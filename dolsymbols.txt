@@ -17,7 +17,6 @@
 8025a874 memmove
 8025a998 memcmp
 8025cec8 vprintf
-8025cf40 snprintf
 8025d098 sprintf
 8025e8fc strcpy
 8025e9bc strncpy
