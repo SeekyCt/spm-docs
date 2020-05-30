@@ -11,3 +11,11 @@ lis r12, PRINTF@ha
 ori r12, r12, PRINTF@l
 mtctr r12
 bctr
+
+Enable HCISU Logging
+====================
+042a15f4 38600001
+
+Enable USB Logging
+==================
+005af070 00000001
