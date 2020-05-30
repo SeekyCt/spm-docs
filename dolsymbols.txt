@@ -17,6 +17,7 @@
 8025a874 memmove
 8025a998 memcmp
 8025cec8 vprintf
+8025cf40 snprintf
 8025d098 sprintf
 8025e8fc strcpy
 8025e9bc strncpy
@@ -115,6 +116,11 @@
 8027400c SetInterruptMask
 80274268 __OSMaskInterrupts
 802742e8 __OSUnmaskInterrupts
+8027465c OSNotifyLink
+80274664 OSNotifyPreLink
+80274668 OSNotifyPostLink
+8027466c Relocate
+80274c0c OSLink
 80275020 __OSModuleInit
 80275248 OSGetPhysicalMem2Size
 80275254 OSGetConsoleSimulatedMem1Size
@@ -164,13 +170,21 @@
 8027a1bc __init_user
 8027a1dc __init_cpp
 8027b8e0 __DVDFSInit
+8027b910 DVDConvertPathToEntrynum
+8027bc18 DVDFastOpen
+8027bc80 DVDClose
+8027bca4 DVDReadAsyncPrio
+8027bd8c DVDReadPrio
+8027bebc StampCommand
 8027bf74 DVDInit
 8027df3c stateCoverClosed
 8027e840 stateReady
 8027eb68 stateBusy
 8027f070 cbForStateBusy
+8027f8a4 DVDReadAbsAsyncPrio
 8027f988 DVDInquiryAsync
 8027fc24 DVDCancelAsync
+8027ff78 DVDCancel
 80280054 __DVDGetCoverStatus
 80280244 __DVDPrepareReset
 802803a4 __DVDClearWaitingQueue
@@ -264,3 +278,5 @@
 8029d130 UnpackItem
 8029dac0 SCFindS8Item
 8029e248 SCGetDisplayOffsetH
+802da858 DEBUGPrint
+802e2814 ARCOpen
