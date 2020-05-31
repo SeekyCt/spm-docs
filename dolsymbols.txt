@@ -17,12 +17,12 @@
 8025a874 memmove
 8025a998 memcmp
 8025cec8 vprintf
+8025cfc0 snprintf
 8025d098 sprintf
 8025e8fc strcpy
 8025e9bc strncpy
 8025ea78 strcmp
 8025eb94 strncmp
-802609ec fwide
 802649a4 TRK_main
 80268a70 TRKSaveExtendedBlock
 80268f58 InitMetroTRK
@@ -100,7 +100,7 @@
 80270854 OSClearContext
 80270934 OSDumpContext
 80270c18 __OSContextInit
-80270c60 printf
+80270c60 OSReport
 80270cec vprintf
 80271430 __OSGetExecParams
 80271954 __OSLaunchMenu
