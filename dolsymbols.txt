@@ -10,8 +10,10 @@
 800063c8 __init_hardware
 800063ec __flush_cache
 8001da60 main
+800294e0 getMapData
 8019c54c AssertionFail
 8019e33c OSPanic
+8023e444 loadRel
 80255838 strlen
 802560a4 __div2i
 80259fd4 fwrite
