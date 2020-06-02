@@ -1,0 +1,5 @@
+Assertions were left in the final build of the game
+
+Removing relF.bin and adding a decompressed relF.rel will cause the game to use that instead
+
+The rel always seems to load in the same place in memory?
