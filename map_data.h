@@ -10,3 +10,4 @@ typedef struct {
 static MapData ** MapDataList; // 804031b8
 
 MapData * getMapData(char * mapName); // 800294e0
+void * getMapEvtScript(char * mapName); // 800295a8
