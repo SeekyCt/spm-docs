@@ -1,3 +1,31 @@
+Print Event Commands Executed
+=============================
+C20DDD9C 00000007
+7F8902A6 5404F0BE
+48000011 636D6420
+25780A00 8025CE00
+7C6802A6 81830008
+7D8803A6 4CC63182
+4E800021 7F8903A6
+4E800420 00000000
+
+mfctr r28
+rlwinm r4, r0, 30, 2, 31
+bl endstring
+
+.string "cmd %x\n"
+#printf pointer
+.long 0x8025ce00
+
+endstring:
+mflr r3
+lwz r12, 8 (r3)
+mtlr r12
+crclr 6
+blrl
+mtctr r28
+bctr
+
 Enable DEBUGPrint
 =================
 C22DA858 00000003
