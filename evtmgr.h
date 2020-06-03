@@ -29,6 +29,7 @@ typedef struct {
 } EvtEntry;
 
 static int evtEntryLimit; // 8050c990
+static int evtEntryCount; // 805ae8d8
 static EvtEntry * evtEntries; // 8050ca20
 
 void evtInit(); // 800d8a88
