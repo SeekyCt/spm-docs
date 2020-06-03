@@ -4,7 +4,7 @@ typedef struct {
   char * name;
   char * nameAgain; // initialised as the exact same pointer, maybe changed later on?
   // unknown 0x8-17
-  void * somethingInRel; // Set by rel prolog function
+  void * evtScript; // In rel, linked by prolog function. See https://github.com/PistonMiner/ttyd-tools
 } MapData;
 
 static MapData ** MapDataList; // 804031b8
