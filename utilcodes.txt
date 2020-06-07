@@ -1,3 +1,31 @@
+Enable debug_put_msg command
+============================
+C20DD518 00000006
+7C641B78 4800000D
+25730A00 8025CE00
+7C6802A6 80030004
+7C0803A6 4CC63182
+4E800021 80010014
+60000000 00000000
+
+C2 @ 800DD518
+mr r4, r3
+bl afterstring
+
+.string "%s\n"
+#printf pointer
+.long 0x8025ce00
+
+afterstring:
+mflr r3
+lwz r0, 0x4 (r3)
+mtlr r0
+crclr 6
+blrl
+
+#default instruction
+lwz r0, 20(r1)
+
 Print Event Commands Executed
 =============================
 C20DDD9C 00000007
