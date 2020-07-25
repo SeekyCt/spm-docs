@@ -1,4 +1,4 @@
-Assertions were left in the final build of the game
+Assertions were left in the final build of the game (Shift-JIS)
 
 Removing relF.bin and adding a decompressed relF.rel will cause the game to use that instead
 
