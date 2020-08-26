@@ -20,7 +20,11 @@ int nextSeq; // 805ae0bc
 typedef void (*SeqFunc)(SeqInfo *);
 
 typedef struct {
-  // unknown 0x0-1f
+  int seq;
+  int stage;
+  char * mapName;
+  char * doorName;
+  // unknown 0x10-1f
   SeqFunc * afterFunc; // ran after every call to the main SeqFunc if not null
 } SeqInfo;
 
