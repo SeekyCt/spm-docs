@@ -17,7 +17,7 @@ int prevSeq; // 805ae0c0
 int curSeq; // 805ae0b8
 int nextSeq; // 805ae0bc
 
-void (*SeqFunc)(SeqInfo *);
+typedef void (*SeqFunc)(SeqInfo *);
 
 typedef struct {
   // unknown 0x0-1f
