@@ -69,4 +69,3 @@ void evtStopOther(EvtEntry * entry, int param_2); // 800d9f54
 void evtStartOther(EvtEntry * entry, int param_2); // 800d9fc8
 EvtEntry * evtGetPtr(int index); // 800da03c
 EvtEntry * evtGetPtrId(int id); // 800da064
-int executeScript(EvtEntry * entry); // 800ddd5c
