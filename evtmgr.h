@@ -9,7 +9,6 @@ As a brief summary, each instruction has the following format:
 
 typedef int (*user_func)(EvtEntry * entry, bool firstRun);
 
-
 typedef struct {
   // unknown 0x0-7
   uint8_t flags; // bit flags, 1 seems to be the script being active?
