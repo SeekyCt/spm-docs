@@ -27,6 +27,7 @@ typedef struct {
   // unknown 0x10-1f
   SeqFunc * afterFunc; // ran after every call to the main SeqFunc if not null
 } SeqInfo;
+SeqInfo seqInfo; // 80512360
 
 typedef struct {
   SeqFunc * init;
@@ -36,24 +37,24 @@ typedef struct {
 SeqFuncHolder[6] seqFuncs; // 804287a8 - one for each seq other than -1
 
 void seqInit_SPMARIO(); // 8017bf2c
-void seqSetSeq(int seqNum, int param_2, int param_3); // 8017c074
+void seqSetSeq(int seqNum, char * mapName, char * doorName); // 8017c074
 void seqMain(); // 8017bf6c - calls all init, main & exit functions based on curSeq & nextSeq
 int seqCheckSeq(); // 8017c084
-void seq_logoInit(); // 80178fd0
-void seq_logoMain(); // 80179140
-void seq_logoExit(); // 801790f8
-void seq_titleInit(); // 8017b130
-void seq_titleMain(); // 8017b250
-void seq_titleExit(); // 8017b410
-void seq_gameInit(); // 8017ce44
-void seq_gameMain(); // 8017cf08
-void seq_gameExit(); // 8017d004
-void seq_mapChangeInit(); // 8017a33c
-void seq_mapChangeMain(); // 8017a464
-void seq_mapChangeExit(); // 8017a460
-void seq_gameOverInit(); // 801789f4
-void seq_gameOverMain(); // 80178b68
-void seq_gameOverExit(); // 80178af4
-void seq_loadInit(); // 8017c10c
-void seq_loadMain(); // 8017c13c
-void seq_loadExit(); // 8017c138
+void seq_logoInit(SeqInfo * info); // 80178fd0
+void seq_logoMain(SeqInfo * info); // 80179140
+void seq_logoExit(SeqInfo * info); // 801790f8
+void seq_titleInit(SeqInfo * info); // 8017b130
+void seq_titleMain(SeqInfo * info); // 8017b250
+void seq_titleExit(SeqInfo * info); // 8017b410
+void seq_gameInit(SeqInfo * info); // 8017ce44
+void seq_gameMain(SeqInfo * info); // 8017cf08
+void seq_gameExit(SeqInfo * info); // 8017d004
+void seq_mapChangeInit(SeqInfo * info); // 8017a33c
+void seq_mapChangeMain(SeqInfo * info); // 8017a464
+void seq_mapChangeExit(SeqInfo * info); // 8017a460
+void seq_gameOverInit(SeqInfo * info); // 801789f4
+void seq_gameOverMain(SeqInfo * info); // 80178b68
+void seq_gameOverExit(SeqInfo * info); // 80178af4
+void seq_loadInit(SeqInfo * info); // 8017c10c
+void seq_loadMain(SeqInfo * info); // 8017c13c
+void seq_loadExit(SeqInfo * info); // 8017c138
