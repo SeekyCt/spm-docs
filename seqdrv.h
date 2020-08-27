@@ -21,7 +21,7 @@ typedef void (*SeqFunc)(SeqInfo *);
 
 typedef struct {
   int seq;
-  int stage;
+  int stage; // number used by the seq_ functions to track their progress
   char * mapName;
   char * doorName;
   // unknown 0x10-1f
