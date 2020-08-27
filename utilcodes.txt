@@ -1,3 +1,48 @@
+Call seqSetSeq
+==============
+(use with activator)
+C0000000 0000000A
+9421FF80 7C6802A6
+BC610008 48000015
+8017C074 6D61635F
+30320073 61766500
+7D6802A6 818B0000
+7D8903A6 38600003
+388B0004 38AB000B
+4E800421 B8610008
+7C6803A6 38210080
+4E800020 00000000
+
+.set seqSetSeq, 0x8017c074
+
+stwu r1, -0x80 (r1)
+mflr r3
+stmw r3, 0x8 (r1)
+
+bl enddata
+startdata:
+func:
+.long seqSetSeq
+mapname:
+.string "mac_02"
+doorname:
+.string "save"
+.align 2
+enddata:
+
+mflr r11
+lwz r12, func - startdata (r11)
+mtctr r12
+li r3, 3
+addi r4, r11, mapname - startdata
+addi r5, r11, doorname - startdata
+bctrl
+
+lmw r3, 0x8 (r1)
+mtlr r3
+addi r1, r1, 0x80
+blr
+
 Enable debug_put_msg command
 ============================
 C20DD518 00000006
