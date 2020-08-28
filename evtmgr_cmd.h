@@ -9,3 +9,10 @@ int evt_end_evt(EvtEntry * entry); // 800da0b0
 int evt_lbl(EvtEntry * entry); // 800da0d4
 // function for every other instruction in the same format...
 int evt_debug_bp(EvtEntry * entry); // 800ddd08
+
+void * evtSearchElse(EvtEntry * entry); // 800df55c
+void * evtSearchEndIf(EvtEntry * entry); // 800df620
+void * evtSearchEndSwitch(EvtEntry * entry); // 800df6d8
+void * evtSearchCase(EvtEntry * entry); // 800df780
+void * evtSearchWhile(EvtEntry * entry); // 800df84c
+void * evtSearchJustBeforeWhile(EvtEntry * entry); // 800df8f8
