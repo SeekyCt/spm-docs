@@ -38,11 +38,19 @@ typedef struct {
   // unknown 0x1a4-7
 } EvtEntry;
 
-int evtEntryLimit; // 8050c990
-int evtEntryCount; // 805ae8d8
-EvtEntry * evtEntries; // 8050ca20
+typedef struct {
+  int entryLimit;
+  uint32_t gw[32];
+  uint gw[3];
+  EvtEntry * entries;
+  // padding 0x94-97
+  int64_t time;
+} EvtWork;
+EvtWork evtWork; // 8050c990
 
-void * evtGetWork(); // 800d87e4
+int evtEntryCount; // 805ae8d8
+
+EvtWork * evtGetWork(); // 800d87e4
 void make_pri_table(); // 800d87f0
 void generateJumptable(EvtEntry * entry); // 800d890c
 void evtmgrInit(); // 800d8a88
