@@ -1,7 +1,7 @@
 float evtGetFloat(EvtEntry * entry, uint32_t datapiece); // 800dedb8
 int evtGetValue(EvtEntry * entry, uint32_t datapiece); // 800de594
 void evtSetFloat(EvtEntry * entry, uint32_t datapiece, float value); // 800df1fc
-void evtSetValue(EvtEntry * entry, uint32 datapiece, float value); // 800de9b8
+void evtSetValue(EvtEntry * entry, uint32_t datapiece, float value); // 800de9b8
 
 int evtmgrCmd(EvtEntry * entry); // 800ddd5c - execute the script of an entry
 
