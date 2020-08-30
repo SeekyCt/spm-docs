@@ -41,7 +41,7 @@ typedef struct {
 typedef struct {
   int entryLimit;
   uint32_t gw[32];
-  uint gw[3];
+  uint32_t gf[3];
   EvtEntry * entries;
   // padding 0x94-97
   int64_t time;
