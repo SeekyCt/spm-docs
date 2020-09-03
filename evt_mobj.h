@@ -13,12 +13,15 @@
   3rd param: float x
   4th param: float y
   5th param: float z
-  6th param: ChanceEntry * chanceTable
-    Format is an array of the following struct, terminated by one with an id of 0
-      struct ChanceEntry {
-        int itemId;
-        int chance;
-      }
+  6th param: can be 2 things
+    int itemId
+    or
+    ChanceEntry * chanceTable
+      Format is an array of the following struct, terminated by one with an id of 0
+        struct ChanceEntry {
+          int itemId;
+          int chance;
+        }
   7th param: unknown
   8th param: unknown
 */
