@@ -26,7 +26,7 @@
   8th param: unknown
 */
 int evt_mobj_blk(EvtEntry * entry); // 800f8be8
-int chanceTableNext(MOBJEntry * entry); // 800f6754 - returns a random id from the table
+int mobj_blk_decideItem(MOBJEntry * entry); // 800f6754 - returns the item id, or a random id from the table if that's what the object uses
 
 /*
   evt_mobj_kan - spawns a sign
