@@ -13,9 +13,9 @@ frame, and its exit function runs when changing to another sequence.
    4: gameOver
    5: load
 */
-int prevSeq; // 805ae0c0
-int curSeq; // 805ae0b8
-int nextSeq; // 805ae0bc
+int cur_seq; // 805ae0b8
+int next_seq; // 805ae0bc
+int prev_seq; // 805ae0c0
 
 typedef void (*SeqFunc)(SeqInfo *);
 
@@ -39,7 +39,7 @@ SeqFuncHolder[6] seqFuncs; // 804287a8 - one for each seq other than -1
 void seqInit_SPMARIO(); // 8017bf2c
 void seqSetSeq(int seqNum, char * mapName, char * doorName); // 8017c074
 void seqMain(); // 8017bf6c - calls all init, main & exit functions based on curSeq & nextSeq
-int seqCheckSeq(); // 8017c084
+int seqGetSeq(); // 8017c084 - returns now_seq, or 0 if equal to -1
 void seq_logoInit(SeqInfo * info); // 80178fd0
 void seq_logoMain(SeqInfo * info); // 80179140
 void seq_logoExit(SeqInfo * info); // 801790f8
