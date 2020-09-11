@@ -52,17 +52,17 @@ int evtEntryCount; // 805ae8d8
 
 EvtWork * evtGetWork(); // 800d87e4
 void make_pri_table(); // 800d87f0
-void generateJumptable(EvtEntry * entry); // 800d890c
+void make_jump_table(EvtEntry * entry); // 800d890c
 void evtmgrInit(); // 800d8a88
 void evtmgrReInit(); // 800d8b2c
 EvtEntry * evtEntry(void * script, uint8_t param_2, char flags); // 800d8b88 - inits an entry for a script
-EvtEntry * evtEntryType(void * script, int param_2, int param_3, int param_4) // 800d8df4
+EvtEntry * evtEntryType(void * script, int param_2, int param_3, int param_4); // 800d8df4
 EvtEntry * evtChildEntry(EvtEntry * entry, void * script, uint8_t flags); // 800d9060
 EvtEntry * evtBrotherEntry(EvtEntry * entry, void * script, uint8_t flags); // 800d9370
 EvtEntry * evtRestart(EvtEntry * entry); // 800d9634
 void evtmgrMain(); // 800d9764
 void evtDelete(EvtEntry * entry); // 800d9944
-void evtDeleteId(int id): // 800d9b00
+void evtDeleteId(int id); // 800d9b00
 bool evtCheckID(int id); // 800d9b88 - returns whether an entry with that id exists
 EvtEntry * evtSetPri(EvtEntry * entry, uint8_t pri); // 800d9bd4
 void evtSetSpeed(EvtEntry * entry, float speed); // 800d9bdc
