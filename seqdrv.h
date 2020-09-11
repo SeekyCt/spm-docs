@@ -13,7 +13,7 @@ frame, and its exit function runs when changing to another sequence.
    4: gameOver
    5: load
 */
-int cur_seq; // 805ae0b8
+int now_seq; // 805ae0b8
 int next_seq; // 805ae0bc
 int prev_seq; // 805ae0c0
 
