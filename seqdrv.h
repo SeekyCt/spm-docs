@@ -22,12 +22,12 @@ typedef void (*SeqFunc)(SeqInfo *);
 typedef struct {
   int seq;
   int stage; // number used by the seq_ functions to track their progress
-  char * mapName;
-  char * doorName;
+  char * p0; // parameter for seq function, always map name?
+  char * p1; // paramater for seq function, always door name?
   // unknown 0x10-1f
   SeqFunc * afterFunc; // ran after every call to the main SeqFunc if not null
-} SeqInfo;
-SeqInfo seqInfo; // 80512360
+} SeqWork;
+SeqWork seqWork; // 80512360
 
 typedef struct {
   SeqFunc * init;
