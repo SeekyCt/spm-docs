@@ -11,4 +11,4 @@ typedef struct {
 } SpMarioGlobals;
 
 SpMarioGlobals * gp; // 805ae178
-SpMarioGlobals marioSt; // 80525550
+SpMarioGlobals spMarioGlobals; // 80525550
