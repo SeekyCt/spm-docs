@@ -8,7 +8,7 @@ typedef struct {
     uint8_t lswf[64]; // evt local saved work flags
     uint8_t lsw[1024]; // evt local saved work
     // unknown 0x1184-1ab0
-} MarioStGlobals;
+} SpMarioGlobals;
 
-MarioStGlobals * gp; // 805ae178
-MarioStGlobals marioSt; // 80525550
+SpMarioGlobals * gp; // 805ae178
+SpMarioGlobals marioSt; // 80525550
