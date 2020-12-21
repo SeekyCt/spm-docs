@@ -139,7 +139,8 @@ C223E5D8 0000000D
 83810008 8361000C
 38210010 00000000
 
-# Insert address 0x8023e5d8 for PAL Revision 0
+C2 @ 0x8023e5d8
+
 # r3-12, r31 and r30 free
 
 .set PRINTF, 0x8025ce00
