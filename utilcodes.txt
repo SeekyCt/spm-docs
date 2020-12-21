@@ -121,3 +121,70 @@ Enable HCISU Logging
 Enable USB Logging
 ==================
 005af070 00000001
+
+Dump Map Script Locations
+=========================
+C223E5D8 0000000D
+4E800421 9421FFF0
+93810008 9361000C
+48000015 8025CE00
+804031B4 25733A20
+25780A00 7FE802A6
+83DF0004 83BF0000
+3B8001D4 84BE0004
+80850000 80BF0018
+387F0008 4CC63182
+7FA803A6 4E800021
+379CFFFF 4181FFE0
+83810008 8361000C
+38210010 00000000
+
+# Insert address 0x8023e5d8 for PAL Revision 0
+# r3-12, r31 and r30 free
+
+.set PRINTF, 0x8025ce00
+.set MAPDATALIST, 0x804031b8
+
+# default instruction
+bctrl
+
+# backup r28 & r29
+stwu r1, -16 (r1)
+stw r28, 8 (r1)
+stw r27, 12 (r1)
+
+# get data pointers
+bl enddata
+
+startdata:
+printf:
+.long PRINTF
+mapdatalist:
+.long MAPDATALIST - 4 # offset for lwzu
+format:
+.string "%s: %x\n"
+.align 2
+enddata:
+
+mflr r31
+lwz r30, mapdatalist - startdata (r31)
+lwz r29, printf - startdata (r31)
+li r28, 0x1d4
+
+# print each name and script
+looptop:
+lwzu r5, 4 (r30) # get map data entry
+lwz r4, 0 (r5) # map name
+lwz r5, 0x18 (r31) # map script
+addi r3, r31, format - startdata
+crxor 6, 6, 6
+mtlr r29
+blrl
+subic. r28, r28, 1
+bgt+ looptop
+
+# pop stack
+lwz r28, 8 (r1)
+lwz r27, 12 (r1)
+addi r1, r1, 16
+
