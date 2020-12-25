@@ -1,3 +1,5 @@
+  80000034 000004 80000034  4 SYS_ARENA_HI 	Global
+  80003110 000004 80003110  4 SYS_HEAP_POINTER 	Global
   80004000 000050 80004000  4 memcpy 	Global
   80004050 0000b4 80004050  4 __fill_mem 	Global
   80004104 000030 80004104  4 memset 	Global
@@ -16,13 +18,17 @@
   800294e0 0000c8 800294e0  4 mapDataPtr 	map_data
   800295a8 0000d8 800295a8  4 mapDataEvtPtr 	map_data
   8002a3f4 000078 8002a3f4  4 mobjInit 	mobjdrv
+  8002a46c 00004c 8002a46c  4 mobjReset 	mobjdrv
   8002a4b8 000ed8 8002a4b8  4 mobjHitEntry 	mobjdrv
   8002b390 0002d4 8002b390  4 mobjEntry 	mobjdrv
   8002b664 0000c8 8002b664  4 mobjDelete 	mobjdrv
   8002b72c 000100 8002b72c  4 mobjSetPosition 	mobjdrv
+  8002b82c 001008 8002b82c  4 mobjMain 	mobjdrv
   8002c834 0000b4 8002c834  4 mobjNameToPtr 	mobjdrv
+  8002c8e8 000098 8002c8e8  4 mobjNameToPtrNoAssert 	mobjdrv
+  8002c980 000084 8002c980  4 mobjRunEvent 	mobjdrv
   8002ca04 0003f0 8002ca04  4 mobjCalcMtx 	mobjdrv
-  8002cdf4 000118 8002cdf4  4 mobjCalcMtx2 	Global
+  8002cdf4 000118 8002cdf4  4 mobjCalcMtx2 	mobjdrv
   8002edd0 000178 8002edd0  4 msgInit 	msgdrv
   8002f130 00022c 8002f130  4 msgLoad 	msgdrv
   800326c4 000048 800326c4  4 msg_compare 	msgdrv
@@ -82,7 +88,7 @@
   8006b4bc 000270 8006b4bc  4 hitEntrySub 	hitdrv
   8006b8cc 0001f4 8006b8cc  4 hitEntryMOBJ 	hitdrv
   8006bac0 0000cc 8006bac0  4 hitDelete 	hitdrv
-  8006d3a0 000060 8006d3a0  4 hitReCalcMatrix 	Global
+  8006d3a0 000060 8006d3a0  4 hitReCalcMatrix 	hitdrv
   8006d560 0004ec 8006d560  4 hitCalcVtxPosition 	hitdrv
   80072188 000054 80072188  4 iconInit 	icondrv
   80072ea8 000308 80072ea8  4 iconDispGxAlpha 	icondrv
@@ -149,7 +155,20 @@
   800da9ac 000074 800da9ac  4 evt_iff_not_equal 	evtmgr_cmd
   800daa20 000078 800daa20  4 evt_iff_small 	evtmgr_cmd
   800daa98 000078 800daa98  4 evt_iff_large 	evtmgr_cmd
+  800dab10 000074 800dab10  4 evt_iff_small_equal 	evtmgr_cmd
+  800dab84 000074 800dab84  4 evt_iff_large_equal 	evtmgr_cmd
+  800dabf8 00006c 800dabf8  4 evt_if_equal 	evtmgr_cmd
+  800dac64 00006c 800dac64  4 evt_if_not_equal 	evtmgr_cmd
+  800dacd0 00006c 800dacd0  4 evt_if_small 	evtmgr_cmd
+  800dad3c 00006c 800dad3c  4 evt_if_large 	evtmgr_cmd
+  800dada8 00006c 800dada8  4 evt_if_small_equal 	evtmgr_cmd
+  800dae14 00006c 800dae14  4 evt_if_large_equal 	evtmgr_cmd
+  800dae80 000060 800dae80  4 evt_if_flag 	evtmgr_cmd
+  800daee0 000060 800daee0  4 evt_if_not_flag 	evtmgr_cmd
+  800daf40 000034 800daf40  4 evt_else 	evtmgr_cmd
+  800daf74 000008 800daf74  4 evt_end_if 	evtmgr_cmd
   800dbaa4 000054 800dbaa4  4 evt_set 	evtmgr_cmd
+  800dc4b8 000090 800dc4b8  4 evt_clamp_int 	evtmgr_cmd
   800dcae8 000094 800dcae8  4 evt_user_func 	evtmgr_cmd
   800dd500 00002c 800dd500  4 evt_debug_put_msg 	evtmgr_cmd
   800dd52c 000008 800dd52c  4 evt_debug_msg_clear 	evtmgr_cmd
@@ -212,15 +231,17 @@
   801991f4 0000f0 801991f4  4 init_801991f4 	Global
   8019beb4 000168 8019beb4  4 treasureMapInit 	treasuremap
   8019c3b0 000040 8019c3b0  4 init_8019c3b0 	Global
-  8019c508 00000c 8019c508  4 getSPMarioDvdRoot 	system
+  8019c508 00000c 8019c508  4 getSpmarioDVDRoot 	system
   8019c514 000010 8019c514  4 getMapdataDvdRoot 	mapdrv
   8019c524 000028 8019c524  4 __assert 	system
   8019c54c 0000e0 8019c54c  4 __assert2 	system
   8019c62c 00005c 8019c62c  4 reviseAngle 	system
+  8019c6bc 00003c 8019c6bc  4 compAngle 	system
   8019c9d4 0005b0 8019c9d4  4 fsort 	system
   8019cf84 0001cc 8019cf84  4 qqsort 	system
   8019d254 000100 8019d254  4 irand 	Global
   8019d4b0 0000c0 8019d4b0  4 sysWaitDrawSync 	system
+  8019d5a4 000020 8019d5a4  4 memcpy_as4 	system
   8019e044 000044 8019e044  4 DVDMgrInit 	dvdmgr
   8019e08c 000158 8019e08c  4 DVDMgrOpen 	dvdmgr
   8019e1e4 0000b8 8019e1e4  4 DVDMgrRead 	dvd
@@ -274,25 +295,38 @@
   801a330c 0004a8 801a330c  4 _JUTFont_DrawPos 	fontmgr
   801a5dcc 000418 801a5dcc  4 memInit 	memory
   801a61e4 000088 801a61e4  4 memClear 	memory
-  801a626c 000084 801a626c  4 __MemAlloc 	memory
+  801a626c 000084 801a626c  4 __memAlloc 	memory
   801a62f0 000010 801a62f0  4 __memFree 	memory
   801a6300 0001f4 801a6300  4 smartInit 	memory
   801a64f4 0000a4 801a64f4  4 smartAutoFree 	memory
   801a6598 0001fc 801a6598  4 smartFree 	memory
   801a6794 0003cc 801a6794  4 smartAlloc 	memory
+  801a6b60 000190 801a6b60  4 smartGarbage? 	memory
+  801a6cf0 00005c 801a6cf0  4 smartTexObj 	memory
   801a74f0 00005c 801a74f0  4 romFontGetMessage 	romfont
   801a754c 000064 801a754c  4 romFontInit 	romfont
   801a75b0 00018c 801a75b0  4 romFontMake 	romfont
   801a773c 000508 801a773c  4 romFontPrintGX 	romfont
   801a7c44 000198 801a7c44  4 romFontGetWidth 	romfont
   801a7ddc 0006fc 801a7ddc  4 spmarioInit 	spmario
+  801a84d8 000270 801a84d8  4 spmarioMain 	spmario
+  801a8748 000028 801a8748  4 spmarioDisp 	spmario
   801a8770 000078 801a8770  4 spmarioSystemLevel 	spmario
+  801a87ec 000008 801a87ec  4 spmarioGetSystemLevel 	Global
+  801a87f4 000198 801a87f4  4 viPostCallback 	spmario
+  801a898c 000428 801a898c  4 wiiDvdCheckThread 	Global
+  801a8db4 0002b4 801a8db4  4 wiiRumbleCheck 	spmario
   801a9098 000200 801a9098  4 DEMOInit 	DEMOInit
+  801a94c8 0000c8 801a94c8  4 DEMOBeforeRender 	DEMOInit
+  801a9590 0000a8 801a9590  4 DEMODoneRender 	DEMOInit
   801a96fc 0000bc 801a96fc  4 init_801a96fc 	Global
   802382b0 000298 802382b0  4 spmario_sndInit 	spmario_snd
-  8023e434 000010 8023e434  4 init_8023e434 	Global
-  8023e444 0001bc 8023e444  4 loadRelF 	Global
+  8023e434 000010 8023e434  4 relInit 	relmgr
+  8023e444 0001bc 8023e444  4 loadRel 	relmgr
+  8023e600 00000c 8023e600  4 isRelLoaded 	relmgr
   8023e60c 000370 8023e60c  4 init_8023e60c 	Global
+  8023e97c 001ca4 8023e97c  4 nandMain 	nandmgr
+  8023e9c0 000020 8023e9c0  4 nandIsExec 	nandmgr
   8023eb68 000088 8023eb68  4 nandInit 	nandmgr
   80241808 0000c0 80241808  4 init_80241808 	Global
   80255838 00001c 80255838  4 strlen 	Global
@@ -364,7 +398,9 @@
   8026a850 0000f0 8026a850  4 SetExiInterruptMask 	Global
   8026a940 00027c 8026a940  4 EXIImm 	Global
   8026abbc 0000a4 8026abbc  4 EXIImmEx 	Global
+  8026ac60 0000f8 8026ac60  4 EXIDma 	Global
   8026ad58 00027c 8026ad58  4 EXISync 	Global
+  8026afd4 000084 8026afd4  4 EXISetExiCallback 	Global
   8026b058 000180 8026b058  4 __EXIProbe 	Global
   8026b1d8 000118 8026b1d8  4 EXIAttach 	Global
   8026b2f0 0000b8 8026b2f0  4 EXIDetach 	Global
@@ -379,6 +415,7 @@
   8026bd38 0003ac 8026bd38  4 EXIGetID 	Global
   8026c0e4 000178 8026c0e4  4 ProbeBarnacle 	Global
   8026c25c 0001bc 8026c25c  4 __OSEnableBarnacle 	Global
+  8026c418 00018c 8026c418  4 EXIWriteReg 	Global
   8026ce00 0000c0 8026ce00  4 SIInit 	Global
   8026db54 000008 8026db54  4 PPCMfhid0 	Global
   8026db7c 000008 8026db7c  4 PPCSync 	Global
@@ -418,6 +455,7 @@
   8026fb00 000008 8026fb00  4 OSSetMEM2ArenaHi 	Global
   8026fb10 000008 8026fb10  4 OSSetMEM1ArenaLo 	Global
   8026fb18 000008 8026fb18  4 OSSetMEM2ArenaLo 	Global
+  8026fb20 000008 8026fb20  4 OSSetArenaLo 	Global
   8026fb5c 000220 8026fb5c  4 __AIClockInit 	Global
   8026fd7c 0001c8 8026fd7c  4 __OSInitAudioSystem 	Global
   8026ff44 0000cc 8026ff44  4 __OSStopAudioSystem 	Global
@@ -448,6 +486,7 @@
   80271954 0000fc 80271954  4 __OSLaunchMenu 	Global
   802723e8 000120 802723e8  4 ESP_GetTicketViews 	Global
   80272508 000090 80272508  4 ESP_LaunchTitle 	Global
+  802729b8 000204 802729b8  4 OSFatal 	Global
   80273494 000054 80273494  4 OSGetFontEncode 	Global
   80273ed8 000014 80273ed8  4 OSDisableInterrupts 	Global
   80273eec 000014 80273eec  4 OSEnableInterrupts 	Global
@@ -580,9 +619,12 @@
   80282f04 000044 80282f04  4 VISetPostRetraceCallback 	Global
   80283260 000548 80283260  4 VIInit 	Global
   802837a8 000054 802837a8  4 VIWaitForRetrace 	Global
+  80283ab4 000190 80283ab4  4 setVerticalRegs 	vi
   80283c44 000794 80283c44  4 VIConfigure 	Global
   8028472c 000114 8028472c  4 VIFlush 	Global
   80284840 00006c 80284840  4 VISetNextFrameBuffer 	Global
+  802848ac 000078 802848ac  4 VISetBlack 	vi
+  8028492c 00009c 8028492c  4 VIGetNextField 	vi
   80284a58 000060 80284a58  4 VIGetTVFormat 	Global
   8028c594 00016c 8028c594  4 __GXShutdown 	Global
   8028c830 000504 8028c830  4 GXInit 	Global
@@ -592,11 +634,13 @@
   8028e1b4 000264 8028e1b4  4 GXSetVtxDesc 	Global
   8028ea44 000034 8028ea44  4 GXClearVtxDesc 	Global
   8028ea78 0001a0 8028ea78  4 GXSetVtxAttrFmt 	Global
+  8028f17c 000010 8028f17c  4 GXInvalidateVtxCache 	gx
   8028f18c 000228 8028f18c  4 GXSetTexCoordGen2 	Global
   8028f3b4 000024 8028f3b4  4 GXSetNumTexGens 	Global
   8028f3d8 00008c 8028f3d8  4 GXSetMisc 	Global
   8028f80c 0000b4 8028f80c  4 GXSetDrawSync 	Global
   8028f8c0 00000c 8028f8c0  4 GXReadDrawSync 	Global
+  8028f8cc 0000c0 8028f8cc  4 GXDrawDone 	gx
   8028fcb8 000278 8028fcb8  4 __GXSetDirtyState 	Global
   8028ff30 00014c 8028ff30  4 GXBegin 	Global
   802901f8 000028 802901f8  4 GXSetCullMode 	Global
@@ -615,10 +659,13 @@
   802913bc 000124 802913bc  4 GXGetTexBufferSize 	Global
   802915a0 00020c 802915a0  4 GXInitTexObj 	Global
   802917f4 000104 802917f4  4 GXInitTexObjLOD 	Global
+  802918f8 000010 802918f8  4 GXInitTexObjData 	gx
   8029194c 000014 8029194c  4 GXGetTexObjWidth 	Global
   80291960 000014 80291960  4 GXGetTexObjHeight 	Global
   80291990 000164 80291990  4 GXLoadTexObjPreLoaded 	Global
   80291af4 000054 80291af4  4 GXLoadTexObj 	Global
+  80291d14 000048 80291d14  4 GXInvalidateTexAll 	gx
+  802929b0 000024 802929b0  4 __GXFlushTextureState 	gx
   802929d4 000094 802929d4  4 GXSetTevOp 	Global
   80292a68 000040 80292a68  4 GXSetTevColorIn 	Global
   80292aa8 000040 80292aa8  4 GXSetTevAlphaIn 	Global
@@ -632,12 +679,15 @@
   80293030 000024 80293030  4 GXSetNumTevStages 	Global
   80293054 00022c 80293054  4 GXSetFog 	Global
   802933a4 000050 802933a4  4 GXSetBlendMode 	Global
+  802933f4 00002c 802933f4  4 GXSetColorUpdate 	gx
+  80293420 00002c 80293420  4 GXSetAlphaUpdate 	gx
   8029344c 000034 8029344c  4 GXSetZMode 	Global
   80293480 000030 80293480  4 GXSetZCompLoc 	Global
   802934b0 0000a8 802934b0  4 GXSetPixelFmt 	Global
   80294304 000050 80294304  4 GXLoadPosMtxImm 	Global
   802943ac 000020 802943ac  4 GXSetCurrentMtx 	Global
   802943cc 0000b4 802943cc  4 GXLoadTexMtxImm 	Global
+  80294510 00003c 80294510  4 GXSetViewportJitter 	gx
   8029454c 00002c 8029454c  4 GXSetViewport 	Global
   802945c8 000068 802945c8  4 GXSetScissor 	Global
   80295a5c 0000b0 80295a5c  4 MEMCreateExpHeapEx 	Global
@@ -715,6 +765,8 @@
   802cc7d4 0000f8 802cc7d4  4 IUSB_OpenLib 	Global
   802cca30 000134 802cca30  4 IUSB_OpenDeviceIds 	Global
   802da858 000050 802da858  4 DEBUGPrint 	Global
+  802e25d8 000134 802e25d8  4 lzss10Decompress 	Global
+  802e270c 000068 802e270c  4 lzss10ParseHeader 	Global
   802e2774 0000a0 802e2774  4 ARCInitHandle 	Global
   802e2814 0002a4 802e2814  4 ARCOpen 	Global
   802e2b08 000264 802e2b08  4 ARCConvertPathToEntrynum 	Global
@@ -771,28 +823,29 @@
   80428650 0000f0 80428650  4 areaTextFileMap 	Global
   80428654 000001 80428654  8 areaTextFileMap[1] 	Global
   80428658 000001 80428658  8 areaTextFileMap[2] 	Global
-  804287a8 000048 804287a8  1 seqFuncs 	Global
-  804287ac 000001 804287ac  8 seqFuncs[0].main 	Global
-  804287b0 000001 804287b0  8 seqFuncs[0].exit 	Global
+  804287a8 000048 804287a8  1 seq_data 	Global
+  804287ac 000001 804287ac  8 seq_data[0].main 	Global
+  804287b0 000001 804287b0  8 seq_data[0].exit 	Global
   8042a398 000020 8042a398  4 fontFilenames 	Global
-  8042a408 000048 8042a408  1 ArenaDescs 	Global
-  8042a40c 000001 8042a40c  8 ArenaDescs[0].size 	Global
-  8042a410 000001 8042a410  8 ArenaDescs[1].mode 	Global
-  8042a420 000001 8042a420  8 ArenaDescs[3].mode 	Global
-  8042a424 000001 8042a424  8 ArenaDescs[3].size 	Global
-  8042a428 000001 8042a428  8 ArenaDescs[4].mode 	Global
+  8042a408 000048 8042a408  1 size_table 	Global
+  8042a40c 000001 8042a40c  8 size_table[0].size 	Global
+  8042a410 000001 8042a410  8 size_table[1].mode 	Global
+  8042a420 000001 8042a420  8 size_table[3].mode 	Global
+  8042a424 000001 8042a424  8 size_table[3].size 	Global
+  8042a428 000001 8042a428  8 size_table[4].mode 	Global
   8042a450 000020 8042a450  4 msg_jp 	Global
   8042a470 000020 8042a470  4 msg_uk 	Global
   8042a490 000020 8042a490  4 msg_uk2 	Global
   8042a530 000020 8042a530  4 msg_tbl 	Global
   8042a534 000001 8042a534  8 msg_tbl[1] 	Global
+  804e5e90 00001c 804e5e90  4 HomeButton2LangSuffixes 	Global
   80509ca0 000018 80509ca0  1 mobjdrv_80509ca0 	Global
   80509ca4 000001 80509ca4  8 mobjdrv_80509ca0.bigs 	Global
   80509ca8 000001 80509ca8  8 mobjdrv_80509ca0.field_0x8 	Global
   80509cac 000001 80509cac  8 mobjdrv_80509ca0.field_0xc 	Global
   80509cb0 000001 80509cb0  8 mobjdrv_80509ca0.smalls 	Global
   80509cb4 000001 80509cb4  8 mobjdrv_80509ca0.prepared? 	Global
-  8050b580 000004 8050b580  4 camPtrs 	Global
+  8050b580 000004 8050b580  4 camPtrTbl 	Global
   8050c990 0000a0 8050c990  1 evtWork 	evtmgr
   8050c994 000001 8050c994  8 evtWork.gw[0] 	Global
   8050ca14 000001 8050ca14  8 evtWork.gf[0] 	Global
@@ -1208,61 +1261,72 @@
   8051742c 000001 8051742c  8 HeapInfo.heapEnd[1] 	Global
   80517434 000001 80517434  8 HeapInfo.heapEnd[3] 	Global
   80517438 000001 80517438  8 HeapInfo.heapEnd[4] 	Global
-  80525550 001ab0 80525550  1 swdrv_80525550 	Global
-  80525554 000001 80525554  8 swdrv_80525550.field_0x4 	Global
-  80525558 000001 80525558  8 swdrv_80525550.language 	Global
-  8052555c 000001 8052555c  8 swdrv_80525550.field_0xc 	Global
-  80525560 000001 80525560  8 swdrv_80525550.field_0x10 	Global
-  80525564 000001 80525564  8 swdrv_80525550.field_0x14 	Global
-  80525568 000001 80525568  8 swdrv_80525550.field_0x18 	Global
-  8052556a 000001 8052556a  8 swdrv_80525550.field_0x1a 	Global
-  8052556c 000001 8052556c  8 swdrv_80525550.field_0x1c 	Global
-  80525570 000001 80525570  8 swdrv_80525550.field_0x20 	Global
-  80525590 000001 80525590  8 swdrv_80525550.field_0x40 	Global
-  80525594 000001 80525594  8 swdrv_80525550.mapName[0] 	Global
-  80525595 000001 80525595  8 swdrv_80525550.mapName[1] 	Global
-  80525596 000001 80525596  8 swdrv_80525550.mapName[2] 	Global
-  805255b4 000001 805255b4  8 swdrv_80525550.doorName[0] 	Global
-  805255d4 000001 805255d4  8 swdrv_80525550.prevMapNameOther 	Global
-  805255f4 000001 805255f4  8 swdrv_80525550.prevName[0] 	Global
-  80525614 000001 80525614  8 swdrv_80525550.field_0xc4 	Global
-  80525618 000001 80525618  8 swdrv_80525550.field_0xc8 	Global
-  8052561c 000001 8052561c  8 swdrv_80525550.field_0xcc 	Global
-  80525620 000001 80525620  8 swdrv_80525550.field_0xd0 	Global
-  80525624 000001 80525624  8 swdrv_80525550.field_0xd4 	Global
-  80525628 000001 80525628  8 swdrv_80525550.field_0xd8 	Global
-  8052562c 000001 8052562c  8 swdrv_80525550.field_0xdc 	Global
-  80525630 000001 80525630  8 swdrv_80525550.field_0xe0 	Global
-  80525648 000001 80525648  8 swdrv_80525550.time 	Global
-  8052564c 000001 8052564c  8 swdrv_80525550.time+4 	Global
-  80525650 000001 80525650  8 swdrv_80525550.field_0x100 	Global
-  80525654 000001 80525654  8 swdrv_80525550.field_0x104 	Global
-  80525658 000001 80525658  8 swdrv_80525550.field_0x108 	Global
-  8052565c 000001 8052565c  8 swdrv_80525550.field_0x10c 	Global
-  80525660 000001 80525660  8 swdrv_80525550.field_0x110 	Global
-  80525664 000001 80525664  8 swdrv_80525550.field_0x114 	Global
-  80525668 000001 80525668  8 swdrv_80525550.field_0x118 	Global
-  8052566c 000001 8052566c  8 swdrv_80525550.field_0x11c 	Global
-  80525670 000001 80525670  8 swdrv_80525550.field_0x120 	Global
-  80525674 000001 80525674  8 swdrv_80525550.field_0x124 	Global
-  80525678 000001 80525678  8 swdrv_80525550.field_0x128 	Global
-  8052567c 000001 8052567c  8 swdrv_80525550.field_0x12c 	Global
-  80525680 000001 80525680  8 swdrv_80525550.field_0x130 	Global
-  80525684 000001 80525684  8 swdrv_80525550.field_0x134 	Global
-  80525688 000001 80525688  8 swdrv_80525550.field_0x138 	Global
-  8052568c 000001 8052568c  8 swdrv_80525550.field_0x13c 	Global
-  80525690 000001 80525690  8 swdrv_80525550.gsw0 	Global
-  80525694 000001 80525694  8 swdrv_80525550.gswf[0] 	Global
-  80525a94 000001 80525a94  8 swdrv_80525550.gsw[0] 	Global
-  80526294 000001 80526294  8 swdrv_80525550.lswf[0] 	Global
-  805262d4 000001 805262d4  8 swdrv_80525550.lsw[0] 	Global
-  805266d4 000001 805266d4  8 swdrv_80525550.coinThings[0].mapname[0] 	Global
-  8052671c 000001 8052671c  8 swdrv_80525550.coinThings[1].mapname[0] 	Global
-  80526724 000001 80526724  8 swdrv_80525550.coinThings[1].mapname[8] 	Global
+  80525550 001b08 80525550  1 SpmarioGlobals_80525550 	Global
+  80525554 000001 80525554  8 SpmarioGlobals_80525550.field_0x4 	Global
+  80525558 000001 80525558  8 SpmarioGlobals_80525550.language 	Global
+  8052555c 000001 8052555c  8 SpmarioGlobals_80525550.field_0xc 	Global
+  80525560 000001 80525560  8 SpmarioGlobals_80525550.systemLevelFlags 	Global
+  80525564 000001 80525564  8 SpmarioGlobals_80525550.field_0x14 	Global
+  80525568 000001 80525568  8 SpmarioGlobals_80525550.field_0x18 	Global
+  8052556a 000001 8052556a  8 SpmarioGlobals_80525550.field_0x1a 	Global
+  8052556c 000001 8052556c  8 SpmarioGlobals_80525550.field_0x1c 	Global
+  80525570 000001 80525570  8 SpmarioGlobals_80525550.field_0x20 	Global
+  80525590 000001 80525590  8 SpmarioGlobals_80525550.field_0x40 	Global
+  80525594 000001 80525594  8 SpmarioGlobals_80525550.mapName[0] 	Global
+  80525595 000001 80525595  8 SpmarioGlobals_80525550.mapName[1] 	Global
+  80525596 000001 80525596  8 SpmarioGlobals_80525550.mapName[2] 	Global
+  805255b4 000001 805255b4  8 SpmarioGlobals_80525550.doorName[0] 	Global
+  805255d4 000001 805255d4  8 SpmarioGlobals_80525550.prevMapNameOther 	Global
+  805255f4 000001 805255f4  8 SpmarioGlobals_80525550.prevName[0] 	Global
+  80525614 000001 80525614  8 SpmarioGlobals_80525550.field_0xc4 	Global
+  80525618 000001 80525618  8 SpmarioGlobals_80525550.field_0xc8 	Global
+  8052561c 000001 8052561c  8 SpmarioGlobals_80525550.field_0xcc 	Global
+  80525620 000001 80525620  8 SpmarioGlobals_80525550.field_0xd0 	Global
+  80525624 000001 80525624  8 SpmarioGlobals_80525550.field_0xd4 	Global
+  80525628 000001 80525628  8 SpmarioGlobals_80525550.field_0xd8 	Global
+  8052562c 000001 8052562c  8 SpmarioGlobals_80525550.field_0xdc 	Global
+  80525630 000001 80525630  8 SpmarioGlobals_80525550.field_0xe0 	Global
+  80525648 000001 80525648  8 SpmarioGlobals_80525550.time 	Global
+  8052564c 000001 8052564c  8 SpmarioGlobals_80525550.time+4 	Global
+  80525650 000001 80525650  8 SpmarioGlobals_80525550.field_0x100 	Global
+  80525654 000001 80525654  8 SpmarioGlobals_80525550.field_0x104 	Global
+  80525658 000001 80525658  8 SpmarioGlobals_80525550.field_0x108 	Global
+  8052565c 000001 8052565c  8 SpmarioGlobals_80525550.field_0x10c 	Global
+  80525660 000001 80525660  8 SpmarioGlobals_80525550.field_0x110 	Global
+  80525664 000001 80525664  8 SpmarioGlobals_80525550.field_0x114 	Global
+  80525668 000001 80525668  8 SpmarioGlobals_80525550.field_0x118 	Global
+  8052566c 000001 8052566c  8 SpmarioGlobals_80525550.field_0x11c 	Global
+  80525670 000001 80525670  8 SpmarioGlobals_80525550.field_0x120 	Global
+  80525674 000001 80525674  8 SpmarioGlobals_80525550.field_0x124 	Global
+  80525678 000001 80525678  8 SpmarioGlobals_80525550.field_0x128 	Global
+  8052567c 000001 8052567c  8 SpmarioGlobals_80525550.field_0x12c 	Global
+  80525680 000001 80525680  8 SpmarioGlobals_80525550.field_0x130 	Global
+  80525684 000001 80525684  8 SpmarioGlobals_80525550.field_0x134 	Global
+  80525688 000001 80525688  8 SpmarioGlobals_80525550.field_0x138 	Global
+  8052568c 000001 8052568c  8 SpmarioGlobals_80525550.field_0x13c 	Global
+  80525690 000001 80525690  8 SpmarioGlobals_80525550.gsw0 	Global
+  80525694 000001 80525694  8 SpmarioGlobals_80525550.gswf[0] 	Global
+  80525a94 000001 80525a94  8 SpmarioGlobals_80525550.gsw[0] 	Global
+  80526294 000001 80526294  8 SpmarioGlobals_80525550.lswf[0] 	Global
+  805262d4 000001 805262d4  8 SpmarioGlobals_80525550.lsw[0] 	Global
+  805266d4 000001 805266d4  8 SpmarioGlobals_80525550.coinThings[0].mapname[0] 	Global
+  8052671c 000001 8052671c  8 SpmarioGlobals_80525550.coinThings[1].mapname[0] 	Global
+  80526724 000001 80526724  8 SpmarioGlobals_80525550.coinThings[1].mapname[8] 	Global
+  80527000 000001 80527000  8 SpmarioGlobals_80525550.field_0x1ab0 	Global
+  80527008 000001 80527008  8 SpmarioGlobals_80525550.field_0x1ab8 	Global
+  8052700c 000001 8052700c  8 SpmarioGlobals_80525550.field_0x1abc 	Global
+  80527028 000001 80527028  8 SpmarioGlobals_80525550.field_0x1ad8 	Global
+  80527029 000001 80527029  8 SpmarioGlobals_80525550.field_0x1ad9 	Global
+  8052702c 000001 8052702c  8 SpmarioGlobals_80525550.field_0x1adc 	Global
+  80527030 000001 80527030  8 SpmarioGlobals_80525550.field_0x1ae0 	Global
+  80527034 000001 80527034  8 SpmarioGlobals_80525550.field_0x1ae4 	Global
+  80527050 000001 80527050  8 SpmarioGlobals_80525550.field_0x1b00 	Global
+  80527058 000001 80527058  1 DVDCheckThread 	Global
   805339f0 000004 805339f0  4 namebuf 	Global
-  80534f98 000010 80534f98  1 RelFHolder 	mobjdrv
+  80534f98 000010 80534f98  1 RelFHolder 	Global
   80534f9c 000001 80534f9c  8 RelFHolder.bss 	Global
-  80534fa0 000001 80534fa0  8 RelFHolder.initialised 	Global
+  80534fa0 000001 80534fa0  8 RelFHolder.loaded 	Global
+  8054ea78 000002 8054ea78  2 regs 	Global
   805964a8 000001 805964a8  1 HCISU_EnableLog 	Global
   805ae018 000004 805ae018  4 evtId 	Global
   805ae01c 000004 805ae01c  4 evtSpeed 	Global
@@ -1273,16 +1337,18 @@
   805ae120 000004 805ae120  4 wp 	dvd
   805ae170 000004 805ae170  4 wp 	romfont
   805ae178 000004 805ae178  4 gp 	Global
-  805ae1a0 00000c 805ae1a0  1 RelFDescriptor 	Global
-  805ae1a4 000001 805ae1a4  8 RelFDescriptor.decompFilename 	Global
-  805ae1a8 000001 805ae1a8  8 RelFDescriptor.compFilename 	Global
+  805ae180 000001 805ae180  1 DemoFirstFrame 	Global
+  805ae1a0 000004 805ae1a0  4 relHolder 	relmgr
+  805ae1a4 000004 805ae1a4  4 relDecompName 	relmgr
+  805ae1a8 000004 805ae1a8  4 relCompName 	relmgr
+  805ae1d8 000004 805ae1d8  4 INT_805ae1d8 	Global
   805ae5b8 000004 805ae5b8  4 IUSB_HeapId 	Global
-  805ae7b8 000004 805ae7b8  4 curCamNo 	Global
+  805ae7b8 000004 805ae7b8  4 currentCamNo 	Global
   805ae7c8 000004 805ae7c8  4 dispEntries 	Global
   805ae7cc 000004 805ae7cc  4 dispEntryPtrs 	Global
   805ae7d0 000004 805ae7d0  4 dispEntryCount 	Global
   805ae7d4 000004 805ae7d4  4 dispCurWork 	Global
-  805ae8d8 000004 805ae8d8  4 EvtEntryCount 	evtmgr
+  805ae8d8 000004 805ae8d8  4 evtMax 	evtmgr
   805ae8dc 000004 805ae8dc  4 priTblNum 	Global
   805ae8e0 000004 805ae8e0  4 runMainF 	Global
   805ae918 000004 805ae918  4 seqMapName 	Global
@@ -1292,9 +1358,17 @@
   805ae968 000004 805ae968  4 comp 	system
   805ae990 000004 805ae990  4 shouldFontDrawEdge 	Global
   805ae9a8 000001 805ae9a8  1 memInitFlag 	Global
+  805ae9c8 000004 805ae9c8  4 _spmarioSystemLevel 	Global
+  805ae9d8 000004 805ae9d8  4 rmode 	Global
+  805ae9e0 000004 805ae9e0  4 DemoFrameBuffer1 	Global
+  805ae9e4 000004 805ae9e4  4 DemoFrameBuffer2 	Global
+  805ae9e8 000004 805ae9e8  4 DEMOCurrentBuffer 	Global
   805aea18 000004 805aea18  4 spsbgmlist 	Global
   805aea1c 000004 805aea1c  4 spssfxlist 	Global
   805aea20 000004 805aea20  4 spsenvlist 	Global
+  805aed18 000004 805aed18  4 changed 	Global
+  805aef90 000001 805aef90  1 FinishQueue 	Global
+  805aef98 000001 805aef98  1 DrawDone 	Global
   805af068 000004 805af068  4 IUSB_HeapLo 	Global
   805af06c 000004 805af06c  4 IUSB_HeapHi 	Global
   805af070 000001 805af070  1 USB_EnableLog 	Global
@@ -1304,3 +1378,4 @@
   805b3069 000001 805b3069  8 fadeColour.blue 	Global
   805b306a 000001 805b306a  8 fadeColour.green 	Global
   805b306b 000001 805b306b  8 fadeColour.alpha 	Global
+  805b70d8 000004 805b70d8  4 __GXData 	Global
