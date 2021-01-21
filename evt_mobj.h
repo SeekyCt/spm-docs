@@ -22,7 +22,7 @@
           int itemId;
           int chance;
         }
-  7th param: unknown
+  7th param: on hit script
   8th param: unknown
 */
 int evt_mobj_blk(EvtEntry * entry); // 800f8be8
