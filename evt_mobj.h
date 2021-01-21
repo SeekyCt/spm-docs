@@ -22,8 +22,8 @@
           int itemId;
           int chance;
         }
-  7th param: on hit script
-  8th param: unknown
+  7th param: EvtScript * hitScript
+  8th param: bool disableHitting
 */
 int evt_mobj_blk(EvtEntry * entry); // 800f8be8
 int mobj_blk_decideItem(MOBJEntry * entry); // 800f6754 - returns the item id, or a random id from the table if that's what the object uses
