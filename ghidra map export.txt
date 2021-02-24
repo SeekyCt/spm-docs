@@ -15,6 +15,7 @@
   800063c8 000024 800063c8  4 __init_hardware 	Global
   800063ec 000034 800063ec  4 __flush_cache 	Global
   8001da60 000028 8001da60  4 main 	Global
+  80025164 000078 80025164  4 getAnEvtScriptOutOfSomething 	Global
   80025700 00003c 80025700  4 evt_item_event_free_work 	item_event_data
   800294e0 0000c8 800294e0  4 mapDataPtr 	map_data
   800295a8 0000d8 800295a8  4 mapDataEvtPtr 	map_data
@@ -67,12 +68,24 @@
   800388b4 000068 800388b4  4 windowInit 	windowdrv
   8003891c 000044 8003891c  4 windowReInit 	windowdrv
   80038960 000088 80038960  4 windowEntry 	windowdrv
+  800389e8 00004c 800389e8  4 windowDelete 	windowdrv
   80038a34 00006c 80038a34  4 windowDeleteID 	windowdrv
   80038aa0 000068 80038aa0  4 windowMain 	windowdrv
+  8003ab80 0005d8 8003ab80  4 windowDispGX2_Waku_col 	windowdrv
   8003b158 000018 8003b158  4 windowCheckID 	windowdrv
   8003b170 000010 8003b170  4 windowGetPointer 	windowdrv
   8003b26c 000044 8003b26c  4 winMgrInit 	winmgr
-  8003b6b4 0000f4 8003b6b4  4 winMain 	winmgr
+  8003b2b0 000018 8003b2b0  4 winmgrReInit 	winmgr
+  8003b2c8 0003ec 8003b2c8  4 winMgrDisp 	winmgr
+  8003b6b4 0000f4 8003b6b4  4 winMgrMain 	winmgr
+  8003b7a8 0002fc 8003b7a8  4 winMgrSeq 	winmgr
+  8003baa4 0000e4 8003baa4  4 winMgrEntry 	winmgr
+  8003bb88 000020 8003bb88  4 winMgrSetParam 	winmgr
+  8003bba8 000030 8003bba8  4 winMgrOpen 	winmgr
+  8003bbd8 00003c 8003bbd8  4 winMgrCloseAutoDelete 	winmgr
+  8003bc14 000018 8003bc14  4 winMgrAction 	winmgr
+  8003bc2c 00002c 8003bc2c  4 winMgrSetSize 	winmgr
+  8003bc58 000020 8003bc58  4 winMgrSetPriority 	winmgr
   8003eb4c 000054 8003eb4c  4 acdrvInit? 	Global
   8003ee44 000544 8003ee44  4 acMain 	acdrv
   8004158c 000008 8004158c  4 animGetPtr 	animdrv
@@ -129,8 +142,8 @@
   8006b4bc 000270 8006b4bc  4 hitEntrySub 	hitdrv
   8006b8cc 0001f4 8006b8cc  4 hitEntryMOBJ 	hitdrv
   8006bac0 0000cc 8006bac0  4 hitDelete 	hitdrv
-  8006bb8c 00013c 8006bb8c  4 main_8006bb8c 	Global
-  8006bcc8 0000b8 8006bcc8  4 main_8006bcc8 	Global
+  8006bb8c 00013c 8006bb8c  4 hitMain 	hitdrv
+  8006bcc8 0000b8 8006bcc8  4 mapDisp? 	Global
   8006d3a0 000060 8006d3a0  4 hitReCalcMatrix 	hitdrv
   8006d560 0004ec 8006d560  4 hitCalcVtxPosition 	hitdrv
   80070898 0000e8 80070898  4 hitGetName 	hitdrv
@@ -160,7 +173,7 @@
   80079338 0000ac 80079338  4 itemDelete 	itemdrv
   800793e4 000084 800793e4  4 itemNameToPtr 	itemdrv
   8007e1a8 0001b4 8007e1a8  4 lightInit 	lightdrv
-  8007e374 000130 8007e374  4 main_8007e374 	Global
+  8007e374 000130 8007e374  4 lightMain 	lightdrv
   8007f1dc 000014 8007f1dc  4 mapGetWork 	mapdrv
   8007f1f0 0002a8 8007f1f0  4 mapGetJointsSub 	mapdrv
   8007f498 0002e0 8007f498  4 mapGetJoints 	mapdrv
@@ -170,8 +183,9 @@
   80081618 000204 80081618  4 mapUnLoad 	mapdrv
   8008181c 002288 8008181c  4 _mapLoad 	mapdrv
   80083a68 000001 80083a68  8 doreturn 	_mapLoad
-  80084594 0004cc 80084594  4 main_80084594 	Global
+  80084594 0004cc 80084594  4 mapMapin 	mapdrv
   80086154 00082c 80086154  4 mapMain 	mapdrv
+  800d401c 000088 800d401c  4 evt_control_rumble 	Global
   800d40a4 00006c 800d40a4  4 evt_rand_range 	Global
   800d442c 000034 800d442c  4 evt_getGpFlags 	Global
   800d44b0 000054 800d44b0  4 evt_wpadGetButtonsHeld 	Global
@@ -297,9 +311,11 @@
   800fc0ac 00008c 800fc0ac  4 evt_msg_togelr 	evt_msg
   800fc138 00003c 800fc138  4 evt_msg_pri 	evt_msg
   800fde94 000140 800fde94  4 evtNpcNameToPtr 	evt_npc
+  800fe124 0000f8 800fe124  4 evtNpcGetPos 	evt_npc
   8010a2f8 000084 8010a2f8  4 evt_maybe_catch_card_rng 	Global
   80121f48 00000c 80121f48  4 marioGetPtr 	mario
   801229c8 000128 801229c8  4 somePosSetThing 	mario
+  80122b7c 000014 80122b7c  4 mairoCheckInConversation 	mario
   80122d1c 000074 80122d1c  4 marioChkSts 	mario
   80122d90 000218 80122d90  4 marioResetHitObj 	mario
   80122fa8 000218 80122fa8  4 marioReset 	mario
@@ -313,10 +329,20 @@
   80147604 000144 80147604  4 changeCharacter 	mario_motion
   8014c088 00000c 8014c088  4 pouchGetPtr 	mario_pouch
   8014c094 000694 8014c094  4 pouchInit 	mario_pouch
+  8014c728 000668 8014c728  4 pouchReInit 	mario_pouch
   8014cd90 0003f4 8014cd90  4 pouchMain 	mario_pouch
   8014d1bc 000034 8014d1bc  4 pouchSetLevel 	mario_pouch
   8014d1f0 000010 8014d1f0  4 pouchGetLevel 	mario_pouch
-  8014d200 000194 8014d200  4 getNextLevelXp 	mario_pouch
+  8014d200 000194 8014d200  4 pouchGetNextLevelXp 	mario_pouch
+  8014d394 000034 8014d394  4 pouchSetAttack 	mario_pouch
+  8014d3c8 000010 8014d3c8  4 pouchGetAttack 	mario_pouch
+  8014d3d8 00003c 8014d3d8  4 pouchAddAttack 	mario_pouch
+  8014d4f8 000010 8014d4f8  4 pouchGetXp 	mario_pouch
+  8014d508 000040 8014d508  4 pouchAddXp 	mario_pouch
+  8014ef98 000018 8014ef98  4 pouchGetCharInfo 	mario_pouch
+  8014f080 000018 8014f080  4 pouchGetPixlInfo 	mario_pouch
+  8014f31c 0000ec 8014f31c  4 pouchGetCurPixl 	mario_pouch
+  8014fc70 0000a8 8014fc70  4 pouchCountPixls 	mario_pouch
   801789f4 000100 801789f4  4 seq_gameOverInit 	seq_gameover
   80178af4 000074 80178af4  4 seq_gameOverExit 	seq_gameover
   80178b68 000468 80178b68  4 seq_gameOverMain 	seq_gameover
@@ -341,9 +367,46 @@
   8017ce44 0000c4 8017ce44  4 seq_gameInit 	seq_game
   8017cf08 0000fc 8017cf08  4 seq_gameMain 	seq_game
   8017d004 000004 8017d004  4 seq_gameExit 	seq_game
+  80180cd0 000020 80180cd0  4 PausewinRelated2Init 	Global
+  80181924 000010 80181924  4 PauseWinRelated3Init 	Global
   80182bdc 00000c 80182bdc  4 getSaveName 	Global
-  80183fd0 0000e4 80183fd0  4 init_80183fd0 	Global
-  80184220 000294 80184220  4 main_80184220 	Global
+  80183fb0 000014 80183fb0  4 pausewinGetEntry 	pausewin
+  80183fc4 00000c 80183fc4  4 pausewinGetTpl 	pausewin
+  80183fd0 0000e4 80183fd0  4 pausewinInit 	pausewin
+  801840b4 000074 801840b4  4 pausewinReInit 	pausewin
+  80184130 000028 80184130  4 checkMoveUp 	pausewin
+  80184158 000028 80184158  4 checkMoveDown 	pausewin
+  80184180 000028 80184180  4 checkMoveLeft 	pausewin
+  801841a8 000028 801841a8  4 checkMoveRight 	pausewin
+  801841d0 000028 801841d0  4 checkPressOk 	pausewin
+  801841f8 000028 801841f8  4 checkPressBack 	pausewin
+  80184220 000294 80184220  4 pausewinMain 	pausewin
+  801844b4 0006d0 801844b4  4 pausewinDisp 	pausewin
+  80184b84 000094 80184b84  4 callEntryDispFuncs 	pausewin
+  80184c18 000470 80184c18  4 pausewinEntry 	pausewin
+  80185088 000050 80185088  4 pausewinMoveToCoords? 	pausewin
+  801850d8 000038 801850d8  4 pauseWinMakeVisible? 	pausewin
+  80185148 000050 80185148  4 pausewinDelete 	pausewin
+  80185274 000158 80185274  4 _pausewinDelete 	pausewin
+  801853cc 000144 801853cc  4 pauseWinPauseGame 	pausewin
+  80185510 0000ac 80185510  4 pausewinUnpauseGame 	pausewin
+  801855bc 000694 801855bc  4 pausewinUpdate 	pausewin
+  80185ed4 000618 80185ed4  4 openPlusWindow 	pausewin
+  80193c24 000130 80193c24  4 openMinusWindow 	Global
+  80195104 000010 80195104  4 charPixelItemWinInit 	charpixlitemwin
+  80195114 000010 80195114  4 charPixelItemWinReInit 	charpixlitemwin
+  80195124 000d40 80195124  4 open 	charpixlitemwin
+  80195fac 000058 80195fac  4 getNextWindow 	charpixlitemwin
+  8019605c 000118 8019605c  4 initCharTab 	charpixlitemwin
+  801969e8 000010 801969e8  4 dispCharTab 	charpixlitemwin
+  801969f8 00003c 801969f8  4 deleteCharTab 	charpixlitemwin
+  80196a34 000258 80196a34  4 initPixlTab 	charpixlitemwin
+  80197550 000010 80197550  4 dispPixlTab 	charpixlitemwin
+  80197560 00003c 80197560  4 deletePixlTab 	charpixlitemwin
+  8019759c 00014c 8019759c  4 initItemTab 	charpixlitemwin
+  80198244 000010 80198244  4 dispItemTab 	charpixlitemwin
+  80198254 00003c 80198254  4 deleteItemTab 	charpixlitemwin
+  80198e40 0003b4 80198e40  4 dispTab 	charpixlitemwin
   801991f4 0000f0 801991f4  4 init_801991f4 	Global
   801994e0 000594 801994e0  4 main_801994e0 	Global
   8019beb4 000168 8019beb4  4 treasureMapInit 	treasuremap
@@ -470,6 +533,7 @@
   802376c4 000020 802376c4  4 wpadGetButtonsHeldRepeat 	wpadmgr
   802380b8 000194 802380b8  4 soundThread 	spmario_snd
   802382b0 000298 802382b0  4 spmario_sndInit 	spmario_snd
+  8023b0f0 000018 8023b0f0  4 playSoundMaybe 	Global
   8023e434 000010 8023e434  4 relInit 	relmgr
   8023e444 0001bc 8023e444  4 relMain 	relmgr
   8023e600 00000c 8023e600  4 isRelLoaded 	relmgr
@@ -513,6 +577,8 @@
   80241808 0000c0 80241808  4 homebuttonInit 	homebutton
   80241914 000884 80241914  4 homebuttonMain 	homebutton
   80242204 000078 80242204  4 dumpEfb 	homebutton
+  80243958 0000d0 80243958  4 searchInit 	search
+  80243a28 000080 80243a28  4 searchReInit 	search
   80255838 00001c 80255838  4 strlen 	Global
   80255934 000048 80255934  4 __destroy_global_chain 	Global
   80255e2c 00005c 80255e2c  4 __cvt_fp2unsigned 	Global
@@ -1347,6 +1413,7 @@
   80407d7c 00000c 80407d7c  1 Vec3_80407d7c 	Global
   80407d80 000001 80407d80  8 Vec3_80407d7c.y 	Global
   80407d84 000001 80407d84  8 Vec3_80407d7c.z 	Global
+  804105b8 000028 804105b8  1 WindowDesc_804105b8 	Global
   804265e8 000020 804265e8  4 charPoseNames 	Global
   804266c8 000050 804266c8  1 CharacterProperties 	Global
   804266cc 000001 804266cc  8 CharacterProperties[0].hitboxHeight 	Global
@@ -1360,6 +1427,7 @@
   804287a8 000048 804287a8  1 seq_data 	Global
   804287ac 000001 804287ac  8 seq_data[0].main 	Global
   804287b0 000001 804287b0  8 seq_data[0].exit 	Global
+  804296f8 000028 804296f8  4 weirdSjisNumbers0to10 	Global
   8042a398 000020 8042a398  4 fontFilenames 	Global
   8042a408 000048 8042a408  1 size_table 	Global
   8042a40c 000001 8042a40c  8 size_table[0].size 	Global
@@ -1423,6 +1491,8 @@
   80509d48 000001 80509d48  8 MsgWork_80509cb8.field_0x90 	Global
   80509d4c 000001 80509d4c  8 MsgWork_80509cb8.field_0x94 	Global
   80509d4d 000001 80509d4d  8 MsgWork_80509cb8.field_0x95 	Global
+  8050a120 000008 8050a120  1 winmgrWork 	Global
+  8050a124 000001 8050a124  8 winmgrWork.entries 	Global
   8050b580 00003c 8050b580  4 camPtrTbl 	Global
   8050b584 000001 8050b584  8 camPtrTbl[1] 	Global
   8050b588 000001 8050b588  8 camPtrTbl[2] 	Global
@@ -1457,282 +1527,282 @@
   8050cc30 000200 8050cc30  4 priIdTbl 	Global
   8050cc34 000001 8050cc34  8 priIdTbl[1] 	Global
   8050ce30 000100 8050ce30  1 debugMsgBuf 	Global
-  80510458 00156c 80510458  1 MarioWork 	Global
-  8051045c 000001 8051045c  8 MarioWork.field_0x4 	Global
-  80510460 000001 80510460  8 MarioWork.field_0x8 	Global
-  80510464 000001 80510464  8 MarioWork.field_0xc 	Global
-  80510468 000001 80510468  8 MarioWork.field_0x10 	Global
-  8051046c 000001 8051046c  8 MarioWork.field_0x14 	Global
-  80510470 000001 80510470  8 MarioWork.field_0x18 	Global
-  80510474 000001 80510474  8 MarioWork.field_0x1c 	Global
-  80510478 000001 80510478  8 MarioWork.field_0x20 	Global
-  8051047c 000001 8051047c  8 MarioWork.field_0x24 	Global
-  80510480 000001 80510480  8 MarioWork.field_0x28 	Global
-  80510484 000001 80510484  8 MarioWork.field_0x2c 	Global
-  80510486 000001 80510486  8 MarioWork.field_0x2e 	Global
-  80510488 000001 80510488  8 MarioWork.field_0x30 	Global
-  8051048c 000001 8051048c  8 MarioWork.field_0x34 	Global
-  8051048d 000001 8051048d  8 MarioWork.field_0x35 	Global
-  80510490 000001 80510490  8 MarioWork.character 	Global
-  80510491 000001 80510491  8 MarioWork.field_0x39 	Global
-  805104a0 000001 805104a0  8 MarioWork.field_0x48 	Global
-  805104a8 000001 805104a8  8 MarioWork.field_0x50 	Global
-  805104b0 000001 805104b0  8 MarioWork.field_0x58 	Global
-  805104b4 000001 805104b4  8 MarioWork.position.x 	Global
-  805104b8 000001 805104b8  8 MarioWork.position.y 	Global
-  805104bc 000001 805104bc  8 MarioWork.position.z 	Global
-  805104c0 000001 805104c0  8 MarioWork.field_0x68 	Global
-  805104e4 000001 805104e4  8 MarioWork.field_0x8c 	Global
-  805104e8 000001 805104e8  8 MarioWork.field_0x90 	Global
-  805104ec 000001 805104ec  8 MarioWork.field_0x94 	Global
-  805104f0 000001 805104f0  8 MarioWork.field_0x98 	Global
-  805104f4 000001 805104f4  8 MarioWork.field_0x9c 	Global
-  805104f8 000001 805104f8  8 MarioWork.field_0xa0 	Global
-  805104fc 000001 805104fc  8 MarioWork.field_0xa4 	Global
-  80510500 000001 80510500  8 MarioWork.field_0xa8 	Global
-  80510504 000001 80510504  8 MarioWork.field_0xac 	Global
-  80510508 000001 80510508  8 MarioWork.field_0xb0.x 	Global
-  8051050c 000001 8051050c  8 MarioWork.field_0xb0.y 	Global
-  80510510 000001 80510510  8 MarioWork.field_0xb0.z 	Global
-  80510514 000001 80510514  8 MarioWork.field_0xbc.x 	Global
-  80510518 000001 80510518  8 MarioWork.field_0xbc.y 	Global
-  8051051c 000001 8051051c  8 MarioWork.field_0xbc.z 	Global
-  80510520 000001 80510520  8 MarioWork.field_0xc8 	Global
-  80510524 000001 80510524  8 MarioWork.field_0xcc 	Global
-  80510528 000001 80510528  8 MarioWork.field_0xd0 	Global
-  80510538 000001 80510538  8 MarioWork.field_0xe0 	Global
-  8051053c 000001 8051053c  8 MarioWork.field_0xe4 	Global
-  80510540 000001 80510540  8 MarioWork.field_0xe8 	Global
-  80510544 000001 80510544  8 MarioWork.field_0xec 	Global
-  80510548 000001 80510548  8 MarioWork.field_0xf0 	Global
-  8051054c 000001 8051054c  8 MarioWork.field_0xf4 	Global
-  8051056c 000001 8051056c  8 MarioWork.field_0x114 	Global
-  80510570 000001 80510570  8 MarioWork.field_0x118 	Global
-  80510574 000001 80510574  8 MarioWork.field_0x11c 	Global
-  80510578 000001 80510578  8 MarioWork.camId 	Global
-  8051057c 000001 8051057c  8 MarioWork.field_0x124 	Global
-  80510580 000001 80510580  8 MarioWork.field_0x128 	Global
-  80510584 000001 80510584  8 MarioWork.field_0x12c 	Global
-  80510588 000001 80510588  8 MarioWork.field_0x130 	Global
-  8051058c 000001 8051058c  8 MarioWork.field_0x134.x 	Global
-  80510590 000001 80510590  8 MarioWork.field_0x134.y 	Global
-  80510594 000001 80510594  8 MarioWork.field_0x134.z 	Global
-  80510598 000001 80510598  8 MarioWork.field_0x140 	Global
-  8051059c 000001 8051059c  8 MarioWork.field_0x144 	Global
-  805105a0 000001 805105a0  8 MarioWork.field_0x148 	Global
-  805105a4 000001 805105a4  8 MarioWork.startSpeed 	Global
-  805105a8 000001 805105a8  8 MarioWork.maxSpeed 	Global
-  805105ac 000001 805105ac  8 MarioWork.field_0x154 	Global
-  805105b0 000001 805105b0  8 MarioWork.unkCharProp 	Global
-  805105b4 000001 805105b4  8 MarioWork.field_0x15c 	Global
-  805105b8 000001 805105b8  8 MarioWork.field_0x160 	Global
-  805105bc 000001 805105bc  8 MarioWork.field_0x164 	Global
-  805105c0 000001 805105c0  8 MarioWork.field_0x168 	Global
-  805105c4 000001 805105c4  8 MarioWork.field_0x16c 	Global
-  805105c8 000001 805105c8  8 MarioWork.field_0x170 	Global
-  805105cc 000001 805105cc  8 MarioWork.field_0x174 	Global
-  805105d0 000001 805105d0  8 MarioWork.field_0x178 	Global
-  805105d4 000001 805105d4  8 MarioWork.field_0x17c 	Global
-  805105d8 000001 805105d8  8 MarioWork.field_0x180 	Global
-  805105dc 000001 805105dc  8 MarioWork.field_0x184 	Global
-  805105e0 000001 805105e0  8 MarioWork.field_0x188 	Global
-  805105ec 000001 805105ec  8 MarioWork.scaledHitboxWidth 	Global
-  805105f0 000001 805105f0  8 MarioWork.scaledHitboxHeight 	Global
-  805105f4 000001 805105f4  8 MarioWork.hitboxWidth 	Global
-  805105f8 000001 805105f8  8 MarioWork.hitboxHeight 	Global
-  805105fc 000001 805105fc  8 MarioWork.field_0x1a4 	Global
-  80510600 000001 80510600  8 MarioWork.field_0x1a8 	Global
-  80510614 000001 80510614  8 MarioWork.hitObjs1[0] 	Global
-  80510618 000001 80510618  8 MarioWork.hitObjs1[1] 	Global
-  8051061c 000001 8051061c  8 MarioWork.hitObjs1[2] 	Global
-  80510620 000001 80510620  8 MarioWork.hitObjs1[3] 	Global
-  80510624 000001 80510624  8 MarioWork.hitObjs1[4] 	Global
-  80510628 000001 80510628  8 MarioWork.hitObjs1[5] 	Global
-  8051062c 000001 8051062c  8 MarioWork.hitObjs1[6] 	Global
-  80510630 000001 80510630  8 MarioWork.hitObjs1[7] 	Global
-  80510634 000001 80510634  8 MarioWork.hitObjs1[8] 	Global
-  80510638 000001 80510638  8 MarioWork.hitObjs1[9] 	Global
-  80510650 000001 80510650  8 MarioWork.field_0x1f8 	Global
-  80510654 000001 80510654  8 MarioWork.hitObjs2[0] 	Global
-  80510658 000001 80510658  8 MarioWork.hitObjs2[1] 	Global
-  8051065c 000001 8051065c  8 MarioWork.hitObjs2[2] 	Global
-  80510664 000001 80510664  8 MarioWork.field_0x20c 	Global
-  80510670 000001 80510670  8 MarioWork.field_0x218 	Global
-  80510690 000001 80510690  8 MarioWork.field_0x238 	Global
-  80510694 000001 80510694  8 MarioWork.field_0x23c 	Global
-  8051069c 000001 8051069c  8 MarioWork.field_0x244 	Global
-  805106a0 000001 805106a0  8 MarioWork.field_0x248 	Global
-  805106a4 000001 805106a4  8 MarioWork.animPoseIds[0] 	Global
-  805106a8 000001 805106a8  8 MarioWork.animPoseIds[1] 	Global
-  805106ac 000001 805106ac  8 MarioWork.animPoseIds[2] 	Global
-  805106b0 000001 805106b0  8 MarioWork.animPoseIds[3] 	Global
-  805106b4 000001 805106b4  8 MarioWork.animPoseIds[4] 	Global
-  805106b8 000001 805106b8  8 MarioWork.field_0x260 	Global
-  805106bc 000001 805106bc  8 MarioWork.field_0x264 	Global
-  805106c0 000001 805106c0  8 MarioWork.field_0x268 	Global
-  805106c4 000001 805106c4  8 MarioWork.field_0x26c 	Global
-  805106ec 000001 805106ec  8 MarioWork.field_0x294 	Global
-  80510714 000001 80510714  8 MarioWork.field_0x2bc 	Global
-  8051073c 000001 8051073c  8 MarioWork.field_0x2e4 	Global
-  80510750 000001 80510750  8 MarioWork.field_0x2f8 	Global
-  8051076e 000001 8051076e  8 MarioWork.field_0x316 	Global
-  8051076f 000001 8051076f  8 MarioWork.field_0x317 	Global
-  805107a0 000001 805107a0  8 MarioWork.field_0x348 	Global
-  805107a4 000001 805107a4  8 MarioWork.field_0x34c 	Global
-  805107a8 000001 805107a8  8 MarioWork.field_0x350 	Global
-  805107ac 000001 805107ac  8 MarioWork.field_0x354 	Global
-  805107b4 000001 805107b4  8 MarioWork.field_0x35c 	Global
-  805107e4 000001 805107e4  8 MarioWork.field_0x38c 	Global
-  805107fc 000001 805107fc  8 MarioWork.field_0x3a4 	Global
-  80510800 000001 80510800  8 MarioWork.field_0x3a8 	Global
-  80510804 000001 80510804  8 MarioWork.field_0x3ac 	Global
-  80510808 000001 80510808  8 MarioWork.field_0x3b0 	Global
-  8051080c 000001 8051080c  8 MarioWork.field_0x3b4 	Global
-  80510810 000001 80510810  8 MarioWork.field_0x3b8 	Global
-  80510814 000001 80510814  8 MarioWork.field_0x3bc 	Global
-  80510818 000001 80510818  8 MarioWork.field_0x3c0 	Global
-  8051081c 000001 8051081c  8 MarioWork.field_0x3c4 	Global
-  80510828 000001 80510828  8 MarioWork.field_0x3d0 	Global
-  8051082c 000001 8051082c  8 MarioWork.field_0x3d4 	Global
-  80510830 000001 80510830  8 MarioWork.field_0x3d8 	Global
-  80510834 000001 80510834  8 MarioWork.field_0x3dc 	Global
-  80510838 000001 80510838  8 MarioWork.field_0x3e0 	Global
-  8051083c 000001 8051083c  8 MarioWork.field_0x3e4 	Global
-  80510840 000001 80510840  8 MarioWork.field_0x3e8 	Global
-  80510844 000001 80510844  8 MarioWork.field_0x3ec 	Global
-  805108a4 000001 805108a4  8 MarioWork.field_0x44c 	Global
-  80511130 000001 80511130  8 MarioWork.field_0xcd8 	Global
-  8051114c 000001 8051114c  8 MarioWork.field_0xcf4 	Global
-  80511150 000001 80511150  8 MarioWork.field_0xcf8 	Global
-  80511154 000001 80511154  8 MarioWork.field_0xcfc 	Global
-  80511158 000001 80511158  8 MarioWork.field_0xd00 	Global
-  80511164 000001 80511164  8 MarioWork.field_0xd0c 	Global
-  805111a4 000001 805111a4  8 MarioWork.field_0xd4c 	Global
-  805111a8 000001 805111a8  8 MarioWork.field_0xd50 	Global
-  805111ac 000001 805111ac  8 MarioWork.field_0xd54 	Global
-  805111b0 000001 805111b0  8 MarioWork.field_0xd58 	Global
-  805111b2 000001 805111b2  8 MarioWork.field_0xd5a 	Global
-  805111b3 000001 805111b3  8 MarioWork.field_0xd5b 	Global
-  805111b4 000001 805111b4  8 MarioWork.field_0xd5c 	Global
-  805111b8 000001 805111b8  8 MarioWork.field_0xd60 	Global
-  805111bc 000001 805111bc  8 MarioWork.field_0xd64 	Global
-  805111c0 000001 805111c0  8 MarioWork.field_0xd68 	Global
-  805111c4 000001 805111c4  8 MarioWork.field_0xd6c 	Global
-  805111c8 000001 805111c8  8 MarioWork.field_0xd70 	Global
-  805111cc 000001 805111cc  8 MarioWork.field_0xd74 	Global
-  805111ce 000001 805111ce  8 MarioWork.field_0xd76 	Global
-  805111cf 000001 805111cf  8 MarioWork.field_0xd77 	Global
-  805111d0 000001 805111d0  8 MarioWork.field_0xd78 	Global
-  805111d4 000001 805111d4  8 MarioWork.field_0xd7c 	Global
-  805111d8 000001 805111d8  8 MarioWork.field_0xd80 	Global
-  805111dc 000001 805111dc  8 MarioWork.field_0xd84 	Global
-  805111e0 000001 805111e0  8 MarioWork.field_0xd88 	Global
-  805111e4 000001 805111e4  8 MarioWork.field_0xd8c 	Global
-  805111e8 000001 805111e8  8 MarioWork.field_0xd90 	Global
-  805111ea 000001 805111ea  8 MarioWork.field_0xd92 	Global
-  805111eb 000001 805111eb  8 MarioWork.field_0xd93 	Global
-  805111ec 000001 805111ec  8 MarioWork.field_0xd94 	Global
-  805111f0 000001 805111f0  8 MarioWork.field_0xd98 	Global
-  805111f4 000001 805111f4  8 MarioWork.field_0xd9c 	Global
-  805111f8 000001 805111f8  8 MarioWork.field_0xda0 	Global
-  805111fc 000001 805111fc  8 MarioWork.field_0xda4 	Global
-  80511200 000001 80511200  8 MarioWork.field_0xda8 	Global
-  80511204 000001 80511204  8 MarioWork.field_0xdac 	Global
-  80511206 000001 80511206  8 MarioWork.field_0xdae 	Global
-  80511207 000001 80511207  8 MarioWork.field_0xdaf 	Global
-  80511208 000001 80511208  8 MarioWork.field_0xdb0 	Global
-  8051120c 000001 8051120c  8 MarioWork.field_0xdb4 	Global
-  80511210 000001 80511210  8 MarioWork.field_0xdb8 	Global
-  80511214 000001 80511214  8 MarioWork.field_0xdbc 	Global
-  80511218 000001 80511218  8 MarioWork.field_0xdc0 	Global
-  8051121c 000001 8051121c  8 MarioWork.field_0xdc4 	Global
-  805112c8 000001 805112c8  8 MarioWork.field_0xe70 	Global
-  805112cc 000001 805112cc  8 MarioWork.field_0xe74 	Global
-  805112d8 000001 805112d8  8 MarioWork.field_0xe80 	Global
-  805112dc 000001 805112dc  8 MarioWork.field_0xe84 	Global
-  805112e0 000001 805112e0  8 MarioWork.field_0xe88 	Global
-  805112e4 000001 805112e4  8 MarioWork.field_0xe8c 	Global
-  805112e8 000001 805112e8  8 MarioWork.field_0xe90 	Global
-  805112ec 000001 805112ec  8 MarioWork.field_0xe94 	Global
-  805112f0 000001 805112f0  8 MarioWork.field_0xe98 	Global
-  805112f4 000001 805112f4  8 MarioWork.field_0xe9c 	Global
-  805112f8 000001 805112f8  8 MarioWork.field_0xea0 	Global
-  805112fc 000001 805112fc  8 MarioWork.field_0xea4 	Global
-  80511300 000001 80511300  8 MarioWork.field_0xea8 	Global
-  80511304 000001 80511304  8 MarioWork.field_0xeac 	Global
-  80511308 000001 80511308  8 MarioWork.field_0xeb0 	Global
-  8051130c 000001 8051130c  8 MarioWork.field_0xeb4 	Global
-  80511310 000001 80511310  8 MarioWork.field_0xeb8 	Global
-  80511314 000001 80511314  8 MarioWork.field_0xebc 	Global
-  80511318 000001 80511318  8 MarioWork.field_0xec0 	Global
-  8051131c 000001 8051131c  8 MarioWork.field_0xec4 	Global
-  80511320 000001 80511320  8 MarioWork.field_0xec8 	Global
-  80511324 000001 80511324  8 MarioWork.field_0xecc 	Global
-  80511328 000001 80511328  8 MarioWork.field_0xed0 	Global
-  8051132c 000001 8051132c  8 MarioWork.field_0xed4 	Global
-  80511330 000001 80511330  8 MarioWork.field_0xed8 	Global
-  80511334 000001 80511334  8 MarioWork.field_0xedc 	Global
-  80511338 000001 80511338  8 MarioWork.field_0xee0 	Global
-  8051133c 000001 8051133c  8 MarioWork.field_0xee4 	Global
-  80511340 000001 80511340  8 MarioWork.field_0xee8 	Global
-  80511344 000001 80511344  8 MarioWork.field_0xeec 	Global
-  80511348 000001 80511348  8 MarioWork.field_0xef0 	Global
-  8051134c 000001 8051134c  8 MarioWork.field_0xef4 	Global
-  80511350 000001 80511350  8 MarioWork.field_0xef8 	Global
-  80511354 000001 80511354  8 MarioWork.field_0xefc 	Global
-  80511358 000001 80511358  8 MarioWork.field_0xf00 	Global
-  8051135c 000001 8051135c  8 MarioWork.field_0xf04 	Global
-  80511360 000001 80511360  8 MarioWork.field_0xf08 	Global
-  80511364 000001 80511364  8 MarioWork.field_0xf0c 	Global
-  80511758 000001 80511758  8 MarioWork.field_0x1300 	Global
-  8051175c 000001 8051175c  8 MarioWork.field_0x1304 	Global
-  80511760 000001 80511760  8 MarioWork.field_0x1308 	Global
-  80511764 000001 80511764  8 MarioWork.field_0x130c 	Global
-  805117a8 000001 805117a8  8 MarioWork.field_0x1350 	Global
-  805117ac 000001 805117ac  8 MarioWork.field_0x1354 	Global
-  805117b0 000001 805117b0  8 MarioWork.field_0x1358 	Global
-  805117b4 000001 805117b4  8 MarioWork.field_0x135c 	Global
-  805117b8 000001 805117b8  8 MarioWork.gravType 	Global
-  805117bc 000001 805117bc  8 MarioWork.gravVec1.x 	Global
-  805117c0 000001 805117c0  8 MarioWork.gravVec1.y 	Global
-  805117c4 000001 805117c4  8 MarioWork.gravVec1.z 	Global
-  805117c8 000001 805117c8  8 MarioWork.gravVec2.x 	Global
-  805117cc 000001 805117cc  8 MarioWork.gravVec2.y 	Global
-  805117d0 000001 805117d0  8 MarioWork.gravVec2.z 	Global
-  805117d4 000001 805117d4  8 MarioWork.gravVec3.x 	Global
-  805117d8 000001 805117d8  8 MarioWork.gravVec3.y 	Global
-  805117dc 000001 805117dc  8 MarioWork.gravVec3.z 	Global
-  805118d0 000001 805118d0  8 MarioWork.field_0x1478 	Global
-  805118e4 000001 805118e4  8 MarioWork.field_0x148c 	Global
-  805118e8 000001 805118e8  8 MarioWork.field_0x1490 	Global
-  805118ec 000001 805118ec  8 MarioWork.field_0x1494 	Global
-  805118f0 000001 805118f0  8 MarioWork.field_0x1498 	Global
-  80511900 000001 80511900  8 MarioWork.field_0x14a8 	Global
-  8051190c 000001 8051190c  8 MarioWork.field_0x14b4 	Global
-  8051193c 000001 8051193c  8 MarioWork.field_0x14e4 	Global
-  80511940 000001 80511940  8 MarioWork.field_0x14e8 	Global
-  80511944 000001 80511944  8 MarioWork.field_0x14ec 	Global
-  80511948 000001 80511948  8 MarioWork.field_0x14f0 	Global
-  8051194c 000001 8051194c  8 MarioWork.field_0x14f4 	Global
-  80511950 000001 80511950  8 MarioWork.field_0x14f8 	Global
-  80511954 000001 80511954  8 MarioWork.field_0x14fc 	Global
-  80511956 000001 80511956  8 MarioWork.field_0x14fe 	Global
-  80511958 000001 80511958  8 MarioWork.field_0x1500 	Global
-  8051195c 000001 8051195c  8 MarioWork.field_0x1504 	Global
-  80511960 000001 80511960  8 MarioWork.field_0x1508 	Global
-  805119a4 000001 805119a4  8 MarioWork.field_0x154c 	Global
-  805119a8 000001 805119a8  8 MarioWork.field_0x1550 	Global
-  805119ac 000001 805119ac  8 MarioWork.field_0x1554 	Global
-  805119b0 000001 805119b0  8 MarioWork.field_0x1558 	Global
-  805119b4 000001 805119b4  8 MarioWork.field_0x155c 	Global
-  805119b8 000001 805119b8  8 MarioWork.field_0x1560 	Global
-  805119bc 000001 805119bc  8 MarioWork.field_0x1564 	Global
-  805119c0 000001 805119c0  8 MarioWork.field_0x1568 	Global
+  80510458 00156c 80510458  1 marioWork 	Global
+  8051045c 000001 8051045c  8 marioWork.field_0x4 	Global
+  80510460 000001 80510460  8 marioWork.field_0x8 	Global
+  80510464 000001 80510464  8 marioWork.field_0xc 	Global
+  80510468 000001 80510468  8 marioWork.field_0x10 	Global
+  8051046c 000001 8051046c  8 marioWork.field_0x14 	Global
+  80510470 000001 80510470  8 marioWork.field_0x18 	Global
+  80510474 000001 80510474  8 marioWork.field_0x1c 	Global
+  80510478 000001 80510478  8 marioWork.field_0x20 	Global
+  8051047c 000001 8051047c  8 marioWork.field_0x24 	Global
+  80510480 000001 80510480  8 marioWork.field_0x28 	Global
+  80510484 000001 80510484  8 marioWork.field_0x2c 	Global
+  80510486 000001 80510486  8 marioWork.field_0x2e 	Global
+  80510488 000001 80510488  8 marioWork.field_0x30 	Global
+  8051048c 000001 8051048c  8 marioWork.field_0x34 	Global
+  8051048d 000001 8051048d  8 marioWork.uiStuffOpen? 	Global
+  80510490 000001 80510490  8 marioWork.character 	Global
+  80510491 000001 80510491  8 marioWork.field_0x39 	Global
+  805104a0 000001 805104a0  8 marioWork.field_0x48 	Global
+  805104a8 000001 805104a8  8 marioWork.field_0x50 	Global
+  805104b0 000001 805104b0  8 marioWork.field_0x58 	Global
+  805104b4 000001 805104b4  8 marioWork.position.x 	Global
+  805104b8 000001 805104b8  8 marioWork.position.y 	Global
+  805104bc 000001 805104bc  8 marioWork.position.z 	Global
+  805104c0 000001 805104c0  8 marioWork.field_0x68 	Global
+  805104e4 000001 805104e4  8 marioWork.field_0x8c 	Global
+  805104e8 000001 805104e8  8 marioWork.field_0x90 	Global
+  805104ec 000001 805104ec  8 marioWork.field_0x94 	Global
+  805104f0 000001 805104f0  8 marioWork.field_0x98 	Global
+  805104f4 000001 805104f4  8 marioWork.field_0x9c 	Global
+  805104f8 000001 805104f8  8 marioWork.field_0xa0 	Global
+  805104fc 000001 805104fc  8 marioWork.field_0xa4 	Global
+  80510500 000001 80510500  8 marioWork.field_0xa8 	Global
+  80510504 000001 80510504  8 marioWork.field_0xac 	Global
+  80510508 000001 80510508  8 marioWork.field_0xb0.x 	Global
+  8051050c 000001 8051050c  8 marioWork.field_0xb0.y 	Global
+  80510510 000001 80510510  8 marioWork.field_0xb0.z 	Global
+  80510514 000001 80510514  8 marioWork.field_0xbc.x 	Global
+  80510518 000001 80510518  8 marioWork.field_0xbc.y 	Global
+  8051051c 000001 8051051c  8 marioWork.field_0xbc.z 	Global
+  80510520 000001 80510520  8 marioWork.field_0xc8 	Global
+  80510524 000001 80510524  8 marioWork.field_0xcc 	Global
+  80510528 000001 80510528  8 marioWork.field_0xd0 	Global
+  80510538 000001 80510538  8 marioWork.field_0xe0 	Global
+  8051053c 000001 8051053c  8 marioWork.field_0xe4 	Global
+  80510540 000001 80510540  8 marioWork.field_0xe8 	Global
+  80510544 000001 80510544  8 marioWork.field_0xec 	Global
+  80510548 000001 80510548  8 marioWork.field_0xf0 	Global
+  8051054c 000001 8051054c  8 marioWork.field_0xf4 	Global
+  8051056c 000001 8051056c  8 marioWork.field_0x114 	Global
+  80510570 000001 80510570  8 marioWork.field_0x118 	Global
+  80510574 000001 80510574  8 marioWork.field_0x11c 	Global
+  80510578 000001 80510578  8 marioWork.camId 	Global
+  8051057c 000001 8051057c  8 marioWork.field_0x124 	Global
+  80510580 000001 80510580  8 marioWork.field_0x128 	Global
+  80510584 000001 80510584  8 marioWork.field_0x12c 	Global
+  80510588 000001 80510588  8 marioWork.field_0x130 	Global
+  8051058c 000001 8051058c  8 marioWork.field_0x134.x 	Global
+  80510590 000001 80510590  8 marioWork.field_0x134.y 	Global
+  80510594 000001 80510594  8 marioWork.field_0x134.z 	Global
+  80510598 000001 80510598  8 marioWork.field_0x140 	Global
+  8051059c 000001 8051059c  8 marioWork.field_0x144 	Global
+  805105a0 000001 805105a0  8 marioWork.field_0x148 	Global
+  805105a4 000001 805105a4  8 marioWork.startSpeed 	Global
+  805105a8 000001 805105a8  8 marioWork.maxSpeed 	Global
+  805105ac 000001 805105ac  8 marioWork.field_0x154 	Global
+  805105b0 000001 805105b0  8 marioWork.unkCharProp 	Global
+  805105b4 000001 805105b4  8 marioWork.field_0x15c 	Global
+  805105b8 000001 805105b8  8 marioWork.field_0x160 	Global
+  805105bc 000001 805105bc  8 marioWork.field_0x164 	Global
+  805105c0 000001 805105c0  8 marioWork.field_0x168 	Global
+  805105c4 000001 805105c4  8 marioWork.field_0x16c 	Global
+  805105c8 000001 805105c8  8 marioWork.field_0x170 	Global
+  805105cc 000001 805105cc  8 marioWork.field_0x174 	Global
+  805105d0 000001 805105d0  8 marioWork.field_0x178 	Global
+  805105d4 000001 805105d4  8 marioWork.field_0x17c 	Global
+  805105d8 000001 805105d8  8 marioWork.field_0x180 	Global
+  805105dc 000001 805105dc  8 marioWork.field_0x184 	Global
+  805105e0 000001 805105e0  8 marioWork.field_0x188 	Global
+  805105ec 000001 805105ec  8 marioWork.scaledHitboxWidth 	Global
+  805105f0 000001 805105f0  8 marioWork.scaledHitboxHeight 	Global
+  805105f4 000001 805105f4  8 marioWork.hitboxWidth 	Global
+  805105f8 000001 805105f8  8 marioWork.hitboxHeight 	Global
+  805105fc 000001 805105fc  8 marioWork.field_0x1a4 	Global
+  80510600 000001 80510600  8 marioWork.field_0x1a8 	Global
+  80510614 000001 80510614  8 marioWork.hitObjs1[0] 	Global
+  80510618 000001 80510618  8 marioWork.hitObjs1[1] 	Global
+  8051061c 000001 8051061c  8 marioWork.hitObjs1[2] 	Global
+  80510620 000001 80510620  8 marioWork.hitObjs1[3] 	Global
+  80510624 000001 80510624  8 marioWork.hitObjs1[4] 	Global
+  80510628 000001 80510628  8 marioWork.hitObjs1[5] 	Global
+  8051062c 000001 8051062c  8 marioWork.hitObjs1[6] 	Global
+  80510630 000001 80510630  8 marioWork.hitObjs1[7] 	Global
+  80510634 000001 80510634  8 marioWork.hitObjs1[8] 	Global
+  80510638 000001 80510638  8 marioWork.hitObjs1[9] 	Global
+  80510650 000001 80510650  8 marioWork.field_0x1f8 	Global
+  80510654 000001 80510654  8 marioWork.hitObjs2[0] 	Global
+  80510658 000001 80510658  8 marioWork.hitObjs2[1] 	Global
+  8051065c 000001 8051065c  8 marioWork.hitObjs2[2] 	Global
+  80510664 000001 80510664  8 marioWork.field_0x20c 	Global
+  80510670 000001 80510670  8 marioWork.field_0x218 	Global
+  80510690 000001 80510690  8 marioWork.field_0x238 	Global
+  80510694 000001 80510694  8 marioWork.field_0x23c 	Global
+  8051069c 000001 8051069c  8 marioWork.field_0x244 	Global
+  805106a0 000001 805106a0  8 marioWork.field_0x248 	Global
+  805106a4 000001 805106a4  8 marioWork.animPoseIds[0] 	Global
+  805106a8 000001 805106a8  8 marioWork.animPoseIds[1] 	Global
+  805106ac 000001 805106ac  8 marioWork.animPoseIds[2] 	Global
+  805106b0 000001 805106b0  8 marioWork.animPoseIds[3] 	Global
+  805106b4 000001 805106b4  8 marioWork.animPoseIds[4] 	Global
+  805106b8 000001 805106b8  8 marioWork.field_0x260 	Global
+  805106bc 000001 805106bc  8 marioWork.field_0x264 	Global
+  805106c0 000001 805106c0  8 marioWork.field_0x268 	Global
+  805106c4 000001 805106c4  8 marioWork.field_0x26c 	Global
+  805106ec 000001 805106ec  8 marioWork.field_0x294 	Global
+  80510714 000001 80510714  8 marioWork.field_0x2bc 	Global
+  8051073c 000001 8051073c  8 marioWork.field_0x2e4 	Global
+  80510750 000001 80510750  8 marioWork.field_0x2f8 	Global
+  8051076e 000001 8051076e  8 marioWork.field_0x316 	Global
+  8051076f 000001 8051076f  8 marioWork.field_0x317 	Global
+  805107a0 000001 805107a0  8 marioWork.field_0x348 	Global
+  805107a4 000001 805107a4  8 marioWork.field_0x34c 	Global
+  805107a8 000001 805107a8  8 marioWork.field_0x350 	Global
+  805107ac 000001 805107ac  8 marioWork.field_0x354 	Global
+  805107b4 000001 805107b4  8 marioWork.field_0x35c 	Global
+  805107e4 000001 805107e4  8 marioWork.field_0x38c 	Global
+  805107fc 000001 805107fc  8 marioWork.field_0x3a4 	Global
+  80510800 000001 80510800  8 marioWork.field_0x3a8 	Global
+  80510804 000001 80510804  8 marioWork.field_0x3ac 	Global
+  80510808 000001 80510808  8 marioWork.field_0x3b0 	Global
+  8051080c 000001 8051080c  8 marioWork.field_0x3b4 	Global
+  80510810 000001 80510810  8 marioWork.field_0x3b8 	Global
+  80510814 000001 80510814  8 marioWork.field_0x3bc 	Global
+  80510818 000001 80510818  8 marioWork.field_0x3c0 	Global
+  8051081c 000001 8051081c  8 marioWork.field_0x3c4 	Global
+  80510828 000001 80510828  8 marioWork.field_0x3d0 	Global
+  8051082c 000001 8051082c  8 marioWork.field_0x3d4 	Global
+  80510830 000001 80510830  8 marioWork.field_0x3d8 	Global
+  80510834 000001 80510834  8 marioWork.field_0x3dc 	Global
+  80510838 000001 80510838  8 marioWork.field_0x3e0 	Global
+  8051083c 000001 8051083c  8 marioWork.field_0x3e4 	Global
+  80510840 000001 80510840  8 marioWork.field_0x3e8 	Global
+  80510844 000001 80510844  8 marioWork.field_0x3ec 	Global
+  805108a4 000001 805108a4  8 marioWork.field_0x44c 	Global
+  80511130 000001 80511130  8 marioWork.field_0xcd8 	Global
+  8051114c 000001 8051114c  8 marioWork.field_0xcf4 	Global
+  80511150 000001 80511150  8 marioWork.field_0xcf8 	Global
+  80511154 000001 80511154  8 marioWork.field_0xcfc 	Global
+  80511158 000001 80511158  8 marioWork.field_0xd00 	Global
+  80511164 000001 80511164  8 marioWork.field_0xd0c 	Global
+  805111a4 000001 805111a4  8 marioWork.field_0xd4c 	Global
+  805111a8 000001 805111a8  8 marioWork.field_0xd50 	Global
+  805111ac 000001 805111ac  8 marioWork.field_0xd54 	Global
+  805111b0 000001 805111b0  8 marioWork.field_0xd58 	Global
+  805111b2 000001 805111b2  8 marioWork.field_0xd5a 	Global
+  805111b3 000001 805111b3  8 marioWork.field_0xd5b 	Global
+  805111b4 000001 805111b4  8 marioWork.field_0xd5c 	Global
+  805111b8 000001 805111b8  8 marioWork.field_0xd60 	Global
+  805111bc 000001 805111bc  8 marioWork.field_0xd64 	Global
+  805111c0 000001 805111c0  8 marioWork.field_0xd68 	Global
+  805111c4 000001 805111c4  8 marioWork.field_0xd6c 	Global
+  805111c8 000001 805111c8  8 marioWork.field_0xd70 	Global
+  805111cc 000001 805111cc  8 marioWork.field_0xd74 	Global
+  805111ce 000001 805111ce  8 marioWork.field_0xd76 	Global
+  805111cf 000001 805111cf  8 marioWork.field_0xd77 	Global
+  805111d0 000001 805111d0  8 marioWork.field_0xd78 	Global
+  805111d4 000001 805111d4  8 marioWork.field_0xd7c 	Global
+  805111d8 000001 805111d8  8 marioWork.field_0xd80 	Global
+  805111dc 000001 805111dc  8 marioWork.field_0xd84 	Global
+  805111e0 000001 805111e0  8 marioWork.field_0xd88 	Global
+  805111e4 000001 805111e4  8 marioWork.field_0xd8c 	Global
+  805111e8 000001 805111e8  8 marioWork.field_0xd90 	Global
+  805111ea 000001 805111ea  8 marioWork.field_0xd92 	Global
+  805111eb 000001 805111eb  8 marioWork.field_0xd93 	Global
+  805111ec 000001 805111ec  8 marioWork.field_0xd94 	Global
+  805111f0 000001 805111f0  8 marioWork.field_0xd98 	Global
+  805111f4 000001 805111f4  8 marioWork.field_0xd9c 	Global
+  805111f8 000001 805111f8  8 marioWork.field_0xda0 	Global
+  805111fc 000001 805111fc  8 marioWork.field_0xda4 	Global
+  80511200 000001 80511200  8 marioWork.field_0xda8 	Global
+  80511204 000001 80511204  8 marioWork.field_0xdac 	Global
+  80511206 000001 80511206  8 marioWork.field_0xdae 	Global
+  80511207 000001 80511207  8 marioWork.field_0xdaf 	Global
+  80511208 000001 80511208  8 marioWork.field_0xdb0 	Global
+  8051120c 000001 8051120c  8 marioWork.field_0xdb4 	Global
+  80511210 000001 80511210  8 marioWork.field_0xdb8 	Global
+  80511214 000001 80511214  8 marioWork.field_0xdbc 	Global
+  80511218 000001 80511218  8 marioWork.field_0xdc0 	Global
+  8051121c 000001 8051121c  8 marioWork.field_0xdc4 	Global
+  805112c8 000001 805112c8  8 marioWork.field_0xe70 	Global
+  805112cc 000001 805112cc  8 marioWork.field_0xe74 	Global
+  805112d8 000001 805112d8  8 marioWork.field_0xe80 	Global
+  805112dc 000001 805112dc  8 marioWork.field_0xe84 	Global
+  805112e0 000001 805112e0  8 marioWork.field_0xe88 	Global
+  805112e4 000001 805112e4  8 marioWork.field_0xe8c 	Global
+  805112e8 000001 805112e8  8 marioWork.field_0xe90 	Global
+  805112ec 000001 805112ec  8 marioWork.field_0xe94 	Global
+  805112f0 000001 805112f0  8 marioWork.field_0xe98 	Global
+  805112f4 000001 805112f4  8 marioWork.field_0xe9c 	Global
+  805112f8 000001 805112f8  8 marioWork.field_0xea0 	Global
+  805112fc 000001 805112fc  8 marioWork.field_0xea4 	Global
+  80511300 000001 80511300  8 marioWork.field_0xea8 	Global
+  80511304 000001 80511304  8 marioWork.field_0xeac 	Global
+  80511308 000001 80511308  8 marioWork.field_0xeb0 	Global
+  8051130c 000001 8051130c  8 marioWork.field_0xeb4 	Global
+  80511310 000001 80511310  8 marioWork.field_0xeb8 	Global
+  80511314 000001 80511314  8 marioWork.field_0xebc 	Global
+  80511318 000001 80511318  8 marioWork.field_0xec0 	Global
+  8051131c 000001 8051131c  8 marioWork.field_0xec4 	Global
+  80511320 000001 80511320  8 marioWork.field_0xec8 	Global
+  80511324 000001 80511324  8 marioWork.field_0xecc 	Global
+  80511328 000001 80511328  8 marioWork.field_0xed0 	Global
+  8051132c 000001 8051132c  8 marioWork.field_0xed4 	Global
+  80511330 000001 80511330  8 marioWork.field_0xed8 	Global
+  80511334 000001 80511334  8 marioWork.field_0xedc 	Global
+  80511338 000001 80511338  8 marioWork.field_0xee0 	Global
+  8051133c 000001 8051133c  8 marioWork.field_0xee4 	Global
+  80511340 000001 80511340  8 marioWork.field_0xee8 	Global
+  80511344 000001 80511344  8 marioWork.field_0xeec 	Global
+  80511348 000001 80511348  8 marioWork.field_0xef0 	Global
+  8051134c 000001 8051134c  8 marioWork.field_0xef4 	Global
+  80511350 000001 80511350  8 marioWork.field_0xef8 	Global
+  80511354 000001 80511354  8 marioWork.field_0xefc 	Global
+  80511358 000001 80511358  8 marioWork.field_0xf00 	Global
+  8051135c 000001 8051135c  8 marioWork.field_0xf04 	Global
+  80511360 000001 80511360  8 marioWork.field_0xf08 	Global
+  80511364 000001 80511364  8 marioWork.field_0xf0c 	Global
+  80511758 000001 80511758  8 marioWork.field_0x1300 	Global
+  8051175c 000001 8051175c  8 marioWork.field_0x1304 	Global
+  80511760 000001 80511760  8 marioWork.field_0x1308 	Global
+  80511764 000001 80511764  8 marioWork.field_0x130c 	Global
+  805117a8 000001 805117a8  8 marioWork.field_0x1350 	Global
+  805117ac 000001 805117ac  8 marioWork.field_0x1354 	Global
+  805117b0 000001 805117b0  8 marioWork.field_0x1358 	Global
+  805117b4 000001 805117b4  8 marioWork.field_0x135c 	Global
+  805117b8 000001 805117b8  8 marioWork.gravType 	Global
+  805117bc 000001 805117bc  8 marioWork.gravVec1.x 	Global
+  805117c0 000001 805117c0  8 marioWork.gravVec1.y 	Global
+  805117c4 000001 805117c4  8 marioWork.gravVec1.z 	Global
+  805117c8 000001 805117c8  8 marioWork.gravVec2.x 	Global
+  805117cc 000001 805117cc  8 marioWork.gravVec2.y 	Global
+  805117d0 000001 805117d0  8 marioWork.gravVec2.z 	Global
+  805117d4 000001 805117d4  8 marioWork.gravVec3.x 	Global
+  805117d8 000001 805117d8  8 marioWork.gravVec3.y 	Global
+  805117dc 000001 805117dc  8 marioWork.gravVec3.z 	Global
+  805118d0 000001 805118d0  8 marioWork.field_0x1478 	Global
+  805118e4 000001 805118e4  8 marioWork.field_0x148c 	Global
+  805118e8 000001 805118e8  8 marioWork.field_0x1490 	Global
+  805118ec 000001 805118ec  8 marioWork.field_0x1494 	Global
+  805118f0 000001 805118f0  8 marioWork.field_0x1498 	Global
+  80511900 000001 80511900  8 marioWork.field_0x14a8 	Global
+  8051190c 000001 8051190c  8 marioWork.field_0x14b4 	Global
+  8051193c 000001 8051193c  8 marioWork.field_0x14e4 	Global
+  80511940 000001 80511940  8 marioWork.field_0x14e8 	Global
+  80511944 000001 80511944  8 marioWork.field_0x14ec 	Global
+  80511948 000001 80511948  8 marioWork.field_0x14f0 	Global
+  8051194c 000001 8051194c  8 marioWork.field_0x14f4 	Global
+  80511950 000001 80511950  8 marioWork.field_0x14f8 	Global
+  80511954 000001 80511954  8 marioWork.field_0x14fc 	Global
+  80511956 000001 80511956  8 marioWork.field_0x14fe 	Global
+  80511958 000001 80511958  8 marioWork.field_0x1500 	Global
+  8051195c 000001 8051195c  8 marioWork.field_0x1504 	Global
+  80511960 000001 80511960  8 marioWork.field_0x1508 	Global
+  805119a4 000001 805119a4  8 marioWork.field_0x154c 	Global
+  805119a8 000001 805119a8  8 marioWork.field_0x1550 	Global
+  805119ac 000001 805119ac  8 marioWork.field_0x1554 	Global
+  805119b0 000001 805119b0  8 marioWork.field_0x1558 	Global
+  805119b4 000001 805119b4  8 marioWork.field_0x155c 	Global
+  805119b8 000001 805119b8  8 marioWork.field_0x1560 	Global
+  805119bc 000001 805119bc  8 marioWork.field_0x1564 	Global
+  805119c0 000001 805119c0  8 marioWork.field_0x1568 	Global
   80511a28 0006a0 80511a28  1 MarioPouchWork 	Global
   80511a2c 000001 80511a2c  8 MarioPouchWork.level 	Global
-  80511a30 000001 80511a30  8 MarioPouchWork.field_0x8 	Global
-  80511a34 000001 80511a34  8 MarioPouchWork.field_0xc 	Global
-  80511a38 000001 80511a38  8 MarioPouchWork.field_0x10 	Global
+  80511a30 000001 80511a30  8 MarioPouchWork.attack 	Global
+  80511a34 000001 80511a34  8 MarioPouchWork.hp 	Global
+  80511a38 000001 80511a38  8 MarioPouchWork.maxHp 	Global
   80511a3c 000001 80511a3c  8 MarioPouchWork.field_0x14 	Global
   80511a40 000001 80511a40  8 MarioPouchWork.xp 	Global
   80511a44 000001 80511a44  8 MarioPouchWork.coins 	Global
@@ -1810,66 +1880,66 @@
   80511ad6 000001 80511ad6  8 MarioPouchWork.field_0xae 	Global
   80511ad8 000001 80511ad8  8 MarioPouchWork.field_0xb0 	Global
   80511ada 000001 80511ada  8 MarioPouchWork.field_0xb2 	Global
-  80511adc 000001 80511adc  8 MarioPouchWork.field_0xb4 	Global
-  80511add 000001 80511add  8 MarioPouchWork.field_0xb5 	Global
-  80511ade 000001 80511ade  8 MarioPouchWork.field_0xb6 	Global
-  80511ae0 000001 80511ae0  8 MarioPouchWork.field_0xb8 	Global
-  80511ae1 000001 80511ae1  8 MarioPouchWork.field_0xb9 	Global
-  80511ae2 000001 80511ae2  8 MarioPouchWork.field_0xba 	Global
-  80511ae4 000001 80511ae4  8 MarioPouchWork.field_0xbc 	Global
-  80511ae5 000001 80511ae5  8 MarioPouchWork.field_0xbd 	Global
-  80511ae6 000001 80511ae6  8 MarioPouchWork.field_0xbe 	Global
-  80511ae8 000001 80511ae8  8 MarioPouchWork.field_0xc0 	Global
-  80511ae9 000001 80511ae9  8 MarioPouchWork.field_0xc1 	Global
-  80511aea 000001 80511aea  8 MarioPouchWork.field_0xc2 	Global
-  80511aec 000001 80511aec  8 MarioPouchWork.field_0xc4 	Global
-  80511aed 000001 80511aed  8 MarioPouchWork.field_0xc5 	Global
-  80511aee 000001 80511aee  8 MarioPouchWork.field_0xc6 	Global
-  80511af0 000001 80511af0  8 MarioPouchWork.field_0xc8 	Global
-  80511af1 000001 80511af1  8 MarioPouchWork.field_0xc9 	Global
-  80511af2 000001 80511af2  8 MarioPouchWork.field_0xca 	Global
-  80511af4 000001 80511af4  8 MarioPouchWork.field_0xcc 	Global
-  80511af5 000001 80511af5  8 MarioPouchWork.field_0xcd 	Global
-  80511af6 000001 80511af6  8 MarioPouchWork.field_0xce 	Global
-  80511af8 000001 80511af8  8 MarioPouchWork.field_0xd0 	Global
-  80511af9 000001 80511af9  8 MarioPouchWork.field_0xd1 	Global
-  80511afa 000001 80511afa  8 MarioPouchWork.field_0xd2 	Global
-  80511afc 000001 80511afc  8 MarioPouchWork.field_0xd4 	Global
-  80511afd 000001 80511afd  8 MarioPouchWork.field_0xd5 	Global
-  80511afe 000001 80511afe  8 MarioPouchWork.field_0xd6 	Global
-  80511b00 000001 80511b00  8 MarioPouchWork.field_0xd8 	Global
-  80511b01 000001 80511b01  8 MarioPouchWork.field_0xd9 	Global
-  80511b02 000001 80511b02  8 MarioPouchWork.field_0xda 	Global
-  80511b04 000001 80511b04  8 MarioPouchWork.field_0xdc 	Global
-  80511b05 000001 80511b05  8 MarioPouchWork.field_0xdd 	Global
-  80511b06 000001 80511b06  8 MarioPouchWork.field_0xde 	Global
-  80511b08 000001 80511b08  8 MarioPouchWork.field_0xe0 	Global
-  80511b09 000001 80511b09  8 MarioPouchWork.field_0xe1 	Global
-  80511b0a 000001 80511b0a  8 MarioPouchWork.field_0xe2 	Global
-  80511b0c 000001 80511b0c  8 MarioPouchWork.field_0xe4 	Global
-  80511b0d 000001 80511b0d  8 MarioPouchWork.field_0xe5 	Global
-  80511b0e 000001 80511b0e  8 MarioPouchWork.field_0xe6 	Global
-  80511b10 000001 80511b10  8 MarioPouchWork.field_0xe8 	Global
-  80511b11 000001 80511b11  8 MarioPouchWork.field_0xe9 	Global
-  80511b12 000001 80511b12  8 MarioPouchWork.field_0xea 	Global
-  80511b14 000001 80511b14  8 MarioPouchWork.field_0xec 	Global
-  80511b15 000001 80511b15  8 MarioPouchWork.field_0xed 	Global
-  80511b16 000001 80511b16  8 MarioPouchWork.field_0xee 	Global
-  80511b18 000001 80511b18  8 MarioPouchWork.field_0xf0 	Global
-  80511b19 000001 80511b19  8 MarioPouchWork.field_0xf1 	Global
-  80511b1a 000001 80511b1a  8 MarioPouchWork.field_0xf2 	Global
-  80511b1c 000001 80511b1c  8 MarioPouchWork.field_0xf4 	Global
-  80511b1d 000001 80511b1d  8 MarioPouchWork.field_0xf5 	Global
-  80511b1e 000001 80511b1e  8 MarioPouchWork.field_0xf6 	Global
-  80511b20 000001 80511b20  8 MarioPouchWork.field_0xf8 	Global
-  80511b21 000001 80511b21  8 MarioPouchWork.field_0xf9 	Global
-  80511b22 000001 80511b22  8 MarioPouchWork.field_0xfa 	Global
-  80511b24 000001 80511b24  8 MarioPouchWork.field_0xfc 	Global
-  80511b25 000001 80511b25  8 MarioPouchWork.field_0xfd 	Global
-  80511b26 000001 80511b26  8 MarioPouchWork.field_0xfe 	Global
-  80511b28 000001 80511b28  8 MarioPouchWork.field_0x100 	Global
-  80511b29 000001 80511b29  8 MarioPouchWork.field_0x101 	Global
-  80511b2a 000001 80511b2a  8 MarioPouchWork.field_0x102 	Global
+  80511adc 000001 80511adc  8 MarioPouchWork.characters[0].selectable 	Global
+  80511add 000001 80511add  8 MarioPouchWork.characters[0].selected 	Global
+  80511ade 000001 80511ade  8 MarioPouchWork.characters[0].id 	Global
+  80511ae0 000001 80511ae0  8 MarioPouchWork.characters[1].selectable 	Global
+  80511ae1 000001 80511ae1  8 MarioPouchWork.characters[1].selected 	Global
+  80511ae2 000001 80511ae2  8 MarioPouchWork.characters[1].id 	Global
+  80511ae4 000001 80511ae4  8 MarioPouchWork.characters[2].selectable 	Global
+  80511ae5 000001 80511ae5  8 MarioPouchWork.characters[2].selected 	Global
+  80511ae6 000001 80511ae6  8 MarioPouchWork.characters[2].id 	Global
+  80511ae8 000001 80511ae8  8 MarioPouchWork.characters[3].selectable 	Global
+  80511ae9 000001 80511ae9  8 MarioPouchWork.characters[3].selected 	Global
+  80511aea 000001 80511aea  8 MarioPouchWork.characters[3].id 	Global
+  80511aec 000001 80511aec  8 MarioPouchWork.pixls[0].selectable 	Global
+  80511aed 000001 80511aed  8 MarioPouchWork.pixls[0].selected 	Global
+  80511aee 000001 80511aee  8 MarioPouchWork.pixls[0].id 	Global
+  80511af0 000001 80511af0  8 MarioPouchWork.pixls[1].selectable 	Global
+  80511af1 000001 80511af1  8 MarioPouchWork.pixls[1].selected 	Global
+  80511af2 000001 80511af2  8 MarioPouchWork.pixls[1].id 	Global
+  80511af4 000001 80511af4  8 MarioPouchWork.pixls[2].selectable 	Global
+  80511af5 000001 80511af5  8 MarioPouchWork.pixls[2].selected 	Global
+  80511af6 000001 80511af6  8 MarioPouchWork.pixls[2].id 	Global
+  80511af8 000001 80511af8  8 MarioPouchWork.pixls[3].selectable 	Global
+  80511af9 000001 80511af9  8 MarioPouchWork.pixls[3].selected 	Global
+  80511afa 000001 80511afa  8 MarioPouchWork.pixls[3].id 	Global
+  80511afc 000001 80511afc  8 MarioPouchWork.pixls[4].selectable 	Global
+  80511afd 000001 80511afd  8 MarioPouchWork.pixls[4].selected 	Global
+  80511afe 000001 80511afe  8 MarioPouchWork.pixls[4].id 	Global
+  80511b00 000001 80511b00  8 MarioPouchWork.pixls[5].selectable 	Global
+  80511b01 000001 80511b01  8 MarioPouchWork.pixls[5].selected 	Global
+  80511b02 000001 80511b02  8 MarioPouchWork.pixls[5].id 	Global
+  80511b04 000001 80511b04  8 MarioPouchWork.pixls[6].selectable 	Global
+  80511b05 000001 80511b05  8 MarioPouchWork.pixls[6].selected 	Global
+  80511b06 000001 80511b06  8 MarioPouchWork.pixls[6].id 	Global
+  80511b08 000001 80511b08  8 MarioPouchWork.pixls[7].selectable 	Global
+  80511b09 000001 80511b09  8 MarioPouchWork.pixls[7].selected 	Global
+  80511b0a 000001 80511b0a  8 MarioPouchWork.pixls[7].id 	Global
+  80511b0c 000001 80511b0c  8 MarioPouchWork.pixls[8].selectable 	Global
+  80511b0d 000001 80511b0d  8 MarioPouchWork.pixls[8].selected 	Global
+  80511b0e 000001 80511b0e  8 MarioPouchWork.pixls[8].id 	Global
+  80511b10 000001 80511b10  8 MarioPouchWork.pixls[9].selectable 	Global
+  80511b11 000001 80511b11  8 MarioPouchWork.pixls[9].selected 	Global
+  80511b12 000001 80511b12  8 MarioPouchWork.pixls[9].id 	Global
+  80511b14 000001 80511b14  8 MarioPouchWork.pixls[10].selectable 	Global
+  80511b15 000001 80511b15  8 MarioPouchWork.pixls[10].selected 	Global
+  80511b16 000001 80511b16  8 MarioPouchWork.pixls[10].id 	Global
+  80511b18 000001 80511b18  8 MarioPouchWork.pixls[11].selectable 	Global
+  80511b19 000001 80511b19  8 MarioPouchWork.pixls[11].selected 	Global
+  80511b1a 000001 80511b1a  8 MarioPouchWork.pixls[11].id 	Global
+  80511b1c 000001 80511b1c  8 MarioPouchWork.pixls[12].selectable 	Global
+  80511b1d 000001 80511b1d  8 MarioPouchWork.pixls[12].selected 	Global
+  80511b1e 000001 80511b1e  8 MarioPouchWork.pixls[12].id 	Global
+  80511b20 000001 80511b20  8 MarioPouchWork.pixls[13].selectable 	Global
+  80511b21 000001 80511b21  8 MarioPouchWork.pixls[13].selected 	Global
+  80511b22 000001 80511b22  8 MarioPouchWork.pixls[13].id 	Global
+  80511b24 000001 80511b24  8 MarioPouchWork.pixls[14].selectable 	Global
+  80511b25 000001 80511b25  8 MarioPouchWork.pixls[14].selected 	Global
+  80511b26 000001 80511b26  8 MarioPouchWork.pixls[14].id 	Global
+  80511b28 000001 80511b28  8 MarioPouchWork.pixls[15].selectable 	Global
+  80511b29 000001 80511b29  8 MarioPouchWork.pixls[15].selected 	Global
+  80511b2a 000001 80511b2a  8 MarioPouchWork.pixls[15].id 	Global
   80511b2c 000001 80511b2c  8 MarioPouchWork.field_0x104 	Global
   80511b2d 000001 80511b2d  8 MarioPouchWork.field_0x105 	Global
   80511b2e 000001 80511b2e  8 MarioPouchWork.field_0x106 	Global
@@ -2105,6 +2175,40 @@
   80512368 000001 80512368  8 seqWork.mapName 	Global
   8051236c 000001 8051236c  8 seqWork.doorName 	Global
   80512380 000001 80512380  8 seqWork.afterFunc 	Global
+  80513be8 0000a8 80513be8  1 CharPixlItemWinWork_80513be8 	Global
+  80513bec 000001 80513bec  8 CharPixlItemWinWork_80513be8.tabHeaderIds[0] 	Global
+  80513bf0 000001 80513bf0  8 CharPixlItemWinWork_80513be8.tabHeaderIds[1] 	Global
+  80513bf4 000001 80513bf4  8 CharPixlItemWinWork_80513be8.tabHeaderIds[2] 	Global
+  80513bf8 000001 80513bf8  8 CharPixlItemWinWork_80513be8.tabIds[0] 	Global
+  80513bfc 000001 80513bfc  8 CharPixlItemWinWork_80513be8.tabIds[1] 	Global
+  80513c00 000001 80513c00  8 CharPixlItemWinWork_80513be8.tabIds[2] 	Global
+  80513c04 000001 80513c04  8 CharPixlItemWinWork_80513be8.unkPauseEntryId 	Global
+  80513c08 000001 80513c08  8 CharPixlItemWinWork_80513be8.unkPauseEntryId2 	Global
+  80513c2c 000001 80513c2c  8 CharPixlItemWinWork_80513be8.charTab.field_0x0 	Global
+  80513c30 000001 80513c30  8 CharPixlItemWinWork_80513be8.charTab.count 	Global
+  80513c34 000001 80513c34  8 CharPixlItemWinWork_80513be8.charTab.field_0x8 	Global
+  80513c38 000001 80513c38  8 CharPixlItemWinWork_80513be8.charTab.field_0xc 	Global
+  80513c3c 000001 80513c3c  8 CharPixlItemWinWork_80513be8.charTab.field_0x10 	Global
+  80513c40 000001 80513c40  8 CharPixlItemWinWork_80513be8.charTab.field_0x14 	Global
+  80513c44 000001 80513c44  8 CharPixlItemWinWork_80513be8.charTab.field_0x18 	Global
+  80513c48 000001 80513c48  8 CharPixlItemWinWork_80513be8.charTab.pauseWinEntry 	Global
+  80513c4c 000001 80513c4c  8 CharPixlItemWinWork_80513be8.pixlTab.field_0x0 	Global
+  80513c50 000001 80513c50  8 CharPixlItemWinWork_80513be8.pixlTab.count 	Global
+  80513c54 000001 80513c54  8 CharPixlItemWinWork_80513be8.pixlTab.field_0x8 	Global
+  80513c58 000001 80513c58  8 CharPixlItemWinWork_80513be8.pixlTab.field_0xc 	Global
+  80513c5c 000001 80513c5c  8 CharPixlItemWinWork_80513be8.pixlTab.field_0x10 	Global
+  80513c60 000001 80513c60  8 CharPixlItemWinWork_80513be8.pixlTab.field_0x14 	Global
+  80513c64 000001 80513c64  8 CharPixlItemWinWork_80513be8.pixlTab.field_0x18 	Global
+  80513c68 000001 80513c68  8 CharPixlItemWinWork_80513be8.pixlTab.pauseWinEntry 	Global
+  80513c6c 000001 80513c6c  8 CharPixlItemWinWork_80513be8.itemTab.field_0x0 	Global
+  80513c70 000001 80513c70  8 CharPixlItemWinWork_80513be8.itemTab.count 	Global
+  80513c74 000001 80513c74  8 CharPixlItemWinWork_80513be8.itemTab.field_0x8 	Global
+  80513c78 000001 80513c78  8 CharPixlItemWinWork_80513be8.itemTab.field_0xc 	Global
+  80513c7c 000001 80513c7c  8 CharPixlItemWinWork_80513be8.itemTab.field_0x10 	Global
+  80513c80 000001 80513c80  8 CharPixlItemWinWork_80513be8.itemTab.field_0x14 	Global
+  80513c84 000001 80513c84  8 CharPixlItemWinWork_80513be8.itemTab.field_0x18 	Global
+  80513c88 000001 80513c88  8 CharPixlItemWinWork_80513be8.itemTab.pauseWinEntry 	Global
+  80513c8c 000001 80513c8c  8 CharPixlItemWinWork_80513be8.activeTabCount 	Global
   80513e60 003000 80513e60  4 tmp0 	system
   80513e64 000001 80513e64  8 tmp0[1] 	Global
   80513e68 000001 80513e68  8 tmp0[2] 	Global
@@ -2249,7 +2353,7 @@
   80525460 000001 80525460  8 smartWork.freeEnd 	Global
   80525464 000001 80525464  8 smartWork.freedThisFrame 	Global
   80525550 001b08 80525550  1 spmarioGlobals 	Global
-  80525554 000001 80525554  8 spmarioGlobals.field_0x4 	Global
+  80525554 000001 80525554  8 spmarioGlobals.fps 	Global
   80525558 000001 80525558  8 spmarioGlobals.language 	Global
   8052555c 000001 8052555c  8 spmarioGlobals.field_0xc 	Global
   80525560 000001 80525560  8 spmarioGlobals.systemLevelFlags 	Global
@@ -2984,6 +3088,7 @@
   805a6408 000001 805a6408  1 _scArray 	Global
   805a8f7c 000004 805a8f7c  4 CmdProbeDevice 	Global
   805adf00 000004 805adf00  4 item_event_dataWp 	Global
+  805adf10 000004 805adf10  4 mobjdrvWp 	Global
   805adf18 000004 805adf18  4 msgw 	Global
   805adf20 000004 805adf20  4 offscreendrvWp 	Global
   805adf40 000004 805adf40  4 swdrvWp 	Global
@@ -3008,6 +3113,9 @@
   805ae0b8 000004 805ae0b8  4 now_seq 	Global
   805ae0bc 000004 805ae0bc  4 next_seq 	Global
   805ae0c0 000004 805ae0c0  4 prev_seq 	Global
+  805ae0d8 000004 805ae0d8  4 pausewinRelated2Wp 	Global
+  805ae0e0 000004 805ae0e0  4 PauseWinRelated3Wp 	Global
+  805ae0f8 000004 805ae0f8  4 charPixlItemWinWp 	Global
   805ae108 000004 805ae108  4 treasuremapWp 	Global
   805ae11c 000004 805ae11c  4 RANDOM_SEED 	Global
   805ae120 000004 805ae120  4 dvdmgrWp 	dvd
@@ -3034,7 +3142,7 @@
   805ae7b8 000004 805ae7b8  4 currentCamNo 	Global
   805ae7c8 000004 805ae7c8  4 dispEntries 	Global
   805ae7cc 000004 805ae7cc  4 dispEntryPtrs 	Global
-  805ae7d0 000004 805ae7d0  4 dispEntryCount 	Global
+  805ae7d0 000004 805ae7d0  4 entry_n 	dispdrv
   805ae7d4 000004 805ae7d4  4 dispCurWork 	Global
   805ae828 000004 805ae828  4 fadedrvWp2 	Global
   805ae868 000002 805ae868  2 itemDefaultNameNext 	Global
@@ -3046,6 +3154,8 @@
   805ae91c 000004 805ae91c  4 seqDoorName 	Global
   805ae91c 000004 805ae91c  4 seq_p1 	Global
   805ae930 000004 805ae930  4 pausewinWp 	Global
+  805ae934 000004 805ae934  4 pausewin1PressTimer 	Global
+  805ae938 000004 805ae938  4 pausewin2PressTimer 	Global
   805ae968 000004 805ae968  4 comp 	system
   805ae988 000004 805ae988  1 RGBA_805ae988 	Global
   805ae989 000001 805ae989  8 RGBA_805ae988.blue 	Global
