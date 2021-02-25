@@ -1,3 +1,7 @@
+/*
+    Definitions used for loading maps
+*/
+
 #define MAP_ID_MAX 0x1d4
 
 typedef struct {
@@ -9,5 +13,12 @@ typedef struct {
 
 MapData * mapDataList[MAP_ID_MAX]; // 804031b8
 
-MapData * mapDataPtr(char * mapName); // 800294e0
-void * mapDataEvtPtr(char * mapName); // 800295a8
+/*
+    Returns the MapData for a map by name
+*/
+MapData * mapDataPtr(const char * mapName); // 800294e0
+
+/*
+    Returns the init script for a map by anme
+*/
+EvtScriptCode * mapDataEvtPtr(const char * mapName); // 800295a8
