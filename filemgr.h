@@ -45,6 +45,11 @@ FileWork fileWork; // 80516f88
 FileWork * fileAfp; // 8019e478
 
 /*
+    Initialises data used in file code
+*/
+void fileInit(); // 8019e478
+
+/*
     Convert all offsets in a TPL file to pointers & reverse
 */
 void UnpackTexPalette(void * tpl); // 8019e5a4

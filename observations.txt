@@ -6,5 +6,6 @@ The rel always seems to load in the same place in memory?
 
 The game's code files generally follow a common structure:
     Variables stored inside a work struct
+    They usually have Entry structures used to control them
     Init & ReInit functions called in spmarioInit
     Main function called in spmarioMain
