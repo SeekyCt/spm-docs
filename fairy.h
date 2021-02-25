@@ -38,8 +38,6 @@ void fairyInit(); // 8011d8f8
 
 void fairyExtraEntry(int extraNo); // 8011f6a0
 
-// fairySetPositions, mairoCheckInConversation
-
 /*
     Sets position of all fairies
 */
