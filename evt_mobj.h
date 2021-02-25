@@ -50,5 +50,4 @@ int evt_mobj_kan(EvtEntry * entry); // 800f6440
   4th param: float z
   5th param: EvtScript * interactScript
 */
-
 int evt_mobj_save_blk(EvtEntry * entry); // 800fb118

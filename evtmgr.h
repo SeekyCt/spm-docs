@@ -1,85 +1,203 @@
 /*
-The script format is also used in TTYD, see ttydasm at https://github.com/PistonMiner/ttyd-tools
-(Note: there's an SPM specific opcode missing in ttyd-opc-summary.txt, but the enum in ttydasm.cpp is accurate)
-As a brief summary, each instruction has the following format:
-  halfword dataPieceCount
-  halfword opcode
-  word data[dataPieceCount]
+    Functions for managing evt scripts
+
+    The script format is also used in TTYD, see ttydasm at https://github.com/PistonMiner/ttyd-tools
+    (Note: there's an SPM-specific opcode missing in ttyd-opc-summary.txt, but the enum in ttydasm.cpp is accurate)
+    As a brief summary, each instruction has the following format:
+        int16_t dataPieceCount
+        int16_t opcode
+        int32_t data[dataPieceCount]
+
+    Note: this file has some progress in the decomp, see the link in README
 */
 
 typedef int (*user_func)(EvtEntry * entry, bool firstRun);
 
-typedef struct {
-  int64_t lifetime;
-  uint8_t flags; // bit flags, 1 seems to be the script being active?
-  uint8_t curDataLength; // number of pieces of data (4 bytes each) belonging to the current instruction
-  uint8_t curOpcode; // see links above for opcodes
-  uint8_t priority;
-  uint8_t type;
-  int8_t blocked;
-  uint8_t dowhileDepth; // number of do-while loops the current instruction is nexted into
-  // unknown 0xf
-  void * curInstructionPtr;
-  void * curDataPtr;
-  uint8_t labelIds[16]; // each correspond to an address in the jump table
-  void * jumptable[16]; // addresses for each label
-  EvtEntry * parentEntry;
-  EvtEntry * childEntry;
-  EvtEntry * brotherEntry;
-  // unknown 0x74-93
-  user_func * userFunc; // Function set & called by the user_func opcode
-  int lw[16];
-  uint32_t lf[3];
-  void * dowhileStartPtrs[8]; // pointer to do opcodes
-  int dowhileCounters[8];
-  // unknown 0x104-14f
-  int * uw;
-  uint32_t * uf;
-  int id;
-  float speed;
-  // unknown 0x160-197
-  int * scriptStart;
-  char * name;
-  void * prevInstructionPtr;
-  // unknown 0x1a4-7
-} EvtEntry;
+typedef int EvtScriptCode;
+
+#define EVT_FLAG_IN_USE (1 << 0) 
+#define EVT_FLAG_PAUSED (1 << 1)
 
 typedef struct {
-  int entryLimit;
-  uint32_t gw[32];
-  uint32_t gf[3];
-  EvtEntry * entries;
-  // padding 0x94-97
-  int64_t time;
-} EvtWork;
+/* 0x000 */ int64_t lifetime;
+/* 0x008 */ uint8_t flags; // bit flags, 1 seems to be the script being active?
+/* 0x009 */ uint8_t curDataLength; // number of pieces of data (4 bytes each) belonging to the current instruction
+/* 0x00A */ uint8_t curOpcode; // see links above for opcodes
+/* 0x00B */ uint8_t priority;
+/* 0x00C */ uint8_t type;
+/* 0x00D */ int8_t blocked;
+/* 0x00E */ uint8_t dowhileDepth; // number of do-while loops the current instruction is nexted into
+/* 0x00F */ // unknown 0xf
+/* 0x010 */ EvtScriptCode * pCurInstruction;
+/* 0x014 */ EvtScriptCode * pCurData;
+/* 0x018 */ int8_t labelIds[16]; // each correspond to an address in the jump table
+/* 0x028 */ void * jumptable[16]; // addresses for each label
+/* 0x068 */ EvtEntry * parentEntry;
+/* 0x06C */ EvtEntry * childEntry;
+/* 0x070 */ EvtEntry * brotherEntry;
+/* 0x074 */ // unknown 0x74-93
+/* 0x094 */ user_func * userFunc; // Function set & called by the user_func opcode
+/* 0x098 */ int lw[16];
+/* 0x0D8 */ uint32_t lf[3];
+/* 0x0E4 */ void * dowhileStartPtrs[8]; // pointer to do opcodes
+/* 0x104 */ int dowhileIds[8];
+/* 0x100 */ // unknown 0x104-14f
+/* 0x150 */ int * uw;
+/* 0x154 */ uint32_t * uf;
+/* 0x158 */ int id;
+/* 0x15C */ float speed;
+/* 0x160 */ // unknown 0x160-167
+/* 0x168 */ void * owner; // might always be an NPCEntry, unsure
+/* 0x16C */ MobjEntry * ownerMobj;
+/* 0x170 */ // unknown 0x170-173
+/* 0x174 */ int msgWindowId;
+/* 0x178 */ // unknown 0x178-187
+/* 0x188 */ int msgPri;
+/* 0x18C */ // unknown 0x18c-198
+/* 0x198 */ EvtScriptCode * scriptStart;
+/* 0x19C */ char * name; // debug thing, unused?
+/* 0x1a0 */ void * pPrevInstruction;
+/* 0x1a4 */ // unknown 0x1a4-7
+} EvtEntry; // total size 0x1a8
+
+typedef struct {
+/* 0x00 */ int entryLimit;
+/* 0x04 */ uint32_t gw[32];
+/* 0x84 */ uint32_t gf[3];
+/* 0x90 */ EvtEntry * entries;
+/* 0x94 */ // padding 0x94-97
+/* 0x98 */ int64_t time;
+} EvtWork; // total size 0xa0
+
 EvtWork evtWork; // 8050c990
 
-int evtEntryCount; // 805ae8d8
+int evtMax; // 805ae8d8
 
+EvtWork work; // 8050c990
+int priTbl[0x80]; // 8050ca30
+int priIdTbl[0x80]; // 8050cc30
+
+int evtMax; // 805ae8d8
+int priTblNum; // 805ae8dc
+int runMainF; // 805ae8e0
+
+int evtId = 1; // 805ae018
+float evtSpd = 1.0; // 805ae01c
+
+/*
+    Returns the pointer to the instance of the EvtWork struct
+*/  
 EvtWork * evtGetWork(); // 800d87e4
+
+/*
+    Updates priTbl and priIdTbl with the current collection of entries
+*/
 void make_pri_table(); // 800d87f0
+
+/*
+    Scans through an entry's script to generate its jump table and label ids
+*/
 void make_jump_table(EvtEntry * entry); // 800d890c
+
+/*
+    Initialises data used in evtmgr code
+*/
 void evtmgrInit(); // 800d8a88
 void evtmgrReInit(); // 800d8b2c
-EvtEntry * evtEntry(int * script, uint8_t priority, uint8_t flags); // 800d8b88 - inits an entry for a script
-EvtEntry * evtEntryType(int * script, int param_2, int param_3, int param_4); // 800d8df4
-EvtEntry * evtChildEntry(EvtEntry * entry, int * script, uint8_t flags); // 800d9060
-EvtEntry * evtBrotherEntry(EvtEntry * entry, int * script, uint8_t flags); // 800d9370
+
+/*
+    Start execution of scripts
+*/
+EvtEntry * evtEntry(EvtScriptCode * script, uint8_t priority, uint8_t flags); // 800d8b88
+EvtEntry * evtEntryType(EvtScriptCode * script, uint8_t priority, uint8_t flags, uint8_t type); // 800d8df4
+EvtEntry * evtChildEntry(EvtEntry * entry, EvtScriptCode * script, uint8_t flags); // 800d9060
+EvtEntry * evtBrotherEntry(EvtEntry * entry, EvtScriptCode * script, uint8_t flags); // 800d9370
+
+/*
+    Restarts an entry
+*/
 EvtEntry * evtRestart(EvtEntry * entry); // 800d9634
+
+/*
+    Called every frame, updates each entry
+*/
 void evtmgrMain(); // 800d9764
+
+/*
+    Terminate an entry and all its children & brothers
+    (can not be resumed, entry struct is freed)
+*/
 void evtDelete(EvtEntry * entry); // 800d9944
 void evtDeleteId(int id); // 800d9b00
-bool evtCheckID(int id); // 800d9b88 - returns whether an entry with that id exists
+
+/*
+    Returns whether an entry with this id exists
+*/
+bool evtCheckID(int id); // 800d9b88
+
+/*
+    Sets the execution priority of an entry
+*/
 void evtSetPri(EvtEntry * entry, uint8_t pri); // 800d9bd4
+
+/*
+    Sets the execution speed of an entry
+*/
 void evtSetSpeed(EvtEntry * entry, float speed); // 800d9bdc
+
+/*
+    Sets the type of an entry
+*/
 void evtSetType(EvtEntry * entry, uint8_t type); // 800d9bec
+
+/*
+    Stops the execution of an entry
+    Unlike evtDelete, this can be resumed later
+*/
 void evtStop(EvtEntry * entry, uint8_t mask); // 800d9bf4
+
+/*
+    Resumes the execution of an entry
+*/
 void evtStart(EvtEntry * entry, uint8_t mask); // 800d9c98
+
+/*
+    Stops the execution of an entry by id
+    Unlike evtDelete, this can be resumed later
+*/
 void evtStopId(int id); // 800d9d3c
+
+/*
+    Resumes the execution of an entry by id
+*/
 void evtStartId(int id); // 800d9dc8
+
+/*
+    Stops the execution of all entries
+*/
 void evtStopAll(uint8_t mask); // 800d9e54
+
+/*
+    Resumes the execution of all entries
+*/
 void evtStartAll(uint8_t mask); // 800d9ed4
+
+/*
+    Stops the execution of all other entries
+*/
 void evtStopOther(EvtEntry * entry, uint8_t mask); // 800d9f54
+
+/*
+    Resumes the execution of all other entries
+*/
 void evtStartOther(EvtEntry * entry, uint8_t mask); // 800d9fc8
+
+/*
+    Gives the pointer to an entry by its index in the array
+*/
 EvtEntry * evtGetPtr(int index); // 800da03c
+
+/*
+    Gives the pointer to an entry by its id
+*/
 EvtEntry * evtGetPtrId(int id); // 800da064
