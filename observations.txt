@@ -3,3 +3,8 @@ Assertions were left in the final build of the game (Shift-JIS)
 Removing relF.bin and adding a decompressed relF.rel will cause the game to use that instead
 
 The rel always seems to load in the same place in memory?
+
+The game's code files generally follow a common structure:
+    Variables stored inside a work struct
+    Init & ReInit functions called in spmarioInit
+    Main function called in spmarioMain
