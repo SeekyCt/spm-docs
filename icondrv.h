@@ -74,5 +74,3 @@ void iconSetScale(const char * name, float scale); // 8007492c
 void iconSetAlpha(const char * name, uint8_t alpha); // 800749d0
 // 80074a54 iconNumberDispGx or iconNumberDispGx3D
 // 80074f80, 80074fe8 unknown functions
-
-
