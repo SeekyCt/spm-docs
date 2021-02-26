@@ -60,9 +60,6 @@ void seqMain(); // 8017bf6c
 int seqGetSeq(); // 8017c084
 
 // TODO: move to own headers
-void seq_logoInit(SeqInfo * info); // 80178fd0
-void seq_logoMain(SeqInfo * info); // 80179140
-void seq_logoExit(SeqInfo * info); // 801790f8
 void seq_titleInit(SeqInfo * info); // 8017b130
 void seq_titleMain(SeqInfo * info); // 8017b250
 void seq_titleExit(SeqInfo * info); // 8017b410
