@@ -23,7 +23,7 @@ typedef struct {
 /* 0x4 */ SeqFunc * main;
 /* 0x8 */ SeqFunc * exit;
 } SeqDef; // total size 0xc
-SeqDef[6] seq_data; // 804287a8 - index is enum above, SEQ_NONE doesn't have an entry
+SeqDef seq_data[6]; // 804287a8 - index is enum above, SEQ_NONE doesn't have an entry
 
 enum {
     SEQ_NONE = -1, // (boot)

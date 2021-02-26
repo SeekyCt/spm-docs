@@ -4,6 +4,11 @@
 typedef struct {
 /* 0x0 */ float x;
 /* 0x4 */ float y;
+} Vec2; // total size 0x8
+
+typedef struct {
+/* 0x0 */ float x;
+/* 0x4 */ float y;
 /* 0x8 */ float z;
 } Vec3; // total size 0xc
 
