@@ -69,7 +69,7 @@ MarioWork marioWork; // 80510458
 MarioWork * marioGetPtr(); // 80121f48
 
 /*
-    Returns whether the player can move (false in things like dialogue)
+    Returns whether player movement is blocked (true in things like dialogue)
 */
 bool marioIsMovementDisabled(); // 80122b7c
 
