@@ -149,7 +149,7 @@ void nandDisableSaving(); // 8023f0a0
 void nandEnableSaving(); // 8023f0b4
 
 /*
-    Returns whether saving to NAND is enabled
+    Returns whether saving to NAND is disabled
 */
 bool nandCheckSaving(); // 8023f0c8
 
