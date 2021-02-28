@@ -36,7 +36,11 @@ typedef struct {
 /* 0x074 */ int16_t shopItem[32];
 /* 0x0B4 */ PouchCharOrPixlInfo characters[4];
 /* 0x0C4 */ PouchCharOrPixlInfo pixls[16];
-/* 0x104 */ // unknown 0x104-69f
+/* 0x104 */ // unknown 0x104-68b
+/* 0x68C */ int totalCoinsCollected;
+/* 0x690 */ // unknown 0x690-697
+/* 0x698 */ int enemiesDefeated;
+/* 0x69C */ // unknown 0x69c-69f
 } MarioPouchWork; // total size 0x6a0
 
 /*
@@ -95,7 +99,7 @@ void pouchAddXp(int increase); // 8014d508
 */
 void pouchSetCoins(int coins); // 8014d548
 int pouchGetCoins(); // 8014d57c
-void pouchAddCoins(int increase); // 8014d58c
+void pouchAddCoins(int increase); // 8014d58c, increases totalCoinsCollected
 
 void pouchRemoveItemIdx(int itemId, int idx); // 8014e6d0
 
@@ -135,6 +139,17 @@ int pouchGetCurPixl(); // 8014f31c
     Deselects all other pixls
 */
 void pouchSetPixlSelected(int itemId); // 8014f408
+
+/*
+    Returns how many coins have ever been collected on this save
+*/
+int pouchGetTotalCoinsCollected(); // 8014f99c
+
+/*
+    Returns/sets how many enemies have ever been defeated on this save
+*/
+int pouchGetEnemiesDefeated(); // 8014f9cc
+void pouchSetEnemiesDefeated(int totalDefeated); // 8014f978
 
 /*
     Returns the number of useItem/keyItem/shopItem/char/pixl slots that aren't empty [and aren't selected]
