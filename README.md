@@ -3,8 +3,6 @@ Documentation of various parts of Super Paper Mario
 
 All addresses are for PAL revision 0
 
-See also https://github.com/SeekyCt/spm-decomp/
-
 ## Contents
 
 ### .h files
@@ -35,3 +33,9 @@ Various debugging cheat codes
 - Various members of the TTYD community for their documentation in the [TTYD Tools](https://github.com/PistonMiner/ttyd-tools), [TTYD Utils](https://github.com/jdaster64/ttyd-utils/), [Practice Codes](https://github.com/Zephiles/TTYD-Practice-Codes/), [Infinite Pit](https://github.com/jdaster64/ttyd-infinite-pit/) and [Decomp](https://github.com/NWPlayer123/PaperMario2) repos
 - Kevin for items.txt
 - JohnP55 for various data addresses in his DMW file
+
+## Other resources
+- [My decompilation](https://github.com/SeekyCt/spm-decomp/)
+- [C++ Rel Kit](https://github.com/SeekyCt/spm-rel-loader/)
+- [Map names](https://docs.google.com/document/d/10w4CS5oNBOHHYtM9OrNUYM7GIqNxIaR-b_Sr8FSG7Pk/edit)
+- [Sequence (GSW 0) values](https://docs.google.com/document/d/1gxALlevkiz-i18lJG700VJF4_NzesA30X1hj0atk1vg/edit)
