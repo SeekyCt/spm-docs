@@ -35,7 +35,8 @@ Various debugging cheat codes
 - JohnP55 for various data addresses in his DMW file
 
 ## Other resources
-- [My decompilation](https://github.com/SeekyCt/spm-decomp/)
+- [My Decompilation](https://github.com/SeekyCt/spm-decomp/)
 - [C++ Rel Kit](https://github.com/SeekyCt/spm-rel-loader/)
-- [Map names](https://docs.google.com/document/d/10w4CS5oNBOHHYtM9OrNUYM7GIqNxIaR-b_Sr8FSG7Pk/edit)
-- [Sequence (GSW 0) values](https://docs.google.com/document/d/1gxALlevkiz-i18lJG700VJF4_NzesA30X1hj0atk1vg/edit)
+- [Map Names](https://docs.google.com/document/d/10w4CS5oNBOHHYtM9OrNUYM7GIqNxIaR-b_Sr8FSG7Pk/edit)
+- [Sequence (GSW 0) Values](https://docs.google.com/document/d/1gxALlevkiz-i18lJG700VJF4_NzesA30X1hj0atk1vg/edit)
+- [TCRF Notes Page](https://tcrf.net/Notes:Super_Paper_Mario)
