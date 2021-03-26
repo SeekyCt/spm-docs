@@ -131,8 +131,8 @@ typedef struct {
 /* 0x5C */ // unknown 0x5c-67, all left blank to be copied from SetupEnemy
 } NPCEnemyTemplate;
 
-NPCTribe npcTribes[535]; // 8043bf30
-NPCEnemyTemplate npcEnemyTemplates[435]; // 80449888
+NPCTribe npcTribes[535]; // 8043bf30, see npctribes.txt
+NPCEnemyTemplate npcEnemyTemplates[435]; // 80449888, npcenemytemplates.txt
 
 void npcInit(); // 801a96fc
 void npcReset(); // 801a97b8
