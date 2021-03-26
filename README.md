@@ -1,7 +1,7 @@
 # spm-docs
 Documentation of various parts of Super Paper Mario
 
-All addresses are for PAL revision 0
+All research is done on PAL revision 0 unless stated otherwise
 
 ## Contents
 
@@ -17,6 +17,12 @@ The latest symbol map export from my Ghidra repo
 ### items.txt
 A list of all item ids, their name and nameMsg
 
+### npcenemytemplates.txt
+A dump of every template in the npcEnemyTemplates array
+
+### npctribes.txt
+A dump of all the animPoseNames for each tribe in the npcTribes array
+
 ### observations.txt
 Various general notes about the game
 
@@ -28,6 +34,9 @@ Differences in the map init scripts from relD.bin compared to relF.bin
 
 ### setupfiles.md
 Documentation of the processing of /setup/*.dat files
+
+### setups.txt
+A dump of the contents of every setup file on the disc
 
 ### utilcodes.txt
 Various debugging cheat codes
