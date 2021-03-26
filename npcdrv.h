@@ -55,16 +55,16 @@ typedef struct {
 /* ????? */ // unknown up to 0x29f
 /* 0x2A0 */ Vec3 position;
 /* 0x2AC */ // unknown 0x2ac-347
-/* 0x348 */ int * templateUnkScript1; // unkScript1 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x348 */ EvtScriptCode * templateUnkScript1; // unkScript1 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x34C */ // unknown 0x34c-35f
-/* 0x360 */ int * templateUnkScript2; // unkScript2 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x364 */ int * templateUnkScript3; // unkScript3 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x368 */ int * templateUnkScript4; // unkScript4 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x36C */ int * templateUnkScript5; // unkScript5 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x370 */ int * templateUnkScript9; // unkScript9 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x374 */ int * templateUnkScript6; // unkScript6 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x378 */ int * templateUnkScript7; // unkScript7 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
-/* 0x37C */ int * templateUnkScript8; // unkScript8 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x360 */ EvtScriptCode * templateUnkScript2; // unkScript2 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x364 */ EvtScriptCode * templateUnkScript3; // unkScript3 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x368 */ EvtScriptCode * templateUnkScript4; // unkScript4 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x36C */ EvtScriptCode * templateUnkScript5; // unkScript5 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x370 */ EvtScriptCode * templateUnkScript9; // unkScript9 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x374 */ EvtScriptCode * templateUnkScript6; // unkScript6 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x378 */ EvtScriptCode * templateUnkScript7; // unkScript7 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x37C */ EvtScriptCode * templateUnkScript8; // unkScript8 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x380 */ // unknown 0x380-38f
 /* 0x390 */ int onSpawnEvtId; // id of the EvtEntry running a templated npc's onSpawn scripts (unknown for non-templated NPCs)
 /* 0x394 */ // unknown 0x394-39b
@@ -87,7 +87,7 @@ typedef struct {
 /* 0x584 */ uint32_t templateField0x64; // field 0x64 of spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x588 */ // unknown 0x588-0x713
 /* 0x714 */ NPCParts * parts; // made from tribe's NPCPartDef list
-/* 0x718 */ int * templateUnkScript10; // unkScript10 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
+/* 0x718 */ EvtScriptCode * templateUnkScript10; // unkScript10 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x71C */ // unknown 0x71c-747
 } NPCEntry; // total size 0x748
 
@@ -117,17 +117,17 @@ typedef struct {
 /* 0x1C */ const char * japaneseName; // unused debug information?
 /* 0x20 */ Vec3 pos; // left blank to be copied from SetupEnemy
 /* 0x2C */ uint32_t flags; // ORd with NPCEntry's flags after spawning
-/* 0x30 */ int * onSpawnScript;
-/* 0x34 */ int * unkScript1;
-/* 0x38 */ int * unkScript2;
-/* 0x3C */ int * unkScript3;
-/* 0x40 */ int * unkScript4;
-/* 0x44 */ int * unkScript5;
-/* 0x48 */ int * unkScript6;
-/* 0x4C */ int * unkScript7;
-/* 0x50 */ int * unkScript8;
-/* 0x54 */ int * unkScript9;
-/* 0x58 */ int * unkScript10;
+/* 0x30 */ EvtScriptCode * onSpawnScript;
+/* 0x34 */ EvtScriptCode * unkScript1;
+/* 0x38 */ EvtScriptCode * unkScript2;
+/* 0x3C */ EvtScriptCode * unkScript3;
+/* 0x40 */ EvtScriptCode * unkScript4;
+/* 0x44 */ EvtScriptCode * unkScript5;
+/* 0x48 */ EvtScriptCode * unkScript6;
+/* 0x4C */ EvtScriptCode * unkScript7;
+/* 0x50 */ EvtScriptCode * unkScript8;
+/* 0x54 */ EvtScriptCode * unkScript9;
+/* 0x58 */ EvtScriptCode * unkScript10;
 /* 0x5C */ // unknown 0x5c-67, all left blank to be copied from SetupEnemy
 } NPCEnemyTemplate;
 
