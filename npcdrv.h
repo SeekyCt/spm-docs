@@ -21,14 +21,17 @@ typedef struct {
 typedef struct {
 /* 0x00 */ const char * animPoseName;
 /* 0x04 */ NPCTribeAnimDef * animDefs; // list terminated by one with id -1
-/* 0x08 */ // unknown 0x8-18
+/* 0x08 */ // unknown 0x8-17
+/* 0x18 */ uint8_t maxHp;
 /* 0x19 */ uint8_t partsCount;
 /* 0x1A */ // unknown 0x1a-1b
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
 /* 0x20 */ // unknown 0x20-4d
 /* 0x4E */ uint16_t dropItemChance; // chance of dropping any item
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
-/* 0x54 */ // unknown 0x54-67
+/* 0x54 */ // unknown 0x54-63
+/* 0x64 */ uint8_t attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
+/* 0x65 */ // unknown 0x54-67
 } NPCTribe; // total size 0x68
 
 typedef struct {
