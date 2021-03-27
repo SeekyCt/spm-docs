@@ -35,7 +35,7 @@ typedef struct {
 /* 0x18 */ // unknown 0x18-2c
 } ItemData; // total size 0x2c
 
-ItemData itemDataTable; // 803f5f98
+ItemData itemDataTable[538]; // 803f5f98
 
 ItemWork * itemWork; // 8050bad8
 ItemWork * itemWp; // 805adfe0
