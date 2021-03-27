@@ -80,8 +80,8 @@ typedef struct {
 /* 0x49C */ int tribeId; // id of the NPCTribe this NPC was spawned with
 /* 0x4A0 */ int tribeId2; // seemingly just a copy of tribeId 
 /* 0x4A4 */ // unknown 0x4a4-4eb
-/* 0x4EC */ uint32_t tribeField0x18; // field 0x18 of spawning NPCTribe
-/* 0x4F0 */ uint32_t tribeField0x18_2; // second copy of field 0x18 of spawning NPCTribe
+/* 0x4EC */ uint32_t maxHp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
+/* 0x4F0 */ uint32_t hp; // copied from spawning NPCTribe, 1 for NPCs not spawned by tribe
 /* 0x4F4 */ // unknown 0x4F4-573
 /* 0x574 */ int dropItemId; // id of the item this npc would drop if killed (determined on spawn)
 /* 0x578 */ // unknown 0x578-57b
