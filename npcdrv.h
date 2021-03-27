@@ -101,6 +101,9 @@ typedef struct {
 /* 0x01C */ // unknown 0x1c-b47
 } NPCWork; // total size 0xb48
 
+NPCWork npcWork; // 805283e0
+NPCWork * npcdrvWp; // 805ae188
+
 typedef bool (EnemyCanSpawnFunction)();
 
 typedef struct {
