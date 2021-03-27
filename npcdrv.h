@@ -43,8 +43,15 @@ typedef struct {
 } NPCAnim; // unknown size
 
 typedef struct {
-/* 0x000 */ // unknown 0x0-397
-} NPCParts; // total size 0x398
+/* 0x000 */ uint16_t id;
+/* 0x002 */ // unknown 0x2-377
+/* 0x378 */ int attackPower; // initialised as 1, changed by onSpawnScript if needed
+/* 0x37C */ // unknown 0x37c-387
+/* 0x388 */ NPCEntry * owner;
+/* 0x38C */ NPCPart * prevPart;
+/* 0x390 */ NPCPart * nextPart;
+/* 0x394 */ // unknown 0x394-397
+} NPCPart; // total size 0x398
 
 typedef struct {
 /* 0x000 */ int id;
@@ -89,7 +96,7 @@ typedef struct {
 /* 0x580 */ uint32_t templateField0x60; // field 0x60 of spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x584 */ uint32_t templateField0x64; // field 0x64 of spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x588 */ // unknown 0x588-0x713
-/* 0x714 */ NPCParts * parts; // made from tribe's NPCPartDef list
+/* 0x714 */ NPCPart * parts; // made from tribe's NPCPartDef list, linked list
 /* 0x718 */ EvtScriptCode * templateUnkScript10; // unkScript10 from spawning SetupEnemyTemplate (unknown for non-templated NPCs)
 /* 0x71C */ // unknown 0x71c-747
 } NPCEntry; // total size 0x748
@@ -161,7 +168,7 @@ void npcUpdateSetupFile5To6(SetupFileV5 * file); // 801c1b5c
 void npcUpdateSetupFile(void * file); // 801c2074
 NPCEntry * npcGetEntries(); // 801c2124
 int npcGetMaxEntries(); // 801c2130
-NPCParts * npcAddPart(NPCEntry * entry, NPCPartDef * partDef); // 801c2148
+NPCPart * npcAddPart(NPCEntry * entry, NPCPartDef * partDef); // 801c2148
 NPCTribe * npcGetTribe(int tribeId); // 801c9ac8
 NPCWork * npcGetWorkPtr(); // 801c9adc
 
