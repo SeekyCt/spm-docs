@@ -1,6 +1,6 @@
 /*
     Itemdrv handles in-world items
-    See items.txt for a list of item types
+    See item_data.h for how item types are defined
 */
 
 #define ITEM_NAME_MAX 12
@@ -24,18 +24,6 @@ typedef struct {
 /* 0x04 */ ItemEntry * entries; // array of num
 /* 0x08 */ // unknown 0x8-7f
 } ItemWork; // total size 0x80
-
-typedef struct {
-/* 0x00 */ const char * itemName;
-/* 0x04 */ // unknown 0x4-7
-/* 0x08 */ const char * animPoseName;
-/* 0x0C */ // unknown 0xc-f
-/* 0x10 */ const char * nameMsg;
-/* 0x14 */ const char * descMsg;
-/* 0x18 */ // unknown 0x18-2c
-} ItemData; // total size 0x2c
-
-ItemData itemDataTable[538]; // 803f5f98
 
 ItemWork * itemWork; // 8050bad8
 ItemWork * itemWp; // 805adfe0

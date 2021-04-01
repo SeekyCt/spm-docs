@@ -15,7 +15,7 @@ A list of locations in the dol that are likely to be evt scripts based on their 
 The latest symbol map export from my Ghidra repo
 
 ### items.txt
-A list of all item ids, their name and nameMsg
+A dump of item_data.c's itemDataTable
 
 ### npcenemytemplates.txt
 A dump of every template in the npcEnemyTemplates array
@@ -43,7 +43,7 @@ Various debugging cheat codes
 
 ## Credits
 - Various members of the TTYD community for their documentation in the [TTYD Tools](https://github.com/PistonMiner/ttyd-tools), [TTYD Utils](https://github.com/jdaster64/ttyd-utils/), [Practice Codes](https://github.com/Zephiles/TTYD-Practice-Codes/), [Infinite Pit](https://github.com/jdaster64/ttyd-infinite-pit/) and [Decomp](https://github.com/NWPlayer123/PaperMario2) repos
-- Kevin for items.txt
+- Kevin for initial item documentation
 - JohnP55 for various data addresses in his DMW file
 - Skawo for initial setup file documentation
 
