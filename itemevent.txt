@@ -1,0 +1,165 @@
+Item Event Data 0:
+	Item id: 65
+	Use script: 0x803fc918
+	Use message: msg_AC_honoo_sakuretsu
+
+Item Event Data 1:
+	Item id: 66
+	Use script: 0x803fcca4
+	Use message: msg_AC_koori_no_ibuki
+
+Item Event Data 2:
+	Item id: 67
+	Use script: 0x803fd028
+	Use message: msg_AC_kaminari_dokkan
+
+Item Event Data 3:
+	Item id: 68
+	Use script: 0x803fd328
+	Use message: msg_AC_kirakira_otoshi
+
+Item Event Data 4:
+	Item id: 69
+	Use script: 0x803fd6b8
+	Use message: msg_AC_pow_block
+
+Item Event Data 5:
+	Item id: 70
+	Use script: 0x803fdba8
+	Use message: msg_AC_koura_de_pon
+
+Item Event Data 6:
+	Item id: 71
+	Use script: 0x803fdd60
+	Use message: (null pointer)
+
+Item Event Data 7:
+	Item id: 72
+	Use script: 0x803fddf8
+	Use message: (null pointer)
+
+Item Event Data 8:
+	Item id: 73
+	Use script: 0x803fde90
+	Use message: msg_AC_barrier_frame
+
+Item Event Data 9:
+	Item id: 74
+	Use script: 0x803fdfb8
+	Use message: msg_AC_kachikachi_koura
+
+Item Event Data 10:
+	Item id: 75
+	Use script: 0x803fe0b4
+	Use message: msg_AC_tuyotuyo_drink
+
+Item Event Data 11:
+	Item id: 76
+	Use script: 0x803fe1b0
+	Use message: msg_AC_biribiri_kinoko
+
+Item Event Data 12:
+	Item id: 77
+	Use script: 0x803fe2b0
+	Use message: msg_AC_obake_kinoko
+
+Item Event Data 13:
+	Item id: 78
+	Use script: 0x803fe338
+	Use message: msg_AC_nemure_yoikoyo
+
+Item Event Data 14:
+	Item id: 79
+	Use script: 0x803fe5c4
+	Use message: msg_AC_stop_watch
+
+Item Event Data 15:
+	Item id: 85
+	Use script: 0x803fe868
+	Use message: msg_AC_jiwajiwa_kinoko
+
+Item Event Data 16:
+	Item id: 86
+	Use script: 0x803fe9e0
+	Use message: (null pointer)
+
+Item Event Data 17:
+	Item id: 87
+	Use script: 0x803fea18
+	Use message: (null pointer)
+
+Item Event Data 18:
+	Item id: 88
+	Use script: 0x803fec68
+	Use message: (null pointer)
+
+Item Event Data 19:
+	Item id: 89
+	Use script: 0x803fef40
+	Use message: (null pointer)
+
+Item Event Data 20:
+	Item id: 90
+	Use script: 0x803ff074
+	Use message: (null pointer)
+
+Item Event Data 21:
+	Item id: 160
+	Use script: 0x803fc918
+	Use message: (null pointer)
+
+Item Event Data 22:
+	Item id: 161
+	Use script: 0x803fc918
+	Use message: (null pointer)
+
+Item Event Data 23:
+	Item id: 146
+	Use script: 0x803fcca4
+	Use message: (null pointer)
+
+Item Event Data 24:
+	Item id: 147
+	Use script: 0x803fcca4
+	Use message: (null pointer)
+
+Item Event Data 25:
+	Item id: 148
+	Use script: 0x803fcca4
+	Use message: (null pointer)
+
+Item Event Data 26:
+	Item id: 149
+	Use script: 0x803fcca4
+	Use message: (null pointer)
+
+Item Event Data 27:
+	Item id: 208
+	Use script: 0x803fe338
+	Use message: (null pointer)
+
+Item Event Data 28:
+	Item id: 163
+	Use script: 0x803fd328
+	Use message: (null pointer)
+
+Item Event Data 29:
+	Item id: 214
+	Use script: 0x803fd6b8
+	Use message: (null pointer)
+
+Item Event Data 30:
+	Item id: 206
+	Use script: 0x803fde90
+	Use message: (null pointer)
+
+Item Event Data 31:
+	Item id: 176
+	Use script: 0x803fe338
+	Use message: (null pointer)
+
+Item Event Data 32:
+	Item id: 50
+	Use script: 0x803ffac0
+	Use message: (null pointer)
+
