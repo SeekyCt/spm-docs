@@ -1,6 +1,6 @@
 /*
     Itemdrv handles in-world items
-    See item_data.h for how item types are defined
+    See item_data.h and item_event_data.h for how item properties are defined 
 */
 
 #define ITEM_NAME_MAX 12
