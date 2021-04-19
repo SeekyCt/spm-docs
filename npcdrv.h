@@ -31,7 +31,7 @@ typedef struct {
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ // unknown 0x54-63
 /* 0x64 */ uint8_t attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
-/* 0x65 */ // unknown 0x54-67
+/* 0x65 */ // unknown 0x65-67
 } NPCTribe; // total size 0x68
 
 typedef struct {
