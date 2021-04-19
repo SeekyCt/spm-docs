@@ -16,7 +16,7 @@ typedef struct {
 typedef struct {
 /* 0x0 */ int itemId;
 /* 0x4 */ int chance;
-} DropItem; // total size 0x4
+} DropItem; // total size 0x8
 
 typedef struct {
 /* 0x00 */ const char * animPoseName;
