@@ -32,6 +32,9 @@ Differences in the map init scripts from rel.bin compared to relF.bin
 ### reld.bin init evt diffs.txt
 Differences in the map init scripts from relD.bin compared to relF.bin
 
+### relscriptlocs.txt
+Like dolscriptlocs.txt but for relF.rel loaded in its default position
+
 ### setupfiles.md
 Documentation of the processing of /setup/*.dat files
 
