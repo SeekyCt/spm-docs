@@ -2,7 +2,7 @@
     Dvdmgr provides lower level file reading than Filemgr
 */
 
-typedef (DVDMgrCallback)(int result, DVDEntry * entry);
+typedef (DVDMgrCallback)(int result, DVDFileInfo * fileInfo);
 
 typedef struct {
 /* 0x00 */ char path[64];
