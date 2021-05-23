@@ -51,8 +51,9 @@ Various debugging cheat codes
 - Skawo for initial setup file documentation
 
 ## Other resources
-- [My Decompilation](https://github.com/SeekyCt/spm-decomp/)
+- [Decompilation](https://github.com/SeekyCt/spm-decomp/)
 - [C++ Rel Kit](https://github.com/SeekyCt/spm-rel-loader/)
+- [Practice Codes Mod](https://github.com/SeekyCt/spm-practice-codes/)
 - [Map Names](https://docs.google.com/document/d/10w4CS5oNBOHHYtM9OrNUYM7GIqNxIaR-b_Sr8FSG7Pk/edit)
 - [Sequence (GSW 0) Values](https://docs.google.com/document/d/1gxALlevkiz-i18lJG700VJF4_NzesA30X1hj0atk1vg/edit)
 - [TCRF Notes Page](https://tcrf.net/Notes:Super_Paper_Mario)
