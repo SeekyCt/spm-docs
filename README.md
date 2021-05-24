@@ -5,44 +5,11 @@ All research is done on PAL revision 0 unless stated otherwise
 
 ## Contents
 
-### .h files
+### headers
 Pseudo-C headers documenting various functions and structures in the game
 
-### dolscriptlocs.txt
-A list of locations in the dol that are likely to be evt scripts based on their contents, picked up by an automatic tool.
-
-### ghidra map export.txt
-The latest symbol map export from my Ghidra repo
-
-### items.txt
-A dump of item_data.c's itemDataTable
-
-### npcenemytemplates.txt
-A dump of every template in the npcEnemyTemplates array
-
-### npctribes.txt
-A dump of all the animPoseNames for each tribe in the npcTribes array
-
-### observations.txt
-Various general notes about the game
-
-### rel.bin init evt diffs.txt
-Differences in the map init scripts from rel.bin compared to relF.bin
-
-### reld.bin init evt diffs.txt
-Differences in the map init scripts from relD.bin compared to relF.bin
-
-### relscriptlocs.txt
-Like dolscriptlocs.txt but for relF.rel loaded in its default position
-
-### setupfiles.md
-Documentation of the processing of /setup/*.dat files
-
-### setups.txt
-A dump of the contents of every setup file on the disc
-
-### utilcodes.txt
-Various debugging cheat codes
+### misc
+Various writeups of mechanics and dumps of internal game data
 
 ## Credits
 - Various members of the TTYD community for their documentation in the [TTYD Tools](https://github.com/PistonMiner/ttyd-tools), [TTYD Utils](https://github.com/jdaster64/ttyd-utils/), [Practice Codes](https://github.com/Zephiles/TTYD-Practice-Codes/), [Infinite Pit](https://github.com/jdaster64/ttyd-infinite-pit/) and [Decomp](https://github.com/NWPlayer123/PaperMario2) repos
