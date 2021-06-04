@@ -34,14 +34,15 @@ typedef struct {
 /* 0x198 */ // unknown 0x198-253
 /* 0x254 */ void * cameraRoad;
 /* 0x258 */ CamDispFunc * dispFunc;
-/* 0x25c */ // unknown 0x25c-2ef
+/* 0x25C */ // unknown 0x25c-2ef
 } CamEntry; // total size 0x2ef
 
 /*
     Cameras:
         0-4 unknown
         5 3d
-        6-11 unknown
+        6-10 unknown
+        11 2d
         12 fade
         13 dbg
         14 dbg3d
@@ -73,7 +74,7 @@ CamEntry * camEntryOrtho(float top, float bottom, float left, float right, float
 void camMain(); // 80055208
 
 /*
-    Updates each camera and calls dispDraw for it
+    Calls dispDraw for each camera
 */
 void camDraw(); // 800556f4
 
