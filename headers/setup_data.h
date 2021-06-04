@@ -10,7 +10,9 @@
 
 typedef struct {
 /* 0x00 */ int instanceId; // ignored if 0
-/* 0x04 */ // 0x4-5b
+/* 0x04 */ // unknown 0x4-f
+/* 0x10 */ int unitWork[16];
+/* 0x50 */ // unknown 0x50-5b
 /* 0x5C */ float gravityRotation; // degrees anti-clockwise about the z-axis
 } MiscSetupDataV6; // total size 0x60
 
