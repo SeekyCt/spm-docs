@@ -5,10 +5,11 @@
 #define MAP_ID_MAX 0x1d4
 
 typedef struct {
-/* 0x00 */ char * name;
-/* 0x04 */ char * filename;
-/* 0x08 */ // unknown 0x8-17
-/* 0x18 */ void * initScript; // In rel, linked by prolog function. See evtmgr.h
+/* 0x00 */ const char * name;
+/* 0x04 */ const char * filename;
+/* 0x08 */ const char * fallbackDoorName; // door name used if entered with a null name, ignored if this is null
+/* 0x0C */ Vec3 fallbackSpawnPos; // position to use when entered with a null door name and fallbackDoorName isn't set
+/* 0x18 */ EvtScriptCode * initScript; // In rel, linked by prolog function. See evtmgr.h
 } MapData; // total size 0x1c
 
 MapData * mapDataList[MAP_ID_MAX]; // 804031b8
