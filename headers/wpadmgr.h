@@ -5,7 +5,7 @@
 */
 
 typedef struct {
-/* 0x0000 */ uint32_t flags;
+/* 0x0000 */ u32 flags;
 /* 0x0004 */ // unknown 0x4-43
 /* 0x0044 */ bool enableRumble[4]; // index controller id, controller vibrates when true
 /* 0x0048 */ bool rumblePrev[4]; // the value of enableRumble on the previous frame
@@ -49,29 +49,29 @@ bool wpadGetCursorStatus(); // 80237640
 /*
     Makes a controller start/stop vibrating
 */
-void wpadRumbleOn(int controller); // 80237650
-void wpadRumbleOff(int controller); // 80237664
+void wpadRumbleOn(s32 controller); // 80237650
+void wpadRumbleOff(s32 controller); // 80237664
 
 /*
     Returns whether a controller is vibrating
     (ignores SpmarioGlobals override)
 */
-bool wpadGetRumbleStatus(int controller); // 80237678
+bool wpadGetRumbleStatus(s32 controller); // 80237678
 
 /*
     Returns a bitmask of all buttons that are down on a controller 
 */
-uint32_t wpadGetButtonsHeld(int controller); // 80237688
+u32 wpadGetButtonsHeld(s32 controller); // 80237688
 
 /*
     Returns a bitmask of all buttons that have just been released/pressed on a controller
 */
-uint32_t wpadGetButtonsReleased(int controller); // 8023769c
-uint32_t wpadGetButtonsPressed(int controller); // 802376b0
+u32 wpadGetButtonsReleased(s32 controller); // 8023769c
+u32 wpadGetButtonsPressed(s32 controller); // 802376b0
 
 /*
     Returns a bitmask of buttons held long enough to trigger the 'repeat' flag
 */
-uint32_t wpadGetButtonsHeldRepeat(int controller); // 802376c4
+u32 wpadGetButtonsHeldRepeat(s32 controller); // 802376c4
 
 // 802376e4, 80237710, 80237750 unknown functions

@@ -6,21 +6,21 @@
 #define ITEM_NAME_MAX 12
 
 typedef struct {
-/* 0x00 */ uint32_t flags
+/* 0x00 */ u32 flags
 /* 0x04 */ char name[ITEM_NAME_MAX];
-/* 0x10 */ int16_t type; // see items.txt
-/* 0x12 */ int16_t behaviour;
+/* 0x10 */ s16 type; // see items.txt
+/* 0x12 */ s16 behaviour;
 /* 0x14 */ Vec3 position
 /* 0x20 */ // unknown 0x20-23
 /* 0x24 */ IconEntry * icon;
-/* 0x28 */ int animPoseId;
-/* 0x2C */ int switchNumber; // evt variable
+/* 0x28 */ s32 animPoseId;
+/* 0x2C */ s32 switchNumber; // evt variable
 /* 0x30 */ EvtScriptCode * pickupScript;
 /* 0x34 */ // unknown 0x34-87
 } ItemEntry; // total size 0x80
 
 typedef struct {
-/* 0x00 */ int num; // 0x100
+/* 0x00 */ s32 num; // 0x100
 /* 0x04 */ ItemEntry * entries; // array of num
 /* 0x08 */ // unknown 0x8-7f
 } ItemWork; // total size 0x80
@@ -47,8 +47,8 @@ void itemMain(); // 80077cd8
 /*
     Spawns an item
 */
-ItemEntry * itemEntry(const char * name, int16_t type, int16_t behaviour, EvtScriptCode * pickupScript,
-                      int switchNumber, float x, float y, float z); // 80078b3c
+ItemEntry * itemEntry(const char * name, s16 type, s16 behaviour, EvtScriptCode * pickupScript,
+                      s32 switchNumber, float x, float y, float z); // 80078b3c
 
 /*
     Despawns an item

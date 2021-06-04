@@ -8,23 +8,23 @@
     Getters & setters for script variables
     Datapiece is the form it's in in a compiled script
 */
-float evtGetFloat(EvtEntry * entry, int datapiece); // 800dedb8
-int evtGetValue(EvtEntry * entry, int datapiece); // 800de594
-void evtSetFloat(EvtEntry * entry, int datapiece, float value); // 800df1fc
-void evtSetValue(EvtEntry * entry, int datapiece, int value); // 800de9b8
+float evtGetFloat(EvtEntry * entry, s32 datapiece); // 800dedb8
+s32 evtGetValue(EvtEntry * entry, s32 datapiece); // 800de594
+void evtSetFloat(EvtEntry * entry, s32 datapiece, float value); // 800df1fc
+void evtSetValue(EvtEntry * entry, s32 datapiece, s32 value); // 800de9b8
 
 /*
     Executes an entry's script until it pauses or finishes
 */
-int evtmgrCmd(EvtEntry * entry); // 800ddd5c
+s32 evtmgrCmd(EvtEntry * entry); // 800ddd5c
 
 /*
     Individual instruction functions
 */
-int evt_end_evt(EvtEntry * entry); // 800da0b0
-int evt_lbl(EvtEntry * entry); // 800da0d4
+s32 evt_end_evt(EvtEntry * entry); // 800da0b0
+s32 evt_lbl(EvtEntry * entry); // 800da0d4
 // function for every other instruction in the same format...
-int evt_debug_bp(EvtEntry * entry); // 800ddd08
+s32 evt_debug_bp(EvtEntry * entry); // 800ddd08
 
 /*
     Returns a pointer to the instruction after the next else on the

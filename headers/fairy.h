@@ -13,9 +13,9 @@ typedef struct {
 typedef struct {
 /* 0x000 */ // unknown 0x-3
 /* 0x004 */ FairyEntry entries[4];
-/* 0x344 */ int max; // 4
-/* 0x348 */ int num;
-/* 0x34C */ int numExtra;
+/* 0x344 */ s32 max; // 4
+/* 0x348 */ s32 num;
+/* 0x34C */ s32 numExtra;
 /* 0x350 */ // unknown 0x350-367
 } FairyWork; // total size 0x368
 
@@ -36,7 +36,7 @@ void fairyEntry(); // 8011d58c
 */
 void fairyInit(); // 8011d8f8
 
-void fairyExtraEntry(int extraNo); // 8011f6a0
+void fairyExtraEntry(s32 extraNo); // 8011f6a0
 
 /*
     Sets position of all fairies

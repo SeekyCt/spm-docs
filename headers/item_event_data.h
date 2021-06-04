@@ -4,7 +4,7 @@
 */
 
 typedef struct {
-/* 0x0 */ int itemId;
+/* 0x0 */ s32 itemId;
 /* 0x4 */ EvtScriptCode * useScript;
 /* 0x8 */ const char * useMsgName;
 } ItemEventData; // total size 0xc
@@ -22,12 +22,12 @@ ItemEventWork * itemEventWp; // 805adf00
 /*
     Returns the script for an item in the table by id, or a fallback if the item isn't in there
 */
-EvtScriptCode * getItemUseEvt(int itemId); // 80025164
+EvtScriptCode * getItemUseEvt(s32 itemId); // 80025164
 
 /*
     Returns the name of the use message for an item in the table, or nulll if the item isn't in there
 */
-const char * getItemUseMsg(int itemId); // 800251dc
+const char * getItemUseMsg(s32 itemId); // 800251dc
 
 // 80025250 unknown function
 

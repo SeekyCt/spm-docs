@@ -7,9 +7,9 @@ typedef (CamDispFunc)(CamEntry * entry);
 #define CAMFLAG_LoadBin 1
 
 typedef struct {
-/* 0x000 */ uint32_t flag;
-/* 0x004 */ int cam_no;
-/* 0x008 */ uint16_t cameraMode;
+/* 0x000 */ u32 flag;
+/* 0x004 */ s32 cam_no;
+/* 0x008 */ u16 cameraMode;
 /* 0x00A */ // unknown 0xa-2f
 /* 0x030 */ // unknown 0x30-33, param_5 of camEntryPersp
 /* 0x034 */ // unknown 0x34-37, param_6 of camEntryPersp
@@ -21,7 +21,7 @@ typedef struct {
 /* 0x0F8 */ float left;
 /* 0x0FC */ float right;
 /* 0x100 */ // unknown 0x100-157
-/* 0x158 */ int isOrtho;
+/* 0x158 */ s32 isOrtho;
 /* 0x15C */ Vec3 pos;
 /* 0x168 */ Vec3 target;
 /* 0x174 */ Vec3 up;
@@ -58,13 +58,13 @@ void camInit(); // 80054804
     Creates a perspective camera
 */
 CamEntry * camEntryPersp(float fovY, float aspect, float near, float far, float param_5,
-                         float param_6, int cam_no, CamDispFunc * callback); // 80054c00
+                         float param_6, s32 cam_no, CamDispFunc * callback); // 80054c00
 
 /*
     Creates an orthographic camera
 */
 CamEntry * camEntryOrtho(float top, float bottom, float left, float right, float near,
-                         float far, int cam_no, CamDispFunc * callback); // 80054e60
+                         float far, s32 cam_no, CamDispFunc * callback); // 80054e60
 
 // 800550f8 unknown function
 
@@ -96,7 +96,7 @@ void camUnloadRoad(); // 80055a60
 /*
     Returns a camera by cam_no
 */
-CamEntry * camGetPtr(int id); // 80055b24
+CamEntry * camGetPtr(s32 id); // 80055b24
 
 /*
     Returns the current camera

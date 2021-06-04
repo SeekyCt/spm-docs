@@ -20,9 +20,9 @@ enum {
 };
 
 typedef struct {
-/* 0x00 */ uint8_t state;
-/* 0x01 */ int8_t fileType;
-/* 0x02 */ int16_t touchCnt;
+/* 0x00 */ u8 state;
+/* 0x01 */ s8 fileType;
+/* 0x02 */ s16 touchCnt;
 /* 0x04 */ // unknown 0x4-1f
 /* 0x20 */ char path[64]; // size is uncertain
 /* 0x60 */ // unknown 0x60-a0
@@ -63,7 +63,7 @@ void fileGarbageDataAdrClear(FileEntry * entry); // 8019e7e0
 /*
     Converts offsets in file data back to self-pointers
 */
-void fileGarbageDataAdrSet(void * data, int fileType); // 8019ee2c
+void fileGarbageDataAdrSet(void * data, s32 fileType); // 8019ee2c
 
 /*
     Safely moves memory containing file data, preserving any self-pointers
@@ -78,20 +78,20 @@ void _fileGarbage(int param_1); // 8019f560
     Calling after Asyncf is finished allows accessing data loaded asynchronously
     Returns -1 if there's an error
 */
-FileEntry * fileAllocf(int fileType, const char * pathFormat, ...); // 8019f724
-FileEntry * fileAlloc(const char * path, int fileType); // 8019f7dc
-FileEntry * _fileAlloc(const char * path, int fileType, int param_3); // 8019f7e4
+FileEntry * fileAllocf(s32 fileType, const char * pathFormat, ...); // 8019f724
+FileEntry * fileAlloc(const char * path, s32 fileType); // 8019f7dc
+FileEntry * _fileAlloc(const char * path, s32 fileType, int param_3); // 8019f7e4
 
 /*
     Unloads a file
 */
 void fileFree(FileEntry * entry); // 8019fa8c
 
-void dvdReadDoneCallback(int result, DVDFileInfo * fileInfo); // 8019fb38
+void dvdReadDoneCallback(s32 result, DVDFileInfo * fileInfo); // 8019fb38
 
 /*
     Loads a file asynchronously
     Returns a null pointer if the file isn't loaded yet
 */
-FileEntry * fileAsyncf(int fileType, int p2, const char * format, ...); // 8019fc5c
-FileEntry * fileAsync(const char * path, int fileType, int param_3); // 8019fd24
+FileEntry * fileAsyncf(s32 fileType, int p2, const char * format, ...); // 8019fc5c
+FileEntry * fileAsync(const char * path, s32 fileType, int param_3); // 8019fd24

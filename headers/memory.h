@@ -18,8 +18,8 @@ enum {
 };
 
 typedef struct {
-/* 0x0 */ int type; // see enum above
-/* 0x4 */ int size;
+/* 0x0 */ s32 type; // see enum above
+/* 0x4 */ s32 size;
 } HeapSize; // total size 0x8
 
 HeapSize size_table[9]; // 8042a408
@@ -37,8 +37,8 @@ typedef struct {
 /* 0x00 */ void * data; // space on the smart heap for the user to put their data, may change during lifetime
 /* 0x04 */ size_t size; // size of the space for data on the smart heap
 /* 0x08 */ FileEntry * fileEntry; // set if this allocation is being used for a file, gives special behaviour
-/* 0x0C */ uint16_t flag; // 1 for in use, 0 otherwise
-/* 0x0E */ uint8_t type; // used to group for de-allocation
+/* 0x0C */ u16 flag; // 1 for in use, 0 otherwise
+/* 0x0E */ u8 type; // used to group for de-allocation
 /* 0x0F */ // unknown 0xf
 /* 0x10 */ size_t spaceAfter; // space after the data before the next allocated data (or the end of the heap)
 /* 0x14 */ SmartAllocation * next; // next item in the allocated or free linked list
@@ -53,13 +53,13 @@ typedef struct {
 /* 0xE00C */ SmartAllocation * allocatedEnd; // last item in the allocated linked list
 /* 0xE010 */ SmartAllocation * freeStart; // first item in free allocation linked list
 /* 0xE014 */ SmartAllocation * freeEnd; // last item in free allocation linked list
-/* 0xE018 */ uint32_t freedThisFrame; // number of allocations freed this frame
+/* 0xE018 */ u32 freedThisFrame; // number of allocations freed this frame
 } SmartWork; // total size 0xe01c
 
 SmartWork smartWork; // 8051744c
 SmartWork swp; // 805ae16c
 
-int g_bFirstSmartAlloc; // 805ae9ac
+s32 g_bFirstSmartAlloc; // 805ae9ac
 
 /*
     Initialise heaps
@@ -69,17 +69,17 @@ void memInit(); // 801a5dcc
 /*
     Clear the contents of a heap
 */
-void memClear(int heapId); // 801a61e4
+void memClear(s32 heapId); // 801a61e4
 
 /*
     Allocate a block of memory from a heap
 */
-void * __memAlloc(int heapId, size_t size); // 801a626c
+void * __memAlloc(s32 heapId, size_t size); // 801a626c
 
 /*
     Free a block of memory back to a heap
 */
-void __memFree(int heapId, void * ptr); // 801a62f0
+void __memFree(s32 heapId, void * ptr); // 801a62f0
 
 /*
     Initialise the smart heap (requires memInit to have ran)
@@ -90,7 +90,7 @@ void smartInit(); // 801a6300
     Frees all allocations of a certain type
     Freeing type 3 also frees type 4
 */  
-void smartAutoFree(int8_t type); // 801a64f4
+void smartAutoFree(s8 type); // 801a64f4
 
 /*
     Frees a smart allocation back to the smart heap
@@ -100,7 +100,7 @@ void smartFree(SmartAllocation * lp); // 801a6598
 /*
     Allocates memory from the smart heap of a certain type
 */
-SmartAllocation * smartAlloc(size_t size, int8_t type); // 801a6794
+SmartAllocation * smartAlloc(size_t size, s8 type); // 801a6794
 
 /*
     Moves allocations forwards in the heap where possible to collect empty space

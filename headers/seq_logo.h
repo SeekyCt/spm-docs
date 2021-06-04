@@ -8,7 +8,7 @@ typedef struct {
 /* 0x10 */ TPL * healthAndSafetyTPL;
 /* 0x14 */ TPL * holdSidewaysTPL;
 /* 0x18 */ EvtEntry * nandCheckEvtEntry; // script at 804e5280
-/* 0x1C */ int nandCheckEvtEntryId;
+/* 0x1C */ s32 nandCheckEvtEntryId;
 } SeqLogoWork; // total size 0x20
 
 SeqLogoWork seqLogoWork; // 80512220

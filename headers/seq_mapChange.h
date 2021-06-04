@@ -8,7 +8,7 @@ typedef struct {
 /* 0x20 */ char mapName[32];
 /* 0x40 */ char doorName[32]; // door the map was entered with
 /* 0x60 */ EvtEntry * initEvtEntry;
-/* 0x64 */ int initEvtEntryId;
+/* 0x64 */ s32 initEvtEntryId;
 /* 0x68 */ // unknown 0x68-73
 } SeqMapChangeWork; // total size 0x74
 

@@ -5,7 +5,7 @@
 
 typedef struct {
 /* 0x00 */ const char * itemName;
-/* 0x04 */ int16_t itemId;
+/* 0x04 */ s16 itemId;
 /* 0x06 */ // unknown 0x6-7
 /* 0x08 */ const char * animPoseName;
 /* 0x0C */ // unknown 0xc-f

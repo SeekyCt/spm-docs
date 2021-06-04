@@ -7,15 +7,15 @@
 */
 
 typedef struct {
-/* 0x0000 */ uint16_t flags; // 2 is corrupt?
+/* 0x0000 */ u16 flags; // 2 is corrupt?
 /* 0x0002 */ // unknown 0x2-7
 /* 0x0008 */ SpmarioGlobals spmarioGlobals; // see spmario.h
 /* 0x1b10 */ MarioPouchWork pouchWork; // see mario_pouch.h
 /* 0x21b0 */ // unknown 0x21b0-25af
     // Checksums are calculated with checksum set to 0 and checksumNOT set to 0xffff
-    // See decomp for checksum algorithm
-/* 0x25b0 */ uint32_t checksum;
-/* 0x25b4 */ uint32_t checksumNOT;
+    // See decomp/spm-save-editor for checksum algorithm
+/* 0x25b0 */ u32 checksum;
+/* 0x25b4 */ u32 checksumNOT;
 } SaveFile; // total size 0x25b8
 
 #define NAND_FLAG_Exec 1
@@ -34,7 +34,7 @@ enum {
 };
 
 typedef struct {
-/* 0x000 */ uint32_t flag;
+/* 0x000 */ u32 flag;
 /* 0x004 */ void * openingBuffer; // used by NANDSafeOpenAsync
 /* 0x008 */ size_t openingBufferSize;
 /* 0x00C */ // unknown 0xc-f
@@ -46,11 +46,11 @@ typedef struct {
 /* 0x19C */ NANDBanner * banner;
 /* 0x1A0 */ size_t bannerSize; // omits unused icon textures
 /* 0x1A4 */ NANDBanner * tempBanner;
-/* 0x1A8 */ uint32_t answer;
-/* 0x1AC */ uint32_t task; // see enum above
-/* 0x1B0 */ uint32_t stage; // used by task main functions to track progress
-/* 0x1B4 */ int code;
-/* 0x1B8 */ int saveId; // slot of save file to work on
+/* 0x1A8 */ u32 answer;
+/* 0x1AC */ u32 task; // see enum above
+/* 0x1B0 */ u32 stage; // used by task main functions to track progress
+/* 0x1B4 */ s32 code;
+/* 0x1B8 */ s32 saveId; // slot of save file to work on
 } NandWork; // total size 0x1bc
 
 NandWork nandWork; // 80534fa8
@@ -75,7 +75,7 @@ bool nandIsExec(); // 8023e9c0
 /*
     Gets the latest NAND library function return
 */
-int nandGetCode(); // 8023e9e0
+s32 nandGetCode(); // 8023e9e0
 
 /*
     Returns a pointer to the array of all 4 save files
@@ -100,7 +100,7 @@ void nandWriteAllSaves(); // 8023eaec
 /*
     Starts a save file being written to NAND asynchronously 
 */
-void nandWriteSave(int saveId); // 8023eb68
+void nandWriteSave(s32 saveId); // 8023eb68
 
 /*
     Starts writing banner.bin to and reading all save files from NAND asynchronously 
@@ -111,32 +111,32 @@ void nandWriteBannerLoadAllSaves(); // 8023ebf0
     Starts a save file being deleted from NAND asynchronously
     Bugged to always delete the first save file
 */
-void nandDeleteSave(int saveId); // 8023ec6c
+void nandDeleteSave(s32 saveId); // 8023ec6c
 
 /*
     Copies the contents of one save file to another
     Changes copies in memory only, NAND is not written
 */
-void nandCopySave(int sourceId, int destId); // 8023ece8
+void nandCopySave(s32 sourceId, s32 destId); // 8023ece8
 
 /*
     Clears the contents of a save file
     Changes the copy in memory only, NAND is not written
 */
-void nandClearSave(int saveId); // 8023ed08
+void nandClearSave(s32 saveId); // 8023ed08
 
 /*
     Updates the contents of a save file
     Changes the copy in memory only, NAND is not written
 */
-void nandUpdateSave(int saveId); // 8023edcc
+void nandUpdateSave(s32 saveId); // 8023edcc
 
 /*
     Loads the contents of a save file into the game's systems
     For example, SpmarioGlobals are copied to gp.
     Uses the copy in memory, NAND is not read
 */
-void nandLoadSave(int saveId); // 8023efe0
+void nandLoadSave(s32 saveId); // 8023efe0
 
 /*
     Disables saving to NAND, all saves are cleared on game over.
@@ -186,9 +186,9 @@ void nandDeleteSaveMain(); // 80240414
 /*
     Callback for NAND library functions
 */
-void genericCallback(int result, NANDCommandBlock * commandBlock); // 80240620
+void genericCallback(s32 result, NANDCommandBlock * commandBlock); // 80240620
 
 /*
     Unique callback for NANDCheck
 */
-void checkCallback(int result, NANDCommandBlock * commandBlock); // 80240648
+void checkCallback(s32 result, NANDCommandBlock * commandBlock); // 80240648

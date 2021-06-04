@@ -9,8 +9,8 @@
 typedef void (SeqFunc)(SeqWork *);
 
 typedef struct {
-/* 0x00 */ int seq;
-/* 0x04 */ int stage; // number used by the seq_ functions to track their progress
+/* 0x00 */ s32 seq;
+/* 0x04 */ s32 stage; // number used by the seq_ functions to track their progress
 /* 0x08 */ char * p0; // parameter for seq function, always map name?
 /* 0x0C */ char * p1; // paramater for seq function, always door name?
 /* 0x10 */ // unknown 0x10-1f
@@ -35,9 +35,9 @@ enum {
     SEQ_LOAD = 5
 };
 
-int now_seq; // 805ae0b8
-int next_seq; // 805ae0bc
-int prev_seq; // 805ae0c0
+s32 now_seq; // 805ae0b8
+s32 next_seq; // 805ae0bc
+s32 prev_seq; // 805ae0c0
 
 /*
     Initialises data used by seqdrv functions
@@ -47,7 +47,7 @@ void seqInit_SPMARIO(); // 8017bf2c
 /*
     Sets the current sequence and its prameters
 */
-void seqSetSeq(int seqNum, const char * p0, const char * p1); // 8017c074
+void seqSetSeq(s32 seqNum, const char * p0, const char * p1); // 8017c074
 
 /*
     Calls all init, main & exit functions based on now_seq & next_seq
@@ -57,7 +57,7 @@ void seqMain(); // 8017bf6c
 /*
     Returns now_seq or 0 if equal to -1
 */
-int seqGetSeq(); // 8017c084
+s32 seqGetSeq(); // 8017c084
 
 // TODO: move to own headers
 void seq_titleInit(SeqInfo * info); // 8017b130

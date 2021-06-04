@@ -29,15 +29,15 @@ enum {
 #define MARIO_GRAVITY_MAX 4
 
 typedef struct {
-/* 0x0000 */ uint32_t flags;
+/* 0x0000 */ u32 flags;
 /* 0x0004 */ // unknown 0x4-34
 /* 0x0035 */ bool disableMovement;
 /* 0x0036 */ // unknown 0x36-37
-/* 0x0038 */ int8_t character; // see enum above
+/* 0x0038 */ s8 character; // see enum above
 /* 0x0039 */ // unknown 0x39-5b
 /* 0x005C */ Vec3 position;
 /* 0x0068 */ // unknown 0x68-11f
-/* 0x0120 */ int camId;
+/* 0x0120 */ s32 camId;
 /* 0x0124 */ // unknown 0x124-14b
 /* 0x014C */ float startSpeed;
 /* 0x0150 */ float maxSpeed;
@@ -51,13 +51,13 @@ typedef struct {
 /* 0x01E4 */ // unknown 0x1e4-1fb
 /* 0x01FC */ HitEntry * hitObjs2[3];
 /* 0x0208 */ // unknown 0x208-24b
-/* 0x024C */ int animPoseIds[5];
+/* 0x024C */ s32 animPoseIds[5];
 /* 0x0260 */ // unknown 0x260-3cf
 /* 0x03D0 */ float scalarSpeed;
 /* 0x03D4 */ // unknown 0x3d4-3d7
 /* 0x03D8 */ Vec3 respawnPosition;
 /* 0x03E4 */ // unknown 0x3e4-135f
-/* 0x1360 */ int gravityType; // see enum above
+/* 0x1360 */ s32 gravityType; // see enum above
 /* 0x1364 */ // unknown 0x1364-156b
 } MarioWork; // total size 0x156c
 
@@ -85,11 +85,11 @@ void marioMain(); // 801243a8
 /*
     Sets the player's gravity direction, see enum above
 */
-void marioSetGravtiy(int dir); // 8012b50c
+void marioSetGravtiy(s32 dir); // 8012b50c
 
 /*
     Returns the player's gravity direction, see enum above
 */
-int marioGetGravity(); // 8012b6cc
+s32 marioGetGravity(); // 8012b6cc
 
 // a lot of unknown functions

@@ -7,25 +7,25 @@
 /*
     Turn on / get / turn off GSWF n
 */
-int swSet(int n); // 80037fac 
-int swGet(int n); // 80037fec
-int swClear(int n); // 80038034
+s32 swSet(s32 n); // 80037fac 
+s32 swGet(s32 n); // 80037fec
+s32 swClear(s32 n); // 80038034
 
 /*
-    Set / get GSW n (int8_t for all GSW except 0, which is a full int)
+    Set / get GSW n (s8 for all GSW except 0, which is a full s32)
 */
-int swByteSet(int n, int val); // 80038074
-int swByteGet(int n); // 800380f8
+s32 swByteSet(s32 n, s32 val); // 80038074
+s32 swByteGet(s32 n); // 800380f8
 
 /*
     Turn on / get / turn off LSWF n
 */
-int _swSet(int n); // 8003811c
-int _swGet(int n); // 8003815c
-int _swClear(int n); // 800381a4
+s32 _swSet(s32 n); // 8003811c
+s32 _swGet(s32 n); // 8003815c
+s32 _swClear(s32 n); // 800381a4
 
 /*
-    Set / get LSW n (all int8_t unlike GSW)
+    Set / get LSW n (all s8 unlike GSW)
 */
-int _swByteSet(int n); // 800381e4
-int _swByteGet(int n); // 800381f4
+s32 _swByteSet(s32 n); // 800381e4
+s32 _swByteGet(s32 n); // 800381f4

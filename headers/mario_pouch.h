@@ -16,7 +16,7 @@
 typedef struct {
 /* 0x0 */ bool selectable;
 /* 0x1 */ bool selected;
-/* 0x2 */ int16_t itemType; // see items.txt
+/* 0x2 */ s16 itemType; // see items.txt
 } PouchCharOrPixlInfo; // total size 0x4
 
 /*
@@ -24,22 +24,22 @@ typedef struct {
 */
 typedef struct {
 /* 0x000 */ // unknown 0x0-3
-/* 0x004 */ int level;
-/* 0x008 */ int attack;
-/* 0x00C */ int hp;
-/* 0x010 */ int maxHp;
+/* 0x004 */ s32 level;
+/* 0x008 */ s32 attack;
+/* 0x00C */ s32 hp;
+/* 0x010 */ s32 maxHp;
 /* 0x014 */ // unknown 0x14-17
-/* 0x018 */ int xp;
-/* 0x01C */ int coins;
-/* 0x020 */ int16_t keyItem[32];
-/* 0x060 */ int16_t useItem[10];
-/* 0x074 */ int16_t shopItem[32];
+/* 0x018 */ s32 xp;
+/* 0x01C */ s32 coins;
+/* 0x020 */ s16 keyItem[32];
+/* 0x060 */ s16 useItem[10];
+/* 0x074 */ s16 shopItem[32];
 /* 0x0B4 */ PouchCharOrPixlInfo characters[4];
 /* 0x0C4 */ PouchCharOrPixlInfo pixls[16];
 /* 0x104 */ // unknown 0x104-68b
-/* 0x68C */ int totalCoinsCollected;
+/* 0x68C */ s32 totalCoinsCollected;
 /* 0x690 */ // unknown 0x690-697
-/* 0x698 */ int enemiesDefeated;
+/* 0x698 */ s32 enemiesDefeated;
 /* 0x69C */ // unknown 0x69c-69f
 } MarioPouchWork; // total size 0x6a0
 
@@ -60,106 +60,106 @@ void pouchMain(); // 8014cd90
 /*
     Set/get the player's level
 */
-void pouchSetLevel(int level); // 8014d1bc
-int pouchGetLevel(); // 8014d1f0
+void pouchSetLevel(s32 level); // 8014d1bc
+s32 pouchGetLevel(); // 8014d1f0
 
 /*
     Returns the xp required by the next level
 */
-int pouchGetnextLevelXp(); // 8014d200
+s32 pouchGetnextLevelXp(); // 8014d200
 
 /*
     Set/get/add to the player's attack power
 */
-void pouchSetAttack(int attack); // 8014d394
-int pouchGetAttack(); // 8014d3c8
-void pouchAddAttack(int increase); // 8014d3d8
+void pouchSetAttack(s32 attack); // 8014d394
+s32 pouchGetAttack(); // 8014d3c8
+void pouchAddAttack(s32 increase); // 8014d3d8
 
 /*
     Set/get/add to the player's HP
 */
-void pouchSetHp(int hp); // 8014d414
-int pouchGetHp(); // 8014d458
-void pouchAddHp(int increase); // 8014d468
+void pouchSetHp(s32 hp); // 8014d414
+s32 pouchGetHp(); // 8014d458
+void pouchAddHp(s32 increase); // 8014d468
 
 /*
     Set/get the player's max HP
 */
-void pouchSetMaxHp(int maxHp); // 8014d4b4
-int pouchGetMaxHp(); // 8014d4e8
+void pouchSetMaxHp(s32 maxHp); // 8014d4b4
+s32 pouchGetMaxHp(); // 8014d4e8
 
 /*
     Get/add to the player's xp
 */
-int pouchGetXp(); // 8014d4f8
-void pouchAddXp(int increase); // 8014d508
+s32 pouchGetXp(); // 8014d4f8
+void pouchAddXp(s32 increase); // 8014d508
 
 /*
     Set/get/add to the player's coin count
 */
-void pouchSetCoins(int coins); // 8014d548
-int pouchGetCoins(); // 8014d57c
-void pouchAddCoins(int increase); // 8014d58c, increases totalCoinsCollected
+void pouchSetCoins(s32 coins); // 8014d548
+s32 pouchGetCoins(); // 8014d57c
+void pouchAddCoins(s32 increase); // 8014d58c, increases totalCoinsCollected
 
-void pouchRemoveItemIdx(int itemId, int idx); // 8014e6d0
+void pouchRemoveItemIdx(s32 itemId, s32 idx); // 8014e6d0
 
 /*
     Get the information about a character slot
 */
-PouchCharOrPixlInfo * pouchGetCharInfo(int slot); // 8014ef98
+PouchCharOrPixlInfo * pouchGetCharInfo(s32 slot); // 8014ef98
 
 /*
     Make a character selectable by id, if it exists in a slot
 */
-void pouchMakeCharSelectable(int itemId); // 8014efb0
+void pouchMakeCharSelectable(s32 itemId); // 8014efb0
 
 /*
     Get the information about a pixl slot
 */
-PouchCharOrPixlInfo * pouchGetPixlinfo(int slot); // 8014f080
+PouchCharOrPixlInfo * pouchGetPixlinfo(s32 slot); // 8014f080
 
 /*
     Make a pixl selectable/not by id, if it exists in a slot
 */
-void pouchMakePixlSelectable(int itemId); // 8014f098
-void pouchMakePixlNotSelectable(int itemId); // 8014f154
+void pouchMakePixlSelectable(s32 itemId); // 8014f098
+void pouchMakePixlNotSelectable(s32 itemId); // 8014f154
 
 /*
     Check if a pixl is selected by id
 */
-void pouchIsPixlSelected(int itemId); // 8014f210
+void pouchIsPixlSelected(s32 itemId); // 8014f210
 
 /*
     Returns the id of the currently selected pixl
 */
-int pouchGetCurPixl(); // 8014f31c
+s32 pouchGetCurPixl(); // 8014f31c
 
 /*
     Makes a pixl selected by id, if it exists in a slot
     Deselects all other pixls
 */
-void pouchSetPixlSelected(int itemId); // 8014f408
+void pouchSetPixlSelected(s32 itemId); // 8014f408
 
 /*
     Returns how many coins have ever been collected on this save
 */
-int pouchGetTotalCoinsCollected(); // 8014f99c
+s32 pouchGetTotalCoinsCollected(); // 8014f99c
 
 /*
     Returns/sets how many enemies have ever been defeated on this save
 */
-int pouchGetEnemiesDefeated(); // 8014f9cc
-void pouchSetEnemiesDefeated(int totalDefeated); // 8014f978
+s32 pouchGetEnemiesDefeated(); // 8014f9cc
+void pouchSetEnemiesDefeated(s32 totalDefeated); // 8014f978
 
 /*
     Returns the number of useItem/keyItem/shopItem/char/pixl slots that aren't empty [and aren't selected]
 */
-int pouchCountUseItems(); // 8014fa20
-int pouchCountKeyItems(); // 8014fad0
-int pouchCountShopItems(); // 8014fb78
-int pouchCountChars(); // 8014fc20
-int pouchCountPixls(); // 8014fc70
-int pouchCountPixlsNotSelected(); // 8014fd18
+s32 pouchCountUseItems(); // 8014fa20
+s32 pouchCountKeyItems(); // 8014fad0
+s32 pouchCountShopItems(); // 8014fb78
+s32 pouchCountChars(); // 8014fc20
+s32 pouchCountPixls(); // 8014fc70
+s32 pouchCountPixlsNotSelected(); // 8014fd18
 
 /*
     Returns whether any useItem slot is emtpy
