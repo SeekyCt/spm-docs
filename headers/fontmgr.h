@@ -81,5 +81,5 @@ u32 HSV2RGB(u8 hsv[3]); // 801a28b4
 
 // more functions, unsure about them
 
-int fontEdge; // 805ae990, 0 or 1
+s32 fontEdge; // 805ae990, 0 or 1
 float fontScale[3]; // 805173a0

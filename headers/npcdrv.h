@@ -150,7 +150,7 @@ NPCEnemyTemplate npcEnemyTemplates[435]; // 80449888, npcenemytemplates.txt
 void npcInit(); // 801a96fc
 void npcReset(); // 801a97b8
 void npcMain(); // 801a9878
-NPCEntry * npcEntry(const char * instanceName, const char * animPoseName, s32 instanceId, int param_4); // 801b6430
+NPCEntry * npcEntry(const char * instanceName, const char * animPoseName, s32 instanceId, UNK param_4); // 801b6430
 NPCEntry * npcIdToPtr(s32 id); // 801b6ee4
 NPCEntry * npcNameToPtr(const char * instanceName); // 801b6f2c
 NPCEntry * npcNameToPtr_NoAssert(const char * instanceName); // 801b6fd4

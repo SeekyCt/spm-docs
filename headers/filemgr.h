@@ -70,7 +70,7 @@ void fileGarbageDataAdrSet(void * data, s32 fileType); // 8019ee2c
 */
 void fileGarbageMoveMem(void * dest, FileEntry * sourceEntry); // 8019f498
 
-void _fileGarbage(int param_1); // 8019f560
+void _fileGarbage(UNK param_1); // 8019f560
 
 /*
     Reads a file into memory
@@ -80,7 +80,7 @@ void _fileGarbage(int param_1); // 8019f560
 */
 FileEntry * fileAllocf(s32 fileType, const char * pathFormat, ...); // 8019f724
 FileEntry * fileAlloc(const char * path, s32 fileType); // 8019f7dc
-FileEntry * _fileAlloc(const char * path, s32 fileType, int param_3); // 8019f7e4
+FileEntry * _fileAlloc(const char * path, s32 fileType, UNK param_3); // 8019f7e4
 
 /*
     Unloads a file
@@ -93,5 +93,5 @@ void dvdReadDoneCallback(s32 result, DVDFileInfo * fileInfo); // 8019fb38
     Loads a file asynchronously
     Returns a null pointer if the file isn't loaded yet
 */
-FileEntry * fileAsyncf(s32 fileType, int p2, const char * format, ...); // 8019fc5c
-FileEntry * fileAsync(const char * path, s32 fileType, int param_3); // 8019fd24
+FileEntry * fileAsyncf(s32 fileType, UNK param_2, const char * format, ...); // 8019fc5c
+FileEntry * fileAsync(const char * path, s32 fileType, UNK param_3); // 8019fd24

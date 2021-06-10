@@ -1,3 +1,7 @@
+/*
+    msgdrv handles the reading of message text files and some of the on-screen display of dialogue
+*/
+
 typedef struct {
 /* 0x0 */ u32 size;
 /* 0x4 */ char * contents;
@@ -59,7 +63,7 @@ void msgPreLoad(const char * filename);
 
 // 8002f3f4, 8002f51c, 8002fccc, 80030998 unknown functions
 
-void msgDispKeyWait_render(int param_1); // 80030bb4
+void msgDispKeyWait_render(UNK param_1); // 80030bb4
 void msgAnalize(SmartAllocation * param_1, void * param_2); // 80030c34
 s32 msg_compare(void * param_1, void * param_2); // 800326c4
 
@@ -85,7 +89,7 @@ s32 msgIconStr2ID(const char * iconStr); // 8003299c
 
 // 80032a20, 80032b30 unknown functions
 
-int msgWindow_entry(int param_1, int param_2, int param_3); // 80032c40
+s32 msgWindow_entry(UNK param_1, UNK param_2, UNK param_3); // 80032c40
 
 // 80032f40 unknown function
 

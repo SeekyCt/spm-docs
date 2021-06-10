@@ -265,7 +265,7 @@ s32 pouchGetEnemiesDefeated(); // 8014f9cc
     Returns/sets the number of arcade tokens in the inventory
 */
 s32 pouchGetArcadeTokens(); // 8014f9dc
-void pouchSetArcadeTokens(int count); // 8014f9ec
+void pouchSetArcadeTokens(s32 count); // 8014f9ec
 
 /*
     Returns the number of useItem/keyItem/shopItem/char/pixl slots that aren't empty [and aren't selected]
