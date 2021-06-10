@@ -7,7 +7,12 @@ typedef (CamDispFunc)(CamEntry * entry);
 #define CAMFLAG_LoadBin 1
 
 typedef struct {
+    /*
+        0x10000000 16:9
+        Others unknown
+    */
 /* 0x000 */ u32 flag;
+
 /* 0x004 */ s32 cam_no;
 /* 0x008 */ u16 cameraMode;
 /* 0x00A */ // unknown 0xa-2f
