@@ -1,8 +1,18 @@
 /*
-    swdrv handles saved work evt variables
+    swdrv handles saved work evt variables and something else unknown
 
     Note: this file has some progress in the decomp, see the link in README
 */
+
+/*
+    Initialises all evt variables as 0 and clears some unknown data
+*/
+void swInit(); // 80037eac
+
+/*
+    Re-initialises all LSW & LSWF as 0 and clears some unknown data
+*/
+void swReInit(); // 80037f48
 
 /*
     Turn on / get / turn off GSWF n
@@ -29,3 +39,5 @@ s32 _swClear(s32 n); // 800381a4
 */
 s32 _swByteSet(s32 n); // 800381e4
 s32 _swByteGet(s32 n); // 800381f4
+
+// 80038204, 800383a0, 80038478, 80038550, 8003863c, 8003864c, 8003865c, 8003875c, 800387d8 unknown functions
