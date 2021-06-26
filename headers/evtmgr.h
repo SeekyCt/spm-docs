@@ -39,7 +39,7 @@ typedef struct {
 /* 0x094 */ user_func * userFunc; // Function set & called by the user_func opcode
 /* 0x098 */ s32 lw[16];
 /* 0x0D8 */ u32 lf[3];
-/* 0x0E4 */ void * dowhileStartPtrs[8]; // pointer to do opcodes
+/* 0x0E4 */ void * dowhileStartPtrs[8]; // pointer to instructions after do opcodes
 /* 0x104 */ s32 dowhileIds[8];
 /* 0x100 */ // unknown 0x104-14f
 /* 0x150 */ s32 * uw;
