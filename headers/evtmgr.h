@@ -11,7 +11,7 @@
     Note: this file has some progress in the decomp, see the link in README
 */
 
-typedef s32 (*user_func)(EvtEntry * entry, bool firstRun);
+typedef s32 (user_func)(EvtEntry * entry, bool firstRun);
 
 typedef s32 EvtScriptCode;
 
