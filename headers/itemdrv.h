@@ -22,7 +22,9 @@ typedef struct {
 typedef struct {
 /* 0x00 */ s32 num; // 0x100
 /* 0x04 */ ItemEntry * entries; // array of num
-/* 0x08 */ // unknown 0x8-7f
+/* 0x08 */ // unknown 0x8-63
+/* 0x64 */ s32 tutorialWindowId;
+/* 0x68 */ // unknown 0x68-7f
 } ItemWork; // total size 0x80
 
 ItemWork * itemWork; // 8050bad8
