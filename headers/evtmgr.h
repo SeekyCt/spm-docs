@@ -41,14 +41,16 @@ typedef struct {
 /* 0x0D8 */ u32 lf[3];
 /* 0x0E4 */ void * dowhileStartPtrs[8]; // pointer to instructions after do opcodes
 /* 0x104 */ s32 dowhileIds[8];
-/* 0x100 */ // unknown 0x104-14f
+/* 0x124 */ // unknown 0x124-14b
+/* 0x14C */ s32 * readAddr;
 /* 0x150 */ s32 * uw;
 /* 0x154 */ u32 * uf;
 /* 0x158 */ s32 id;
 /* 0x15C */ float speed;
-/* 0x160 */ // unknown 0x160-167
-/* 0x168 */ void * owner; // might always be an NPCEntry, unsure
-/* 0x16C */ MobjEntry * ownerMobj;
+/* 0x160 */ // unknown 0x160-163
+/* 0x164 */ s32 casedrvId;
+/* 0x168 */ NPCEntry * ownerNpc;
+/* 0x16C */ MOBJEntry * ownerMobj;
 /* 0x170 */ // unknown 0x170-173
 /* 0x174 */ s32 msgWindowId;
 /* 0x178 */ // unknown 0x178-187
