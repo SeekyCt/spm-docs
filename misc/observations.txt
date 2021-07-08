@@ -2,10 +2,13 @@ Assertions were left in the final build of the game (Shift-JIS)
 
 Removing relF.bin and adding a decompressed relF.rel will cause the game to use that instead
 
-The rel always seems to load in the same place in memory?
+The rel always loads in the same place
+
+All memory addresses match between PAL revision 0 and 1 (dol is identical, rel has 1 float value changed)
 
 The game's code files generally follow a common structure:
     Variables stored inside a work struct
     They usually have Entry structures used to control them
-    Init & ReInit functions called in spmarioInit
+    Init functions called in spmarioInit
+    ReInit called in places like _unload
     Main function called in spmarioMain
