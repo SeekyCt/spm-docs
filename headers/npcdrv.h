@@ -30,7 +30,7 @@ typedef struct {
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ // unknown 0x54-63
-/* 0x64 */ u16 attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
+/* 0x64 */ u8 attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
 /* 0x65 */ // unknown 0x65-67
 } NPCTribe; // total size 0x68
 
