@@ -157,7 +157,7 @@ NPCEntry * npcNameToPtr_NoAssert(const char * instanceName); // 801b6fd4
 NPCEntry * npcEntryFromTemplate(NPCEnemyTemplate * enemyTemplate); // 801be198
 bool npcAreOnSpawnEvtsDone(); // 801be638
 NPCEntry * npcEntryFromSetupEnemy(s32 setupFileIndex, Vec3 * pos, s32 nTemplateNo, MiscSetupDataV6 * miscSetupData); // 801bf7a0
-s32f npcGetNextTemplateNpcId(); // 801bfc08
+s32 npcGetNextTemplateNpcId(); // 801bfc08
 bool npcReadSetupFile(const char * mapName, bool reAllocate); // 801c045c
 void npcUpdateSetupFile0To1(SetupFileV0 * file); // 801c077c
 void npcUpdateSetupFile1To2(SetupFileV1 * file); // 801c0a90
