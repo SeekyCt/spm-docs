@@ -30,7 +30,7 @@ typedef struct {
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ // unknown 0x54-63
-/* 0x64 */ u16 attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
+/* 0x64 */ u8 attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
 /* 0x65 */ // unknown 0x65-67
 } NPCTribe; // total size 0x68
 
@@ -157,7 +157,7 @@ NPCEntry * npcNameToPtr_NoAssert(const char * instanceName); // 801b6fd4
 NPCEntry * npcEntryFromTemplate(NPCEnemyTemplate * enemyTemplate); // 801be198
 bool npcAreOnSpawnEvtsDone(); // 801be638
 NPCEntry * npcEntryFromSetupEnemy(s32 setupFileIndex, Vec3 * pos, s32 nTemplateNo, MiscSetupDataV6 * miscSetupData); // 801bf7a0
-s32f npcGetNextTemplateNpcId(); // 801bfc08
+s32 npcGetNextTemplateNpcId(); // 801bfc08
 bool npcReadSetupFile(const char * mapName, bool reAllocate); // 801c045c
 void npcUpdateSetupFile0To1(SetupFileV0 * file); // 801c077c
 void npcUpdateSetupFile1To2(SetupFileV1 * file); // 801c0a90
