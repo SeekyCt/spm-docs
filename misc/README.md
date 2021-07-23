@@ -37,3 +37,12 @@ A dump of the contents of every setup file on the disc
 
 ### utilcodes.txt
 Various debugging cheat codes
+
+### wiidungeon.md
+Documentation of the format of wiidungeon.xml
+
+### wiidungeon_names.md
+Documentation of the `<name>` values in `<enemy>` tags of wiidungeon.xml
+
+### wiidungeon.xml
+A dump of the game's text used to define the Pits of 100 Trials
