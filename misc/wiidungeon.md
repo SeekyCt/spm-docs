@@ -4,6 +4,8 @@ The pit of 100 trial definitions are stored in an XML-like (the only difference 
 
 For more low-level detail of how this works, see my decompilation of [dan.c](https://github.com/SeekyCt/spm-decomp/blob/master/rel/dan.c).
 
+**The tags must be used in the order listed below and nested as shown by the title sizes.**
+
 ## \<dungeon\>
 Inside each `<dungeon>` tag is the definition of 1 floor of the pit.
 
@@ -11,7 +13,11 @@ Inside each `<dungeon>` tag is the definition of 1 floor of the pit.
 The `<no>` tag shows which floor this `<dungeon>` is referring to. (0-99 being the Flipside pit, 100-199 being the Flopside pit)
 
 ### \<item\>
-The `<item>` tag sets which item should be in the reward chest for chest rooms, and is left as `ITEM_ID_NULL` elsewhere.
+The `<item>` tag sets which item should be in the reward chest for chest rooms, and is left as `ITEM_ID_NULL` elsewhere. The names are the `Name` field from [items.txt](https://github.com/SeekyCt/spm-docs/blob/master/misc/items.txt) prefixed with one of the following prefixes:
+* `ITEM_ID_USE_` for items with ids in the range 65-119 (inclusive)
+* `ITEM_ID_COOK_` for items with ids in the range 120-215 (inclusive)
+* `ITEM_ID_CARD_` for items with ids in the range 282-537 (inclusive)
+* Items that don't fall within any of these ranges can not be used
 
 ### \<map\>
 The `<map>` tag is a set of bit flags (awkwardly left in decimal format, practice codes adds support for these to be in hex with the 0x prefix but that's not in the vanilla game) which determines the parts of the map (floors, walls & pipes) to enable in enemy rooms, and is left as 0 elsewhere. See the [map flags & door ids diagram](#map-flags--door-ids) for more.
