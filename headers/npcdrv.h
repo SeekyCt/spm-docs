@@ -26,7 +26,9 @@ typedef struct {
 /* 0x19 */ u8 partsCount;
 /* 0x1A */ // unknown 0x1a-1b
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
-/* 0x20 */ // unknown 0x20-4d
+/* 0x20 */ // unknown 0x20-37
+/* 0x38 */ s16 baseKillXp;
+/* 0x40 */ // unknown 0x40-4d
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ // unknown 0x54-63
