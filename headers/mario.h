@@ -29,16 +29,26 @@ enum {
 #define MARIO_GRAVITY_MAX 4
 
 typedef struct {
-/* 0x0000 */ u32 flags;
-/* 0x0004 */ // unknown 0x4-34
-/* 0x0035 */ bool disableMovement;
-/* 0x0036 */ // unknown 0x36-37
+/* 0x0000 */ u32 flag0;
+/* 0x0004 */ u32 flag4;
+/* 0x0008 */ u32 flag8;
+/* 0x000C */ u32 flagC;
+/* 0x0014 */ u32 flag14;
+/* 0x0015 */ // unknown 0x15-2b
+/* 0x002C */ u16 state;
+/* 0x002E */ // unknown 0x2e-33
+/* 0x0034 */ u8 ctrl;
+/* 0x0035 */ u8 keyOff;
+/* 0x0036 */ s16 cutsceneCount;
 /* 0x0038 */ s8 character; // see enum above
 /* 0x0039 */ // unknown 0x39-5b
 /* 0x005C */ Vec3 position;
 /* 0x0068 */ // unknown 0x68-11f
 /* 0x0120 */ s32 camId;
-/* 0x0124 */ // unknown 0x124-14b
+/* 0x0124 */ // unknown 0x124-127
+/* 0x0128 */ s32 framebufferPosX;
+/* 0x012C */ s32 framebufferPosY;
+/* 0x0130 */ // unknown 0x130-14b
 /* 0x014C */ float startSpeed;
 /* 0x0150 */ float maxSpeed;
 /* 0x0154 */ // unknown 0x154-193
