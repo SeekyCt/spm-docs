@@ -33,6 +33,7 @@ typedef struct {
 /* 0x0004 */ u32 flag4;
 /* 0x0008 */ u32 flag8;
 /* 0x000C */ u32 flagC;
+/* 0x0010 */ u32 flag10;
 /* 0x0014 */ u32 flag14;
 /* 0x0015 */ // unknown 0x15-2b
 /* 0x002C */ u16 state;
