@@ -40,7 +40,7 @@ typedef struct {
 /* 0x002E */ // unknown 0x2e-33
 /* 0x0034 */ u8 ctrl;
 /* 0x0035 */ u8 keyOff;
-/* 0x0036 */ s16 cutsceneCount;
+/* 0x0036 */ u16 cutsceneCount;
 /* 0x0038 */ s8 character; // see enum above
 /* 0x0039 */ // unknown 0x39-5b
 /* 0x005C */ Vec3 position;
