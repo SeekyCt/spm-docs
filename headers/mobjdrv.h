@@ -5,6 +5,10 @@
 typedef void (MobjUpdateFunc)(MobjEntry * entry);
 
 typedef struct {
+    /*
+        1 is active
+        Others unknown
+    */
 /* 0x000 */ u32 flag0;
 /* 0x004 */ u32 flag4;
 /* 0x008 */ char instanceName[16];
@@ -12,18 +16,39 @@ typedef struct {
 /* 0x024 */ Vec3 scale;
 /* 0x030 */ Vec3 rotation;
 /* 0x03C */ // unknown 0x3c-47
-/* 0x048 */ s32 animPoseEntryId;
-/* 0x04C */ // unknown 0x4c-20f
+/* 0x048 */ s32 animPoseId;
+/* 0x04C */ // unknown 0x4c-5b
+    /*
+        These are likely an array of structs, but the exact boundaries are unknown
+    */
+/* 0x05c */ HitObj * joint1_HitObj; // see hitdrv.h
+/* 0x060 */ char joint1_Name[16];
+/* 0x070 */ // unknown 0x70-77
+/* 0x078 */ MapFileJoint joint1; // see mapdrv.h
+/* 0x0E0 */ // unknown 0xe0-e3
+/* 0x0E4 */ HitObj * joint2_HitObj;
+/* 0x0E8 */ char joint2_Name[16];
+/* 0x0F8 */ // unknown 0xf8-100
+/* 0x100 */ MapFileJoint joint2;
+/* 0x168 */ // unknown 0x168-16b
+/* 0x16C */ HitObj * joint3_HitObj;
+/* 0x170 */ char joint3_Name[16];
+/* 0x180 */ // unknown 0x180-187
+/* 0x188 */ MapFileJoint joint3;
+/* 0x1F0 */ // unknown 0x1f0-20f
 /* 0x210 */ union {
 /*       */     DropItem * items; // see npcdrv.h
 /*       */     s32 item;
 /*       */ }
-/* 0x214 */ // unknown 0x214-23b
+/* 0x214 */ // unknown 0x214-217
+/* 0x218 */ ItemEntry * itemEntry; // see itemdrv.h
+/* 0x21C */ // unknown 0x21c-23b
 /* 0x23C */ s32 evtId; // id of the EvtEntry from mobjRunEvent
 /* 0x240 */ MobjUpdateFunc * updateFunction; // runs every frame in mobjMain
 /* 0x244 */ EvtScriptCode * interactScript; // ran when the player interacts with the object
-/* 0x248 */ EvtScriptCode * afterInteractScript; // seems to run when interactScript finishes
-/* 0x24C */ // unknown 0x24c-2a7
+/* 0x248 */ EvtScriptCode * afterInteractScript; // usage varies by MOBJ
+/* 0x24C */ s32 state; // values vary by MOBJ
+/* 0x250 */ // unknown 0x250-2a7
 } MobjEntry; // total size 0x2a8
 
 typedef struct { // paired with a MobjEntry at the same index, unknown purpose
