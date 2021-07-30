@@ -13,8 +13,8 @@ ItemEventData itemEventDataTable[33]; // 803fbc10
 
 typedef struct {
 /* 0x0 */ void * wp;
-/* 0x4 */ // unknown 0x4-7
-} ItemEventWork; // total size 0x8
+/* 0x4 */ // unknown 0x4-1f
+} ItemEventWork; // total size 0x20
 
 ItemEventWork itemEventWork; // 80509c80
 ItemEventWork * itemEventWp; // 805adf00
@@ -35,7 +35,7 @@ const char * getItemUseMsg(s32 itemId); // 800251dc
     Frees wp->wp and sets it to null
 */
 // evt_item_event_free_work()
-EVT_DECLARE_USER_FUNC(evt_item_event_free_work); // 80025700
+EVT_DECLARE_USER_FUNC(evt_item_event_free_work, 0); // 80025700
 
 /*
     Sets wp->wp to null
@@ -43,3 +43,9 @@ EVT_DECLARE_USER_FUNC(evt_item_event_free_work); // 80025700
 void itemEventDataExit(); // 8002573c
 
 // A lot of unknown functions
+
+/*
+    Gives the map & door name that the return pipe should go to
+*/
+// evt_itemdata_get_return_pipe_info(char * &mapNameOut, char * &doorNameOut)
+EVT_DECLARE_USER_FUNC(evt_itemdata_get_return_pipe_info, 2); // 80029434
