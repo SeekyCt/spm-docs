@@ -58,6 +58,7 @@ void setupSpawnItems(s32 count, SetupItem * items); // 80029680
     version of the item data and the pointer to the array of items
     
     Returns all 0s for setup files that aren't v5 or v6, or for v5 & v6 that
-    don't have any item data in them (technically reads uninitialised memory)
+    don't have any item data in them
+    (This reads uninitialised memory that happens to be 0 because of disc alignment)
 */
 void setupReadItemInfo(void * file, s32 * count, s32 * version, SetupItem ** data); // 80029730

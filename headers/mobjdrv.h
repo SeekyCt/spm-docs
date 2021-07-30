@@ -40,7 +40,9 @@ typedef struct {
 /* 0x15 */ // unknown 0x15-17
 } MobjWork; // total size 0x18
 
-// 800297c0, 80029c34,80029e50, 8002a03c, 8002a0bc, 8002a150, 8002a1d4, 8002a258, 8002a31c unknown functions
+// 800297c0, 80029c34, 80029e50, 8002a03c,
+// 8002a0bc, 8002a150, 8002a1d4, 8002a258,
+// 8002a31c unknown functions
 
 /*
     Allocates entries and otherEntries, sets entryCountMax and initialises other unknown data
@@ -95,8 +97,11 @@ EvtEntry * mobjRunEvent(MobjEntry * entry, EvtScriptCode * script); // 8002c980
 void mobjCalcMtx(MobjEntry * entry); // 8002ca04
 void mobjCalcMtx2(MobJEntry * entry); // 8002cdf4
 
-// 8002cf0c, 8002cfcc, 8002d2c0, 8002d560, 8002d640, 8002d720, 8002d7d8, 8002d890, 8002d89c,
-// 8002d8a8, 8002d914, 8002d9bc, 8002de94, 8002dfc4, 8002e278, 8002e4c8, 8002e940, 8002e954,
-// 8002e968, 8002e980, 8002e9bc, 8002ea0c, 8002ea54, 8002eb0c, 8002eb38, 8002eb60, 8002ed80,
-// 8002ed90 unknown functions
+// 8002cf0c, 8002cfcc, 8002d2c0, 8002d560,
+// 8002d640, 8002d720, 8002d7d8, 8002d890,
+// 8002d89c, 8002d8a8, 8002d914, 8002d9bc,
+// 8002de94, 8002dfc4, 8002e278, 8002e4c8,
+// 8002e940, 8002e954, 8002e968, 8002e980,
+// 8002e9bc, 8002ea0c, 8002ea54, 8002eb0c,
+// 8002eb38, 8002eb60, 8002ed80, 8002ed90 unknown functions
  
