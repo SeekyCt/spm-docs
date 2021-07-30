@@ -2,6 +2,8 @@
     Guide controls Tippi & Tiptron
 */
 
+#define GUIDERunEnd 6
+
 typedef const char * (GuideAnimChangeHandler)(const char * newAnimName);
 
 typedef struct {
