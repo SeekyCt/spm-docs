@@ -25,7 +25,7 @@ typedef struct {
 /* 0x4 */ s32 iconid;
 } IconNameIdDef; // total size 0x8
 
-IconNameIdDef iconNameIdDefs[24]; // 80405bd8
+IconNameIdDef msgIcon[24]; // 80405bd8
 
 /*
     Closes file and sets discReadFinished
@@ -38,9 +38,9 @@ void dvdCb(s32 result, DVDFileInfo * fileInfo); // 8002eda0
 void msgInit(); // 8002edd0
 
 /*
-    Parses un-prased message files and loads hoshi_2 model
+    Parses un-parsed message files and loads hoshi_2 model
 */
-void msgMain(); // 8002ef48
+void msgdrvMain(); // 8002ef48
 
 /*
     Loads the specified text file into the specified file slot
@@ -80,7 +80,12 @@ char * msgSearch(const char * msgName); // 8003270c
 char * msgSearchNoFallback(const char * msgName); // 800327e4
 
 bool _ismbblead(char param_1); // 800328b0
-char * msgGetCommand(char * param_1, char * param_2, char * param_3); // 800328fc
+
+/*
+    Splits a message command into tag and value
+    For example, command "<col ffffff80>" writes "col" to tag and "ffffff80" to value
+*/
+char * msgGetCommand(const char * command, char * tag, char * value); // 800328fc
 
 /*
     Takes an icon name (like "STICK") and returns the icon id for it
