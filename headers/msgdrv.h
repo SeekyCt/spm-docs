@@ -2,6 +2,36 @@
     msgdrv handles the reading of message text files and some of the on-screen display of dialogue
 */
 
+typedef (MsgSpeakerFunc)(s32 state, SmartAllocation * speakerSp);
+
+typedef struct {
+/* 0x0000 */ const char * msgName;
+/* 0x0004 */ u32 flags;
+/* 0x0008 */ // unknown 0x8-17
+/* 0x0018 */ s64 openTime; // when the window was opened
+/* 0x0020 */ // unknown 0x20-2f
+/* 0x0030 */ s64 messageStartTime; // last time text was added
+/* 0x0038 */ s32 cellCount;
+/* 0x003C */ // unknown 0x3c-f1fb
+/* 0xF1FC */ MsgSpeakerFunc * mainFunc; // Called multiple times in msgMain with different states
+/* 0xF200 */ // unknown 0xf200-f203
+/* 0xF204 */ char npcName[32];
+/* 0xF224 */ // unknown 0xf224-f227
+    /*
+        0 normal
+        1 typewriter (used in opening cutscene)
+        2 writing
+        3 Francis dating
+        4-15 duplicates of normal
+    */
+/* 0xF228 */ s32 talkSfxGroup;
+/* 0xF22C */ u8 talkVolume;
+/* 0xF22D */ // unknown 0xf22d-f24b
+/* 0xF24C */ WindowEntry * window;
+/* 0xF250 */ s32 talkPoseTime; // frames remaining to be in the talking animation
+/* 0xF254 */ s32 isInTalkPose; // 1 if in talking animation, 0 otherwise
+} MsgSpeaker; // total size 0xf258
+
 typedef struct {
 /* 0x0 */ u32 size;
 /* 0x4 */ char * contents;
@@ -59,12 +89,38 @@ void msgUnLoad(s32 slot); // 8002f35c
     Language folder path is generated automatically, not included in textFileName
     .txt is appended automatically, not included in textFileName
 */
-void msgPreLoad(const char * filename);
+void msgPreLoad(const char * filename); // 8002f37c
 
-// 8002f3f4, 8002f51c, 8002fccc, 80030998 unknown functions
+/*
+    Creates a smart pointer to a MsgSpeaker struct
+*/
+SmartAllocation * msgSpeakerInit(const char * msg, MsgSpeakerFunc * mainFunc, WindowEntry * window); // 8002f3f4
 
+/*
+    Updates a MsgSpeaker
+*/
+void msgMain(SmartAllocation * speakerSp); // 8002f51c
+
+/*
+    Renders the window & text for a MsgSpeaker
+*/
+void msgDisp(); // 8002fccc
+
+/*
+    Draws the star that appears when waiting for input
+*/
+void msgDispKeyWait(); // 80030998
+
+/*
+    Configures GX settings for 
+*/
 void msgDispKeyWait_render(UNK param_1); // 80030bb4
-void msgAnalize(SmartAllocation * param_1, void * param_2); // 80030c34
+
+/*
+    Adds message text to a MsgSpeaker
+*/
+void msgAnalize(SmartAllocation * speakerSp, const char * msg); // 80030c34
+
 s32 msg_compare(void * param_1, void * param_2); // 800326c4
 
 /*
@@ -92,15 +148,67 @@ char * msgGetCommand(const char * command, char * tag, char * value); // 800328f
 */
 s32 msgIconStr2ID(const char * iconStr); // 8003299c
 
-// 80032a20, 80032b30 unknown functions
+/*
+    Sets a MsgSpeaker's npc/fairy/player/item to their talking/standing animation
+*/
+void msgSetTalkPose(SmartAllocation * speakerSp); // 80032a20
+void msgSetStayPose(SmartAllocation * speakerSp); // 80032b30
 
-s32 msgWindow_entry(UNK param_1, UNK param_2, UNK param_3); // 80032c40
+/*
+    Creates a message WindowEntry and its MsgSpeaker
+*/
+s32 msgWindow_Entry(const char * msg, MsgSpeakerFunc * mainFunc, u16 priority); // 80032c40
 
-// 80032f40 unknown function
+/*
+    Delete callback for WindowEntry, frees MsgSpeaker
+*/
+s32 msgWindow_Delete(WindowEntry * entry); // 80032f40
 
-void msgWindow_Add(void * param_1, s32 windowId); // 80032f84
+/*
+    Adds text on to the end of a window
+*/
+void msgWindow_Add(const char * msg, s32 windowId); // 80032f84
+
+/*
+    Moves on from the window
+*/
 void msgWindow_Continue(s32 windowId); // 80032ff8
-void msgWindow_Repeat(s32 windowId); // 80033088
-void msgWindow_ForceClose(const char * param_1); // 800330fc
 
-// 800331ac, 80033234, 80033a40, 80033d40, 80034528, 8003490c unknown functions
+/*
+    Restarts text in a window
+*/
+void msgWindow_Repeat(s32 windowId); // 80033088
+
+/*
+    Closes a window
+*/
+void msgWindow_ForceClose(const char * messageName); // 800330fc
+
+/*
+    Closes all text windows
+*/
+void msgWindow_ForceCloseAll(); // 800331ac
+
+/*
+    Main callback for WindowEntry, updates text position, handles inputs
+    and schedules rendering to run this frame
+*/
+void msgWindow_Main(WindowEntry * window); // 80033234
+
+void msgWindow_Clear_Main(WindowEntry * window); // 80033a40
+
+/*
+    Renders window background, text and input waiting icon
+*/
+void msgWindow_Disp(s8 camId, WindoWentry * window); // 80033d40
+
+/*
+    Main callback for WindowEntry, updates text position, handles inputs
+    and schedules rendering to run this frame
+*/
+void selectWindow_Main(WindowEntry * window); // 80034528
+
+/*
+    Renders window background, text and cursor
+*/
+void selectWindow_Disp(s8 camId, WindowEntry * window); // 8003490c
