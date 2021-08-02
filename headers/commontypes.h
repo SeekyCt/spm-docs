@@ -17,10 +17,16 @@
 /*
     Maths
 */
+
 typedef struct {
 /* 0x0 */ float x;
 /* 0x4 */ float y;
 } Vec2; // total size 0x8
+
+typedef struct {
+/* 0x0 */ s32 x;
+/* 0x4 */ s32 y;
+} Vec2i; // total size 0x8
 
 typedef struct {
 /* 0x0 */ float x;
@@ -28,12 +34,19 @@ typedef struct {
 /* 0x8 */ float z;
 } Vec3; // total size 0xc
 
+typedef struct {
+/* 0x0 */ s32 x;
+/* 0x4 */ s32 y;
+/* 0x8 */ s32 z;
+} Vec3i; // total size 0xc
+
 typedef float Mtx34[3][4]; // total size 0x30
 typedef float Mtx44[4][4]; // total size 0x40
 
 /*
     Display
 */
+
 typedef struct {
 /* 0x0 */ u8 r;
 /* 0x1 */ u8 g;
