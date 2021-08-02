@@ -32,7 +32,9 @@ typedef struct {
         15 - alternate selection (used in Francis dating)
     */
 /* 0x08 */ s32 type;
-/* 0x0C */ // unknown 0xc-1f
+/* 0x0C */ Vec2 pos;
+/* 0x14 */ Vec2 scale;
+/* 0x1C */ // unknown 0x1c-1f
 /* 0x20 */ s64 lastUpdateTime;
 /* 0x28 */ SmartAllocation * speakerSp; // smart pointer to MsgSpeaker
 /* 0x2C */ // unknown 0x2c-2f
