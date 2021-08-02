@@ -57,6 +57,25 @@ typedef struct {
 
 IconNameIdDef msgIcon[24]; // 80405bd8
 
+typedef struct {
+/* 0x0 */ const char * name1;
+/* 0x4 */ const char * name2;
+/* 0x8 */ const char * name3;
+/* 0xC */ const char * name4;
+} MsgTalkSfxGroup; // total size 0x10
+
+MsgTalkSfxGroup * msgTalkSfxGroups[14]; // 80405cd8, index MsgSpeaker.talkSfxGroup
+const char * msgSKipSfx[16]; // 80405d10, index MsgSpeaker.talkSfxGroup
+
+typedef struct {
+/* 0x0 */ const char * openName;
+/* 0x4 */ const char * closeName;
+} MsgOpenCloseSfxGroup; // total size 0x8;
+MsgOpenCloseSfxGroup msgOpenCloseSfxGroups[32]; // 80405d50, index WindowEntry.type
+
+// "msg/XX"
+const char * language_dir[8]; // 80405e50, index gp->language
+
 /*
     Closes file and sets discReadFinished
 */
