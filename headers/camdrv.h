@@ -18,7 +18,9 @@ typedef struct {
 /* 0x00A */ // unknown 0xa-2f
 /* 0x030 */ // unknown 0x30-33, param_5 of camEntryPersp
 /* 0x034 */ // unknown 0x34-37, param_6 of camEntryPersp
-/* 0x038 */ // unknown 0x38-93
+/* 0x038 */ // unknown 0x38-53
+/* 0x054 */ Mtx34 viewMtx;
+/* 0x084 */ // unknown 0x94-93
 /* 0x094 */ Mtx44 projMtx;
 /* 0x0D4 */ // unknown 0xd4-ef
 /* 0x0F0 */ float top;
@@ -36,7 +38,14 @@ typedef struct {
 /* 0x18C */ float aspect;
 /* 0x190 */ float near;
 /* 0x194 */ float far;
-/* 0x198 */ // unknown 0x198-253
+/* 0x198 */ // unknown 0x198-20b
+/* 0x20C */ Vec3 zoomStartPos;
+/* 0x218 */ Vec3 zoomStartTarget;
+/* 0x224 */ Vec3 zoomDestPos;
+/* 0x230 */ Vec3 zoomDestTarget;
+/* 0x23C */ // unknown 0x23c-23f
+/* 0x240 */ s64 zoomStartTime;
+/* 0x248 */ // unknown 0x248-253
 /* 0x254 */ void * cameraRoad;
 /* 0x258 */ CamDispFunc * dispFunc;
 /* 0x25C */ // unknown 0x25c-2ef
@@ -120,4 +129,10 @@ CamEntry * camGetCurNo(); // 80055b50
 */
 void cam3dMain(CamEntry * cp); // 80056a60
 
-// a lot of unknown functions
+// 80057cb0, 80057cc8, 80057ce0, 80057da0,
+// 80057e4c, 80057ec4, 80057ee8, 80058128 unknown functions
+
+/*
+    Converts coordinates in the world to where they appear on screen
+*/
+void getScreenPoint(Vec3 * worldPos, Vec3 * screenPosOut); // 80058294
