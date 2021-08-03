@@ -14,12 +14,18 @@ typedef struct {
 /* 0x4 */ float order;
 /* 0x8 */ DispCallback * callback;
 /* 0xC */ void * callbackParam;
-} DispWork; // total size 0x10
+} DispEntry; // total size 0x10
 
-DispWork * dispCurWork; // 805ae7d4
-DispWork * pDispWork; // 805ae7c8, array of 2048
-DispWork ** pSortWork; // 805ae7c8, array of 2048
+DispEntry * dispCurWork; // 805ae7d4
+DispEntry * pDispEntry; // 805ae7c8, array of 2048
+DispEntry ** pSortWork; // 805ae7c8, array of 2048
 s32 entry_n; // 805ae7d0
+
+typedef struct {
+/* 0x0 */ // unknown 0x0-f
+} DispScissor; // total size 0x10
+
+DispScissor dispScissors[0x20]; // 8050b620
 
 /*
     Initialise data used by dispdrv functions
@@ -32,7 +38,8 @@ void dispReInit(); // 8005aef4
 */
 void dispEntry(float z, s8 cameraId, s8 renderMode, DispCallback * callback, void * callbackParam); // 8005af04
 
-// 8005b088, 8005b0dc unknown functions
+void dispSetCurScissor(s32 scissorNo); // 8005b088
+void dispSetScissor(s32 id, UNK field_0, UNK field_4, UNK field_8, UNK field_c); // 8005b0dc
 
 bool _sort(DispEntry ** lhs, DispEntry ** rhs); // 8005b158
 void dispSort(); // 8005b188
@@ -45,6 +52,8 @@ void dispDraw(s32 cameraId); // 8005b1a0
 float dispCalcZ(float param_1); // 8005b46c
 
 /*
-    Returns the DispWork currently being executed
+    Returns the DispEntry currently being executed
 */
-DispWork * dispGetCurWork(); // 8005b524
+DispEntry * dispGetCurWork(); // 8005b524
+
+// 8005b52c unknown function
