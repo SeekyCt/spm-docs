@@ -3,7 +3,7 @@
 */
 
 typedef struct {
-/* 0x00 */ u16 flags
+/* 0x00 */ u16 flags;
 /* 0x02 */ // unknown 0x2-3
     // Touching a HitObj with either name triggers the script
 /* 0x04 */ const char * name;
