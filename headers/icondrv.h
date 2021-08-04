@@ -52,7 +52,7 @@ void iconEntry2D(const char * name, s32 iconId); // 800729ac
 void iconDelete(const char * name); // 80072c48
 
 /*
-    Renders icons
+    Renders an icon
 */
 void iconDisp(s8 cameraId, IconEntry * entry); // 80072cdc
 
