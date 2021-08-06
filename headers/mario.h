@@ -62,7 +62,7 @@ typedef struct {
 /* 0x019C */ float HitboxWidth;
 /* 0x01A0 */ float HitboxHeight;
 /* 0x01A4 */ // unknown 0x1a4-1bb
-/* 0x01BB */ HitEntry * hitObjs1[10];
+/* 0x01BC */ HitEntry * hitObjs1[10];
 /* 0x01E4 */ // unknown 0x1e4-1fb
 /* 0x01FC */ HitEntry * hitObjs2[3];
 /* 0x0208 */ // unknown 0x208-24b
