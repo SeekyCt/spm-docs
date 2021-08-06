@@ -62,9 +62,9 @@ typedef struct {
 /* 0x019C */ float HitboxWidth;
 /* 0x01A0 */ float HitboxHeight;
 /* 0x01A4 */ // unknown 0x1a4-1bb
-/* 0x01BC */ HitEntry * hitObjs1[10];
+/* 0x01BC */ HitObj * hitObjs1[10];
 /* 0x01E4 */ // unknown 0x1e4-1fb
-/* 0x01FC */ HitEntry * hitObjs2[3];
+/* 0x01FC */ HitObj * hitObjs2[3];
 /* 0x0208 */ // unknown 0x208-24b
 /* 0x024C */ s32 animPoseIds[8]; // 8th is for slim flip model
 /* 0x026C */ // unknown 0x26c-30b
