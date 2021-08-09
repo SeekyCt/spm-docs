@@ -12,9 +12,9 @@ Pseudo-C headers documenting various functions and structures in the game
 Various writeups of mechanics and dumps of internal game data
 
 ## Credits
-- Various members of the TTYD community for their documentation in the [TTYD Tools](https://github.com/PistonMiner/ttyd-tools), [TTYD Utils](https://github.com/jdaster64/ttyd-utils/), [Practice Codes](https://github.com/Zephiles/TTYD-Practice-Codes/), [Infinite Pit](https://github.com/jdaster64/ttyd-infinite-pit/) and [Decomp](https://github.com/NWPlayer123/PaperMario2) repos
+- Various members of the TTYD community for their documentation in the [TTYD Tools](https://github.com/PistonMiner/ttyd-tools), [TTYD Utils](https://github.com/jdaster64/ttyd-utils/), [Practice Codes](https://github.com/Zephiles/TTYD-Practice-Codes/), [Infinite Pit](https://github.com/jdaster64/ttyd-infinite-pit/) and [Decomp](https://github.com/NWPlayer123/PaperMario2) repos, as well as in the shared Ghidra project
 - Kevin for initial item documentation
-- JohnP55 for various data addresses in his DMW file
+- JohnP55 for various data addresses in his DMW file and various information in the speedrunning Discord
 - Skawo for initial setup file documentation
 
 ## Other resources
