@@ -68,7 +68,7 @@ void hitMain(); // 8006bb8c
 void hitRecalcMatrices(); // 8006bcc8
 
 /*
-    Turns on/off a flag for a HitObj by name
+    Turns on/off flags for a HitObj by name
     allowSubName matches HitObjs with the string anywhere in their name (strstr instead of strcmp)
 */
 void hitObjFlagOn(bool allowSubName, const char * name, u16 mask); // 8006bd80
