@@ -5,8 +5,10 @@
 
 typedef struct {
     /*
+        0x80000000 is belongs to MOBJ
         0x80 is deleted
         0x40 is matrix recalculated
+        0x1 is disable
         Others unknown
     */
 /* 0x000 */ u16 flags;

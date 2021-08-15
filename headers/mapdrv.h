@@ -111,6 +111,10 @@ typedef struct {
 } MapFileAnimData; // total size 0x20
 
 typedef struct {
+    /*
+        0x1 is hide
+        Others unknown
+    */
 /* 0x000 */ u32 flag0;
 /* 0x004 */ u32 flag4;
 /* 0x008 */ u8 blendMode;
