@@ -22,7 +22,9 @@
   800251dc 000074 800251dc  4 getItemUseMsg 	item_event_data
   80025700 00003c 80025700  4 evt_item_event_free_work 	item_event_data
   8002573c 000010 8002573c  4 itemEventDataExit 	item_event_data
-  80029434 0000ac 80029434  4 getReturnPipeMapAndDoor 	
+  80025bf4 00005c 80025bf4  4 evt_item_event_apply_statuses 	item_event_data
+  80029190 000060 80029190  4 evt_item_event_get_item_hp_gain 	item_event_data
+  80029434 0000ac 80029434  4 evt_item_event_get_return_pipe_info 	item_event_data
   800294e0 0000c8 800294e0  4 mapDataPtr 	map_data
   800295a8 0000d8 800295a8  4 mapDataEvtPtr 	map_data
   80029680 0000b0 80029680  4 setupSpawnItems 	setup_data
@@ -39,12 +41,18 @@
   8002c980 000084 8002c980  4 mobjRunEvent 	mobjdrv
   8002ca04 0003f0 8002ca04  4 mobjCalcMtx 	mobjdrv
   8002cdf4 000118 8002cdf4  4 mobjCalcMtx2 	mobjdrv
+  8002e954 000014 8002e954  4 mobjDropFromCatch 	mobjdrv
+  8002eb38 000028 8002eb38  4 mobjGetModelName 	mobjdrv
   8002eda0 000030 8002eda0  4 dvdCb 	msgdrv
   8002edd0 000178 8002edd0  4 msgInit 	msgdrv
-  8002ef48 0001e8 8002ef48  4 msgMain 	msgdrv
+  8002ef48 0001e8 8002ef48  4 msgdrvMain 	msgdrv
   8002f130 00022c 8002f130  4 msgLoad 	msgdrv
   8002f35c 000020 8002f35c  4 msgUnload 	msgdrv
   8002f37c 000078 8002f37c  4 msgPreLoad 	msgdrv
+  8002f3f4 000128 8002f3f4  4 msgSpeakerInit 	msgdrv
+  8002f51c 0007b0 8002f51c  4 msgMain 	msgdrv
+  8002fccc 000ccc 8002fccc  4 msgDisp 	msgdrv
+  80030998 00021c 80030998  4 msgDispKeyWait 	msgdrv
   80030bb4 000080 80030bb4  4 msgDispKeyWait_render 	msgdrv
   80030c34 001a90 80030c34  4 msgAnalize 	msgdrv
   800326c4 000048 800326c4  4 msg_compare 	msgdrv
@@ -53,17 +61,27 @@
   800328b0 00004c 800328b0  4 _ismbblead 	msgdrv
   800328fc 0000a0 800328fc  4 msgGetCommand 	msgdrv
   8003299c 000084 8003299c  4 msgIconStr2ID 	msgdrv
-  80032c40 000300 80032c40  4 msgWindow_entry 	msgdrv
+  80032a20 000110 80032a20  4 msgSetTalkPose 	msgdrv
+  80032b30 000110 80032b30  4 msgSetStayPose 	msgdrv
+  80032c40 000300 80032c40  4 msgWindow_Entry 	msgdrv
+  80032f40 000044 80032f40  4 msgWindow_Delete 	msgdrv
   80032f84 000074 80032f84  4 msgWindow_Add 	msgdrv
   80032ff8 000090 80032ff8  4 msgWindow_Continue 	msgdrv
   80033088 000074 80033088  4 msgWindow_Repeat 	msgdrv
   800330fc 0000b0 800330fc  4 msgWindow_ForceClose 	msgdrv
+  800331ac 000088 800331ac  4 msgWindow_ForceCloseAll 	msgdrv
+  80033234 00080c 80033234  4 msgWindow_Main 	msgdrv
+  80033a40 000300 80033a40  4 msgWindow_Clear_Main 	msgdrv
+  80033d40 0007e8 80033d40  4 msgWindow_disp 	msgdrv
+  80034528 0003e4 80034528  4 selectWindow_Main 	msgdrv
+  8003490c 000238 8003490c  4 selectWindow_Disp 	msgdrv
   80034b44 000044 80034b44  4 offscreenInit 	offscreendrv
   80034b88 000018 80034b88  4 offscreenReset 	offscreendrv
   80034ba0 00018c 80034ba0  4 offscreenEntry 	offscreendrv
   80034d2c 000154 80034d2c  4 offscreenDisp 	offscreendrv
   80034e80 000088 80034e80  4 offscreenMain 	offscreendrv
   80034f08 000198 80034f08  4 offscreenAddBoundingBox 	offscreendrv
+  8003516c 0000b0 8003516c  4 offscreenNameToId 	offscreendrv
   800355d4 0000c0 800355d4  4 shadowInit 	shadowdrv
   80035694 0001ac 80035694  4 shadowMain 	shadowdrv
   80035840 000698 80035840  4 shadowDisp 	shadowdrv
@@ -80,7 +98,6 @@
   800372f0 00016c 800372f0  4 shadowEntry 	shadowdrv
   8003745c 000170 8003745c  4 shadowEntryMode 	shadowdrv
   800375cc 000018 800375cc  4 shadowSetType 	shadowdrv
-  8003765c 00001c 8003765c  4 shadowSetType 	shadowdrv
   80037678 00001c 80037678  4 shadowSetVolumeDecay 	shadowdrv
   80037694 000018 80037694  4 shadowSetSize 	shadowdrv
   800376ac 000034 800376ac  4 shadowSetCollision 	shadowdrv
@@ -122,10 +139,14 @@
   800389e8 00004c 800389e8  4 windowDelete 	windowdrv
   80038a34 00006c 80038a34  4 windowDeleteID 	windowdrv
   80038aa0 000068 80038aa0  4 windowMain 	windowdrv
-  8003a5e4 00059c 8003a5e4  4 windowdrvItemBoxBgDisp 	windowdrv
+  80039188 000240 80039188  4 windowDispGX_Kanban 	windowdrv
+  800396e0 0004a0 800396e0  4 windowDispGX_System 	windowdrv
+  8003a440 0001a4 8003a440  4 windowDispGX_Message 	windowdrv
+  8003a5e4 00059c 8003a5e4  4 windowDispGX_ItemBox 	windowdrv
   8003ab80 0005d8 8003ab80  4 windowDispGX2_Waku_col 	windowdrv
   8003b158 000018 8003b158  4 windowCheckID 	windowdrv
   8003b170 000010 8003b170  4 windowGetPointer 	windowdrv
+  8003b180 0000ec 8003b180  4 windowCheckOpen 	windowdrv
   8003b26c 000044 8003b26c  4 winMgrInit 	winmgr
   8003b2b0 000018 8003b2b0  4 winmgrReInit 	winmgr
   8003b2c8 0003ec 8003b2c8  4 winMgrDisp 	winmgr
@@ -138,6 +159,14 @@
   8003bc14 000018 8003bc14  4 winMgrAction 	winmgr
   8003bc2c 00002c 8003bc2c  4 winMgrSetSize 	winmgr
   8003bc58 000020 8003bc58  4 winMgrSetPriority 	winmgr
+  8003bc78 000c30 8003bc78  4 winMgrSelectEntry 	winmgr
+  8003c8a8 000064 8003c8a8  4 winMgrSelect 	winmgr
+  8003c90c 0000c4 8003c90c  4 winMgrSelectDelete 	winmgr
+  8003c9d0 000008 8003c9d0  4 winMgrSelectGetIndex 	winmgr
+  8003c9d8 0008d4 8003c9d8  4 select_main 	winmgr
+  8003d2ac 001334 8003d2ac  4 select_disp 	winmgr
+  8003e5e0 000374 8003e5e0  4 select_disp2 	winmgr
+  8003e954 0001f8 8003e954  4 select_disp3 	winmgr
   8003eb4c 000054 8003eb4c  4 acInit 	acdrv
   8003eba0 000018 8003eba0  4 acReInit 	acdrv
   8003ee44 000544 8003ee44  4 acMain 	acdrv
@@ -147,6 +176,7 @@
   8003f67c 000040 8003f67c  4 acUnpauseAll 	acdrv
   8003f730 000050 8003f730  4 acIsRunning 	acdrv
   8003f780 000098 8003f780  4 acNameToPtr 	acdrv
+  8003f818 00011c 8003f818  4 acMsgDisp 	acdrv
   8004158c 000008 8004158c  4 animGetPtr 	animdrv
   80041594 000030 80041594  4 animTimeGetTime 	animdrv
   800415c4 000104 800415c4  4 testAlloc 	animdrv
@@ -168,7 +198,7 @@
   80043dd8 000584 80043dd8  4 animPoseSetEffect 	animdrv
   8004435c 00021c 8004435c  4 animPoseSetEffectAnim 	animdrv
   80044578 0000ec 80044578  4 animPoseSetGXFunc 	animdrv
-  80044664 0000d0 80044664  4 animPoseGetLoopTimes 	
+  80044664 0000d0 80044664  4 animPoseGetLoopTimes 	animdrv
   80044734 0000e4 80044734  4 animPoseSetFlagF0On 	animdrv
   80044818 0000e4 80044818  4 animPoseSetFlagF0Off 	animdrv
   800448fc 0000e4 800448fc  4 animPoseSetFlagF4On 	animdrv
@@ -176,7 +206,7 @@
   80044ac4 0000e4 80044ac4  4 animPoseSetMaterialLightFlagOn 	animdrv
   80044ba8 0000e4 80044ba8  4 animPoseSetMaterialLightFlagOff 	animdrv
   80044c8c 0000f8 80044c8c  4 animPoseSetMaterialEvtColor 	animdrv
-  80044d84 0000e4 80044d84  4 animPoseSetMaterialAnmColor? 	animdrv
+  80044d84 0000e4 80044d84  4 animPoseSetMaterialAnmColor 	animdrv
   80044e68 0000d0 80044e68  4 animPoseGetFlagF0 	animdrv
   80044f38 0000d0 80044f38  4 animPoseGetFlagF4 	animdrv
   80045008 0000d0 80045008  4 animPoseGetMaterialEvtColor 	animdrv
@@ -219,9 +249,25 @@
   8004e710 000028 8004e710  4 bgSetColor 	bgdrv
   8004e77c 000014 8004e77c  4 bgFlagOn 	bgdrv
   8004e790 000014 8004e790  4 bgFlagOff 	bgdrv
+  8004e7a4 00001c 8004e7a4  4 bgFlag8On 	bgdrv
+  8004e7c0 00001c 8004e7c0  4 bgFlag8Off 	bgdrv
   8004e7dc 000488 8004e7dc  4 bgMain 	bgdrv
-  8004f654 0000d0 8004f654  4 cam_roadInit 	cam_road
+  8004f654 0000d0 8004f654  4 workInit 	cam_road
   8004f724 000168 8004f724  4 camRoadSetup 	cam_road
+  8004f88c 000210 8004f88c  4 calcCurrentCamState 	cam_road
+  8004fa9c 000be8 8004fa9c  4 collisionTri_simple 	cam_road
+  80050684 000c64 80050684  4 collisionCurve 	cam_road
+  800512e8 0000e8 800512e8  4 getVec 	cam_road
+  800513d0 000d88 800513d0  4 calcCamRoad 	cam_road
+  80052158 000378 80052158  4 compareCamRoad 	cam_road
+  800524d0 000264 800524d0  4 calcHokanCamRoad 	cam_road
+  80052734 000a64 80052734  4 camRoadMain 	cam_road
+  80053198 000008 80053198  4 camRoadGetWorkPtr 	cam_road
+  800531a0 000074 800531a0  4 camRoadReset 	cam_road
+  80053214 000094 80053214  4 camRoadCurveOn 	cam_road
+  800532a8 000094 800532a8  4 camRoadCurveOff 	cam_road
+  8005401c 000064 8005401c  4 camShiftInit 	cam_shift
+  800547a0 000064 800547a0  4 camShiftReset 	cam_shift
   80054804 0003fc 80054804  4 camInit 	camdrv
   80054c00 000260 80054c00  4 camEntryPersp 	camdrv
   80054e60 000298 80054e60  4 camEntryOrtho 	camdrv
@@ -235,7 +281,9 @@
   80055b50 000008 80055b50  4 camGetCurNo 	camdrv
   80056a60 001250 80056a60  4 cam3dMain 	camdrv
   80057cb0 000018 80057cb0  4 cam3dImgMain? 	camdrv
-  80058854 000008 80058854  4 weirdUnusedCheck 	
+  80058294 0000d0 80058294  4 getScreenPoint 	camdrv
+  80058364 000024 80058364  4 camCheck3d 	camdrv
+  80058854 000008 80058854  4 weirdUnusedCheck 	camdrv
   80058d58 000050 80058d58  4 caseInit 	casedrv
   80058da8 000040 80058da8  4 caseReInit 	casedrv
   80058de8 000320 80058de8  4 caseEntry 	casedrv
@@ -247,17 +295,26 @@
   8005aea4 000050 8005aea4  4 dispInit 	dispdrv
   8005aef4 000010 8005aef4  4 dispReInit 	dispdrv
   8005af04 000184 8005af04  4 dispEntry 	dispdrv
-  8005b068 000001 8005b068  8 doreturn 	dispEntry
+  8005b088 000054 8005b088  4 dispSetCurScissor 	dispdrv
+  8005b0dc 00007c 8005b0dc  4 dispSetScissor 	dispdrv
   8005b158 000030 8005b158  4 _sort 	dispdrv
   8005b188 000018 8005b188  4 dispSort 	dispdrv
   8005b1a0 0002cc 8005b1a0  4 dispDraw 	dispdrv
   8005b46c 0000b8 8005b46c  4 dispCalcZ 	dispdrv
   8005b524 000008 8005b524  4 dispGetCurWork 	dispdrv
   8005bd04 0001d4 8005bd04  4 effSubInit 	eff_sub
+  8005bf08 000054 8005bf08  4 effSubMain 	eff_sub
   800614e0 0000a8 800614e0  4 effInit 	effdrv
+  80061588 000044 80061588  4 effGetTexObj 	effdrv
+  800615e0 000044 800615e0  4 effGetTexObjN64 	effdrv
+  80061624 0000b8 80061624  4 effAutoRelease 	effdrv
   800616dc 000008 800616dc  4 effEntry 	effdrv
   800616e4 000118 800616e4  4 effEntryType 	effdrv
+  800617fc 0000b4 800617fc  4 effSetName 	effdrv
   800618b0 000184 800618b0  4 effMain 	effdrv
+  80061a74 000080 80061a74  4 effDelete 	effdrv
+  80061af4 00009c 80061af4  4 effSoftDelete 	effdrv
+  80061b90 000098 80061b90  4 effNameToPtr 	effdrv
   80063408 000010 80063408  4 envInit 	envdrv
   80063418 000010 80063418  4 envReInit 	envdrv
   80063428 0001f0 80063428  4 envCapture 	envdrv
@@ -353,13 +410,15 @@
   80077660 000008 80077660  4 itemGetWork 	itemdrv
   80077668 000074 80077668  4 itemInit 	itemdrv
   800776dc 000048 800776dc  4 itemReInit 	itemdrv
-  800777a8 0004a0 800777a8  4 handleItemPickup 	itemdrv
+  800777a8 0004a0 800777a8  4 itemHandlePickupEffect 	itemdrv
   80077cd8 000e64 80077cd8  4 itemMain 	itemdrv
   80078b3c 0007fc 80078b3c  4 itemEntry 	itemdrv
   80079308 000001 80079308  8 return 	itemEntry
   80079338 0000ac 80079338  4 itemDelete 	itemdrv
   800793e4 000084 800793e4  4 itemNameToPtr 	itemdrv
+  8007b5cc 000660 8007b5cc  4 itemCollect 	itemdrv
   8007bccc 000158 8007bccc  4 itemTypeNameToId 	itemdrv
+  8007d7c4 0000a4 8007d7c4  4 itemSetAnim 	itemdrv
   8007d8b4 000048 8007d8b4  4 itemCheckForId 	itemdrv
   8007e1a8 0001b4 8007e1a8  4 lightInit 	lightdrv
   8007e35c 000018 8007e35c  4 lightReInit 	lightdrv
@@ -395,9 +454,10 @@
   8008130c 000060 8008130c  4 mapPauseAnimationAll 	mapdrv
   8008136c 000060 8008136c  4 mapReStartAnimationAll 	mapdrv
   800813cc 0000b8 800813cc  4 mapSetPlayRate 	mapdrv
+  80081484 0000e4 80081484  4 mapSetPlayProgress 	mapdrv
+  80081568 0000b0 80081568  4 mapGetPlayDuration 	mapdrv
   80081618 000204 80081618  4 mapUnLoad 	mapdrv
-  8008181c 002288 8008181c  4 _mapLoad 	mapdrv
-  80083a68 000001 80083a68  8 doreturn 	_mapLoad
+  8008181c 002288 8008181c  4 mapLoad 	mapdrv
   80083abc 0003f8 80083abc  4 mapCalcAnimMatrix 	mapdrv
   80084474 000120 80084474  4 mapReCalcMatrix 	mapdrv
   80084594 0004cc 80084594  4 mapMain 	mapdrv
@@ -426,6 +486,7 @@
   8008b304 0001c4 8008b304  4 mapSetPolygonVtxDesc 	mapdrv
   8008b95c 000580 8008b95c  4 mapSearchDmdJointSub 	mapdrv
   8008bedc 000410 8008bedc  4 mapSearchDmdJointSub2 	mapdrv
+  8008c2ec 0000ac 8008c2ec  4 mapSearchDmdMaterial 	mapdrv
   8008c398 0000a8 8008c398  4 mapGetMapObj 	mapdrv
   8008c440 0001d8 8008c440  4 mapObjFlagOn 	mapdrv
   8008c618 0001c4 8008c618  4 mapObjFlagOff 	mapdrv
@@ -469,15 +530,35 @@
   800a4868 00013c 800a4868  4 speedFlowerSlowFlowerEffEntry 	
   800a49a4 00000c 800a49a4  4 unk_speedFlowerSlowFlowerEff 	
   800a49b0 000114 800a49b0  4 speedFlowerSlowFlowerEffMain 	
-  800d17c8 00028c 800d17c8  4 hitScoreEffect 	
+  800bc828 000170 800bc828  4 damageEffect 	
+  800c59c8 000130 800c59c8  4 statusIconEffect 	
+  800c5af8 000014 800c5af8  4 statusIconEffectSetPos 	
+  800cc01c 000184 800cc01c  4 niceEffect 	
+  800cf3c4 0004a4 800cf3c4  4 audienceEffect 	
+  800d17c8 00028c 800d17c8  4 scoreEffect 	
   800d2148 000044 800d2148  4 evt_snd_bgmon 	evt_snd
-  800d218c 00006c 800d218c  4 evt_snd_bgmon_f 	evt_snd
+  800d218c 00006c 800d218c  4 evt_snd_bgmon_f_d 	evt_snd
   800d21f8 00002c 800d21f8  4 evt_snd_bgmoff 	evt_snd
-  800d2224 000044 800d2224  4 evt_snd_bgmoff_f 	evt_snd
+  800d2224 000044 800d2224  4 evt_snd_bgmoff_f_d 	evt_snd
   800d24b8 0002dc 800d24b8  4 evt_snd_get_bgm_wait_time 	evt_snd
+  800d2800 000034 800d2800  4 evt_snd_sfxon 	evt_snd
+  800d28fc 0000d0 800d28fc  4 evt_snd_sfxon_character 	evt_snd
   800d29cc 00008c 800d29cc  4 evt_snd_sfxon_3d 	evt_snd
+  800d2af4 000070 800d2af4  4 evt_snd_sfxon_npc 	evt_snd
+  800d2b64 00009c 800d2b64  4 evt_snd_sfxon_npc_delay 	evt_snd
+  800d2c00 000058 800d2c00  4 evt_snd_sfxon_3d_player 	evt_snd
+  800d2cd8 0000e0 800d2cd8  4 evt_snd_sfxon_3d_player_character 	evt_snd
+  800d2f74 000030 800d2f74  4 evt_snd_sfxoff 	evt_snd
+  800d3030 000030 800d3030  4 evt_snd_get_last_sfx_id 	evt_snd
+  800d32a4 000040 800d32a4  4 evt_snd_sfx_wait 	evt_snd
+  800d32e4 000040 800d32e4  4 evt_snd_sfx_wait_name 	evt_snd
+  800d3324 00005c 800d3324  4 evt_snd_sfx_flag_on 	evt_snd
+  800d3380 00005c 800d3380  4 evt_snd_sfx_flag_off 	evt_snd
   800d3430 000034 800d3430  4 evt_snd_envon 	evt_snd
   800d3464 000054 800d3464  4 evt_snd_envon_f 	evt_snd
+  800d36f4 000030 800d36f4  4 evt_snd_set_sfx_reverb_mode 	evt_snd
+  800d3724 000034 800d3724  4 evt_snd_flag_on 	evt_snd
+  800d3758 000034 800d3758  4 evt_snd_flag_off 	evt_snd
   800d37d8 0000a0 800d37d8  4 evt_sub_intpl_msec_init 	evt_sub
   800d3878 0000dc 800d3878  4 evt_sub_intpl_msec_get_value 	evt_sub
   800d3954 00011c 800d3954  4 evt_sub_intpl_msec_get_value_para 	evt_sub
@@ -503,7 +584,10 @@
   800d49d4 000080 800d49d4  4 evt_sub_file_async 	evt_sub
   800d4a54 000030 800d4a54  4 evt_sub_load_mapdata_bin 	evt_sub
   800d4a84 000034 800d4a84  4 evt_sub_get_fps 	evt_sub
+  800d4ab8 000094 800d4ab8  4 evt_sub_fmt_str_int 	evt_sub
+  800d4d30 000080 800d4d30  4 evt_hud_configure 	evt_sub
   800d7888 000034 800d7888  4 evt_sub_get_save_name 	evt_sub
+  800d78bc 000074 800d78bc  4 evt_zero_vector 	evt_sub
   800d87e4 00000c 800d87e4  4 evtGetWork 	evtmgr
   800d87f0 00011c 800d87f0  4 make_pri_table 	evtmgr
   800d890c 00017c 800d890c  4 make_jump_table 	evtmgr
@@ -694,6 +778,7 @@
   800e5798 00000c 800e5798  4 evt_door_get_dokan_desc_num 	evt_door
   800e57a4 00000c 800e57a4  4 evt_door_get_map_door_descs 	evt_door
   800e57b0 00000c 800e57b0  4 evt_door_get_map_door_desc_num 	evt_door
+  800e6148 000034 800e6148  4 evt_eff_softdelete 	evt_eff
   800e658c 000098 800e658c  4 evt_env_blur_on 	evt_env
   800e6f9c 000090 800e6f9c  4 evt_ext_entry 	evt_ext
   800e702c 000024 800e702c  4 evt_ext_reset 	evt_ext
@@ -703,22 +788,33 @@
   800e74ec 0000b0 800e74ec  4 evt_fairy_set_pos 	evt_fairy
   800e759c 000084 800e759c  4 evt_fairy_set_pos_all 	evt_fairy
   800e7620 0000b4 800e7620  4 evt_fairy_get_pos 	evt_fairy
-  800e8214 0000c8 800e8214  4 evt_fairy_flag_onoff 	evt_fairy
+  800e8164 0000b0 800e8164  4 evt_fairy_flag_onoff 	evt_fairy
+  800e8214 0000c8 800e8214  4 evt_fairy_flag_onoff_all 	evt_fairy
   800e9bb4 0000bc 800e9bb4  4 evt_guide_set_pos 	evt_guide
   800e9c70 000078 800e9c70  4 evt_guide_get_pos 	evt_guide
+  800ea7a0 000024 800ea7a0  4 evt_guide_enter_run_mode_1 	evt_guide
+  800ea7c4 000024 800ea7c4  4 evt_guide_enter_runmode_2 	evt_guide
   800ea87c 00008c 800ea87c  4 evt_guide_flag2_onoff 	evt_guide
   800ea908 00007c 800ea908  4 evt_guide_flag0_onoff 	evt_guide
   800ea984 000070 800ea984  4 evt_guide_check_flag0 	evt_guide
   800eac54 0000cc 800eac54  4 evt_hitobj_flag_onoff 	evt_hit
   800eb72c 0000c8 800eb72c  4 evt_hitobj_attr_onoff 	evt_hit
   800ecc84 0000ec 800ecc84  4 evt_item_entry 	evt_item
+  800eced8 0000a8 800eced8  4 evt_item_flag_onoff 	evt_item
+  800ed12c 00005c 800ed12c  4 evt_item_wait_collected 	evt_item
   800ed6c0 00009c 800ed6c0  4 evt_mapobj_trans 	evt_map
+  800ed75c 00009c 800ed75c  4 evt_mapobj_rotate 	evt_map
+  800ed894 0000dc 800ed894  4 evt_map_set_fog 	evt_map
+  800ed970 000040 800ed970  4 evt_map_fog_onoff 	evt_map
   800edb54 0000dc 800edb54  4 evt_mapobj_color 	evt_map
   800edc30 000078 800edc30  4 evt_map_playanim 	evt_map
   800edcd8 000078 800edcd8  4 evt_map_checkanim 	evt_map
   800ede18 000058 800ede18  4 evt_map_set_playrate 	evt_map
   800edf24 0000c8 800edf24  4 evt_mapobj_flag_onoff 	evt_map
   800edfec 0000c8 800edfec  4 evt_mapobj_flag4_onoff 	evt_map
+  800ee1c4 0000cc 800ee1c4  4 evt_mapobj_get_position 	evt_map
+  800ee55c 000040 800ee55c  4 evt_mapdisp_onoff 	evt_map
+  800ee834 0001c0 800ee834  4 evt_mapobj_blendmode 	evt_map
   800ef3c8 00007c 800ef3c8  4 evt_mario_flag0_onoff 	evt_mario
   800ef444 00007c 800ef444  4 evt_mario_flag4_onoff 	evt_mario
   800ef4c0 00007c 800ef4c0  4 evt_mario_flag8_onoff 	evt_mario
@@ -727,11 +823,16 @@
   800ef650 0001a0 800ef650  4 evt_mario_key_off 	evt_mario
   800ef7f0 000024 800ef7f0  4 evt_mario_key_off2 	evt_mario
   800ef908 000050 800ef908  4 evt_mario_get_character 	evt_mario
+  800ef958 000030 800ef958  4 evt_mario_set_character 	evt_mario
   800ef988 0000c4 800ef988  4 evt_mario_set_pos 	evt_mario
   800efa4c 000078 800efa4c  4 evt_mario_get_pos 	evt_mario
+  800f1954 00006c 800f1954  4 evt_mario_set_pose 	evt_mario
+  800f19c0 000048 800f19c0  4 evt_mario_wait_anim 	evt_mario
   800f25b0 000030 800f25b0  4 evt_set_gravity 	evt_mario
   800f25e0 00004c 800f25e0  4 evt_get_gravity 	evt_mario
+  800f2ae8 000040 800f2ae8  4 evt_mario_tamara_onoff 	evt_mario
   800f2b28 0000d8 800f2b28  4 evt_mario_tamara_chg_mode 	evt_Mario
+  800f3180 000030 800f3180  4 evt_mario_set_pane_boundaries 	evt_mario
   800f358c 00007c 800f358c  4 evt_mobj_entry 	evt_mobj
   800f3608 000030 800f3608  4 evt_mobj_delete 	evt_mobj
   800f3638 000078 800f3638  4 evt_mobj_exec_cancel 	evt_mobj
@@ -740,6 +841,11 @@
   800f3a88 000108 800f3a88  4 evt_mobj_set_position 	evt_mobj
   800f3b90 000108 800f3b90  4 evt_mobj_set_scale 	evt_mobj
   800f3c98 000108 800f3c98  4 evt_mobj_set_rotation 	evt_mobj
+  800f422c 000070 800f422c  4 evt_mobj_check 	evt_mobj
+  800f50fc 0001a8 800f50fc  4 mobj_jumpstand 	evt_mobj
+  800f52a4 000140 800f52a4  4 evt_mobj_jumpstand 	evt_mobj
+  800f53e4 0000a8 800f53e4  4 mobj_hunmer_blk 	evt_mobj
+  800f548c 00017c 800f548c  4 evt_mobj_hunmer_blk 	evt_mobj
   800f5608 000440 800f5608  4 mobj_zyo 	evt_mobj
   800f5ad8 0001a0 800f5ad8  4 evt_mobj_zyo 	evt_mobj
   800f5c78 000534 800f5c78  4 mobj_thako 	evt_mobj
@@ -750,7 +856,6 @@
   800f6610 000144 800f6610  4 evt_mobj_arrow 	evt_mobj
   800f6754 000134 800f6754  4 mobj_blk_decideItem 	evt_mobj
   800f6888 000950 800f6888  4 mobj_blk 	evt_mobj
-  800f718c 000001 800f718c  8 doreturn 	mobj_blk
   800f8be8 000818 800f8be8  4 evt_mobj_blk 	evt_mobj
   800f9400 000288 800f9400  4 mobj_eria_block 	evt_mobj
   800f9688 000168 800f9688  4 evt_mobj_eria_block 	evt_mobj
@@ -769,11 +874,17 @@
   800fc02c 000080 800fc02c  4 evt_msg_toge 	evt_msg
   800fc0ac 00008c 800fc0ac  4 evt_msg_togelr 	evt_msg
   800fc138 00003c 800fc138  4 evt_msg_pri 	evt_msg
+  800fc174 000f50 800fc174  4 evtMsgFmtStr 	evt_msg
+  800fd0c4 0000a8 800fd0c4  4 evt_msg_fmt_str 	evt_msg
+  800fd16c 000a58 800fd16c  4 evtMsgFmtInt 	evt_msg
+  800fdbc4 0000a8 800fdbc4  4 evt_msg_fmt_int 	evt_msg
   800fdcc0 0001d4 800fdcc0  4 _intplGetFloat 	evt_npc
   800fde94 000140 800fde94  4 evtNpcNameToPtr 	evt_npc
   800fdfd4 000150 800fdfd4  4 evtNpcNameToPtr_NoAssert 	evt_npc
   800fe124 0000f8 800fe124  4 evt_npc_get_position 	evt_npc
   800fe21c 00011c 800fe21c  4 evt_npc_set_position 	evt_npc
+  801004c0 00023c 801004c0  4 evt_npc_jump_to 	evt_npc
+  80102574 000684 80102574  4 evt_npc_glide_to 	evt_npc
   80102c7c 0000c0 80102c7c  4 evt_npc_get_hp 	evt_npc
   80102d3c 0000c0 80102d3c  4 evt_npc_get_max_hp 	evt_npc
   80102f5c 000088 80102f5c  4 evt_npc_entry 	evt_npc
@@ -781,6 +892,7 @@
   80103718 00008c 80103718  4 evt_npc_flagC_onoff 	evt_npc
   801037a4 00008c 801037a4  4 evt_npc_flag46C_onoff 	evt_npc
   80103830 00008c 80103830  4 evt_npc_flag10_onoff 	evt_npc
+  801038bc 0000fc 801038bc  4 evt_npc_part_flag_onoff 	evt_npc
   801039b8 00008c 801039b8  4 evt_npc_animflag_onoff 	evt_npc
   80103dbc 0000ec 80103dbc  4 evt_npc_get_unitwork 	evt_npc
   80103ea8 0000ec 80103ea8  4 evt_npc_set_unitwork 	evt_npc
@@ -799,7 +911,9 @@
   8010781c 0000f4 8010781c  4 evt_npc_set_timer_end? 	evt_npc
   80107910 0000e0 80107910  4 evt_npc_get_timer_end? 	evt_npc
   80108d98 000124 80108d98  4 evt_npc_set_part_attack_power 	evt_npc
-  8010a2f8 000084 8010a2f8  4 evt_maybe_catch_card_rng 	
+  80109900 000080 80109900  4 marioLuigiNpcDispCb 	
+  80109da0 000078 80109da0  4 evt_npc_set_disp_callback 	evt_npc
+  8010a2f8 000084 8010a2f8  4 evt_npc_try_catch_card 	evt_npc
   8010a910 0001cc 8010a910  4 evt_npc_teleport_effect 	evt_npc
   8010c028 000060 8010c028  4 evt_npc_handle_hit_xp 	evt_npc
   8010c698 000030 8010c698  4 evt_pouch_set_hp 	evt_pouch
@@ -817,6 +931,7 @@
   8010c964 000030 8010c964  4 evt_pouch_add_coins 	evt_pouch
   8010c994 000030 8010c994  4 evt_pouch_add_item 	evt_pouch
   8010c9c4 000054 8010c9c4  4 evt_pouch_check_have_item 	evt_pouch
+  8010ca18 000030 8010ca18  4 evt_pouch_remove_item 	evt_pouch
   8010ca48 00005c 8010ca48  4 evt_pouch_remove_item_idx 	evt_pouch
   8010cb60 000030 8010cb60  4 evt_pouch_set_pixl_selected 	evt_pouch
   8010cb90 00004c 8010cb90  4 evt_pouch_count_use_items 	evt_pouch
@@ -829,11 +944,15 @@
   8010cdd4 000030 8010cdd4  4 evt_pouch_set_level 	evt_pouch
   8010ce04 00004c 8010ce04  4 evt_pouch_get_next_level_xp 	evt_pouch
   8010cecc 00004c 8010cecc  4 evt_pouch_get_total_coins_collected 	evt_pouch
+  8010cf18 00004c 8010cf18  4 evt_pouch_get_max_jump_combo 	evt_pouch
+  8010cf64 00004c 8010cf64  4 evt_pouch_get_max_stylish_combo 	evt_pouch
   8010cfb0 00004c 8010cfb0  4 evt_pouch_get_enemies_defeated 	evt_pouch
   8010cffc 00002c 8010cffc  4 evt_pouch_increment_enemies_defeated 	evt_pouch
   8010d028 000078 8010d028  4 evt_seq_set_seq 	evt_seq
-  8010d0a0 000050 8010d0a0  4 evt_seq_wait 	
+  8010d0a0 000050 8010d0a0  4 evt_seq_wait 	evt_seq
   8010d0f0 0000a4 8010d0f0  4 evt_seq_mapchange 	evt_seq
+  8010d194 000124 8010d194  4 evt_shop_wait_coin_sfx 	evt_shop
+  8010d304 0000d0 8010d304  4 evt_shop_get_name_items 	evt_shop
   8010d4b0 000108 8010d4b0  4 evt_get_fortune_teller_message 	evt_shop
   8010e194 0000dc 8010e194  4 evt_shop_get_point_reward 	evt_shop
   8010e270 000084 8010e270  4 evt_shop_set_point_reward_collected 	evt_shop
@@ -841,33 +960,98 @@
   8010e340 000040 8010e340  4 evt_shop_add_shop_point 	evt_shop
   8010e380 000030 8010e380  4 evt_shop_clear_shop_points 	evt_shop
   8010e820 00009c 8010e820  4 evt_shop_add_charm 	evt_shop
-  8010f08c 00052c 8010f08c  4 catchCardShop 	
+  8010ef8c 000100 8010ef8c  4 evt_shop_get_card_give_info 	evt_shop
+  8010f08c 00052c 8010f08c  4 evt_shop_get_card_bag 	evt_shop
+  8010f5b8 0001d8 8010f5b8  4 evt_shop_select_card 	evt_shop
+  8010f790 0001bc 8010f790  4 evt_shop_count_cards 	evt_shop
+  8010f94c 000044 8010f94c  4 evt_shop_init_card_item_flags 	evt_shop
+  8010f990 00023c 8010f990  4 evt_shop_remove_card 	evt_shop
+  8010fbcc 00078c 8010fbcc  4 evt_shop_init_flopside_cards 	evt_shop
+  80110358 000060 80110358  4 evt_shop_get_buy_price 	evt_shop
   80111b88 000194 80111b88  4 evt_otoya_get_bgm_info 	evt_shop
   80111d1c 0002cc 80111d1c  4 evt_shop_set_defs 	evt_shop
+  80111fe8 0009b8 80111fe8  4 mot_stay 	mot_stay
+  80112a2c 00006c 80112a2c  4 mot_stay_post 	mot_stay
+  80112bc4 0008a8 80112bc4  4 mot_swim 	
+  8011346c 0000b8 8011346c  4 mot_swim_post 	
+  80116afc 000780 80116afc  4 mot_70 	
+  8011727c 000090 8011727c  4 mot_70_post 	
+  80117fec 000b80 80117fec  4 mot_68 	
+  80119040 000544 80119040  4 mot_walk 	mot_walk
+  80119584 00053c 80119584  4 mot_dash 	mot_walk
+  8011a430 0002e0 8011a430  4 mot_crouch 	
+  8011a710 00005c 8011a710  4 mot_crouch_post 	
+  8011a92c 0004b0 8011a92c  4 mot_5 	
+  8011addc 000048 8011addc  4 mot_5_post 	
+  8011b67c 00058c 8011b67c  4 mot_13 	
   8011d58c 000368 8011d58c  4 fairyEntry 	fairy
-  8011d8f4 000004 8011d8f4  4 _fairyReInit 	fairy
+  8011d8f4 000004 8011d8f4  4 fairyReset 	fairy
   8011d8f8 0000a0 8011d8f8  4 fairyInit 	fairy
   8011d998 000004 8011d998  4 fairyReInit 	fairy
+  8011d99c 0004d0 8011d99c  4 fairyUpdate 	fairy
+  8011de6c 0000bc 8011de6c  4 fairyMain 	fairy
+  8011df28 0004f0 8011df28  4 fairyDisp 	fairy
+  8011e418 000190 8011e418  4 fairyDispMain 	fairy
   8011e5a8 000314 8011e5a8  4 _fairyReInit 	fairy
   8011e8bc 000050 8011e8bc  4 fairyIdToPtr 	fairy
-  8011f258 00007c 8011f258  4 fairySetPositions 	fairy
+  8011e90c 000064 8011e90c  4 fairyItemIdToPtr 	fairy
+  8011e970 000044 8011e970  4 fairyGetExtra 	fairy
+  8011e9b4 000094 8011e9b4  4 fairySetAnim 	fairy
+  8011ea90 0000c4 8011ea90  4 fairyEnterRunMode 	fairy
+  8011eb54 000104 8011eb54  4 fairyIdEnterRunMode 	fairy
+  8011ec58 00009c 8011ec58  4 fairyEnterRunModeAlt 	fairy
+  8011ecf4 000094 8011ecf4  4 fairyIdEnterRunMode0 	fairy
+  8011ed88 000094 8011ed88  4 fairyIdEnterRunMode1 	fairy
+  8011ee1c 00008c 8011ee1c  4 fairyAllEnterRunMode0 	fairy
+  8011eea8 000090 8011eea8  4 fairyAllEnterRunMode1 	fairy
+  8011ef38 000170 8011ef38  4 fairyIdEnterRunMode2 	fairy
+  8011f0a8 0001b0 8011f0a8  4 fairyAllEnterRunMode2 	fairy
+  8011f258 00007c 8011f258  4 fairySetAllPositions 	fairy
   8011f36c 000010 8011f36c  4 fairyGetEntries 	fairy
   8011f37c 000010 8011f37c  4 fairyGetNum 	fairy
   8011f38c 000010 8011f38c  4 fairyGetNumExtra 	fairy
+  8011f564 0000e4 8011f564  4 fairyUpdateAnimPose 	fairy
+  8011f648 000058 8011f648  4 fairySetMaterialEvtAlpha 	fairy
   8011f6a0 0002b8 8011f6a0  4 fairyExtraEntry 	fairy
+  8011f958 0000ac 8011f958  4 fairyFreeExtra 	fairy
+  8011fa04 000014 8011fa04  4 fairyOff 	fairy
+  8011fa18 000014 8011fa18  4 fairyOn 	fairy
   8011fa2c 00000c 8011fa2c  4 guideGetWork 	guide
   8011fa38 000044 8011fa38  4 guideInit 	guide
   8011fa7c 000258 8011fa7c  4 guideReInit 	guide
   8011fcd4 0001dc 8011fcd4  4 guideMain 	guide
-  80121e50 000008 80121e50  4 marioGetSpeedScale 	mario
+  8011feb0 00018c 8011feb0  4 guideDispMain 	guide
+  8012003c 000288 8012003c  4 guideDisp 	guide
+  801202c4 00009c 801202c4  4 runMode0Main 	guide
+  80120360 0000ac 80120360  4 runMode1Main 	guide
+  8012040c 0008fc 8012040c  4 runMode2Main 	guide
+  80120d08 000374 80120d08  4 runMode3Main 	guide
+  8012107c 000374 8012107c  4 runMode4Main 	guide
+  801213f0 000200 801213f0  4 runMode5Main 	guide
+  80121990 00007c 80121990  4 guideSetAnim 	guide
+  80121a0c 000098 80121a0c  4 guideEnterRunMode 	guide
+  80121aa4 000038 80121aa4  4 guideEnterRunMode1 	guide
+  80121adc 00004c 80121adc  4 guideEnterRunMode2 	guide
+  80121b28 00007c 80121b28  4 guideEnterRunMode5 	guide
+  80121e50 000008 80121e50  4 marioGameGetSpeedScale 	mario
   80121f48 00000c 80121f48  4 marioGetPtr 	mario
-  801229c8 000128 801229c8  4 setPosInNewMap 	mario
+  8012230c 000140 8012230c  4 marioSetAnimGroup 	mario
+  801226f0 00023c 801226f0  4 marioUpdateCharProperties 	mario
+  8012292c 000024 8012292c  4 marioGetHitboxWidthRaw 	mario
+  80122950 000028 80122950  4 marioGetHitboxHeightRaw 	mario
+  80122978 000038 80122978  4 marioGetHitboxHeight_BowserSpecial 	mario
+  801229b0 000018 801229b0  4 marioGetDashSpeedRaw 	mario
+  801229c8 000128 801229c8  4 marioOnMapChange 	mario
+  80122af0 00005c 80122af0  4 marioChkKey 	mario
+  80122b4c 00001c 80122b4c  4 marioCtrlOnChk 	mario
   80122b68 000014 80122b68  4 marioCtrlOffChk 	mario
   80122b7c 000014 80122b7c  4 marioKeyOffChk 	mario
   80122b90 00002c 80122b90  4 marioCtrlOff 	mario
   80122bbc 000038 80122bbc  4 marioCtrlOn 	mario
   80122bf4 000038 80122bf4  4 marioKeyOff 	mario
   80122c2c 000038 80122c2c  4 marioKeyOn 	mario
+  80122c64 00005c 80122c64  4 marioBgModeOn 	mario
+  80122cc0 00005c 80122cc0  4 marioBgModeOff 	mario
   80122d1c 000074 80122d1c  4 marioChkSts 	mario
   80122d90 000218 80122d90  4 marioResetHitObj 	mario
   80122fa8 000218 80122fa8  4 marioReset 	mario
@@ -876,19 +1060,138 @@
   80123288 000114 80123288  4 marioPoseInit 	mario
   8012339c 000314 8012339c  4 marioInit 	mario
   801236b0 00085c 801236b0  4 marioReInit 	mario
+  80124034 000340 80124034  4 marioUpdateRespawnPos 	mario
   801243a8 0014ac 801243a8  4 marioMain 	mario
-  80126dcc 000030 80126dcc  4 isPointInFramebuffer 	mario
-  8012823c 000124 8012823c  4 marioFlag14On 	mario
+  801266e4 0001d0 801266e4  4 marioChgPose 	mario
+  801268b4 00008c 801268b4  4 marioChgPoseTime 	mario
+  80126940 00008c 80126940  4 marioChgPaper 	mario
+  801269cc 000084 801269cc  4 marioChgPaper2 	mario
+  80126a50 00005c 80126a50  4 marioSetPaperAnimeLocalTime 	mario
+  80126aac 0000dc 80126aac  4 marioPaperOn 	mario
+  80126b88 000080 80126b88  4 marioPaperOff 	mario
+  80126c08 000014 80126c08  4 marioPaperLightOn 	mario
+  80126c1c 000014 80126c1c  4 marioPaperLightOff 	mario
+  80126c30 000068 80126c30  4 marioIsAnimFinished 	mario
+  80126d48 000084 80126d48  4 marioGetScreenPos 	mario
+  80126dcc 000030 80126dcc  4 marioChkInScreen 	mario
+  80126dfc 000020 80126dfc  4 marioGetScale 	mario
+  80127148 000494 80127148  4 marioMakeDispDir 	mario
+  801277f4 000768 801277f4  4 marioPreDisp 	mario
+  8012823c 000124 8012823c  4 marioEffectFlagOn 	mario
   80128360 000018 80128360  4 marioFlag14Off 	mario
+  80128ec8 000064 80128ec8  4 marioDisp 	mario
+  80129438 0002e0 80129438  4 toRearPose 	mario
+  80129718 0002e0 80129718  4 toFrontPose 	mario
+  8012a3a8 000238 8012a3a8  4 marioCalcDamageToEnemy 	mario
+  8012a5e0 0000a0 8012a5e0  4 marioPlayDamageSfx 	mario
+  8012a680 0005a8 8012a680  4 marioTakeDamage 	mario
+  8012ac28 0000f4 8012ac28  4 marioUpdateCatch 	mario
+  8012ad1c 000258 8012ad1c  4 marioCalcCatchPos 	mario
+  8012af74 0000a4 8012af74  4 marioDropCatch 	mario
+  8012b080 000010 8012b080  4 marioCheck3d 	mario
   8012b50c 0001c0 8012b50c  4 marioSetGravity 	mario
   8012b6cc 000010 8012b6cc  4 marioGetGravity 	mario
+  8012b6dc 000018 8012b6dc  4 marioGetGravUnitDown 	mario
+  8012b6f4 000090 8012b6f4  4 marioApplyGravity 	mario
+  8012b784 000074 8012b784  4 marioGravityDotProduct 	mario
+  8012bbd4 000118 8012bbd4  4 marioSetPaneBoundaries 	mario
+  8012bcec 000070 8012bcec  4 marioGetPaneForPos 	mario
+  8012bd5c 00039c 8012bd5c  4 marioHandleSqaush 	mario
+  8012d180 000040 8012d180  4 marioLockRespawnPos 	mario
+  8012d1c0 000024 8012d1c0  4 marioUnlockRespawnPos 	mario
+  8012d1e8 000030 8012d1e8  4 marioLockFacingDir 	mario
+  8012d218 000018 8012d218  4 marioUnlockFacing 	mario
+  8012d81c 000074 8012d81c  4 marioAddTamara 	mario
+  8012d890 000020 8012d890  4 marioRemoveTamara 	mario
+  8012d904 000064 8012d904  4 marioAddAngeko 	mario
+  8012d968 000020 8012d968  4 marioRemoveAngeko 	mario
+  8012dac4 0000b0 8012dac4  4 marioPlayCharacterStylishSfx 	mario_acrobat
+  8012db74 00084c 8012db74  4 marioAcrobatMainSub 	mario_acrobat
+  8012e3c0 001000 8012e3c0  4 marioAcrobatWpadCheck 	mario_acrobat
+  8012f3c0 000058 8012f3c0  4 marioAcrobatMain 	mario_acrobat
+  8012f4c0 0000c4 8012f4c0  4 marioAcrobatEndStylish 	mario_acrobat
+  8012f90c 000100 8012f90c  4 commonAcrobatCb0 	mario_acrobat
+  8012fa0c 000100 8012fa0c  4 commonAcrobatCb1 	mario_acrobat
+  8012fb0c 0001a8 8012fb0c  4 commonAcrobatCb4 	mario_acrobat
+  8012fcb4 0001a8 8012fcb4  4 commonAcrobatCb5 	mario_acrobat
+  8012fe5c 000184 8012fe5c  4 commonAcrobatCb2 	mario_acrobat
+  8012ffe0 000184 8012ffe0  4 commonAcrobatCb3 	mario_acrobat
+  80130164 000184 80130164  4 commonAcrobatCb6 	mario_acrobat
+  801302e8 000184 801302e8  4 commonAcrobatCb7 	mario_acrobat
+  8013046c 0001cc 8013046c  4 marioAcrobatCb 	mario_acrobat
+  80130638 000124 80130638  4 peachAcrobatCb 	mario_acrobat
+  8013075c 000128 8013075c  4 bowserAcrobatCb 	mario_acrobat
+  80130884 0001cc 80130884  4 luigiAcrobatCb 	mario_acrobat
   80130a50 000070 80130a50  4 marioFairyInit 	mario_fairy
   80130ac0 000070 80130ac0  4 marioFairyReInit 	mario_fairy
+  80130b30 000150 80130b30  4 marioFairyMain 	mario_fairy
+  80130c80 0000e4 80130c80  4 marioFairyReset 	mario_fairy
+  80130d64 0000ec 80130d64  4 marioFairyDeleteId 	mario_fairy
+  80130e50 000008 80130e50  4 marioFairyDefaultFlagDelete 	mario_fairy
+  80130e58 000020 80130e58  4 marioFairyDefaultDelete 	mario_fairy
+  80130e78 000008 80130e78  4 marioFairyDefaultMain 	mario_fairy
+  80130e80 000058 80130e80  4 marioFairyIdToPtr 	mario_fairy
+  80130ed8 000054 80130ed8  4 marioFairyCountId 	mario_fairy
   80130f2c 000128 80130f2c  4 marioFairyEntry 	mario_fairy
+  80131054 000070 80131054  4 marioFairyGroup_Start 	mario_fairy
+  801310c4 000060 801310c4  4 marioFairyGroup_Next 	mario_fairy
   80131124 000098 80131124  4 marioFairyIdToData 	mario_fairy
   801311bc 0002cc 801311bc  4 marioFairyUse 	mario_fairy
-  80147604 000144 80147604  4 changeCharacter 	mario_motion
+  80131488 000098 80131488  4 clear_hitobj_ride 	mario_hit
+  80131520 0000f4 80131520  4 clear_hitobj_interact? 	mario_hit
+  80131614 00007c 80131614  4 clear_hitobj_head 	mario_hit
+  80131690 000070 80131690  4 clear_hitobj_9 	mario_hit
+  801318bc 00003c 801318bc  4 marioGetTopY 	mario_hit
+  80131ad4 000038 80131ad4  4 marioGetHitboxWidth 	mario_hit
+  80132610 00001c 80132610  4 __as 	VEC3
+  801361fc 000530 801361fc  4 marioCheckLandon2? 	mario_hit
+  8013672c 000880 8013672c  4 marioChkOverhead 	mario_hit
+  80136fac 0001d4 80136fac  4 marioChkOverheadJabara 	mario_hit
+  80137974 000798 80137974  4 marioSearchHead 	mario_hit
+  80138260 000298 80138260  4 marioCheckWall 	mario_hit
+  801384f8 0001dc 801384f8  4 marioSearchFrontWall_staying 	mario_hit
+  801386d4 0001c0 801386d4  4 marioChkFront 	mario_hit
+  80138b38 00129c 80138b38  4 searchFrontWall 	mario_hit
+  8013a150 000314 8013a150  4 marioChkFrontStep 	mario_hit
+  8013a9ac 00086c 8013a9ac  4 marioChkWallAround 	mario_hit
+  8013b218 000450 8013b218  4 marioGetAvailableWidth 	mario_hit
+  80142ba4 0000b4 80142ba4  4 marioLandonSe 	mario_hit
+  80143370 00006c 80143370  4 marioMotion 	mario_motion
+  801433dc 000008 801433dc  4 marioChgMot 	mario_motion
+  801433e4 00013c 801433e4  4 marioChgMotSub 	mario_motion
+  80143520 000074 80143520  4 marioChgMot2 	mario_motion
+  80143594 00000c 80143594  4 marioClearJumpPara 	mario_motion
+  801435dc 0008b0 801435dc  4 marioSetJumpPara 	mario_motion
+  80143e8c 000214 80143e8c  4 marioSetFallPara 	mario_motion
+  80144230 000084 80144230  4 marioGetJumpParaDef 	mario_motion
+  80145398 0006ac 80145398  4 marioJump 	mario_motion
+  80145a44 000370 80145a44  4 marioFall 	mario_motion
+  80145db4 0001b4 80145db4  4 marioLandCamShake 	mario_motion
+  80145f68 0004e0 80145f68  4 marioLandon 	mario_motion
+  80147570 000094 80147570  4 marioChangeCharacter 	mario_motion
+  80147604 000144 80147604  4 _marioChangeCharacter 	mario_motion
+  80147840 0005d8 80147840  4 mot_character_change 	mario_motion
   80147e18 0000fc 80147e18  4 marioChangePixl 	mario_motion
+  80148144 0003b8 80148144  4 mot_pixl_change 	mario_motion
+  801487e4 00008c 801487e4  4 marioChgMotCharAbility 	mario_motion
+  801489cc 000004 801489cc  4 mot_dummy 	mario_motion
+  801489d0 0001d8 801489d0  4 mot_22 	mario_motion
+  80148ba8 000080 80148ba8  4 mot_23 	mario_motion
+  80149a14 000518 80149a14  4 mot_parasol_guard 	mario_motion
+  80149f2c 000060 80149f2c  4 mot_75_post 	mario_motion
+  8014a5a4 0004dc 8014a5a4  4 mot_fire 	mario_motion
+  8014aa80 0000e8 8014aa80  4 mot_fire_post 	mario_motion
+  8014ad08 0001e4 8014ad08  4 mot_talk 	mario_motion
+  8014aeec 00062c 8014aeec  4 mot_29 	mario_motion
+  8014b6b4 0002c4 8014b6b4  4 mot_28 	mario_motion
+  8014b978 000020 8014b978  4 mot_28_post 	mario_motion
+  8014b998 0000d8 8014b998  4 mot_31 	mario_motion
+  8014ba70 00001c 8014ba70  4 mot_31_post 	mario_motion
+  8014ba8c 000118 8014ba8c  4 mot_32 	mario_motion
+  8014bba4 000044 8014bba4  4 mot_32_post 	mario_motion
+  8014bbec 000290 8014bbec  4 mot_33 	mario_motion
+  8014bf00 000108 8014bf00  4 mot_34 	mario_motion
+  8014c008 000080 8014c008  4 mot_34_post 	mario_motion
   8014c088 00000c 8014c088  4 pouchGetPtr 	mario_pouch
   8014c094 000694 8014c094  4 pouchInit 	mario_pouch
   8014c728 000668 8014c728  4 pouchReInit 	mario_pouch
@@ -949,18 +1252,139 @@
   8014fe88 000114 8014fe88  4 pouchCountMapsOwned 	mario_pouch
   8014ff9c 000114 8014ff9c  4 pouchCountRecipesKnown 	mario_pouch
   801500b0 000114 801500b0  4 pouchCountCardsKnown 	mario_pouch
-  80150c1c 000488 80150c1c  4 marioUpdateKeyData 	mario
-  801537a0 000004 801537a0  4 GXTexModeSync 	
+  801501c4 00008c 801501c4  4 marioBottomless 	mario_sbr
+  801502bc 000094 801502bc  4 marioAdjustMoveDir 	mario_sbr
+  801504e8 000034 801504e8  4 revise360 	mario_sbr
+  8015051c 00016c 8015051c  4 toMovedir 	mario_sbr
+  80150c1c 000488 80150c1c  4 marioUpdateKeyData 	mario_sbr
+  801510a4 000188 801510a4  4 marioGetStick 	mario_sbr
+  8015157c 000028 8015157c  4 marioCheckSlowFallInput 	mario_sbr
+  801515a4 000050 801515a4  4 marioCheck2HeldFor2 	mario_sbr
+  801515f4 000028 801515f4  4 marioCheck1Held 	mario_sbr
+  8015161c 000050 8015161c  4 marioCheck1HeldFor3 	mario_sbr
+  8015166c 000028 8015166c  4 marioCheck2Pressed 	mario_sbr
+  80152000 000028 80152000  4 marioCheckParasolFloatInput 	mario_sbr
+  80152194 000050 80152194  4 marioCheck2HeldFor2Alt 	mario_sbr
+  801521ec 00002c 801521ec  4 marioReset12Timers 	mario_sbr
+  80152218 0000b0 80152218  4 marioUpdate12Timers 	mario_sbr
+  80154c80 000004 80154c80  4 marioStatusInit 	mario_status
+  80154c84 000004 80154c84  4 marioStatusReInit 	mario_status
+  80154c88 000060 80154c88  4 marioStatusOnMapChange 	mario_status
+  80154ce8 000254 80154ce8  4 marioStatusMain 	mario_status
   80154f3c 0010e0 80154f3c  4 marioStatusApplyStatuses 	mario_status
   8015601c 0000d4 8015601c  4 marioStatusEntry 	mario_status
   801560f0 0000e4 801560f0  4 marioStatusDeleteAll 	mario_status
   801561d4 0000d4 801561d4  4 marioStatusDelete 	mario_status
-  80158a64 000120 80158a64  4 speedFlowerStatusMain 	
-  80158b84 0000b8 80158b84  4 speedFlowerStatusDeleteFunc 	
-  80158c3c 00005c 80158c3c  4 speedFlowerStatusCb3 	
-  80158c98 000120 80158c98  4 slowFlowerStatusMain 	
-  80158db8 0000b8 80158db8  4 slowFlowerStatusDelete 	
-  80158e70 00005c 80158e70  4 slowFlowerStatusCb3 	
+  801562a8 000098 801562a8  4 marioCheckStatusPauseMot 	mario_status
+  80156340 0000cc 80156340  4 marioCheckPoisonStatusPauseMot 	mario_status
+  8015640c 0001c4 8015640c  4 statusPoisonMain 	mario_status
+  801565d0 000090 801565d0  4 statusPoisionDelete 	mario_status
+  80156660 00005c 80156660  4 statusPoisonMapChange 	mario_status
+  801566bc 000148 801566bc  4 statusSlowMain 	mario_status
+  80156804 000090 80156804  4 statusSlowDelete 	mario_status
+  80156894 00005c 80156894  4 statusSlowMapChange 	mario_status
+  801568f0 000148 801568f0  4 statusNoSkillsMain 	mario_status
+  80156a38 000090 80156a38  4 statusNoSkillsDelete 	mario_status
+  80156ac8 00005c 80156ac8  4 statusNoSkillsMapChange 	mario_status
+  80156b24 000148 80156b24  4 statusNoJumpMain 	mario_status
+  80156c6c 000090 80156c6c  4 statusNoJumpDelete 	mario_status
+  80156cfc 00005c 80156cfc  4 statusNoJumpMapChange 	mario_status
+  80156d58 000148 80156d58  4 statusFlippedControlsMain 	mario_status
+  80156ea0 000090 80156ea0  4 statusFlippedControlsDelete 	mario_status
+  80156f30 00005c 80156f30  4 statusFlippedControlsMapChange 	mario_status
+  80156f8c 0001d0 80156f8c  4 statusHalfDamageMain 	mario_status
+  8015715c 000060 8015715c  4 statusHalfDamageDelete 	mario_status
+  801571bc 00002c 801571bc  4 statusHalfDamageMapChange 	mario_status
+  801571e8 0001d8 801571e8  4 statusDoubleAttackMain 	mario_status
+  801573c0 000060 801573c0  4 statusDoubleAttackDelete 	mario_status
+  80157420 00002c 80157420  4 statusDoubleAttackMapChange 	mario_status
+  8015744c 0001e4 8015744c  4 statusElectrifiedMain 	mario_status
+  80157630 000084 80157630  4 statusElectrifiedDelete 	mario_status
+  801576b4 000054 801576b4  4 statusElectrifiedMapChange 	mario_status
+  8015778c 0002a4 8015778c  4 statusHpRegenMain 	mario_status
+  80157a30 000084 80157a30  4 statusHpRegenDelete 	mario_status
+  80157ab4 000050 80157ab4  4 statusHpRegenMapChange 	mario_status
+  80157cac 000030 80157cac  4 evt_mario_status_set_system_level 	mario_status
+  80157cdc 000250 80157cdc  4 statusBarrierMain 	mario_status
+  80157f2c 0000c4 80157f2c  4 statusBarrierDelete 	mario_status
+  80157ff0 00002c 80157ff0  4 statusBarrierMapChange 	mario_status
+  801586dc 000138 801586dc  4 statusBarrierDispMain 	mario_status
+  80158930 000028 80158930  4 marioStatusCheckBarrier 	mario_status
+  80158a64 000120 80158a64  4 statusSpeedFlowerMain 	mario_status
+  80158b84 0000b8 80158b84  4 statusSpeedFlowerDelete 	mario_status
+  80158c3c 00005c 80158c3c  4 statusSpeedFlowerMapChange 	mario_status
+  80158c98 000120 80158c98  4 statusSlowFlowerMain 	mario_status
+  80158db8 0000b8 80158db8  4 statusSlowFlowerDelete 	mario_status
+  80158e70 00005c 80158e70  4 statusSlowFlowerMapChange 	mario_status
+  80158ecc 000108 80158ecc  4 statusCoinFlowerMain 	mario_status
+  80158fd4 00009c 80158fd4  4 statusCoinFlowerDelete 	mario_status
+  80159070 000064 80159070  4 statusCoinFlowerMapChange 	mario_status
+  8015a2f4 0007ac 8015a2f4  4 statusPalPillsMain 	mario_status
+  8015aaa0 000108 8015aaa0  4 statusPalPillsDelete 	mario_status
+  8015aba8 000158 8015aba8  4 statusPalPillsMapChange 	mario_status
+  8015dd4c 0007a4 8015dd4c  4 statusGhostShroomMain 	mario_status
+  8015e4f0 0000a8 8015e4f0  4 statusGhostShroomDelete 	mario_status
+  8015e598 00006c 8015e598  4 statusGhostShroomMapChange 	mario_status
+  8015f104 000d70 8015f104  4 mot_flip 	
+  8015fe74 000070 8015fe74  4 mot_flip_post 	
+  8016060c 000308 8016060c  4 marioGetRespawnPos 	mot_damage
+  80160944 00062c 80160944  4 mot_20 	
+  80161028 0006d8 80161028  4 mot_bottomless 	mot_damage
+  80161700 0000b8 80161700  4 mot_bottomless_post 	mot_damage
+  801617b8 0003bc 801617b8  4 mot_24 	
+  80161b74 000004 80161b74  4 mot_24_post 	
+  80161cf8 0000cc 80161cf8  4 onHpEquals0 	
+  80161dc4 000250 80161dc4  4 mot_30 	
+  80162014 000018 80162014  4 mot_30_post 	
+  80163ea0 0000a4 80163ea0  4 fairyDropFromCatch 	
+  80164a74 0006cc 80164a74  4 mot_place_bomb 	
+  80165140 000100 80165140  4 mot_place_bomb_post 	
+  8016571c 000de8 8016571c  4 mot_fleep 	
+  80166504 000114 80166504  4 mot_fleep_post 	
+  80168378 001e20 80168378  4 mot_grab 	
+  8016a198 000224 8016a198  4 mot_grab_post 	
+  8016a8f8 000698 8016a8f8  4 mot_dottie_shrink 	
+  8016af90 000164 8016af90  4 mot_dottie_shrink_post 	
+  8016b0f4 0007ec 8016b0f4  4 mot_dottie_grow 	
+  8016b8e0 000244 8016b8e0  4 mot_dottie_grow_post 	
+  8016bbf4 0003f4 8016bbf4  4 mot_barry 	
+  8016bfe8 0000c4 8016bfe8  4 mot_barry_post 	
+  8016c0b4 0004b4 8016c0b4  4 mot_43 	
+  8016c568 0000a0 8016c568  4 mot_43_post 	
+  8016ccec 0005ac 8016ccec  4 mot_carrie_mount 	
+  8016d298 0000a0 8016d298  4 mot_carrie_mount_post 	
+  8016d338 000484 8016d338  4 mot_carrie_dismount 	mot_fairy_mario
+  8016d7bc 0000dc 8016d7bc  4 mot_carrie_dismount_post 	mot_fairy_mario
+  8016d8d4 00001c 8016d8d4  4 mot_35 	
+  8016d950 000990 8016d950  4 mot_piccolo 	
+  8016e2e0 0000d8 8016e2e0  4 mot_piccolo_post 	
+  8016e520 000690 8016e520  4 mot_hammer 	
+  8016ebb0 00004c 8016ebb0  4 mot_hammer_post 	
+  801707d8 001364 801707d8  4 mot_14 	
+  80171ca4 000120 80171ca4  4 mot_14_post 	
+  80171f34 001900 80171f34  4 mot_jabara 	
+  80173834 000054 80173834  4 jabaraNoHitChk 	mot_jabara
+  80173a30 000268 80173a30  4 mot_jabara_post 	
+  80173c98 000098 80173c98  4 marioPreJump 	mot_jump
+  80173d30 000a44 80173d30  4 mot_7 	
+  80174774 00010c 80174774  4 mot_7_post 	
+  801748d4 000708 801748d4  4 mot_8 	
+  80174fdc 000010 80174fdc  4 mot_8_post 	
+  801751ac 0002d0 801751ac  4 mot_jump 	mot_jump
+  8017547c 00003c 8017547c  4 mot_jump_post 	mot_jump
+  801754b8 00014c 801754b8  4 mot_12 	
+  80175604 00001c 80175604  4 mot_12_post 	
+  80175620 000264 80175620  4 mot_fall 	
+  80175884 000058 80175884  4 mot_fall_post 	
+  801758dc 000274 801758dc  4 mot_26 	
+  80175b50 00007c 80175b50  4 mot_26_post 	
+  80175bcc 000334 80175bcc  4 mot_damage 	mot_damage
+  80175f00 000068 80175f00  4 mot_damage_post 	mot_damage
+  80176008 00038c 80176008  4 mot_parasol_float 	
+  80176394 000038 80176394  4 mot_74_post 	
+  80176918 0000f8 80176918  4 marioSlitForceCancel 	
+  80176dd4 0003c8 80176dd4  4 mot_slit_post 	
+  80177330 00156c 80177330  4 mot_slit 	
   801789f4 000100 801789f4  4 seq_gameOverInit 	seq_gameover
   80178af4 000074 80178af4  4 seq_gameOverExit 	seq_gameover
   80178b68 000468 80178b68  4 seq_gameOverMain 	seq_gameover
@@ -1000,7 +1424,6 @@
   80181248 000570 80181248  4 levelUpWindowMain 	levelupwindow
   80181924 000010 80181924  4 charmWindowInit 	charmwindow
   80182704 000370 80182704  4 charmWindowMain 	charmwindow
-  80182a74 00012c 80182a74  4 charmWindowMain 	charmwindow
   80182bdc 00000c 80182bdc  4 nameEntGetName 	nameent
   80182be8 0000d4 80182be8  4 nameEntInit 	nameent
   80182cbc 00000c 80182cbc  4 nameEntExit 	nameent
@@ -1080,7 +1503,7 @@
   8018efb4 00024c 8018efb4  4 pluswinCardCtrlDisp 	pausewin
   8018fa80 000730 8018fa80  4 pluswinRecipesWinOpen 	pausewin
   801914d0 0005f0 801914d0  4 pluswinMapsWinOpen 	pausewin
-  80193c24 000130 80193c24  4 openMinusWindow 	
+  80193c24 000130 80193c24  4 minuswinOpen 	minuswin
   80195104 000010 80195104  4 charPixlItemWinInit 	charpixlitemwin
   80195114 000010 80195114  4 charPixlItemWinReInit 	charpixlitemwin
   80195124 000d40 80195124  4 charPixlItemWinOpen 	charpixlitemwin
@@ -1101,6 +1524,7 @@
   801992e4 0001ac 801992e4  4 hudReInit 	hud
   80199490 000050 80199490  4 hudLoadStats 	hud
   801994e0 000594 801994e0  4 hudMain 	hud
+  80199a90 000040 80199a90  4 hudUnhideAlt 	hud
   80199ad0 00003c 80199ad0  4 hudHide 	hud
   80199ba8 0000cc 80199ba8  4 hudUnhide 	hud
   80199cc4 000034 80199cc4  4 hudStartCountdown 	hud
@@ -1120,6 +1544,7 @@
   8019c688 000034 8019c688  4 distABf 	system
   8019c6bc 00003c 8019c6bc  4 compAngle 	system
   8019c6f8 0001b4 8019c6f8  4 angleABf 	system
+  8019c8ac 000084 8019c8ac  4 sincosf 	system
   8019c9d4 0005b0 8019c9d4  4 fsort 	system
   8019cf84 0001cc 8019cf84  4 qqsort 	system
   8019d150 000104 8019d150  4 rand 	system
@@ -1234,14 +1659,28 @@
   801a96fc 0000bc 801a96fc  4 npcInit 	npcdrv
   801a97b8 0000ac 801a97b8  4 npcReset 	npcdrv
   801a9878 00136c 801a9878  4 npcMain 	npcdrv
+  801aaea4 0021b4 801aaea4  4 npcHitMain 	npcdrv
+  801b357c 0002e4 801b357c  4 npcDispSub 	npcdrv
+  801b38b0 000c64 801b38b0  4 mtx_setup 	npcdrv
+  801b50a0 00001c 801b50a0  4 npcDisp 	npcdrv
+  801b50bc 000020 801b50bc  4 npcPartDisp 	npcdrv
+  801b50dc 00001c 801b50dc  4 npcDisp_xlu 	npcdrv
+  801b50f8 000020 801b50f8  4 npcPartDisp_xlu 	npcdrv
+  801b5674 0000a4 801b5674  4 npcDisp_general 	npcdrv
+  801b5718 0000a4 801b5718  4 npcPartDisp_general 	npcdrv
+  801b62f8 00009c 801b62f8  4 npcDisp_offscreen 	npcdrv
+  801b6394 00009c 801b6394  4 npcDisp_offscreen_xlu 	npcdrv
   801b6430 000ab4 801b6430  4 npcEntry 	npcdrv
   801b6ee4 000048 801b6ee4  4 npcIdToPtr 	npcdrv
   801b6f2c 0000a8 801b6f2c  4 npcNameToPtr 	npcdrv
   801b6fd4 000090 801b6fd4  4 npcNameToPtr_NoAssert 	npcdrv
+  801bc9ac 000254 801bc9ac  4 npcDropFromCatch 	npcdrv
   801be198 0004a0 801be198  4 npcEntryFromTemplate 	npcdrv
   801be638 000094 801be638  4 npcAreOnSpawnEvtsDone 	npcdrv
   801bf7a0 000468 801bf7a0  4 npcEntryFromSetupEnemy 	npcdrv
   801bfc08 00000c 801bfc08  4 npcGetNextTemplateNpcId 	npcdrv
+  801bfc84 0000e4 801bfc84  4 npcSetStayPose 	npcdrv
+  801bfd68 0000e4 801bfd68  4 npcSetTalkPose 	npcdrv
   801c0350 000078 801c0350  4 npcGetPartDefense 	npcdrv
   801c045c 000320 801c045c  4 npcReadSetupFile 	npcdrv
   801c077c 000314 801c077c  4 npcUpdateSetupFile0To1 	npcdrv
@@ -1259,7 +1698,7 @@
   801c9ac8 000014 801c9ac8  4 npcGetTribe 	npcdrv
   801c9adc 000008 801c9adc  4 npcGetWorkPtr 	npcdrv
   801cc118 00001c 801cc118  4 npcGetBaseHitXp 	npcdrv
-  801d1bf4 000188 801d1bf4  4 maybeCatchCardRng 	
+  801d1bf4 000188 801d1bf4  4 npcTryCatchCard 	npcdrv
   801ef744 00008c 801ef744  4 evt_npc_dimeen_l_init 	npc_dimeen_l
   801ef7d0 0000a4 801ef7d0  4 evt_npc_dimeen_l_exit 	npc_dimeen_l
   80227d14 000040 80227d14  4 canFloroCragnonSpawn 	
@@ -1292,6 +1731,7 @@
   802385ec 0000b0 802385ec  4 spsndPause 	spmario_snd
   8023869c 000090 8023869c  4 spsndUnpause 	spmario_snd
   802387b4 000040 802387b4  4 spsndSetPosDirListener 	spmario_snd
+  802387f4 000010 802387f4  4 spsndSetSFXReverbMode 	spmario_snd
   802388b4 000018 802388b4  4 spsndSetFlag 	spmario_snd
   802388cc 000018 802388cc  4 spsndClearFlag 	spmario_snd
   802388e4 000010 802388e4  4 spsndGetFlag 	spmario_snd
@@ -1359,7 +1799,6 @@
   8023f570 0004b4 8023f570  4 nandWriteAllSavesMain 	nandmgr
   8023fa24 000340 8023fa24  4 nandWriteSaveMain 	nandmgr
   8023fd64 0006b0 8023fd64  4 nandWriteBannerLoadAllSavesMain 	nandmgr
-  802403f0 000001 802403f0  8 increaseStage 	switchD_8023fe18
   80240414 00020c 80240414  4 nandDeleteSaveMain 	nandmgr
   80240620 000028 80240620  4 genericCallback 	nandmgr
   80240648 000058 80240648  4 checkCallback 	nandmgr
@@ -1384,6 +1823,7 @@
   80243958 0000d0 80243958  4 searchInit 	search
   80243a28 000080 80243a28  4 searchReInit 	search
   80244740 00145c 80244740  4 searchMain 	search
+  80249abc 00006c 80249abc  4 searchDumpEfb 	search
   80255838 00001c 80255838  4 strlen 	
   80255854 0000c8 80255854  4 __va_arg 	
   8025591c 000018 8025591c  4 __register_global_object 	
@@ -1443,7 +1883,6 @@
   802563cc 000024 802563cc  4 __shl2i 	
   802563f0 0000b4 802563f0  4 __cvt_sll_flt 	
   802564a4 0000a0 802564a4  4 __cvt_ull_flt 	
-  80256544 0000cc 80256544  4 __cvt_dbl_usll 	
   80256610 0000a8 80256610  4 __cvt_dbl_usll 	
   802566b8 00003c 802566b8  4 __init_cpp_exceptions 	
   802566f4 000034 802566f4  4 __fini_cpp_exceptions 	
@@ -4791,23 +5230,37 @@
   803fbc10 00018c 803fbc10  1 itemEventDataTable 	
   803ff190 000001 803ff190  1 default_item_use_evt 	
   804031b8 000750 804031b8  4 MapDataList 	map_data
-  80405bd8 0000c0 80405bd8  1 iconNameIdDefs 	
-  80405e50 000020 80405e50  4 language_dir 	
+  80405bd8 0000c0 80405bd8  1 msgIcon 	msgdrv
+  80405cd8 000038 80405cd8  4 msgTalkSfxGroups 	msgdrv
+  80405d10 000040 80405d10  4 msgSkipSfx 	msgdrv
+  80405d50 000100 80405d50  4 msgOpenCloseSfxGroups 	msgdrv
+  80405e50 000020 80405e50  4 language_dir 	msgdrv
   80405fe0 000001 80405fe0  1 shadowConfig 	
   804062a0 000001 804062a0  1 vertex_tbl 	shadowdrv
   80406580 000001 80406580  1 color_tbl 	shadowdrv
   804065e8 0006ac 804065e8  4 fortuneTellerLimits 	
+  80406d80 000050 80406d80  1 select_desc 	
+  80406dd0 000078 80406dd0  1 select_recipe_desc 	
+  80406e48 000050 80406e48  1 select_card_desc 	
+  80406e98 000040 80406e98  1 select_desc_tbl 	winmgr
   80406ed8 00017c 80406ed8  1 acDefs 	
   80407cc0 000010 80407cc0  4 vivihimoTailGroupNo 	
+  80407d70 00000c 80407d70  1 camDefaultPos 	
+  80407d7c 00000c 80407d7c  1 camDefaultUp 	
   80408c48 000001 80408c48  1 Normals 	extdrv
   80408c60 000001 80408c60  1 UVs 	extdrv
   8040b1f0 000001 8040b1f0  1 void_env_sound_setup_evt 	
-  8040bda8 000001 8040bda8  1 chapter_prologue_evt 	
+  8040bda8 000001 8040bda8  1 chapter_full_intro_evt 	
+  8040d438 000001 8040d438  1 chapter_return_intro_evt 	
   8040e44c 0000c0 8040e44c  1 mysteryCookDefs 	
   80411060 000001 80411060  1 evt_door_open 	evt_door
   80411fc8 000001 80411fc8  1 evt_door_close 	
   80412ce8 000010 80412ce8  4 dokanAnimFiles 	
+  8041a2b0 000001 8041a2b0  1 door_init_evt 	
+  8041ac90 000008 8041ac90  4 mobjJumpstandNames 	evt_mobj
+  8041ac98 000010 8041ac98  4 mobjHunmerBlockNames 	evt_mobj
   8041b108 000040 8041b108  1 defaultMobjBlkDropItems 	
+  8041b148 000058 8041b148  1 he1_01_mobjBlkDropItems 	
   8041b6d8 000001 8041b6d8  1 mobj_save_blk_sysevt 	evt_mobj
   8041be58 000001 8041be58  1 evt_npc_teleport_appear 	
   8041c090 000001 8041c090  1 evt_npc_teleport_disappear 	
@@ -4820,21 +5273,43 @@
   8041e0b0 000058 8041e0b0  1 shopPointRewards 	
   8041e108 000001 8041e108  1 evt_shop_evt5 	
   8041f378 000001 8041f378  1 evt_shop_evt6 	
-  804205e0 000001 804205e0  1 evt_shop_case_evt16 	
+  804205e0 000001 804205e0  1 shop_case_evt16 	
   804211d8 000001 804211d8  1 evt_shop_case_evt7 	
   804218e0 000001 804218e0  1 evt_shop_evt7 	
-  804220d0 000001 804220d0  1 evt_shop_evt8 	
-  80422e60 000001 80422e60  1 evt_shop_evt9 	
-  804236fc 000001 804236fc  1 evt_shop_evt10 	
-  804244f0 000001 804244f0  1 evt_shop_evt11 	
+  804220d0 000001 804220d0  1 shop_cooking_evt 	
+  80422e60 000001 80422e60  1 shop_cooking_flopside_evt 	
+  804236fc 000001 804236fc  1 shop_card_flipside_evt 	
+  804244f0 000001 804244f0  1 shop_card_flopside_evt 	
   80425028 000001 80425028  1 evt_shop_evt12 	
   80425510 000001 80425510  1 evt_shop_evt13 	
   80425a60 000001 80425a60  1 evt_shop_evt14 	
   80425f78 000001 80425f78  1 evt_shop_evt15 	
+  80426548 000008 80426548  4 fairyExtraAnimposeNames 	
+  80426590 000018 80426590  4 guideRunModeMainFuncs 	
   804265e8 000020 804265e8  4 charPoseNames 	
+  80426608 000020 80426608  4 charBackPoseNames 	
   804266c8 000050 804266c8  1 characterProperties 	
   80426780 000030 80426780  4 damageSfx 	
+  80426840 000090 80426840  1 commonAcrobatDefs 	
+  804268d0 000030 804268d0  1 marioUniqueAcrobatDefs 	
+  80426900 000030 80426900  1 peachUniqueAcrobatDefs 	
+  80426930 000030 80426930  1 bowserUniqueAcrobatDefs 	
+  80426960 000030 80426960  1 luigiUniqueAcrobatDefs 	
+  80426990 00000c 80426990  4 marioAcrobatDefs 	
+  8042699c 00000c 8042699c  4 peachAcrobatDefs 	
+  804269a8 00000c 804269a8  4 bowserAcrobatDefs 	
+  804269b4 00000c 804269b4  4 luigiAcrobatDefs 	
+  804269e8 000018 804269e8  4 stylishLevelSfx 	
+  80426a00 000028 80426a00  4 stylishLevelSfxMap 	
+  80426a28 000040 80426a28  4 characterStylishSfx 	
   80426b30 000068 80426b30  1 fairyUseFuncs 	
+  80426ba8 000010 80426ba8  4 characterLandSfx 	
+  80426bb8 000270 80426bb8  1 marioMotTbl 	
+  80426e28 0000f0 80426e28  1 marioJumpParaDefs 	
+  80426fe8 000001 80426fe8  1 marioJumpFallDef1sAlt 	
+  80427298 000001 80427298  1 marioJumpFallDef3sAlt 	
+  80427450 000001 80427450  1 mario_land_cam_shake_evt 	
+  80427740 000001 80427740  1 status_barrier_evt 	
   804285d0 000038 804285d0  4 healthAndSafetyTpls 	
   80428650 0000f0 80428650  4 areaTextFileMap 	
   80428788 000020 80428788  4 languageNames 	
@@ -4866,10 +5341,12 @@
   8042a510 000004 8042a510  4 msg_it 	
   8042a530 000020 8042a530  4 msg_tbl 	
   8042aa34 00001c 8042aa34  4 setupFileUpdaters 	
-  8043bf30 000680 8043bf30  1 npcTribes 	
+  8043bf30 00d958 8043bf30  1 npcTribes 	
   80449888 00b0b8 80449888  1 npcEnemyTemplates 	
   8044989c 000001 8044989c  8 setupEnemyDefs 	
-  804e5280 000001 804e5280  1 evt_nand_write_banner_load_all_saves 	
+  804bd494 000001 804bd494  1 npc_squig_onspawn_evt 	
+  804e4fc8 000001 804e4fc8  1 sfxReverbModes 	spmario_snd
+  804e5280 000001 804e5280  1 nand_write_banner_load_all_saves_evt 	
   804e5658 000001 804e5658  1 savefile_update_evt 	
   804e5c20 000001 804e5c20  1 evt_memcard_save 	
   804e5c48 000001 804e5c48  1 delete_save_confirm_evt 	
@@ -4963,7 +5440,7 @@
   80509bac 000001 80509bac  1 __vt 	Manager
   80509be8 000001 80509be8  1 __vt 	Component
   80509c48 000001 80509c48  1 __vt 	RemoteSpk
-  80509c80 000004 80509c80  4 item_event_dataWork 	
+  80509c80 000020 80509c80  1 itemEventWork 	
   80509ca0 000018 80509ca0  1 mobjWork 	
   80509cb8 000098 80509cb8  1 msgWork 	
   8050a080 000001 8050a080  1 rampTex8 	shadowdrv
@@ -4973,24 +5450,33 @@
   8050a128 000008 8050a128  1 acWork 	
   8050a130 0002c8 8050a130  4 tanfTbl 	animdrv
   8050b580 00003c 8050b580  4 camPtrTbl 	
+  8050b5bc 00000c 8050b5bc  1 camDefaultTarget 	
   8050b610 000010 8050b610  1 caseWork 	
+  8050b620 000200 8050b620  1 dispScissors 	
   8050b820 000131 8050b820  1 effWork 	
   8050bac0 000010 8050bac0  1 iconWork 	
   8050bb60 000002 8050bb60  2 paperLight3DImg 	
   8050bbc0 000002 8050bbc0  2 paperLight3d 	
+  8050bc20 0006ac 8050bc20  1 mapWork 	
   8050c2d0 000001 8050c2d0  1 error_data 	mapdrv
   8050c990 0000a0 8050c990  1 evtWork 	evtmgr
   8050ca20 000001 8050ca20  8 EvtEntries 	evtmgr
   8050ca30 000200 8050ca30  4 priTbl 	
   8050cc30 000200 8050cc30  4 priIdTbl 	
   8050ce30 000100 8050ce30  1 debugMsgBuf 	
+  8050d4c0 000001 8050d4c0  1 strFmtBuf 	evt_msg
+  8050f2c0 000001 8050f2c0  1 intFmtBuf 	evt_msg
   8050fcc0 000010 8050fcc0  1 evtShopWork 	
   8050fcd0 000001 8050fcd0  1 fortuneTellerMessage 	
+  8050fe88 00003c 8050fe88  4 itemTable 	evt_shop
   80510030 000368 80510030  1 fairyWork 	
   80510398 0000b4 80510398  1 guideWork 	
   80510450 000008 80510450  4 marioMainLastRunTime 	
+  80510454 000001 80510454  8 marioMainLastRunTime+4 	
   80510458 00156c 80510458  1 marioWork 	
+  805119c8 000060 805119c8  1 marioUnkStack 	
   80511a28 0006a0 80511a28  1 MarioPouchWork 	
+  805120e8 000110 805120e8  1 marioExts 	
   80512220 000020 80512220  1 seqLogoWork 	
   80512240 000074 80512240  1 seqMapChangeWork 	seq_mapChange
   805122c4 00009c 805122c4  1 seqTitleWork 	
@@ -5160,7 +5646,7 @@
   805add60 000001 805add60  1 sAlarm 	Controller
   805ade20 000001 805ade20  1 sAlarmSoundOff 	Controller
   805adee0 000001 805adee0  1 sThis 	Controller
-  805adf00 000004 805adf00  4 item_event_dataWp 	
+  805adf00 000004 805adf00  4 itemEventWp 	
   805adf08 000004 805adf08  1 setupItemTemplates 	
   805adf10 000004 805adf10  4 mobjdrvWp 	
   805adf18 000004 805adf18  4 msgw 	
@@ -5174,7 +5660,9 @@
   805adf58 000004 805adf58  4 animdrvWp 	
   805adf5c 000004 805adf5c  4 _dummy 	
   805adf60 000004 805adf60  4 bgdrvWp 	
-  805adf68 000004 805adf68  4 cam_roadWp 	
+  805adf68 000004 805adf68  4 camRoadWp 	
+  805adf70 000004 805adf70  4 camShiftWp 	
+  805adf78 000004 805adf78  4 camdrvWp 	
   805adf88 000004 805adf88  4 casedrvWp 	
   805adf90 000004 805adf90  4 effdrvWp 	
   805adf98 000004 805adf98  4 envdrvWp 	
@@ -5205,6 +5693,7 @@
   805ae0e0 000004 805ae0e0  4 charmwindowWp 	
   805ae0e8 000004 805ae0e8  4 nameEntWp 	
   805ae0f0 000004 805ae0f0  4 plusWinWp 	
+  805ae0f4 000004 805ae0f4  4 minuswinWp 	
   805ae0f8 000004 805ae0f8  4 charPixlItemWinWp 	
   805ae100 000004 805ae100  4 hudWp 	hud
   805ae108 000004 805ae108  4 treasuremapWp 	
@@ -5246,6 +5735,9 @@
   805ae6ac 000004 805ae6ac  4 spAllocator 	
   805ae6b8 000004 805ae6b8  4 scCursorPaneName 	HomeButton
   805ae6c4 000004 805ae6c4  4 scCursorRotPaneName 	HomeButton
+  805ae780 000004 805ae780  4 msgSEOn 	msgdrv
+  805ae784 000002 805ae784  2 active 	msgdrv
+  805ae788 000004 805ae788  4 msgSortDvdData 	msgdrv
   805ae790 000004 805ae790  4 windowdrvWp 	
   805ae7a0 000004 805ae7a0  4 acdrvLp 	
   805ae7ac 000004 805ae7ac  4 g_modeling_mtx_lv 	
@@ -5255,20 +5747,27 @@
   805ae7cc 000004 805ae7cc  4 pSortWork 	dispdrv
   805ae7d0 000004 805ae7d0  4 entry_n 	dispdrv
   805ae7d4 000004 805ae7d4  4 dispCurWork 	
+  805ae7dc 000004 805ae7dc  4 dispScissorNo 	dispdrv
   805ae7e4 000004 805ae7e4  4 effSubWp 	
   805ae828 000004 805ae828  4 fadedrvWp2 	
   805ae868 000002 805ae868  2 itemDefaultNameNext 	
+  805ae870 000004 805ae870  4 error_flag 	mapdrv
   805ae874 000004 805ae874  4 errorCount 	mapdrv
   805ae878 000004 805ae878  4 __mapdrv_make_dl 	mapdrv
+  805ae8c8 000004 805ae8c8  4 lastSfxId 	evt_snd
   805ae8d8 000004 805ae8d8  4 evtMax 	evtmgr
   805ae8dc 000004 805ae8dc  4 priTblNum 	
   805ae8e0 000004 805ae8e0  4 runMainF 	
-  805ae8e8 000004 805ae8e8  4 marioSpeedScale 	
+  805ae8e8 000004 805ae8e8  4 marioGameSpeedScale 	
+  805ae8f4 000004 805ae8f4  4 marioUnkStackTop 	
+  805ae8f8 000004 805ae8f8  4 fairyGroupNextFairy 	mario_fairy
+  805ae8fc 000004 805ae8fc  4 fairyGroupId 	mario_fairy
   805ae918 000004 805ae918  4 next_p0 	
   805ae91c 000004 805ae91c  4 next_p1 	
   805ae930 000004 805ae930  4 pausewinWp 	
   805ae934 000004 805ae934  4 pausewin1PressTimer 	
   805ae938 000004 805ae938  4 pausewin2PressTimer 	
+  805ae940 000001 805ae940  1 hudPlayingCoinCount 	hud
   805ae960 000001 805ae960  1 sptextureImage 	
   805ae968 000004 805ae968  4 comp 	system
   805ae980 000002 805ae980  2 token 	system
@@ -5398,6 +5897,17 @@
   80c5d5f4 000001 80c5d5f4  4 cudge_motto_related 	
   80c5db9c 000001 80c5db9c  4 evt_get_yossy_mario_angle_dist 	gn3_02
   80c74dbc 000001 80c74dbc  4 evt_an4_06_get_mario_pos 	an4_06
+  80c7e938 000001 80c7e938  4 treeDisp 	aa1_01
+  80c7ea0c 000001 80c7ea0c  4 evt_aa1_01_tree_disp 	aa1_01
+  80c7ead8 000001 80c7ead8  4 evt_aa1_01_get_tree_pos 	aa1_01
+  80c7eb78 000001 80c7eb78  4 evt_aa1_01_set_tree_pos 	aa1_01
+  80c7ed74 000001 80c7ed74  4 evt_aa2_02_ext_init 	aa2_02
+  80c7f9b4 000001 80c7f9b4  4 aa2_02_extInit 	aa2_02
+  80c7fbac 00050c 80c7fbac  4 aa2_02_extMain 	aa2_02
+  80c800b8 000001 80c800b8  4 aa2_02_extDispMain 	aa2_02
+  80c800ec 000020 80c800ec  4 aa2_02_extDisp 	aa2_02
+  80c80590 000001 80c80590  4 evt_aa2_02_eff_jigen_darkness 	aa2_02
+  80c8064c 000001 80c8064c  4 evt_aa2_02_eff_jigen_darkness_mini 	aa2_02
   80c81eb0 000001 80c81eb0  4 evt_dan_read_data 	dan
   80c82188 000001 80c82188  4 evt_dan_handle_map_parts 	dan
   80c82448 000001 80c82448  4 evt_dan_handle_dokans 	dan
@@ -5425,6 +5935,7 @@
   80c882f0 000001 80c882f0  4 _unresolved 	relocatable_module
   80ca9ad8 000004 80ca9ad8  4 ctors 	relocatable_module
   80ca9adc 000004 80ca9adc  4 dtors 	relocatable_module
+  80cf6d08 000001 80cf6d08  1 mac_01_mario_fall 	
   80cf7f60 000001 80cf7f60  1 mac_01_init_evt 	
   80cf8d88 000058 80cf8d88  1 mac_02_elv_descs 	
   80d0e1ec 000001 80d0e1ec  1 mac_02_init_evt 	
@@ -5434,6 +5945,7 @@
   80d15250 000001 80d15250  1 mac_06_init_evt 	
   80d15928 000001 80d15928  1 mac_07_init_evt 	
   80d15cb0 000001 80d15cb0  1 mac_08_init_evt 	
+  80d185f8 000028 80d185f8  1 mac_09_shopDefs 	
   80d1929c 000001 80d1929c  1 mac_09_init_evt 	
   80d1a700 000001 80d1a700  1 mac_11_init_evt 	
   80d20fb0 000001 80d20fb0  1 mac_12_init_evt 	
@@ -5442,9 +5954,11 @@
   80d251e8 000001 80d251e8  1 mac_16_init_evt 	
   80d259d4 000001 80d259d4  1 mac_17_init_evt 	
   80d25d90 000001 80d25d90  1 mac_18_init_evt 	
+  80d27e70 000028 80d27e70  1 mac_19_shopDefs 	
   80d28c40 000001 80d28c40  1 mac_19_init_evt 	
   80d2b2f8 000001 80d2b2f8  1 mac_22_init_evt 	
   80d2b468 000004 80d2b468  4 machiWp 	
+  80d2dfac 000004 80d2dfac  4 machiNpcWp 	
   80d2ff10 000001 80d2ff10  1 he1_01_init_evt 	
   80d30670 000001 80d30670  1 he1_02_init_evt 	
   80d30c88 000001 80d30c88  1 he1_03_init_evt 	
@@ -5464,6 +5978,7 @@
   80db01d0 000020 80db01d0  1 gn2_03_map_door_descs 	
   80db1980 000001 80db1980  1 gn2_03_stone_tablet_wait 	
   80db1cf0 000001 80db1cf0  1 gn2_03_init_evt 	
+  80db2060 00003c 80db2060  4 gn2_04_blkItemIds 	
   80db5ac0 000001 80db5ac0  1 gn3_02_rock_destroy 	
   80db5cd0 000001 80db5cd0  1 gn3_02_init_evt 	
   80e06cd8 000020 80e06cd8  1 an4_06_mapDoorDescs 	
@@ -5481,7 +5996,13 @@
   80e47140 000001 80e47140  1 bos_01_5_2_ochunks 	
   80e47b18 000001 80e47b18  1 bos_01_5_4_ochunks 	
   80e49650 000001 80e49650  1 bos_01_init_evt 	
+  80e499a0 000001 80e499a0  1 aa1_01_mario_house_transition_evt 	
+  80e49ab0 000001 80e49ab0  1 aa1_01_cutscene_2_evt 	
+  80e4a4b8 000018 80e4a4b8  4 treeAnimNames 	aa1_01
+  80e4a4d0 000001 80e4a4d0  1 aa1_01_move_tree_evt 	
+  80e4a590 000001 80e4a590  1 aa1_01_start_tree_move_evt 	
   80e4a688 000001 80e4a688  1 aa1_01_init_evt 	
+  80e4abd0 000001 80e4abd0  1 aa1_02_cutscene_evt 	
   80e4b04c 000001 80e4b04c  1 aa1_02_init_evt 	
   80e4b410 000001 80e4b410  1 aa2_01_init_evt 	
   80e4e308 000001 80e4e308  1 aa2_02_init_evt 	
@@ -5532,9 +6053,12 @@
   80e5bb70 000001 80e5bb70  1 he1_06_init_evt 	
   80e5bde0 000040 80e5bde0  4 item_tbl 	
   80e5da30 000001 80e5da30  1 mac_30_init_evt 	
+  80e5e008 000001 80e5e008  1 gn3_15_blk_init_evt 	
   80e5fa18 000001 80e5fa18  1 aa4_01_init_evt 	
   80f64368 000120 80f64368  1 machiWork 	
   80f65010 000004 80f65010  4 gn2_12Wp 	
+  80f65870 000004 80f65870  4 treeWp 	aa1_01
+  80f65878 000004 80f65878  4 aa2_02Wp 	
   80f65880 000004 80f65880  4 aa3_01Wp 	
   80f65888 000004 80f65888  4 danWp 	
   80f65bf8 000004 80f65bf8  4 chocobarWork 	
