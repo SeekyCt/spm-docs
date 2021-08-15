@@ -6,7 +6,8 @@ typedef void (MobjUpdateFunc)(MobjEntry * entry);
 
 typedef struct {
     /*
-        1 is active
+        0x10000000 is grabbable with Thoreau
+        0x1 is active
         Others unknown
     */
 /* 0x000 */ u32 flag0;
