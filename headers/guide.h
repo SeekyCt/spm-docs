@@ -4,6 +4,7 @@
 
 #define GUIDERunEnd 6
 
+// Returns an override for the name
 typedef const char * (GuideAnimChangeHandler)(const char * newAnimName);
 
 typedef struct {

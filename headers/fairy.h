@@ -9,6 +9,7 @@ enum FairyExtraNo {
     FAIRY_EXTRA_ANGEKO = 1 // Luvbi
 };
 
+// Returns an override for the name
 typedef const char * (FairyAnimChangeHandler)(FairyEntry * fairy, const char * newAnimName);
 
 typedef struct {
