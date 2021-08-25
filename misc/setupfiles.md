@@ -51,7 +51,7 @@ During stage 10 of seq_MapChangeMain, the setup file is loaded and passed into [
 https://github.com/SeekyCt/spm-docs/blob/d9671add0c08410a85beac7139c75d78dfbd032b/setup_data.h#L60). If the item count returned
 is more than 0, the version is asserted to be 20051201 (SETUPOBJ_FORMAT_VERSION) and the item list is passed into setpupSpawnItems.
 
-## setupSpawnItems
+### setupSpawnItems
 
 [setupSpawnItems](https://github.com/SeekyCt/spm-docs/blob/d9671add0c08410a85beac7139c75d78dfbd032b/setup_data.h#L51) then iterates 
 through the list of items, passing each one into [itemEntry](
