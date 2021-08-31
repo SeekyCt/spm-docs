@@ -5,7 +5,20 @@
 */
 
 typedef struct {
-/* 0x00 */ // unknown 0x0-48
+/* 0x0 */ u8 type;
+/* 0x1 */ u8 defense;
+/* 0x2 */ u16 flags;
+} NPCDefense; // total size 0x4
+
+typedef void (NPCPartUpdateFunc)(NPCPart * part, UNK);
+
+typedef struct {
+/* 0x00 */ u16 id;
+/* 0x02 */ // unknown 0x2-27
+/* 0x28 */ NPCDefense * defenses;
+/* 0x2C */ // unknown 0x2c-2f
+/* 0x30 */ NPCPartUpdateFunc * updateFunc;
+/* 0x34 */ // unknown 0x34-47
 } NPCPartDef; // total size 0x48
 
 typedef struct {
@@ -25,15 +38,19 @@ typedef struct {
 /* 0x0C */ // unknown 0xc-17
 /* 0x18 */ u8 maxHp;
 /* 0x19 */ u8 partsCount;
-/* 0x1A */ // unknown 0x1a-1b
+/* 0x1A */ // padding 0x1a-1b
 /* 0x1C */ NPCPartDef * partsList; // partsCount length
 /* 0x20 */ // unknown 0x20-37
 /* 0x38 */ s16 killXp;
-/* 0x40 */ // unknown 0x40-4d
+/* 0x40 */ // unknown 0x40-45
+/* 0x46 */ u16 coinDropChance; // chance of dropping any coins at all, percentage
+/* 0x48 */ u16 coinDropBaseCount; // minimum amount of coins to drop, if any are dropping
+/* 0x4A */ u16 coinDropExtraChance; // chance for each extra coin to drop, percentage
+/* 0x4C */ u16 coinDropExtraMax; // maximum amount of extra coins to drop on top of base count
 /* 0x4E */ u16 dropItemChance; // chance of dropping any item, percentage
 /* 0x50 */ DropItem * dropItemList; // terminated by an entry with id 0
 /* 0x54 */ // unknown 0x54-63
-/* 0x64 */ u8 attackStrength; // seems to only be used for the tattle and doesn't actually affect damage
+/* 0x64 */ u8 attackStrength; // only used for the tattle, doesn't affect damage
 /* 0x65 */ // unknown 0x65-67
 } NPCTribe; // total size 0x68
 

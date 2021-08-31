@@ -15,7 +15,7 @@ A dump of item_data.c's itemDataTable
 A dump of every template in the npcEnemyTemplates array
 
 ### npctribes.txt
-A dump of all the animPoseNames for each tribe in the npcTribes array
+A dump of every tribe in the npcTribes array
 
 ### observations.txt
 Various general notes about the game
