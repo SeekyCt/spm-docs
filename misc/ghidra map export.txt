@@ -41,6 +41,8 @@
   8002c980 000084 8002c980  4 mobjRunEvent 	mobjdrv
   8002ca04 0003f0 8002ca04  4 mobjCalcMtx 	mobjdrv
   8002cdf4 000118 8002cdf4  4 mobjCalcMtx2 	mobjdrv
+  8002d560 0000e0 8002d560  4 mobjHitOn 	mobjdrv
+  8002d640 0000e0 8002d640  4 mobjHitOff 	mobjdrv
   8002e954 000014 8002e954  4 mobjDropFromCatch 	mobjdrv
   8002eb38 000028 8002eb38  4 mobjGetModelName 	mobjdrv
   8002eda0 000030 8002eda0  4 dvdCb 	msgdrv
@@ -210,6 +212,7 @@
   80044e68 0000d0 80044e68  4 animPoseGetFlagF0 	animdrv
   80044f38 0000d0 80044f38  4 animPoseGetFlagF4 	animdrv
   80045008 0000d0 80045008  4 animPoseGetMaterialEvtColor 	animdrv
+  800450d8 0000ec 800450d8  4 animPoseSetDispCallBack2 	animdrv
   80045288 00143c 80045288  4 animPoseMain 	animdrv
   800466c4 000568 800466c4  4 pushGXModelMtx_TransformNode__ 	animdrv
   80046c2c 000544 80046c2c  4 pushGXModelMtx_JointNode__ 	animdrv
@@ -541,6 +544,7 @@
   800d21f8 00002c 800d21f8  4 evt_snd_bgmoff 	evt_snd
   800d2224 000044 800d2224  4 evt_snd_bgmoff_f_d 	evt_snd
   800d24b8 0002dc 800d24b8  4 evt_snd_get_bgm_wait_time 	evt_snd
+  800d2794 00006c 800d2794  4 evt_snd_get_bgm_name 	evt_snd
   800d2800 000034 800d2800  4 evt_snd_sfxon 	evt_snd
   800d28fc 0000d0 800d28fc  4 evt_snd_sfxon_character 	evt_snd
   800d29cc 00008c 800d29cc  4 evt_snd_sfxon_3d 	evt_snd
@@ -761,10 +765,14 @@
   800e0e24 00008c 800e0e24  4 evt_del_case_evt 	evt_case
   800e0eb0 000080 800e0eb0  4 evt_set_case_wrk 	evt_case
   800e0fb0 000010 800e0fb0  4 evtDoorInit 	evt_door
-  800e0fc0 000080 800e0fc0  4 evt_door_flag 	evt_door
+  800e0fc0 000080 800e0fc0  4 evt_door_flag_onoff 	evt_door
   800e1080 000098 800e1080  4 evtDoorCheckMapDoorDescExists 	evt_door
   800e1118 000098 800e1118  4 evtDoorCheckMapDoorDescInUnkMask 	evt_door
+  800e11b0 000020 800e11b0  4 evtDoorGetActiveDoorDesc 	evt_door
+  800e1580 0002ec 800e1580  4 evt_door_cmd 	evt_door
+  800e219c 000034 800e219c  4 evt_door_set_active_door_desc 	evt_door
   800e2450 0000b0 800e2450  4 evt_door_get_desc 	evt_door
+  800e260c 000004 800e260c  4 roomBottomlesssCb 	evt_door
   800e2610 0002f8 800e2610  4 evt_door_set_door_descs 	evt_door
   800e2908 000270 800e2908  4 evt_door_enable_disable_door_desc 	evt_door
   800e3588 00027c 800e3588  4 evt_door_set_dokan_descs 	evt_door
@@ -826,22 +834,44 @@
   800ef958 000030 800ef958  4 evt_mario_set_character 	evt_mario
   800ef988 0000c4 800ef988  4 evt_mario_set_pos 	evt_mario
   800efa4c 000078 800efa4c  4 evt_mario_get_pos 	evt_mario
+  800effb8 0000bc 800effb8  4 evt_mario_face_npc 	evt_mario
+  800f025c 000084 800f025c  4 evt_mario_face 	evt_mario
+  800f02e0 000024 800f02e0  4 evt_mario_face_free 	evt_mario
   800f1954 00006c 800f1954  4 evt_mario_set_pose 	evt_mario
   800f19c0 000048 800f19c0  4 evt_mario_wait_anim 	evt_mario
   800f25b0 000030 800f25b0  4 evt_set_gravity 	evt_mario
   800f25e0 00004c 800f25e0  4 evt_get_gravity 	evt_mario
   800f2ae8 000040 800f2ae8  4 evt_mario_tamara_onoff 	evt_mario
   800f2b28 0000d8 800f2b28  4 evt_mario_tamara_chg_mode 	evt_Mario
+  800f2ea0 000060 800f2ea0  4 evt_mario_set_botomless_cb 	evt_mario
+  800f2f00 000068 800f2f00  4 evt_mario_get_bottomless_cb 	
   800f3180 000030 800f3180  4 evt_mario_set_pane_boundaries 	evt_mario
+  800f31b0 000094 800f31b0  4 evt_mario_get_pane_for_pos 	evt_mario
+  800f3244 000040 800f3244  4 evt_mario_set_pane 	evt_mario
+  800f3284 000040 800f3284  4 evt_mario_pane_change_func 	evt_mario
+  800f32c4 00004c 800f32c4  4 evt_mario_get_pane_change_func 	evt_mario
+  800f3364 00004c 800f3364  4 evt_mario_check_3d 	evt_mario
+  800f3514 000078 800f3514  4 evt_mario_calc_damage_to_enemy 	evt_mario
   800f358c 00007c 800f358c  4 evt_mobj_entry 	evt_mobj
   800f3608 000030 800f3608  4 evt_mobj_delete 	evt_mobj
   800f3638 000078 800f3638  4 evt_mobj_exec_cancel 	evt_mobj
+  800f36b0 000064 800f36b0  4 evt_mobj_hit_onoff 	evt_mobj
   800f380c 0000cc 800f380c  4 evt_mobj_flag_onoff 	evt_mobj
   800f39e4 0000a4 800f39e4  4 evt_mobj_get_position 	evt_mobj
   800f3a88 000108 800f3a88  4 evt_mobj_set_position 	evt_mobj
   800f3b90 000108 800f3b90  4 evt_mobj_set_scale 	evt_mobj
   800f3c98 000108 800f3c98  4 evt_mobj_set_rotation 	evt_mobj
+  800f3da0 000094 800f3da0  4 evt_mobj_set_anim 	evt_mobj
+  800f3e34 000094 800f3e34  4 evt_mobj_wait_animation_end 	evt_mobj
+  800f3ec8 000070 800f3ec8  4 evt_mobj_set_interact_script 	evt_mobj
+  800f3f38 000070 800f3f38  4 evt_mobj_set_item 	evt_mobj
   800f422c 000070 800f422c  4 evt_mobj_check 	evt_mobj
+  800f430c 00039c 800f430c  4 mobj_sui 	evt_mobj
+  800f46a8 000314 800f46a8  4 mobj_sui_15 	evt_mobj
+  800f49bc 0002d8 800f49bc  4 evt_mobj_sui 	evt_mobj
+  800f4c94 0000d4 800f4c94  4 mobj_jump_kumo 	evt_mobj
+  800f4d68 00012c 800f4d68  4 mobj_big_jump_kumo 	evt_mobj
+  800f4e94 000268 800f4e94  4 evt_mobj_jump_kumo 	evt_mobj
   800f50fc 0001a8 800f50fc  4 mobj_jumpstand 	evt_mobj
   800f52a4 000140 800f52a4  4 evt_mobj_jumpstand 	evt_mobj
   800f53e4 0000a8 800f53e4  4 mobj_hunmer_blk 	evt_mobj
@@ -859,6 +889,12 @@
   800f8be8 000818 800f8be8  4 evt_mobj_blk 	evt_mobj
   800f9400 000288 800f9400  4 mobj_eria_block 	evt_mobj
   800f9688 000168 800f9688  4 evt_mobj_eria_block 	evt_mobj
+  800f9df0 000234 800f9df0  4 mobj_fire_block 	evt_mobj
+  800fa024 0003b8 800fa024  4 evt_mobj_fire_block 	evt_mobj
+  800fa3dc 000380 800fa3dc  4 mobj_hip_kui 	evt_mobj
+  800fa75c 000250 800fa75c  4 evt_mobj_hip_kui 	evt_mobj
+  800fa9ac 00017c 800fa9ac  4 mobj_kaze 	evt_mobj
+  800fac74 0002d0 800fac74  4 evt_mobj_kaze 	evt_mobj
   800faf44 0001d4 800faf44  4 mobj_save_blk 	evt_mobj
   800fb118 000164 800fb118  4 evt_mobj_save_blk 	evt_mobj
   800fb27c 000004 800fb27c  4 evt_msg_init 	evt_msg
@@ -883,11 +919,17 @@
   800fdfd4 000150 800fdfd4  4 evtNpcNameToPtr_NoAssert 	evt_npc
   800fe124 0000f8 800fe124  4 evt_npc_get_position 	evt_npc
   800fe21c 00011c 800fe21c  4 evt_npc_set_position 	evt_npc
+  800fe5b8 0000b0 800fe5b8  4 evt_npc_get_rotation 	evt_npc
+  800fe668 0000f8 800fe668  4 evt_npc_rotate 	evt_npc
+  800ffbd8 0008e8 800ffbd8  4 evt_npc_walk_to 	evt_npc
   801004c0 00023c 801004c0  4 evt_npc_jump_to 	evt_npc
   80102574 000684 80102574  4 evt_npc_glide_to 	evt_npc
   80102c7c 0000c0 80102c7c  4 evt_npc_get_hp 	evt_npc
   80102d3c 0000c0 80102d3c  4 evt_npc_get_max_hp 	evt_npc
   80102f5c 000088 80102f5c  4 evt_npc_entry 	evt_npc
+  80103108 000098 80103108  4 evt_npc_set_anim 	evt_npc
+  8010330c 00005c 8010330c  4 evt_npc_get_cur_anim 	evt_npc
+  80103368 0000a8 80103368  4 evt_npc_search_anim_defs 	evt_npc
   8010368c 00008c 8010368c  4 evt_npc_flag8_onoff 	evt_npc
   80103718 00008c 80103718  4 evt_npc_flagC_onoff 	evt_npc
   801037a4 00008c 801037a4  4 evt_npc_flag46C_onoff 	evt_npc
@@ -901,10 +943,15 @@
   80104c94 000248 80104c94  4 evt_npc_set_property 	evt_npc
   80104edc 0000d0 80104edc  4 modifyPartProperty 	evt_npc
   80104fac 0000e0 80104fac  4 evt_npc_modify_part 	evt_npc
-  80106390 000394 80106390  4 evt_read_setup_file 	
-  80106724 0001e0 80106724  4 evt_npc_entry_from_template 	
+  8010508c 0001bc 8010508c  4 evt_npc_get_property 	evt_npc
+  801055ec 00011c 801055ec  4 evt_npc_check_3d 	evt_npc
+  80105924 0000ac 80105924  4 evt_npc_get_axis_movement_unit 	evt_npc
+  80106390 000394 80106390  4 evt_read_setup_file 	evt_npc
+  80106724 0001e0 80106724  4 evt_npc_entry_from_template 	evt_npc
   80106b84 000230 80106b84  4 someEvtNpcTemplateSpawn2 	
-  80106db4 0001c4 80106db4  4 someEvtTrapTripleGoldbarSpawn 	
+  80106db4 0001c4 80106db4  4 evt_npc_spawn_sammer_guy 	evt_npc
+  801073f4 0000bc 801073f4  4 evt_npc_get_coin_drop_count 	evt_npc
+  801074b0 000090 801074b0  4 evt_npc_get_drop_item_type 	evt_npc
   80107540 000078 80107540  4 evt_npc_id_to_name 	evt_npc
   80107648 0000f4 80107648  4 evt_npc_set_timer_start? 	evt_npc
   8010773c 0000e0 8010773c  4 evt_npc_get_timer_start 	evt_npc
@@ -915,6 +962,7 @@
   80109da0 000078 80109da0  4 evt_npc_set_disp_callback 	evt_npc
   8010a2f8 000084 8010a2f8  4 evt_npc_try_catch_card 	evt_npc
   8010a910 0001cc 8010a910  4 evt_npc_teleport_effect 	evt_npc
+  8010be00 000080 8010be00  4 evt_npc_agb_async 	evt_npc
   8010c028 000060 8010c028  4 evt_npc_handle_hit_xp 	evt_npc
   8010c698 000030 8010c698  4 evt_pouch_set_hp 	evt_pouch
   8010c6c8 00004c 8010c6c8  4 evt_pouch_get_hp 	evt_pouch
@@ -1033,6 +1081,7 @@
   80121aa4 000038 80121aa4  4 guideEnterRunMode1 	guide
   80121adc 00004c 80121adc  4 guideEnterRunMode2 	guide
   80121b28 00007c 80121b28  4 guideEnterRunMode5 	guide
+  80121d34 000050 80121d34  4 guideCanSearch 	guide
   80121e50 000008 80121e50  4 marioGameGetSpeedScale 	mario
   80121f48 00000c 80121f48  4 marioGetPtr 	mario
   8012230c 000140 8012230c  4 marioSetAnimGroup 	mario
@@ -1524,6 +1573,7 @@
   801992e4 0001ac 801992e4  4 hudReInit 	hud
   80199490 000050 80199490  4 hudLoadStats 	hud
   801994e0 000594 801994e0  4 hudMain 	hud
+  80199a74 00001c 80199a74  4 hudGetPos 	hud
   80199a90 000040 80199a90  4 hudUnhideAlt 	hud
   80199ad0 00003c 80199ad0  4 hudHide 	hud
   80199ba8 0000cc 80199ba8  4 hudUnhide 	hud
@@ -1679,9 +1729,13 @@
   801be638 000094 801be638  4 npcAreOnSpawnEvtsDone 	npcdrv
   801bf7a0 000468 801bf7a0  4 npcEntryFromSetupEnemy 	npcdrv
   801bfc08 00000c 801bfc08  4 npcGetNextTemplateNpcId 	npcdrv
+  801bfc48 00003c 801bfc48  4 npcSearchAnimDefs 	
   801bfc84 0000e4 801bfc84  4 npcSetStayPose 	npcdrv
   801bfd68 0000e4 801bfd68  4 npcSetTalkPose 	npcdrv
-  801c0350 000078 801c0350  4 npcGetPartDefense 	npcdrv
+  801bfe4c 0000f8 801bfe4c  4 npcSetAnimSub 	npcdrv
+  801bff44 000234 801bff44  4 _npcSetAnim 	npcdrv
+  801c0178 000014 801c0178  4 npcSetAnim 	npcdrv
+  801c0350 000078 801c0350  4 npcGetDefense 	npcdrv
   801c045c 000320 801c045c  4 npcReadSetupFile 	npcdrv
   801c077c 000314 801c077c  4 npcUpdateSetupFile0To1 	npcdrv
   801c0a90 000280 801c0a90  4 npcUpdateSetupFile1To2 	npcdrv
@@ -1697,8 +1751,10 @@
   801c82a8 000160 801c82a8  4 npcHandleHitXp 	npcdrv
   801c9ac8 000014 801c9ac8  4 npcGetTribe 	npcdrv
   801c9adc 000008 801c9adc  4 npcGetWorkPtr 	npcdrv
-  801cc118 00001c 801cc118  4 npcGetBaseHitXp 	npcdrv
+  801cc118 00001c 801cc118  4 npcGetKillXp 	npcdrv
   801d1bf4 000188 801d1bf4  4 npcTryCatchCard 	npcdrv
+  801e3a1c 0003e0 801e3a1c  4 npcDropItem 	
+  801e3dfc 000078 801e3dfc  4 evt_npc_drop_item 	
   801ef744 00008c 801ef744  4 evt_npc_dimeen_l_init 	npc_dimeen_l
   801ef7d0 0000a4 801ef7d0  4 evt_npc_dimeen_l_exit 	npc_dimeen_l
   80227d14 000040 80227d14  4 canFloroCragnonSpawn 	
@@ -1762,6 +1818,7 @@
   8023caa8 000008 8023caa8  4 spsndBGMOff 	spmario_snd
   8023cab0 000004 8023cab0  4 spsndBGMOff_f_d_alt 	spmario_snd
   8023cfe8 0000f4 8023cfe8  4 setBgmVolume? 	spmario_snd
+  8023d1d0 000028 8023d1d0  4 spsndGetBgmName 	spmario_snd
   8023d3e4 000344 8023d3e4  4 spsndENVMain 	spmario_snd
   8023d728 000430 8023d728  4 spsndENVOn_f_d 	spmario_snd
   8023db58 000004 8023db58  4 spsndENVOn 	spmario_snd
@@ -1820,10 +1877,25 @@
   802421dc 000014 802421dc  4 homebuttonAllowOpen 	homebuttondrv
   80242204 000078 80242204  4 homebuttonDumpEfb 	homebuttondrv
   8024227c 0006bc 8024227c  4 homebuttonDisp 	homebuttondrv
+  8024386c 000040 8024386c  4 searchSp3GateSeqCheck 	search
+  802438ac 0000ac 802438ac  4 searchInitMapTattles 	search
   80243958 0000d0 80243958  4 searchInit 	search
   80243a28 000080 80243a28  4 searchReInit 	search
+  80243ae4 0001c8 80243ae4  4 searchMobjGuideDisp 	search
+  80243cac 0002b8 80243cac  4 searchMobjGuideInit 	search
   80244740 00145c 80244740  4 searchMain 	search
+  80245b9c 0001a4 80245b9c  4 searchGetPlayerMsg 	search
+  80245d40 000164 80245d40  4 searchGetFairyMsg 	search
+  80245ea4 000188 80245ea4  4 searchGetFairyExtraMsg 	earch
+  8024602c 0004b0 8024602c  4 searchGetNpcMsg 	search
+  802464dc 0003f8 802464dc  4 searchGetMobjMsg 	earch
+  802468d4 000300 802468d4  4 searchGetItemMsg 	search
+  80246cb8 000370 80246cb8  4 searchSelect 	search
+  80247028 00033c 80247028  4 searchDeselect 	search
+  802473a8 0022b0 802473a8  4 searchCalcTarget 	search
+  80249658 000190 80249658  4 searchCheckCursorOnTarget 	search
   80249abc 00006c 80249abc  4 searchDumpEfb 	search
+  80249b28 000ac0 80249b28  4 searchDisp 	search
   80255838 00001c 80255838  4 strlen 	
   80255854 0000c8 80255854  4 __va_arg 	
   8025591c 000018 8025591c  4 __register_global_object 	
@@ -5203,6 +5275,7 @@
   80343ea0 000018 80343ea0  1 spsndFxReverbHiParam 	
   80344490 005058 80344490  1 saveImagesTpl 	
   80349830 000001 80349830  1 homeButtonNotAllowedTpl 	
+  8034ca60 002958 8034ca60  1 mapTattles 	
   80358d88 000001 80358d88  1 ag2tg 	
   8035b250 000001 8035b250  1 cookingText 	
   8036a8a0 000001 8036a8a0  1 treasureMapText 	
@@ -5254,9 +5327,11 @@
   8040d438 000001 8040d438  1 chapter_return_intro_evt 	
   8040e44c 0000c0 8040e44c  1 mysteryCookDefs 	
   80411060 000001 80411060  1 evt_door_open 	evt_door
-  80411fc8 000001 80411fc8  1 evt_door_close 	
+  80411fc8 000001 80411fc8  1 evt_door_close 	evt_door
   80412ce8 000010 80412ce8  4 dokanAnimFiles 	
   8041a2b0 000001 8041a2b0  1 door_init_evt 	
+  8041ac40 000048 8041ac40  4 mobjSuiNames 	evt_mobj
+  8041ac88 000008 8041ac88  4 mobjJumpKumoNames 	evt_mobj
   8041ac90 000008 8041ac90  4 mobjJumpstandNames 	evt_mobj
   8041ac98 000010 8041ac98  4 mobjHunmerBlockNames 	evt_mobj
   8041b108 000040 8041b108  1 defaultMobjBlkDropItems 	
@@ -5464,6 +5539,7 @@
   8050ca30 000200 8050ca30  4 priTbl 	
   8050cc30 000200 8050cc30  4 priIdTbl 	
   8050ce30 000100 8050ce30  1 debugMsgBuf 	
+  8050cf30 00057c 8050cf30  1 evt_doorWork 	
   8050d4c0 000001 8050d4c0  1 strFmtBuf 	evt_msg
   8050f2c0 000001 8050f2c0  1 intFmtBuf 	evt_msg
   8050fcc0 000010 8050fcc0  1 evtShopWork 	
@@ -5531,6 +5607,7 @@
   80534f98 000010 80534f98  1 relWork 	
   80534fa8 0001bc 80534fa8  1 nandWork 	
   80535168 0000a0 80535168  1 homeButtonWork 	
+  80535208 0004a8 80535208  1 searchWork 	
   805356b0 000004 805356b0  4 fragmentinfo 	
   80535a18 000001 80535a18  1 gTRKEventQueue 	
   80535a40 000004 80535a40  4 gTRKBigEndian 	
@@ -5552,6 +5629,8 @@
   805381e0 000001 805381e0  1 DriveInfo 	
   80538200 000001 80538200  1 DriveBlock 	
   80538230 000001 80538230  1 __OSErrorTable 	
+  80544144 000008 80544144  4 nextIosTitleId 	
+  80544148 000001 80544148  8 nextIosTitleId+4 	
   805489e0 000001 805489e0  1 FatalContext 	
   80548ca8 000001 80548ca8  1 FatalParam 	
   80548d18 000001 80548d18  1 DefaultThread 	
@@ -5622,6 +5701,7 @@
   80565668 000004 80565668  4 IpcFdArray 	
   805656e8 000004 805656e8  4 IpcReqPtrArray 	
   80565780 000001 80565780  1 nand_homeDir 	
+  80596480 000004 80596480  4 uusbDevice 	
   805964a8 000001 805964a8  1 HCISU_EnableLog 	
   805a2520 000001 805a2520  1 _managerAlarm 	
   805a2550 000004 805a2550  4 _wpdcb 	
@@ -5675,7 +5755,7 @@
   805adfe8 000004 805adfe8  4 lightdrvWp 	
   805adff0 000004 805adff0  4 mapdrvWp 	
   805ae018 000004 805ae018  4 evtId 	
-  805ae01c 000004 805ae01c  4 evtSpeed 	
+  805ae01c 000004 805ae01c  4 evtSpd 	
   805ae020 000004 805ae020  4 evt_doorWp 	
   805ae028 000004 805ae028  4 evt_envWp 	
   805ae030 000004 805ae030  4 evt_shopWp 	
@@ -5716,6 +5796,7 @@
   805ae1b0 000004 805ae1b0  4 nandmgrWp 	
   805ae1b8 000004 805ae1b8  4 homebuttonWp 	
   805ae1c0 000004 805ae1c0  4 searchWp 	
+  805ae1c4 000004 805ae1c4  4 searchLastTargetType 	search
   805ae1d0 000004 805ae1d0  4 thandler 	std
   805ae1d4 000004 805ae1d4  4 uhandler 	std
   805ae1d8 000004 805ae1d8  4 fragmentID 	
@@ -5723,6 +5804,9 @@
   805ae1f8 000004 805ae1f8  4 __float_nan 	
   805ae1fc 000004 805ae1fc  4 __float_huge 	
   805ae200 000008 805ae200  4 __double_huge 	
+  805ae298 000004 805ae298  4 netKdRequestFd 	
+  805ae2d0 000004 805ae2d0  4 diFd 	
+  805ae3a0 000004 805ae3a0  4 fdFd 	
   805ae5b8 000004 805ae5b8  4 IUSB_HeapId 	
   805ae62c 000004 805ae62c  4 kp_fs_fstick_min 	
   805ae634 000004 805ae634  4 kp_cl_stick_min 	
@@ -5779,7 +5863,7 @@
   805ae9c0 000001 805ae9c0  1 doResetButtonRestart 	
   805ae9c1 000001 805ae9c1  1 doShutdown 	
   805ae9c2 000001 805ae9c2  1 doHomeButtonRestart 	
-  805ae9c3 000001 805ae9c3  1 doReturnToMenu 	
+  805ae9c4 000004 805ae9c4  4 resetCode 	
   805ae9c8 000004 805ae9c8  4 _spmarioSystemLevel 	
   805ae9cc 000004 805ae9cc  4 pMainThread 	
   805ae9d0 000004 805ae9d0  4 DemoFifoBuffer 	
@@ -5794,6 +5878,7 @@
   805aea1c 000004 805aea1c  4 spssfxlist 	
   805aea20 000004 805aea20  4 spsenvlist 	
   805aea24 000004 805aea24  4 wiiMarioSndDatReadHead 	
+  805aea30 000004 805aea30  4 searchLastTarget 	search
   805aea40 000004 805aea40  4 __global_destructor_chain 	
   805aea48 000001 805aea48  1 @LOCAL@get_malloc_pool__Fv@init@0 	
   805aea50 000004 805aea50  4 errno 	
@@ -5816,6 +5901,7 @@
   805aec18 000004 805aec18  4 FstStart 	
   805aec1c 000004 805aec1c  4 BootInfo 	
   805aec20 000004 805aec20  4 CommandInfoCounter 	
+  805aec5c 000004 805aec5c  4 dvdInitFlag 	
   805aed18 000004 805aed18  4 changed 	
   805aede0 000004 805aede0  4 __OldStack 	
   805aee48 000002 805aee48  2 __AXAuxCVolume 	
@@ -5828,6 +5914,7 @@
   805aef98 000001 805aef98  1 DrawDone 	
   805aef9c 000004 805aef9c  4 DrawDoneCB 	
   805af010 000004 805af010  4 nand_libState 	
+  805af060 000001 805af060  1 btaTraceLevel 	
   805af068 000004 805af068  4 IUSB_HeapLo 	
   805af06c 000004 805af06c  4 IUSB_HeapHi 	
   805af070 000001 805af070  1 USB_EnableLog 	
@@ -5896,7 +5983,9 @@
   80c5c7fc 000001 80c5c7fc  4 cragnon_5_1_please_input_related 	
   80c5d5f4 000001 80c5d5f4  4 cudge_motto_related 	
   80c5db9c 000001 80c5db9c  4 evt_get_yossy_mario_angle_dist 	gn3_02
+  80c6a9dc 0003c4 80c6a9dc  4 evt_wa_get_sammer_value 	wa1_02
   80c74dbc 000001 80c74dbc  4 evt_an4_06_get_mario_pos 	an4_06
+  80c7c490 000001 80c7c490  4 evt_ls4_12_update_book_y 	ls4_12
   80c7e938 000001 80c7e938  4 treeDisp 	aa1_01
   80c7ea0c 000001 80c7ea0c  4 evt_aa1_01_tree_disp 	aa1_01
   80c7ead8 000001 80c7ead8  4 evt_aa1_01_get_tree_pos 	aa1_01
@@ -5938,6 +6027,7 @@
   80cf6d08 000001 80cf6d08  1 mac_01_mario_fall 	
   80cf7f60 000001 80cf7f60  1 mac_01_init_evt 	
   80cf8d88 000058 80cf8d88  1 mac_02_elv_descs 	
+  80cf9268 000160 80cf9268  1 mac_02_door_descs 	
   80d0e1ec 000001 80d0e1ec  1 mac_02_init_evt 	
   80d11fe8 000001 80d11fe8  1 mac_03_init_evt 	
   80d13638 000001 80d13638  1 mac_04_init_evt 	
@@ -5981,6 +6071,8 @@
   80db2060 00003c 80db2060  4 gn2_04_blkItemIds 	
   80db5ac0 000001 80db5ac0  1 gn3_02_rock_destroy 	
   80db5cd0 000001 80db5cd0  1 gn3_02_init_evt 	
+  80dc79a0 0004b0 80dc79a0  1 sammerDefsCh6 	
+  80dc7e50 000fa0 80dc7e50  1 sammerDefsEndgame 	
   80e06cd8 000020 80e06cd8  1 an4_06_mapDoorDescs 	
   80e06cf8 000001 80e06cf8  1 an4_06_handle_2d_z 	
   80e07958 000001 80e07958  1 an4_06_init_evt 	
@@ -6057,6 +6149,7 @@
   80e5fa18 000001 80e5fa18  1 aa4_01_init_evt 	
   80f64368 000120 80f64368  1 machiWork 	
   80f65010 000004 80f65010  4 gn2_12Wp 	
+  80f65648 000004 80f65648  4 curSammerDef 	wa1_02
   80f65870 000004 80f65870  4 treeWp 	aa1_01
   80f65878 000004 80f65878  4 aa2_02Wp 	
   80f65880 000004 80f65880  4 aa3_01Wp 	
