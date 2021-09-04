@@ -843,8 +843,8 @@
   800f25e0 00004c 800f25e0  4 evt_get_gravity 	evt_mario
   800f2ae8 000040 800f2ae8  4 evt_mario_tamara_onoff 	evt_mario
   800f2b28 0000d8 800f2b28  4 evt_mario_tamara_chg_mode 	evt_Mario
-  800f2ea0 000060 800f2ea0  4 evt_mario_set_botomless_cb 	evt_mario
-  800f2f00 000068 800f2f00  4 evt_mario_get_bottomless_cb 	
+  800f2ea0 000060 800f2ea0  4 evt_mario_set_bottomless_cb 	evt_mario
+  800f2f00 000068 800f2f00  4 evt_mario_get_bottomless_cb 	evt_mario
   800f3180 000030 800f3180  4 evt_mario_set_pane_boundaries 	evt_mario
   800f31b0 000094 800f31b0  4 evt_mario_get_pane_for_pos 	evt_mario
   800f3244 000040 800f3244  4 evt_mario_set_pane 	evt_mario
@@ -5301,6 +5301,7 @@
   803f5a90 000004 803f5a90  4 scGroupAnmTable 	homebutton
   803f5f98 005c78 803f5f98  1 itemDataTable 	
   803fbc10 00018c 803fbc10  1 itemEventDataTable 	
+  803fea18 000001 803fea18  1 catch_card_use_evt 	
   803ff190 000001 803ff190  1 default_item_use_evt 	
   804031b8 000750 804031b8  4 MapDataList 	map_data
   80405bd8 0000c0 80405bd8  1 msgIcon 	msgdrv
@@ -5416,9 +5417,19 @@
   8042a510 000004 8042a510  4 msg_it 	
   8042a530 000020 8042a530  4 msg_tbl 	
   8042aa34 00001c 8042aa34  4 setupFileUpdaters 	
+  80437cc0 000001 80437cc0  1 fracktail_on_spawn_evt 	
+  80437eb0 000001 80437eb0  1 wracktail_on_spawn_evt 	
+  804380e8 000001 804380e8  1 fracktail_on_hit_event 	
+  80439e58 000001 80439e58  1 npc_drop_item_evt 	
   8043bf30 00d958 8043bf30  1 npcTribes 	
   80449888 00b0b8 80449888  1 npcEnemyTemplates 	
   8044989c 000001 8044989c  8 setupEnemyDefs 	
+  804732e8 000001 804732e8  1 big_blooper_on_spawn_evt 	
+  80473cbc 000001 80473cbc  1 big_blooper_on_hit_evt 	
+  80474be8 000001 80474be8  1 big_tentacle_on_hit_script 	
+  804aa2a0 000001 804aa2a0  1 mimi_spider_weakening_hit_evt 	
+  804aa510 000001 804aa510  1 mimi_spider_true_hit_evt 	
+  804aad0c 000001 804aad0c  1 mimi_spider_on_hit_evt 	
   804bd494 000001 804bd494  1 npc_squig_onspawn_evt 	
   804e4fc8 000001 804e4fc8  1 sfxReverbModes 	spmario_snd
   804e5280 000001 804e5280  1 nand_write_banner_load_all_saves_evt 	
@@ -5548,7 +5559,6 @@
   80510030 000368 80510030  1 fairyWork 	
   80510398 0000b4 80510398  1 guideWork 	
   80510450 000008 80510450  4 marioMainLastRunTime 	
-  80510454 000001 80510454  8 marioMainLastRunTime+4 	
   80510458 00156c 80510458  1 marioWork 	
   805119c8 000060 805119c8  1 marioUnkStack 	
   80511a28 0006a0 80511a28  1 MarioPouchWork 	
@@ -5630,7 +5640,6 @@
   80538200 000001 80538200  1 DriveBlock 	
   80538230 000001 80538230  1 __OSErrorTable 	
   80544144 000008 80544144  4 nextIosTitleId 	
-  80544148 000001 80544148  8 nextIosTitleId+4 	
   805489e0 000001 805489e0  1 FatalContext 	
   80548ca8 000001 80548ca8  1 FatalParam 	
   80548d18 000001 80548d18  1 DefaultThread 	
@@ -5677,9 +5686,6 @@
   80551120 000004 80551120  4 __AXBufferAuxC 	
   80551ea0 000001 80551ea0  1 __AXCommandList 	
   80551fa0 000004 80551fa0  4 __AXLocalProfile 	
-  80551fa1 000001 80551fa1  8 __AXLocalProfile+1 	
-  80551fa2 000001 80551fa2  8 __AXLocalProfile+2 	
-  80551fa3 000001 80551fa3  8 __AXLocalProfile+3 	
   80551fe0 000004 80551fe0  4 __AXRmtOutBuffer 	
   80552580 000004 80552580  4 __AXOutSBuffer 	
   80552880 000004 80552880  4 __AXOutBuffer 	
@@ -5863,6 +5869,7 @@
   805ae9c0 000001 805ae9c0  1 doResetButtonRestart 	
   805ae9c1 000001 805ae9c1  1 doShutdown 	
   805ae9c2 000001 805ae9c2  1 doHomeButtonRestart 	
+  805ae9c3 000001 805ae9c3  1 doReturnToMenu 	
   805ae9c4 000004 805ae9c4  4 resetCode 	
   805ae9c8 000004 805ae9c8  4 _spmarioSystemLevel 	
   805ae9cc 000004 805ae9cc  4 pMainThread 	
@@ -5954,9 +5961,6 @@
   805af154 000001 805af154  1 sInitialized__Q34nw4r2ut19DvdLockedFileStream 	
   805af158 000001 805af158  1 @GUARD@fog$5710 	
   805af15c 000004 805af15c  4 fog$5710 	
-  805af15d 000001 805af15d  8 fog$5710+1 	
-  805af15e 000001 805af15e  8 fog$5710+2 	
-  805af15f 000001 805af15f  8 fog$5710+3 	
   805af164 000001 805af164  1 mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<wchar_t> 	
   805af168 000001 805af168  1 @GUARD@mDefaultTagProcessor 	TextWriterBase<char>
   805af169 000001 805af169  1 @GUARD@mDefaultTagProcessor 	TextWriterBase<wchar_t>
@@ -6028,6 +6032,13 @@
   80cf7f60 000001 80cf7f60  1 mac_01_init_evt 	
   80cf8d88 000058 80cf8d88  1 mac_02_elv_descs 	
   80cf9268 000160 80cf9268  1 mac_02_door_descs 	
+  80cf9408 000001 80cf9408  1 mac_02_lock_interact_evt 	
+  80cf9464 000001 80cf9464  1 mac_02_lock_open_evt 	
+  80cfa03c 000001 80cfa03c  1 mac_02_heart_pillar_inserted_custcene 	
+  80d0d774 000001 80d0d774  1 mac_02_door_appear_cutscene_evt 	
+  80d0dd60 000001 80d0dd60  1 mac_02_save_blk_evt 	
+  80d0dfd4 000001 80d0dfd4  1 mac_02_outskirts_sign_evt 	
+  80d0e188 000001 80d0e188  1 mac_02_records_sign_evt 	
   80d0e1ec 000001 80d0e1ec  1 mac_02_init_evt 	
   80d11fe8 000001 80d11fe8  1 mac_03_init_evt 	
   80d13638 000001 80d13638  1 mac_04_init_evt 	
@@ -6049,44 +6060,436 @@
   80d2b2f8 000001 80d2b2f8  1 mac_22_init_evt 	
   80d2b468 000004 80d2b468  4 machiWp 	
   80d2dfac 000004 80d2dfac  4 machiNpcWp 	
+  80d2e068 000001 80d2e068  1 machi_npc_setup_evt 	
   80d2ff10 000001 80d2ff10  1 he1_01_init_evt 	
   80d30670 000001 80d30670  1 he1_02_init_evt 	
   80d30c88 000001 80d30c88  1 he1_03_init_evt 	
   80d318c0 000001 80d318c0  1 he1_04_init_evt 	
   80d32008 000001 80d32008  1 he1_05_init_evt 	
+  80d333d8 000001 80d333d8  1 he2_01_init_evt 	
+  80d33d5c 000001 80d33d5c  1 he2_02_init_evt 	
+  80d36e80 000001 80d36e80  1 he2_03_init_evt 	
+  80d38a7c 000001 80d38a7c  1 he2_04_init_evt 	
+  80d39650 000001 80d39650  1 he2_05_init_evt 	
+  80d399a8 000001 80d399a8  1 he2_06_init_evt 	
+  80d3a884 000001 80d3a884  1 he2_07_init_evt 	
+  80d3ac80 000001 80d3ac80  1 he2_08_init_evt 	
+  80d3b0d8 000001 80d3b0d8  1 he3_01_init_evt 	
+  80d3b9e0 000001 80d3b9e0  1 he3_02_init_evt 	
+  80d3c0f8 000001 80d3c0f8  1 he3_03_init_evt 	
   80d3c470 000040 80d3c470  1 he3_04_map_door_descs 	
+  80d3cf9c 000001 80d3cf9c  1 he3_04_ochunks_intro_evt 	
   80d3db60 000001 80d3db60  1 he3_04_init_evt 	
+  80d3dd58 000001 80d3dd58  1 he3_05_init_evt 	
+  80d3e878 000001 80d3e878  1 he3_06_init_evt 	
+  80d3eaf8 000001 80d3eaf8  1 he3_07_init_evt 	
+  80d3f268 000001 80d3f268  1 he3_08_init_evt 	
+  80d3f558 000001 80d3f558  1 he4_01_init_evt 	
+  80d3f7d0 000001 80d3f7d0  1 he4_02_init_evt 	
+  80d3faa8 000001 80d3faa8  1 he4_03_init_evt 	
+  80d3fe6c 000001 80d3fe6c  1 he4_04_init_evt 	
+  80d402c8 000001 80d402c8  1 he4_05_init_evt 	
+  80d40af8 000001 80d40af8  1 he4_06_init_evt 	
+  80d40d3c 000001 80d40d3c  1 he4_07_init_evt 	
+  80d42348 000001 80d42348  1 he4_08_init_evt 	
+  80d42b10 000001 80d42b10  1 he4_09_init_evt 	
+  80d45030 000001 80d45030  1 he4_10_init_evt 	
+  80d46b80 000001 80d46b80  1 he4_11_init_evt 	
+  80d473d4 000001 80d473d4  1 mi1_01_init_evt 	
+  80d47c30 000001 80d47c30  1 mi1_02_init_evt 	
+  80d47f58 000001 80d47f58  1 mi1_03_init_evt 	
+  80d484b8 000001 80d484b8  1 mi1_04_init_evt 	
+  80d48a08 000001 80d48a08  1 mi1_05_init_evt 	
+  80d48dd4 000001 80d48dd4  1 mi1_06_init_evt 	
+  80d4a160 000001 80d4a160  1 mi1_07_init_evt 	
+  80d4aaa8 000001 80d4aaa8  1 mi1_08_init_evt 	
+  80d4b38c 000001 80d4b38c  1 mi1_09_init_evt 	
+  80d4b608 000001 80d4b608  1 mi1_10_init_evt 	
+  80d4bbf8 000001 80d4bbf8  1 mi1_11_init_evt 	
+  80d4c928 000001 80d4c928  1 mi2_01_init_evt 	
+  80d4ce30 000001 80d4ce30  1 mi2_02_init_evt 	
+  80d4e418 000001 80d4e418  1 mi2_03_init_evt 	
+  80d4ed70 000001 80d4ed70  1 mi2_04_init_evt 	
+  80d4f548 000001 80d4f548  1 mi2_05_init_evt 	
+  80d50c88 000001 80d50c88  1 mi2_06_init_evt 	
+  80d516d0 000001 80d516d0  1 mi2_07_init_evt 	
+  80d519fc 000001 80d519fc  1 mi2_08_init_evt 	
+  80d51f58 000001 80d51f58  1 mi2_09_init_evt 	
+  80d52438 000001 80d52438  1 mi2_10_init_evt 	
+  80d52938 000001 80d52938  1 mi2_11_init_evt 	
+  80d54f78 000001 80d54f78  1 mi3_01_init_evt 	
+  80d56a20 000001 80d56a20  1 mi3_02_init_evt 	
+  80d578e8 000001 80d578e8  1 mi3_03_init_evt 	
+  80d59080 000001 80d59080  1 mi3_04_init_evt 	
+  80d59ee8 000001 80d59ee8  1 mi3_05_init_evt 	
+  80d5b1d8 000001 80d5b1d8  1 mi3_06_init_evt 	
+  80d5bbd0 000001 80d5bbd0  1 mi4_01_init_evt 	
+  80d5bf08 000001 80d5bf08  1 mi4_02_init_evt 	
+  80d5c0ec 000001 80d5c0ec  1 mi4_03_init_evt 	
+  80d5c31c 000001 80d5c31c  1 mi4_04_init_evt 	
+  80d5c57c 000001 80d5c57c  1 mi4_05_init_evt 	
+  80d5dc88 000001 80d5dc88  1 mi4_06_init_evt 	
+  80d5e25c 000001 80d5e25c  1 mi4_07_init_evt 	
+  80d5e778 000001 80d5e778  1 mi4_08_init_evt 	
+  80d5ea94 000001 80d5ea94  1 mi4_09_init_evt 	
+  80d5eec0 000001 80d5eec0  1 mi4_10_init_evt 	
+  80d5f270 000001 80d5f270  1 mi4_11_init_evt 	
+  80d5f678 000001 80d5f678  1 mi4_12_init_evt 	
+  80d5f9b8 000001 80d5f9b8  1 mi4_13_init_evt 	
+  80d65860 000001 80d65860  1 mi4_14_init_evt 	
+  80d66ee0 000001 80d66ee0  1 ta1_02_init_evt 	
+  80d674f8 000001 80d674f8  1 ta1_03_init_evt 	
   80d67f88 000060 80d67f88  1 ta1_04_dokan_descs 	
   80d6c020 000001 80d6c020  1 ta1_04_init_evt 	
+  80d6ced4 000001 80d6ced4  1 ta1_05_init_evt 	
+  80d6d048 000001 80d6d048  1 ta1_06_init_evt 	
+  80d6d718 000001 80d6d718  1 ta1_07_init_evt 	
+  80d6da68 000001 80d6da68  1 ta1_08_init_evt 	
+  80d6e4ec 000001 80d6e4ec  1 ta1_09_init_evt 	
+  80d71e9c 000001 80d71e9c  1 ta1_01_init_evt 	
+  80d72890 000001 80d72890  1 ta2_01_init_evt 	
+  80d734c8 000001 80d734c8  1 ta2_02_init_evt 	
+  80d737e8 000001 80d737e8  1 ta2_03_init_evt 	
+  80d74a68 000001 80d74a68  1 ta2_04_init_evt 	
+  80d7500c 000001 80d7500c  1 ta2_05_boss_setup_evt 	
+  80d76468 000001 80d76468  1 ta2_05_init_evt 	
+  80d767b4 000001 80d767b4  1 ta2_06_init_evt 	
+  80d77648 000001 80d77648  1 ta3_01_init_evt 	
+  80d7ae50 000001 80d7ae50  1 ta3_02_init_evt 	
+  80d7bff8 000001 80d7bff8  1 ta3_03_init_evt 	
+  80d7c82c 000001 80d7c82c  1 ta3_04_init_evt 	
+  80d7c950 000001 80d7c950  1 ta3_05_init_evt 	
+  80d7d4d8 000001 80d7d4d8  1 ta3_06_init_evt 	
+  80d7d970 000001 80d7d970  1 ta3_07_init_evt 	
+  80d7de50 000001 80d7de50  1 ta3_08_init_evt 	
+  80d7e330 000001 80d7e330  1 ta4_01_init_evt 	
+  80d7eb08 000001 80d7eb08  1 ta4_02_init_evt 	
+  80d7f1c8 000001 80d7f1c8  1 ta4_03_init_evt 	
+  80d80d08 000001 80d80d08  1 ta4_04_init_evt 	
+  80d81394 000001 80d81394  1 ta4_05_init_evt 	
+  80d817bc 000001 80d817bc  1 ta4_06_init_evt 	
+  80d81b40 000001 80d81b40  1 ta4_07_init_evt 	
+  80d81f28 000001 80d81f28  1 ta4_08_init_evt 	
+  80d82918 000001 80d82918  1 ta4_09_init_evt 	
+  80d82c30 000001 80d82c30  1 ta4_10_init_evt 	
+  80d84720 000001 80d84720  1 ta4_11_init_evt 	
+  80d85768 000001 80d85768  1 ta4_12_init_evt 	
+  80d8a020 000001 80d8a020  1 ta4_13_init_evt 	
+  80d8af70 000001 80d8af70  1 ta4_14_init_evt 	
+  80d8b628 000001 80d8b628  1 ta4_15_init_evt 	
   80d8e9e8 000020 80d8e9e8  1 sp1_01_mapDoorDesc1 	
   80d8ea08 000020 80d8ea08  1 sp1_01_mapDoorDesc2 	
   80d8ea28 000020 80d8ea28  1 sp1_01_dokanDesc 	
   80d8ede8 000001 80d8ede8  1 sp1_01_init_evt 	
+  80d8fd20 000001 80d8fd20  1 sp1_02_init_evt 	
+  80d900e0 000001 80d900e0  1 sp1_03_init_evt 	
+  80d90370 000001 80d90370  1 sp1_04_init_evt 	
+  80d90608 000001 80d90608  1 sp1_05_init_evt 	
+  80d90dec 000001 80d90dec  1 sp1_06_init_evt 	
+  80d90fb8 000001 80d90fb8  1 sp1_07_init_evt 	
+  80d930a0 000001 80d930a0  1 sp2_01_init_evt 	
+  80d93bcc 000001 80d93bcc  1 sp2_02_init_evt 	
+  80d93f70 000001 80d93f70  1 sp2_03_init_evt 	
+  80d94320 000001 80d94320  1 sp2_04_init_evt 	
+  80d94548 000001 80d94548  1 sp2_05_init_evt 	
+  80d94a30 000001 80d94a30  1 sp2_06_init_evt 	
+  80d94d30 000001 80d94d30  1 sp2_07_init_evt 	
+  80d95630 000001 80d95630  1 sp2_08_init_evt 	
+  80d95818 000001 80d95818  1 sp2_09_init_evt 	
+  80d95948 000001 80d95948  1 sp2_10_init_evt 	
+  80d96c58 000001 80d96c58  1 sp3_01_init_evt 	
   80d9916c 000001 80d9916c  1 sp3_02_init_evt 	
+  80d9966c 000001 80d9966c  1 sp3_03_init_evt 	
+  80d99f68 000001 80d99f68  1 sp3_04_init_evt 	
+  80d9b264 000001 80d9b264  1 sp3_05_init_evt 	
+  80d9bba8 000001 80d9bba8  1 sp3_06_init_evt 	
   80d9bdbc 000001 80d9bdbc  1 sp3_07_init_evt 	
+  80d9c800 000001 80d9c800  1 sp4_01_init_evt 	
+  80d9cb40 000001 80d9cb40  1 sp4_02_init_evt 	
+  80d9cda8 000001 80d9cda8  1 sp4_03_init_evt 	
+  80d9cfa0 000001 80d9cfa0  1 sp4_04_init_evt 	
+  80d9d1a4 000001 80d9d1a4  1 sp4_05_init_evt 	
+  80d9d3a8 000001 80d9d3a8  1 sp4_06_init_evt 	
+  80d9d6b0 000001 80d9d6b0  1 sp4_07_init_evt 	
+  80d9d8e0 000001 80d9d8e0  1 sp4_08_init_evt 	
   80d9dde8 000001 80d9dde8  1 sp4_09_init_evt 	
+  80d9e018 000001 80d9e018  1 sp4_10_init_evt 	
+  80d9e240 000001 80d9e240  1 sp4_11_init_evt 	
+  80d9e504 000001 80d9e504  1 sp4_12_init_evt 	
+  80da0a20 000001 80da0a20  1 sp4_13_init_evt 	
+  80da13e8 000001 80da13e8  1 sp4_14_init_evt 	
+  80da1730 000001 80da1730  1 sp4_15_init_evt 	
+  80da73c4 000001 80da73c4  1 gn1_01_init_evt 	
+  80da9f70 000001 80da9f70  1 gn1_02_init_evt 	
+  80daaf2c 000001 80daaf2c  1 gn1_03_init_evt 	
+  80dabcb8 000001 80dabcb8  1 gn1_04_init_evt 	
+  80dabee0 000001 80dabee0  1 gn1_05_init_evt 	
+  80dac7e8 000001 80dac7e8  1 gn2_01_init_evt 	
+  80daf4d8 000001 80daf4d8  1 gn2_02_init_evt 	
   80db01d0 000020 80db01d0  1 gn2_03_map_door_descs 	
   80db1980 000001 80db1980  1 gn2_03_stone_tablet_wait 	
   80db1cf0 000001 80db1cf0  1 gn2_03_init_evt 	
   80db2060 00003c 80db2060  4 gn2_04_blkItemIds 	
+  80db20a0 000001 80db20a0  1 gn2_04_blk_init_evt 	
+  80db2930 000001 80db2930  1 gn2_04_init_evt 	
+  80db2c50 000001 80db2c50  1 gn2_05_init_evt 	
+  80db2f24 000001 80db2f24  1 gn2_06_init_evt 	
+  80db51b0 000001 80db51b0  1 gn3_01_init_evt 	
   80db5ac0 000001 80db5ac0  1 gn3_02_rock_destroy 	
   80db5cd0 000001 80db5cd0  1 gn3_02_init_evt 	
+  80db65f4 000001 80db65f4  1 gn3_03_init_evt 	
+  80db6d38 000001 80db6d38  1 gn3_04_init_evt 	
+  80db6e70 000001 80db6e70  1 gn3_05_init_evt 	
+  80db73f8 000001 80db73f8  1 gn3_06_init_evt 	
+  80db76f8 000001 80db76f8  1 gn3_07_init_evt 	
+  80db7ac0 000001 80db7ac0  1 gn3_08_init_evt 	
+  80db7edc 000001 80db7edc  1 gn3_09_init_evt 	
+  80db80d0 000001 80db80d0  1 gn3_10_init_evt 	
+  80db89c0 000001 80db89c0  1 gn3_11_init_evt 	
+  80db9248 000001 80db9248  1 gn3_12_init_evt 	
+  80db9b40 000001 80db9b40  1 gn3_13_init_evt 	
+  80dba018 000001 80dba018  1 gn3_14_init_evt 	
+  80dba9b0 000001 80dba9b0  1 gn4_01_init_evt 	
+  80dbbc38 000001 80dbbc38  1 gn4_02_init_evt 	
+  80dbd000 000001 80dbd000  1 gn4_03_init_evt 	
+  80dbd330 000001 80dbd330  1 gn4_04_init_evt 	
+  80dbd460 000001 80dbd460  1 gn4_05_init_evt 	
+  80dbd570 000001 80dbd570  1 gn4_06_init_evt 	
+  80dbd770 000001 80dbd770  1 gn4_07_init_evt 	
+  80dbd8d0 000001 80dbd8d0  1 gn4_08_init_evt 	
+  80dbda14 000001 80dbda14  1 gn4_09_init_evt 	
+  80dbdd98 000001 80dbdd98  1 gn4_10_init_evt 	
+  80dbe000 000001 80dbe000  1 gn4_11_init_evt 	
+  80dbe4d0 000001 80dbe4d0  1 gn4_12_init_evt 	
+  80dbf8c8 000001 80dbf8c8  1 gn4_13_init_evt 	
+  80dc02f0 000001 80dc02f0  1 gn4_14_init_evt 	
+  80dc0bf8 000001 80dc0bf8  1 gn4_15_init_evt 	
+  80dc4158 000001 80dc4158  1 gn4_16_init_evt 	
+  80dc52f0 000001 80dc52f0  1 gn4_17_init_evt 	
+  80dc57f8 000001 80dc57f8  1 wa1_01_init_evt 	
+  80dc5cb0 000001 80dc5cb0  1 sammer_door_disable_evt 	
+  80dc6180 000001 80dc6180  1 sammer_enemy_deactivate_evt 	
   80dc79a0 0004b0 80dc79a0  1 sammerDefsCh6 	
   80dc7e50 000fa0 80dc7e50  1 sammerDefsEndgame 	
+  80dc8e10 000001 80dc8e10  1 sammer_mario_x_wait_evt 	
+  80dc8e70 000001 80dc8e70  1 sammer_fight_start_evt 	
+  80dcbdf0 000001 80dcbdf0  1 sammer_fight_setup_evt 	
+  80dccbc8 000001 80dccbc8  1 wa1_02_world_restart_evt 	
+  80dccf58 000001 80dccf58  1 wa1_02_init_evt 	
+  80dcd350 000001 80dcd350  1 wa1_03_init_evt 	
+  80dcd490 000001 80dcd490  1 wa1_04_init_evt 	
+  80dcd5a8 000001 80dcd5a8  1 wa1_05_init_evt 	
+  80dcd6c0 000001 80dcd6c0  1 wa1_06_init_evt 	
+  80dcd7d8 000001 80dcd7d8  1 wa1_07_init_evt 	
+  80dcd8f0 000001 80dcd8f0  1 wa1_08_init_evt 	
+  80dcda08 000001 80dcda08  1 wa1_09_init_evt 	
+  80dcdb20 000001 80dcdb20  1 wa1_10_init_evt 	
+  80dcdc38 000001 80dcdc38  1 wa1_11_init_evt 	
+  80dcdd50 000001 80dcdd50  1 wa1_12_init_evt 	
+  80dcde68 000001 80dcde68  1 wa1_13_init_evt 	
+  80dcdf80 000001 80dcdf80  1 wa1_14_init_evt 	
+  80dce098 000001 80dce098  1 wa1_15_init_evt 	
+  80dce1b0 000001 80dce1b0  1 wa1_16_init_evt 	
+  80dce2c8 000001 80dce2c8  1 wa1_17_init_evt 	
+  80dce3e0 000001 80dce3e0  1 wa1_18_init_evt 	
+  80dce4f8 000001 80dce4f8  1 wa1_19_init_evt 	
+  80dce610 000001 80dce610  1 wa1_20_init_evt 	
+  80dce728 000001 80dce728  1 wa1_21_init_evt 	
+  80dce840 000001 80dce840  1 wa1_22_init_evt 	
+  80dce958 000001 80dce958  1 wa1_23_init_evt 	
+  80dcea70 000001 80dcea70  1 wa1_24_init_evt 	
+  80dceb88 000001 80dceb88  1 wa1_25_init_evt 	
+  80dced30 000001 80dced30  1 wa1_26_init_evt 	
+  80dd2198 000001 80dd2198  1 wa1_27_init_evt 	
+  80dd39c8 000001 80dd39c8  1 wa2_01_init_evt 	
+  80dd4010 000001 80dd4010  1 wa2_02_init_evt 	
+  80dd4168 000001 80dd4168  1 wa2_03_init_evt 	
+  80dd42c0 000001 80dd42c0  1 wa2_04_init_evt 	
+  80dd4418 000001 80dd4418  1 wa2_05_init_evt 	
+  80dd4570 000001 80dd4570  1 wa2_06_init_evt 	
+  80dd46c8 000001 80dd46c8  1 wa2_07_init_evt 	
+  80dd4800 000001 80dd4800  1 wa2_08_init_evt 	
+  80dd4938 000001 80dd4938  1 wa2_09_init_evt 	
+  80dd4a70 000001 80dd4a70  1 wa2_10_init_evt 	
+  80dd4ba8 000001 80dd4ba8  1 wa2_11_init_evt 	
+  80dd4ce0 000001 80dd4ce0  1 wa2_12_init_evt 	
+  80dd4e18 000001 80dd4e18  1 wa2_13_init_evt 	
+  80dd4f50 000001 80dd4f50  1 wa2_14_init_evt 	
+  80dd5088 000001 80dd5088  1 wa2_15_init_evt 	
+  80dd51c0 000001 80dd51c0  1 wa2_16_init_evt 	
+  80dd52f8 000001 80dd52f8  1 wa2_17_init_evt 	
+  80dd5430 000001 80dd5430  1 wa2_18_init_evt 	
+  80dd5568 000001 80dd5568  1 wa2_19_init_evt 	
+  80dd56a0 000001 80dd56a0  1 wa2_20_init_evt 	
+  80dd57d8 000001 80dd57d8  1 wa2_21_init_evt 	
+  80dd5910 000001 80dd5910  1 wa2_22_init_evt 	
+  80dd5a48 000001 80dd5a48  1 wa2_23_init_evt 	
+  80dd5b80 000001 80dd5b80  1 wa2_24_init_evt 	
+  80dd5d28 000001 80dd5d28  1 wa2_25_init_evt 	
+  80dd5e40 000001 80dd5e40  1 wa3_01_init_evt 	
+  80dd5fc0 000001 80dd5fc0  1 wa3_02_init_evt 	
+  80dd60d8 000001 80dd60d8  1 wa3_03_init_evt 	
+  80dd61f0 000001 80dd61f0  1 wa3_04_init_evt 	
+  80dd6308 000001 80dd6308  1 wa3_05_init_evt 	
+  80dd6420 000001 80dd6420  1 wa3_06_init_evt 	
+  80dd6538 000001 80dd6538  1 wa3_07_init_evt 	
+  80dd6650 000001 80dd6650  1 wa3_08_init_evt 	
+  80dd6768 000001 80dd6768  1 wa3_09_init_evt 	
+  80dd6880 000001 80dd6880  1 wa3_10_init_evt 	
+  80dd6998 000001 80dd6998  1 wa3_11_init_evt 	
+  80dd6ab0 000001 80dd6ab0  1 wa3_12_init_evt 	
+  80dd6bc8 000001 80dd6bc8  1 wa3_13_init_evt 	
+  80dd6ce0 000001 80dd6ce0  1 wa3_14_init_evt 	
+  80dd6df8 000001 80dd6df8  1 wa3_15_init_evt 	
+  80dd6f10 000001 80dd6f10  1 wa3_16_init_evt 	
+  80dd7028 000001 80dd7028  1 wa3_17_init_evt 	
+  80dd7140 000001 80dd7140  1 wa3_18_init_evt 	
+  80dd7258 000001 80dd7258  1 wa3_19_init_evt 	
+  80dd7370 000001 80dd7370  1 wa3_20_init_evt 	
+  80dd7488 000001 80dd7488  1 wa3_21_init_evt 	
+  80dd75a0 000001 80dd75a0  1 wa3_22_init_evt 	
+  80dd76b8 000001 80dd76b8  1 wa3_23_init_evt 	
+  80dd77d0 000001 80dd77d0  1 wa3_24_init_evt 	
+  80dd7958 000001 80dd7958  1 wa3_25_init_evt 	
+  80dd7a50 000001 80dd7a50  1 wa4_01_init_evt 	
+  80dd7c20 000001 80dd7c20  1 wa4_02_init_evt 	
+  80dd7d58 000001 80dd7d58  1 wa4_03_init_evt 	
+  80dd7e90 000001 80dd7e90  1 wa4_04_init_evt 	
+  80dd7fc8 000001 80dd7fc8  1 wa4_05_init_evt 	
+  80dd8100 000001 80dd8100  1 wa4_06_init_evt 	
+  80dd8238 000001 80dd8238  1 wa4_07_init_evt 	
+  80dd8370 000001 80dd8370  1 wa4_08_init_evt 	
+  80dd84a8 000001 80dd84a8  1 wa4_09_init_evt 	
+  80dd85e0 000001 80dd85e0  1 wa4_10_init_evt 	
+  80dd8718 000001 80dd8718  1 wa4_11_init_evt 	
+  80dd8850 000001 80dd8850  1 wa4_12_init_evt 	
+  80dd8988 000001 80dd8988  1 wa4_13_init_evt 	
+  80dd8ac0 000001 80dd8ac0  1 wa4_14_init_evt 	
+  80dd8bf8 000001 80dd8bf8  1 wa4_15_init_evt 	
+  80dd8d30 000001 80dd8d30  1 wa4_16_init_evt 	
+  80dd8e68 000001 80dd8e68  1 wa4_17_init_evt 	
+  80dd8fa0 000001 80dd8fa0  1 wa4_18_init_evt 	
+  80dd90d8 000001 80dd90d8  1 wa4_19_init_evt 	
+  80dd9210 000001 80dd9210  1 wa4_20_init_evt 	
+  80dd9348 000001 80dd9348  1 wa4_21_init_evt 	
+  80dd9480 000001 80dd9480  1 wa4_22_init_evt 	
+  80dd95b8 000001 80dd95b8  1 wa4_23_init_evt 	
+  80dd96f0 000001 80dd96f0  1 wa4_24_init_evt 	
+  80dd9828 000001 80dd9828  1 wa4_25_init_evt 	
+  80dd9fa8 000001 80dd9fa8  1 wa4_26_init_evt 	
+  80ddb0a0 000001 80ddb0a0  1 an1_01_init_evt 	
+  80ddbe68 000001 80ddbe68  1 an1_02_init_evt 	
+  80ddd7f0 000001 80ddd7f0  1 an1_03_init_evt 	
+  80de1760 000001 80de1760  1 an1_04_init_evt 	
+  80de22cc 000001 80de22cc  1 an1_05_init_evt 	
+  80de2914 000001 80de2914  1 an1_06_init_evt 	
+  80de3d64 000001 80de3d64  1 an1_07_init_evt 	
+  80de4998 000001 80de4998  1 an1_08_init_evt 	
+  80de4bb8 000001 80de4bb8  1 an1_09_init_evt 	
+  80de5248 000001 80de5248  1 an1_10_init_evt 	
+  80de5720 000001 80de5720  1 an1_11_init_evt 	
+  80de5db8 000001 80de5db8  1 an2_01_init_evt 	
+  80de76b8 000001 80de76b8  1 an2_02_init_evt 	
+  80de8f40 000001 80de8f40  1 an2_03_init_evt 	
+  80dea708 000001 80dea708  1 an2_04_init_evt 	
+  80dec918 000001 80dec918  1 an2_05_init_evt 	
+  80ded0e0 000001 80ded0e0  1 an2_06_init_evt 	
+  80deeed8 000001 80deeed8  1 an2_07_init_evt 	
+  80df4428 000001 80df4428  1 an2_08_init_evt 	
+  80df49e8 000001 80df49e8  1 an2_09_init_evt 	
+  80df4c18 000001 80df4c18  1 an2_10_init_evt 	
+  80df53f0 000001 80df53f0  1 an3_01_init_evt 	
+  80df6368 000001 80df6368  1 an3_02_init_evt 	
+  80df7368 000001 80df7368  1 an3_03_init_evt 	
+  80df77b0 000001 80df77b0  1 an3_04_init_evt 	
+  80df7c38 000001 80df7c38  1 an3_05_init_evt 	
+  80dfadf8 000001 80dfadf8  1 an3_06_init_evt 	
+  80dfb7b8 000001 80dfb7b8  1 an3_07_init_evt 	
+  80dfbd48 000001 80dfbd48  1 an3_08_init_evt 	
+  80dfc2fc 000001 80dfc2fc  1 an3_09_init_evt 	
+  80dfc850 000001 80dfc850  1 an3_10_init_evt 	
+  80dfcd08 000001 80dfcd08  1 an3_11_init_evt 	
+  80dfd180 000001 80dfd180  1 an3_12_init_evt 	
+  80dfd620 000001 80dfd620  1 an3_13_init_evt 	
+  80dfddc0 000001 80dfddc0  1 an3_14_init_evt 	
+  80dff5bc 000001 80dff5bc  1 an3_15_init_evt 	
+  80e005e4 000001 80e005e4  1 an4_01_init_evt 	
+  80e01c98 000001 80e01c98  1 an4_02_init_evt 	
+  80e03f28 000001 80e03f28  1 an4_03_init_evt 	
+  80e05790 000001 80e05790  1 an4_04_init_evt 	
+  80e06a20 000001 80e06a20  1 an4_05_init_evt 	
   80e06cd8 000020 80e06cd8  1 an4_06_mapDoorDescs 	
   80e06cf8 000001 80e06cf8  1 an4_06_handle_2d_z 	
   80e07958 000001 80e07958  1 an4_06_init_evt 	
+  80e09594 000001 80e09594  1 an4_07_init_evt 	
+  80e09a70 000001 80e09a70  1 an4_08_init_evt 	
+  80e0b000 000001 80e0b000  1 an4_09_init_evt 	
+  80e0e870 000001 80e0e870  1 an4_10_init_evt 	
+  80e0f370 000001 80e0f370  1 an4_11_init_evt 	
+  80e0f4f0 000001 80e0f4f0  1 an4_12_init_evt 	
   80e0fd10 000001 80e0fd10  1 ls1_01_init_evt 	
+  80e0ff48 000001 80e0ff48  1 ls1_02_init_evt 	
+  80e10908 000001 80e10908  1 ls1_03_init_evt 	
+  80e11f60 000001 80e11f60  1 ls1_04_init_evt 	
+  80e13be4 000001 80e13be4  1 ls1_05_init_evt 	
+  80e14f60 000001 80e14f60  1 ls1_06_init_evt 	
+  80e154c8 000001 80e154c8  1 ls1_07_init_evt 	
+  80e15688 000001 80e15688  1 ls1_08_init_evt 	
+  80e15800 000001 80e15800  1 ls1_09_init_evt 	
+  80e15e20 000001 80e15e20  1 ls1_10_init_evt 	
+  80e18c68 000001 80e18c68  1 ls1_11_init_evt 	
+  80e197cc 000001 80e197cc  1 ls1_12_init_evt 	
+  80e1bbe0 000001 80e1bbe0  1 ls2_01_init_evt 	
+  80e1d970 000001 80e1d970  1 ls2_02_init_evt 	
+  80e1e6a0 000001 80e1e6a0  1 ls2_03_init_evt 	
+  80e1f07c 000001 80e1f07c  1 ls2_04_init_evt 	
+  80e1f3e8 000001 80e1f3e8  1 ls2_05_init_evt 	
+  80e1f580 000001 80e1f580  1 ls2_06_init_evt 	
+  80e1ff78 000001 80e1ff78  1 ls2_07_init_evt 	
+  80e21198 000001 80e21198  1 ls2_08_init_evt 	
+  80e21cd0 000001 80e21cd0  1 ls2_09_init_evt 	
+  80e22538 000001 80e22538  1 ls2_10_init_evt 	
+  80e22aa0 000001 80e22aa0  1 ls2_11_init_evt 	
+  80e230a0 000001 80e230a0  1 ls2_12_init_evt 	
+  80e237a8 000001 80e237a8  1 ls2_13_init_evt 	
+  80e239e8 000001 80e239e8  1 ls2_14_init_evt 	
+  80e23c28 000001 80e23c28  1 ls2_15_init_evt 	
+  80e2484c 000001 80e2484c  1 ls2_16_init_evt 	
+  80e268e8 000001 80e268e8  1 ls2_17_init_evt 	
+  80e27d60 000001 80e27d60  1 ls2_18_init_evt 	
+  80e28290 000001 80e28290  1 ls3_01_init_evt 	
+  80e28574 000001 80e28574  1 ls3_02_init_evt 	
+  80e28d88 000001 80e28d88  1 ls3_03_init_evt 	
+  80e292b0 000001 80e292b0  1 ls3_04_init_evt 	
+  80e29560 000001 80e29560  1 ls3_05_init_evt 	
+  80e297a0 000001 80e297a0  1 ls3_06_init_evt 	
+  80e29aa8 000001 80e29aa8  1 ls3_07_init_evt 	
+  80e29e70 000001 80e29e70  1 ls3_08_init_evt 	
+  80e2a3a8 000001 80e2a3a8  1 ls3_09_init_evt 	
+  80e2a748 000001 80e2a748  1 ls3_10_init_evt 	
+  80e2aae4 000001 80e2aae4  1 ls3_11_init_evt 	
   80e2ba80 000001 80e2ba80  1 ls3_12_dimentio_post_chase 	
   80e2d170 000001 80e2d170  1 ls3_12_blk_hit 	
   80e2d268 000001 80e2d268  1 ls3_12_crack_flip 	
   80e2d380 000001 80e2d380  1 ls3_12_dimentio_intro 	
   80e2d6e8 000001 80e2d6e8  1 ls3_12_init_evt 	
+  80e2e318 000001 80e2e318  1 ls3_13_init_evt 	
+  80e2e7a0 000001 80e2e7a0  1 ls4_01_init_evt 	
   80e2ea08 000001 80e2ea08  1 ls4_02_init_evt 	
+  80e2eee8 000001 80e2eee8  1 ls4_03_init_evt 	
+  80e2f4d0 000001 80e2f4d0  1 ls4_04_init_evt 	
+  80e2f838 000001 80e2f838  1 ls4_05_init_evt 	
+  80e2fa38 000001 80e2fa38  1 ls4_06_init_evt 	
+  80e2ff80 000001 80e2ff80  1 ls4_07_init_evt 	
+  80e30550 000001 80e30550  1 ls4_08_init_evt 	
+  80e30b20 000001 80e30b20  1 ls4_09_init_evt 	
+  80e30d20 000001 80e30d20  1 ls4_10_init_evt 	
   80e3edf0 000001 80e3edf0  1 ls4_11_init_evt 	
-  80e46968 000001 80e46968  1 bos_01_3_3_ochunks 	
+  80e45f28 000001 80e45f28  1 ls4_12_init_evt 	
+  80e46968 000001 80e46968  1 bos_01_3_3_dimentio 	
   80e47140 000001 80e47140  1 bos_01_5_2_ochunks 	
   80e47b18 000001 80e47b18  1 bos_01_5_4_ochunks 	
+  80e49278 000001 80e49278  1 bos_01_8_4_cutscene 	
   80e49650 000001 80e49650  1 bos_01_init_evt 	
   80e499a0 000001 80e499a0  1 aa1_01_mario_house_transition_evt 	
   80e49ab0 000001 80e49ab0  1 aa1_01_cutscene_2_evt 	
@@ -6096,10 +6499,23 @@
   80e4a688 000001 80e4a688  1 aa1_01_init_evt 	
   80e4abd0 000001 80e4abd0  1 aa1_02_cutscene_evt 	
   80e4b04c 000001 80e4b04c  1 aa1_02_init_evt 	
+  80e4b318 000001 80e4b318  1 aa2_01_cutscene_evt 	
   80e4b410 000001 80e4b410  1 aa2_01_init_evt 	
+  80e4b890 000001 80e4b890  1 aa2_02_crowd_cheer_msgs_evt 	
+  80e4b9c0 000001 80e4b9c0  1 aa2_01_crowd_panic_msgs_evt 	
+  80e4bb28 000001 80e4bb28  1 aa2_01_npc_enter_void_evt 	
+  80e4bc3c 000001 80e4bc3c  1 aa2_02_mario_attacked_evt 	
+  80e4c098 000001 80e4c098  1 aa2_02_cutscene_1_evt 	
+  80e4dbb8 000001 80e4dbb8  1 aa2_02_cutscene_2_evt 	
   80e4e308 000001 80e4e308  1 aa2_02_init_evt 	
+  80e4ef08 000001 80e4ef08  1 aa3_01_credits_evt 	
   80e4f6b0 000001 80e4f6b0  1 aa3_01_init_evt 	
+  80e4f740 000001 80e4f740  1 tst_00_init_evt 	
   80e4f810 000001 80e4f810  1 tst_05_init_evt 	
+  80e4f820 000001 80e4f820  1 unused_lava_bubble_test_talk_evt 	
+  80e4f8a8 000001 80e4f8a8  1 unused_lava_bubble_test_evt 	
+  80e4fb30 000001 80e4fb30  1 kaw_05_init_evt 	
+  80e4fe30 000001 80e4fe30  1 hei_02_init_evt 	
   80e4fee8 000001 80e4fee8  1 tst_02_init_evt 	
   80e4fef8 000040 80e4fef8  4 danMapParts 	
   80e4ff38 000100 80e4ff38  1 danDokanDescs 	
@@ -6142,11 +6558,21 @@
   80e54ccc 000b7c 80e54ccc  4 dan_70_reward_appear_evt 	
   80e55848 000010 80e55848  4 dan_start_shadoo_evt 	
   80e55858 000001 80e55858  1 mg4_01_init_evt 	
+  80e5a8b8 000001 80e5a8b8  1 he2_09_init_evt 	
   80e5bb70 000001 80e5bb70  1 he1_06_init_evt 	
   80e5bde0 000040 80e5bde0  4 item_tbl 	
   80e5da30 000001 80e5da30  1 mac_30_init_evt 	
+  80e5de20 000001 80e5de20  1 mi4_15_init_evt 	
   80e5e008 000001 80e5e008  1 gn3_15_blk_init_evt 	
+  80e5e858 000001 80e5e858  1 gn3_15_hunmer_blk_break_evt 	
+  80e5ecb8 000001 80e5ecb8  1 gn3_15_init_evt 	
   80e5fa18 000001 80e5fa18  1 aa4_01_init_evt 	
+  80e5fcc8 000001 80e5fcc8  1 sp4_16_init_evt 	
+  80e603bc 000001 80e603bc  1 sp4_17_init_evt 	
+  80e607a8 000001 80e607a8  1 he4_12_init_evt 	
+  80e609a8 000001 80e609a8  1 ls4_13_init_evt 	
+  80e60cf0 000001 80e60cf0  1 an3_16_init_evt 	
+  80e613f8 000001 80e613f8  1 gn3_16_init_evt 	
   80f64368 000120 80f64368  1 machiWork 	
   80f65010 000004 80f65010  4 gn2_12Wp 	
   80f65648 000004 80f65648  4 curSammerDef 	wa1_02
