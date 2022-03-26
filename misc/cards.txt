@@ -1,0 +1,4864 @@
+Card 0 (Item 282):
+	Name: KURIBOO
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: kuribo_Z_1
+	Name Message: ename_000 (Goomba)
+	Description Message: ehelp_000
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 0
+	Sort Value: 241
+Card 1 (Item 290):
+	Name: MD_KURIBOO_BLK
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: kuribo_Z_1
+	Name Message: ename_295 (Dark Goomba)
+	Description Message: ehelp_295
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 2
+	Sort Value: 242
+Card 2 (Item 283):
+	Name: TOGEKURI
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: toge_kuribo_Z_2
+	Name Message: ename_001 (Spiked Goomba)
+	Description Message: ehelp_001
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 4
+	Sort Value: 243
+Card 3 (Item 284):
+	Name: TOGEKURI_BLK
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: toge_kuribo_Z_2
+	Name Message: ename_292 (Dark Spiked Goomba)
+	Description Message: ehelp_292
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 6
+	Sort Value: 244
+Card 4 (Item 285):
+	Name: PATAKURI
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: pata_kuribo_Z_2
+	Name Message: ename_003 (Paragoomba)
+	Description Message: ehelp_003
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 7
+	Sort Value: 245
+Card 5 (Item 286):
+	Name: MD_PATAKURI_BLK
+	Icon id: 136
+	AnimPose Name: e_kuribo
+	Animation Name: pata_kuribo_Z_2
+	Name Message: ename_293 (Dark Paragoomba)
+	Description Message: ehelp_293
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 8
+	Sort Value: 246
+Card 6 (Item 287):
+	Name: YAMI_KURIBOO
+	Icon id: 136
+	AnimPose Name: e_kuribo_y
+	Animation Name: kuribo_Z_1
+	Name Message: ename_004 (Gloomba)
+	Description Message: ehelp_004
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 3
+	Sort Value: 247
+Card 7 (Item 288):
+	Name: ZUTSUKI_KURIBOO
+	Icon id: 136
+	AnimPose Name: e_z_kuribo
+	Animation Name: z_kuribo_Z_1
+	Name Message: ename_005 (Headbonk Goomba)
+	Description Message: ehelp_005
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 9
+	Sort Value: 248
+Card 8 (Item 289):
+	Name: ZUTSUKI_KURIBOO_BLK
+	Icon id: 136
+	AnimPose Name: e_z_kuribo
+	Animation Name: z_kuribo_Z_1
+	Name Message: ename_294 (Dark Headbonk Goomba)
+	Description Message: ehelp_294
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 10
+	Sort Value: 249
+Card 9 (Item 291):
+	Name: NOKONOKO
+	Icon id: 136
+	AnimPose Name: e_nokoteki
+	Animation Name: NKT_Z_1
+	Name Message: ename_008 (Koopa Troopa)
+	Description Message: ehelp_008
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 11
+	Sort Value: 250
+Card 10 (Item 295):
+	Name: BOSS_NOKONOKO
+	Icon id: 136
+	AnimPose Name: e_big_nok
+	Animation Name: big_nok_Z_1
+	Name Message: ename_015 (Mega Koopa)
+	Description Message: ehelp_015
+	Buy Price: 200
+	Sell Price: 100
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 17
+	Sort Value: 251
+Card 11 (Item 294):
+	Name: MD_NOKONOKO_BLK
+	Icon id: 136
+	AnimPose Name: e_nokoteki_r
+	Animation Name: NKT_Z_1
+	Name Message: ename_287 (Dark Koopa)
+	Description Message: ehelp_287
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 16
+	Sort Value: 252
+Card 12 (Item 292):
+	Name: TOGENOKO
+	Icon id: 136
+	AnimPose Name: e_togenoko
+	Animation Name: Z_1
+	Name Message: ename_012 (Koopatrol)
+	Description Message: ehelp_012
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 18
+	Sort Value: 253
+Card 13 (Item 293):
+	Name: MD_TOGENOKO_BLK
+	Icon id: 136
+	AnimPose Name: e_togenoko
+	Animation Name: Z_1
+	Name Message: ename_296 (Dark Koopatrol)
+	Description Message: ehelp_296
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 19
+	Sort Value: 254
+Card 14 (Item 296):
+	Name: PATAPATA
+	Icon id: 136
+	AnimPose Name: e_nokoteki
+	Animation Name: PTP_Z_1
+	Name Message: ename_016 (Paratroopa)
+	Description Message: ehelp_016
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 20
+	Sort Value: 255
+Card 15 (Item 297):
+	Name: MD_PATAPATA_BLK
+	Icon id: 136
+	AnimPose Name: e_nokoteki_r
+	Animation Name: PTP_Z_1
+	Name Message: ename_297 (Dark Paratroopa)
+	Description Message: ehelp_297
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 24
+	Sort Value: 256
+Card 16 (Item 298):
+	Name: MET
+	Icon id: 136
+	AnimPose Name: e_met
+	Animation Name: MET_Z_1
+	Name Message: ename_022 (Buzzy Beetle)
+	Description Message: ehelp_022
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 25
+	Sort Value: 257
+Card 17 (Item 299):
+	Name: TOGE_MET
+	Icon id: 136
+	AnimPose Name: e_met
+	Animation Name: TMT_Z_1
+	Name Message: ename_024 (Spike Top)
+	Description Message: ehelp_024
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 27
+	Sort Value: 258
+Card 18 (Item 300):
+	Name: TOGE_MET_BLK
+	Icon id: 136
+	AnimPose Name: e_met
+	Animation Name: TMT_Z_1
+	Name Message: ename_298 (Dark Spike Top)
+	Description Message: ehelp_298
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 29
+	Sort Value: 259
+Card 19 (Item 301):
+	Name: PATA_MET
+	Icon id: 136
+	AnimPose Name: e_met
+	Animation Name: PMT_Z_1
+	Name Message: ename_028 (Parabuzzy)
+	Description Message: ehelp_028
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 30
+	Sort Value: 260
+Card 20 (Item 302):
+	Name: PATATOGE_MET
+	Icon id: 136
+	AnimPose Name: e_met
+	Animation Name: PTM_Z_1
+	Name Message: ename_029 (Spiky Parabuzzy)
+	Description Message: ehelp_029
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 31
+	Sort Value: 261
+Card 21 (Item 303):
+	Name: STONE_MET
+	Icon id: 136
+	AnimPose Name: e_stonemet
+	Animation Name: Z_1
+	Name Message: ename_030 (Stone Buzzy)
+	Description Message: ehelp_030
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 32
+	Sort Value: 262
+Card 22 (Item 304):
+	Name: STONE_MET_BLK
+	Icon id: 136
+	AnimPose Name: e_stonemet
+	Animation Name: Z_1
+	Name Message: ename_299 (Dark Stone Buzzy)
+	Description Message: ehelp_299
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 33
+	Sort Value: 263
+Card 23 (Item 305):
+	Name: TOGEZO
+	Icon id: 136
+	AnimPose Name: e_togezo
+	Animation Name: TGZ_Z_1
+	Name Message: ename_031 (Spiny)
+	Description Message: ehelp_031
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 36
+	Sort Value: 264
+Card 24 (Item 306):
+	Name: MD_TOGEZO_BLK
+	Icon id: 136
+	AnimPose Name: e_togezo
+	Animation Name: TGZ_Z_1
+	Name Message: ename_300 (Dark Spiny)
+	Description Message: ehelp_300
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 38
+	Sort Value: 265
+Card 25 (Item 307):
+	Name: JUGEMU
+	Icon id: 136
+	AnimPose Name: e_jugemu
+	Animation Name: JGM_Z_1
+	Name Message: ename_034 (Lakitu)
+	Description Message: ehelp_034
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 34
+	Sort Value: 266
+Card 26 (Item 308):
+	Name: HONENOKO
+	Icon id: 136
+	AnimPose Name: e_karon_g
+	Animation Name: KRN_Z_1
+	Name Message: ename_036 (Dull Bones)
+	Description Message: ehelp_036
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 41
+	Sort Value: 267
+Card 27 (Item 309):
+	Name: HONENOKO_BLK
+	Icon id: 136
+	AnimPose Name: e_karon_g
+	Animation Name: KRN_Z_1
+	Name Message: ename_301 (Dark Dull Bones)
+	Description Message: ehelp_301
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 43
+	Sort Value: 268
+Card 28 (Item 310):
+	Name: KARON
+	Icon id: 136
+	AnimPose Name: e_karon
+	Animation Name: KRN_Z_1
+	Name Message: ename_038 (Dry Bones)
+	Description Message: ehelp_038
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 39
+	Sort Value: 269
+Card 29 (Item 311):
+	Name: HAMMER_BROS
+	Icon id: 137
+	AnimPose Name: e_burosu_h
+	Animation Name: BRO_Z_1
+	Name Message: ename_040 (Hammer Bro)
+	Description Message: ehelp_040
+	Buy Price: 60
+	Sell Price: 24
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 45
+	Sort Value: 270
+Card 30 (Item 314):
+	Name: MD_HAMMER_BROS_BLK
+	Icon id: 136
+	AnimPose Name: e_burosu_h
+	Animation Name: BRO_Z_1
+	Name Message: ename_302 (Dark Hammer Bro)
+	Description Message: ehelp_302
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 49
+	Sort Value: 271
+Card 31 (Item 312):
+	Name: BOOM_BROS
+	Icon id: 137
+	AnimPose Name: e_burosu_b
+	Animation Name: BRO_Z_1
+	Name Message: ename_042 (Boomerang Bro)
+	Description Message: ehelp_042
+	Buy Price: 70
+	Sell Price: 28
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 51
+	Sort Value: 272
+Card 32 (Item 315):
+	Name: MD_BOOM_BROS_BLK
+	Icon id: 136
+	AnimPose Name: e_burosu_b
+	Animation Name: BRO_Z_1
+	Name Message: ename_303 (Dark Boomerang Bro)
+	Description Message: ehelp_303
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 55
+	Sort Value: 273
+Card 33 (Item 313):
+	Name: FIRE_BROS
+	Icon id: 137
+	AnimPose Name: e_burosu_f
+	Animation Name: BRO_Z_1
+	Name Message: ename_044 (Fire Bro)
+	Description Message: ehelp_044
+	Buy Price: 70
+	Sell Price: 28
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 57
+	Sort Value: 274
+Card 34 (Item 316):
+	Name: MD_FIRE_BROS_BLK
+	Icon id: 136
+	AnimPose Name: e_burosu_f
+	Animation Name: BRO_Z_1
+	Name Message: ename_304 (Dark Fire Bro)
+	Description Message: ehelp_304
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 61
+	Sort Value: 275
+Card 35 (Item 317):
+	Name: KAMEC_B
+	Icon id: 137
+	AnimPose Name: e_kamek
+	Animation Name: KMK_Z_1
+	Name Message: ename_052 (Magikoopa)
+	Description Message: ehelp_052
+	Buy Price: 60
+	Sell Price: 24
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 63
+	Sort Value: 276
+Card 36 (Item 318):
+	Name: KAMEC_R_BLK
+	Icon id: 136
+	AnimPose Name: e_kamek_r
+	Animation Name: KMK_Z_1
+	Name Message: ename_305 (Dark Magikoopa)
+	Description Message: ehelp_305
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 66
+	Sort Value: 277
+Card 37 (Item 319):
+	Name: KOURA_SHOOTER
+	Icon id: 136
+	AnimPose Name: e_k_shooter
+	Animation Name: Z_1
+	Name Message: ename_064 (Koopa Striker)
+	Description Message: ehelp_064
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 69
+	Sort Value: 278
+Card 38 (Item 320):
+	Name: KOURA_SHOOTER_M
+	Icon id: 137
+	AnimPose Name: e_k_shooter2
+	Animation Name: Z_1
+	Name Message: ename_066 (Toopa Striker)
+	Description Message: ehelp_066
+	Buy Price: 80
+	Sell Price: 32
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 71
+	Sort Value: 279
+Card 39 (Item 321):
+	Name: KOURA_SHOOTER_H
+	Icon id: 136
+	AnimPose Name: e_k_shooter3
+	Animation Name: Z_1
+	Name Message: ename_068 (Soopa Striker)
+	Description Message: ehelp_068
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 73
+	Sort Value: 280
+Card 40 (Item 322):
+	Name: KOURA_SHOOTER_H_BLK
+	Icon id: 136
+	AnimPose Name: e_k_shooter3
+	Animation Name: Z_1
+	Name Message: ename_306 (Dark Striker)
+	Description Message: ehelp_306
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 75
+	Sort Value: 281
+Card 41 (Item 323):
+	Name: GABON
+	Icon id: 136
+	AnimPose Name: e_gabon
+	Animation Name: gabon_Z_1
+	Name Message: ename_070 (Clubba)
+	Description Message: ehelp_070
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 94
+	Sort Value: 282
+Card 42 (Item 324):
+	Name: GABON_BLK
+	Icon id: 136
+	AnimPose Name: e_gabon
+	Animation Name: gabon_Z_1
+	Name Message: ename_307 (Dark Clubba)
+	Description Message: ehelp_307
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 95
+	Sort Value: 283
+Card 43 (Item 373):
+	Name: OCTARO_R
+	Icon id: 136
+	AnimPose Name: e_octa2
+	Animation Name: Z_1
+	Name Message: ename_139 (Squiglet)
+	Description Message: ehelp_139
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 125
+	Sort Value: 284
+Card 44 (Item 374):
+	Name: OCTARO
+	Icon id: 136
+	AnimPose Name: e_octar
+	Animation Name: Z_1
+	Name Message: ename_140 (Squig)
+	Description Message: ehelp_140
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 126
+	Sort Value: 285
+Card 45 (Item 375):
+	Name: OCTARO_G
+	Icon id: 136
+	AnimPose Name: e_octa3
+	Animation Name: Z_1
+	Name Message: ename_142 (Squog)
+	Description Message: ehelp_142
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 128
+	Sort Value: 286
+Card 46 (Item 377):
+	Name: OCTARO_W
+	Icon id: 136
+	AnimPose Name: e_octa4
+	Animation Name: Z_1
+	Name Message: ename_144 (Squoinker)
+	Description Message: ehelp_144
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 61
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 130
+	Sort Value: 287
+Card 47 (Item 376):
+	Name: OCTARO_G_BLK
+	Icon id: 136
+	AnimPose Name: e_octa3
+	Animation Name: Z_1
+	Name Message: ename_322 (Dark Squiglet)
+	Description Message: ehelp_322
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 132
+	Sort Value: 288
+Card 48 (Item 378):
+	Name: TECKTIE
+	Icon id: 136
+	AnimPose Name: e_tekti
+	Animation Name: Z_1
+	Name Message: ename_146 (Sproing-Oing)
+	Description Message: ehelp_146
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 134
+	Sort Value: 289
+Card 49 (Item 379):
+	Name: TECKTIE_M
+	Icon id: 136
+	AnimPose Name: e_tekt2
+	Animation Name: Z_1
+	Name Message: ename_148 (Boing-Oing)
+	Description Message: ehelp_148
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 136
+	Sort Value: 290
+Card 50 (Item 380):
+	Name: TECKTIE_H
+	Icon id: 136
+	AnimPose Name: e_tekt3
+	Animation Name: Z_1
+	Name Message: ename_150 (Zoing-Oing)
+	Description Message: ehelp_150
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 138
+	Sort Value: 291
+Card 51 (Item 381):
+	Name: TECKTIE_H_BLK
+	Icon id: 136
+	AnimPose Name: e_tekt3
+	Animation Name: Z_1
+	Name Message: ename_323 (Dark Sproing-Oing)
+	Description Message: ehelp_323
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 140
+	Sort Value: 292
+Card 52 (Item 382):
+	Name: BOROVOY
+	Icon id: 136
+	AnimPose Name: e_card_bolbo
+	Animation Name: Z_1
+	Name Message: ename_152 (Boomboxer)
+	Description Message: ehelp_152
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 142
+	Sort Value: 293
+Card 53 (Item 383):
+	Name: BOROVOY_M
+	Icon id: 136
+	AnimPose Name: e_card_bolbr
+	Animation Name: Z_1
+	Name Message: ename_154 (Beepboxer)
+	Description Message: ehelp_154
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 144
+	Sort Value: 294
+Card 54 (Item 385):
+	Name: BOROVOY_W
+	Icon id: 136
+	AnimPose Name: e_card_bolbw
+	Animation Name: Z_1
+	Name Message: ename_158 (Blastboxer)
+	Description Message: ehelp_158
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 146
+	Sort Value: 295
+Card 55 (Item 384):
+	Name: BOROVOY_H_BLK
+	Icon id: 136
+	AnimPose Name: e_card_bolbg
+	Animation Name: Z_1
+	Name Message: ename_325 (Dark Boomboxer)
+	Description Message: ehelp_325
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 148
+	Sort Value: 296
+Card 56 (Item 325):
+	Name: PAKKUN_FLOWER
+	Icon id: 136
+	AnimPose Name: e_pakflwr
+	Animation Name: PKF_Z_1
+	Name Message: ename_071 (Piranha Plant)
+	Description Message: ehelp_071
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 77
+	Sort Value: 297
+Card 57 (Item 326):
+	Name: POISON_PAKKUN
+	Icon id: 136
+	AnimPose Name: e_pakflwr_p
+	Animation Name: PKF_Z_1
+	Name Message: ename_073 (Putrid Piranha)
+	Description Message: ehelp_073
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 78
+	Sort Value: 298
+Card 58 (Item 327):
+	Name: ICE_PAKKUN
+	Icon id: 136
+	AnimPose Name: e_pakflwr_i
+	Animation Name: PKF_Z_1
+	Name Message: ename_076 (Frost Piranha)
+	Description Message: ehelp_076
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 80
+	Sort Value: 299
+Card 59 (Item 328):
+	Name: PANSY
+	Icon id: 136
+	AnimPose Name: e_pansy
+	Animation Name: pansy__Z_1
+	Name Message: ename_079 (Crazee Dayzee)
+	Description Message: ehelp_079
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 115
+	Sort Value: 300
+Card 60 (Item 329):
+	Name: KIRA_PANSY
+	Icon id: 138
+	AnimPose Name: e_pansy_k
+	Animation Name: pansy__k_Z_1
+	Name Message: ename_081 (Amazy Dayzee)
+	Description Message: ehelp_081
+	Buy Price: 500
+	Sell Price: 300
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 117
+	Sort Value: 301
+Card 61 (Item 330):
+	Name: KIRA_PANSY_BLK
+	Icon id: 137
+	AnimPose Name: e_pansy_k
+	Animation Name: pansy__k_Z_1
+	Name Message: ename_308 (Dark Dayzee)
+	Description Message: ehelp_308
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 4
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 119
+	Sort Value: 302
+Card 62 (Item 331):
+	Name: CHOROBON
+	Icon id: 136
+	AnimPose Name: e_chorobon
+	Animation Name: CBN_Z_1
+	Name Message: ename_085 (Fuzzy)
+	Description Message: ehelp_085
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 96
+	Sort Value: 303
+Card 63 (Item 332):
+	Name: FLOWER_CHOROBON
+	Icon id: 136
+	AnimPose Name: e_chorobon_f
+	Animation Name: CBN_Z_1
+	Name Message: ename_086 (Pink Fuzzy)
+	Description Message: ehelp_086
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 97
+	Sort Value: 304
+Card 64 (Item 333):
+	Name: FLOWER_CHOROBON_BLK
+	Icon id: 136
+	AnimPose Name: e_chorobon_f
+	Animation Name: CBN_Z_1
+	Name Message: ename_309 (Dark Fuzzy)
+	Description Message: ehelp_309
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 98
+	Sort Value: 305
+Card 65 (Item 334):
+	Name: SAMBO
+	Icon id: 136
+	AnimPose Name: e_sanbo
+	Animation Name: SNB_Z_1
+	Name Message: ename_091 (Pokey)
+	Description Message: ehelp_091
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 102
+	Sort Value: 306
+Card 66 (Item 335):
+	Name: DOKU_SAMBO
+	Icon id: 136
+	AnimPose Name: e_sanbo_m
+	Animation Name: SNB_Z_1
+	Name Message: ename_093 (Poison Pokey)
+	Description Message: ehelp_093
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 104
+	Sort Value: 307
+Card 67 (Item 336):
+	Name: DOKU_SAMBO_BLK
+	Icon id: 136
+	AnimPose Name: e_sanbo_m
+	Animation Name: SNB_Z_1
+	Name Message: ename_310 (Dark Pokey)
+	Description Message: ehelp_310
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 106
+	Sort Value: 308
+Card 68 (Item 338):
+	Name: PUKUPUKU
+	Icon id: 136
+	AnimPose Name: e_pukupuku_g
+	Animation Name: pukupuku_Z_1
+	Name Message: ename_097 (Cheep Cheep)
+	Description Message: ehelp_097
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 88
+	Sort Value: 309
+Card 69 (Item 339):
+	Name: GESSO
+	Icon id: 136
+	AnimPose Name: e_gesso
+	Animation Name: yari_dancer_Z_1
+	Name Message: ename_100 (Blooper)
+	Description Message: ehelp_100
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 91
+	Sort Value: 310
+Card 70 (Item 340):
+	Name: FUGUMODOKI
+	Icon id: 136
+	AnimPose Name: e_hugumodoki
+	Animation Name: Z_1
+	Name Message: ename_102 (Bittacuda)
+	Description Message: ehelp_102
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 33
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 93
+	Sort Value: 311
+Card 71 (Item 386):
+	Name: JYAMAZO
+	Icon id: 136
+	AnimPose Name: e_card_jyamazo
+	Animation Name: Z_1
+	Name Message: ename_160 (Jawbus)
+	Description Message: ehelp_160
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 21
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 168
+	Sort Value: 312
+Card 72 (Item 387):
+	Name: JYAMAZO_H
+	Icon id: 137
+	AnimPose Name: e_card_jyama_r
+	Animation Name: Z_1
+	Name Message: ename_161 (Rawbus)
+	Description Message: ehelp_161
+	Buy Price: 120
+	Sell Price: 48
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 169
+	Sort Value: 313
+Card 73 (Item 388):
+	Name: JYAMAZO_H_BLK
+	Icon id: 136
+	AnimPose Name: e_card_jyama_r
+	Animation Name: Z_1
+	Name Message: ename_326 (Dark Jawbus)
+	Description Message: ehelp_326
+	Buy Price: 60
+	Sell Price: 18
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 171
+	Sort Value: 314
+Card 74 (Item 389):
+	Name: JYAMAZO_W
+	Icon id: 136
+	AnimPose Name: e_card_jyama_w
+	Animation Name: Z_1
+	Name Message: ename_162 (Gawbus)
+	Description Message: ehelp_162
+	Buy Price: 60
+	Sell Price: 18
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 170
+	Sort Value: 315
+Card 75 (Item 343):
+	Name: HANNYA
+	Icon id: 136
+	AnimPose Name: e_hannya
+	Animation Name: Z_1
+	Name Message: ename_108 (Spania)
+	Description Message: ehelp_108
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 113
+	Sort Value: 316
+Card 76 (Item 344):
+	Name: HENNYA_BLK
+	Icon id: 136
+	AnimPose Name: e_hannya_p
+	Animation Name: Z_1
+	Name Message: ename_312 (Dark Spania)
+	Description Message: ehelp_312
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 114
+	Sort Value: 317
+Card 77 (Item 345):
+	Name: NOROINOROI
+	Icon id: 136
+	AnimPose Name: e_card_noroi
+	Animation Name: Z_1
+	Name Message: ename_110 (Cursya)
+	Description Message: ehelp_110
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 245
+	Sort Value: 318
+Card 78 (Item 346):
+	Name: NOROINOROI_M
+	Icon id: 136
+	AnimPose Name: e_card_nri_m
+	Animation Name: Z_1
+	Name Message: ename_111 (Back Cursya)
+	Description Message: ehelp_111
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 246
+	Sort Value: 319
+Card 79 (Item 347):
+	Name: NOROINOROI_P
+	Icon id: 136
+	AnimPose Name: e_card_nri_p
+	Animation Name: Z_1
+	Name Message: ename_112 (Tech Cursya)
+	Description Message: ehelp_112
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 247
+	Sort Value: 320
+Card 80 (Item 348):
+	Name: NOROINOROI_R
+	Icon id: 136
+	AnimPose Name: e_card_nri_r
+	Animation Name: Z_1
+	Name Message: ename_113 (Heavy Cursya)
+	Description Message: ehelp_113
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 248
+	Sort Value: 321
+Card 81 (Item 349):
+	Name: NOROINOROI_Y
+	Icon id: 136
+	AnimPose Name: e_card_nri_y
+	Animation Name: Z_1
+	Name Message: ename_114 (Reversya Cursya)
+	Description Message: ehelp_114
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 249
+	Sort Value: 322
+Card 82 (Item 350):
+	Name: NOROINOROI_BLK
+	Icon id: 136
+	AnimPose Name: e_card_noroi
+	Animation Name: Z_1
+	Name Message: ename_313 (Dark Cursya)
+	Description Message: ehelp_313
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 250
+	Sort Value: 323
+Card 83 (Item 351):
+	Name: NOROINOROI_P_BLK
+	Icon id: 136
+	AnimPose Name: e_card_nri_p
+	Animation Name: Z_1
+	Name Message: ename_315 (Dark Tech Cursya)
+	Description Message: ehelp_315
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 251
+	Sort Value: 324
+Card 84 (Item 352):
+	Name: NOROINOROI_R_BLK
+	Icon id: 136
+	AnimPose Name: e_card_nri_r
+	Animation Name: Z_1
+	Name Message: ename_316 (Dark Heavy Cursya)
+	Description Message: ehelp_316
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 252
+	Sort Value: 325
+Card 85 (Item 353):
+	Name: NOROINOROI_Y_BLK
+	Icon id: 136
+	AnimPose Name: e_card_nri_y
+	Animation Name: Z_1
+	Name Message: ename_317 (Dark Reversya Cursya)
+	Description Message: ehelp_317
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 253
+	Sort Value: 326
+Card 86 (Item 337):
+	Name: BASABASA
+	Icon id: 136
+	AnimPose Name: e_basabasa
+	Animation Name: Z_1
+	Name Message: ename_095 (Swooper)
+	Description Message: ehelp_095
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 108
+	Sort Value: 327
+Card 87 (Item 528):
+	Name: CHERIRING
+	Icon id: 136
+	AnimPose Name: e_cheririn
+	Animation Name: Z_1
+	Name Message: ename_409 (Cherbil)
+	Description Message: ehelp_409
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 440
+	Sort Value: 328
+Card 88 (Item 529):
+	Name: ICE_CHERIRING
+	Icon id: 136
+	AnimPose Name: e_cheririn_b
+	Animation Name: Z_1
+	Name Message: ename_410 (Ice Cherbil)
+	Description Message: ehelp_410
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 444
+	Sort Value: 329
+Card 89 (Item 530):
+	Name: POISON_CHERIRING
+	Icon id: 136
+	AnimPose Name: e_cheririn_g
+	Animation Name: Z_1
+	Name Message: ename_411 (Poison Cherbil)
+	Description Message: ehelp_411
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 442
+	Sort Value: 330
+Card 90 (Item 535):
+	Name: KAGE_CHERIRING
+	Icon id: 136
+	AnimPose Name: e_cheririn
+	Animation Name: Z_1
+	Name Message: ename_416 (Dark Cherbil)
+	Description Message: ehelp_416
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 446
+	Sort Value: 331
+Card 91 (Item 354):
+	Name: TERESA
+	Icon id: 136
+	AnimPose Name: e_teresa
+	Animation Name: Z_1
+	Name Message: ename_115 (Boo)
+	Description Message: ehelp_115
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 84
+	Sort Value: 332
+Card 92 (Item 355):
+	Name: DARK_TERESA
+	Icon id: 136
+	AnimPose Name: e_teresa_p
+	Animation Name: Z_1
+	Name Message: ename_116 (Dark Boo)
+	Description Message: ehelp_116
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 85
+	Sort Value: 333
+Card 93 (Item 356):
+	Name: DARK_TERESA_BLK
+	Icon id: 136
+	AnimPose Name: e_teresa_p
+	Animation Name: Z_1
+	Name Message: ename_318 (Dark Dark Boo)
+	Description Message: ehelp_318
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 86
+	Sort Value: 334
+Card 94 (Item 525):
+	Name: ATOMIC_TERESA
+	Icon id: 136
+	AnimPose Name: e_atmic_trs
+	Animation Name: Z_1
+	Name Message: ename_406 (Atomic Boo)
+	Description Message: ehelp_406
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 31
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 87
+	Sort Value: 335
+Card 95 (Item 394):
+	Name: GUY
+	Icon id: 136
+	AnimPose Name: e_card_gii1
+	Animation Name: Z_1
+	Name Message: ename_169 (Growmeba)
+	Description Message: ehelp_169
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 21
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 159
+	Sort Value: 336
+Card 96 (Item 395):
+	Name: GUY_M
+	Icon id: 136
+	AnimPose Name: e_card_gii2
+	Animation Name: Z_1
+	Name Message: ename_170 (Blomeba)
+	Description Message: ehelp_170
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 160
+	Sort Value: 337
+Card 97 (Item 396):
+	Name: GUY_H
+	Icon id: 136
+	AnimPose Name: e_card_gii3
+	Animation Name: Z_1
+	Name Message: ename_171 (Chromeba)
+	Description Message: ehelp_171
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 161
+	Sort Value: 338
+Card 98 (Item 397):
+	Name: GUY_H_BLK
+	Icon id: 136
+	AnimPose Name: e_card_gii3
+	Animation Name: Z_1
+	Name Message: ename_328 (Dark Growmeba)
+	Description Message: ehelp_328
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 162
+	Sort Value: 339
+Card 99 (Item 392):
+	Name: BIG_EYE
+	Icon id: 136
+	AnimPose Name: e_card_ome1
+	Animation Name: Z_1
+	Name Message: ename_165 (Mister I)
+	Description Message: ehelp_165
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 21
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 150
+	Sort Value: 340
+Card 100 (Item 393):
+	Name: BIG_EYE_H
+	Icon id: 136
+	AnimPose Name: e_card_ome2
+	Animation Name: Z_1
+	Name Message: ename_167 (Red I)
+	Description Message: ehelp_167
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 152
+	Sort Value: 341
+Card 101 (Item 358):
+	Name: WANWAN
+	Icon id: 136
+	AnimPose Name: e_wanwan
+	Animation Name: WAZ_Z_1
+	Name Message: ename_120 (Chain Chomp)
+	Description Message: ehelp_120
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 122
+	Sort Value: 342
+Card 102 (Item 360):
+	Name: RED_WANWAN
+	Icon id: 137
+	AnimPose Name: e_wanwan_r
+	Animation Name: WAZ_Z_1
+	Name Message: ename_121 (Red Chomp)
+	Description Message: ehelp_121
+	Buy Price: 110
+	Sell Price: 44
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 123
+	Sort Value: 343
+Card 103 (Item 361):
+	Name: WANGWANG_X3
+	Icon id: 137
+	AnimPose Name: e_card_3wan1
+	Animation Name: Z_1
+	Name Message: ename_122 (The Underchomp)
+	Description Message: ehelp_122
+	Buy Price: 160
+	Sell Price: 64
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 328
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 324
+	Sort Value: 344
+Card 104 (Item 359):
+	Name: WANWAN_BLK
+	Icon id: 136
+	AnimPose Name: e_wanwan
+	Animation Name: WAZ_Z_1
+	Name Message: ename_319 (Dark Chomp)
+	Description Message: ehelp_319
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 124
+	Sort Value: 345
+Card 105 (Item 362):
+	Name: SHINNOSUKE
+	Icon id: 136
+	AnimPose Name: e_sinnosuke
+	Animation Name: SIS_Z_1
+	Name Message: ename_128 (Bald Cleft)
+	Description Message: ehelp_128
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 99
+	Sort Value: 346
+Card 106 (Item 363):
+	Name: SHINEMON
+	Icon id: 136
+	AnimPose Name: e_sinemon
+	Animation Name: SIN_Z_1
+	Name Message: ename_129 (Moon Cleft)
+	Description Message: ehelp_129
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 100
+	Sort Value: 347
+Card 107 (Item 364):
+	Name: SHINEMON_BLK
+	Icon id: 136
+	AnimPose Name: e_sinemon
+	Animation Name: SIN_Z_1
+	Name Message: ename_320 (Dark Cleft)
+	Description Message: ehelp_320
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 101
+	Sort Value: 348
+Card 108 (Item 365):
+	Name: DODON
+	Icon id: 136
+	AnimPose Name: e_dodon
+	Animation Name: Z_1
+	Name Message: ename_130 (Shlurp)
+	Description Message: ehelp_130
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 21
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 156
+	Sort Value: 349
+Card 109 (Item 366):
+	Name: DODON_H
+	Icon id: 136
+	AnimPose Name: e_dodo2
+	Animation Name: Z_1
+	Name Message: ename_131 (Shlorp)
+	Description Message: ehelp_131
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 157
+	Sort Value: 350
+Card 110 (Item 367):
+	Name: DODON_H_BLK
+	Icon id: 136
+	AnimPose Name: e_dodo2
+	Animation Name: Z_1
+	Name Message: ename_321 (Dark Shlurp)
+	Description Message: ehelp_321
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 158
+	Sort Value: 351
+Card 111 (Item 368):
+	Name: DOSSUN
+	Icon id: 137
+	AnimPose Name: e_dossun
+	Animation Name: dossun_Z_1
+	Name Message: ename_132 (Thwomp)
+	Description Message: ehelp_132
+	Buy Price: 90
+	Sell Price: 36
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 265
+	Sort Value: 352
+Card 112 (Item 369):
+	Name: GORON
+	Icon id: 137
+	AnimPose Name: e_goron
+	Animation Name: yari_dancer_Z_1
+	Name Message: ename_133 (Spiny Tromp)
+	Description Message: ehelp_133
+	Buy Price: 100
+	Sell Price: 40
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 266
+	Sort Value: 353
+Card 113 (Item 370):
+	Name: KORON
+	Icon id: 137
+	AnimPose Name: e_koron
+	Animation Name: yari_dancer_Z_1
+	Name Message: ename_134 (Spiky Tromp)
+	Description Message: ehelp_134
+	Buy Price: 80
+	Sell Price: 32
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 267
+	Sort Value: 354
+Card 114 (Item 371):
+	Name: KILLER
+	Icon id: 136
+	AnimPose Name: e_kilr
+	Animation Name: KIL_Z_1
+	Name Message: ename_135 (Bullet Bill)
+	Description Message: ehelp_135
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 82
+	Sort Value: 355
+Card 115 (Item 372):
+	Name: KILLER_CANON
+	Icon id: 136
+	AnimPose Name: e_killtai
+	Animation Name: KTA_Z_1
+	Name Message: ename_136 (Bill Blaster)
+	Description Message: ehelp_136
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 83
+	Sort Value: 356
+Card 116 (Item 341):
+	Name: KUROKUMORN
+	Icon id: 136
+	AnimPose Name: e_kmoon
+	Animation Name: Z_1
+	Name Message: ename_103 (Ruff Puff)
+	Description Message: ehelp_103
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 109
+	Sort Value: 357
+Card 117 (Item 342):
+	Name: KUROKUMORN_BLK
+	Icon id: 136
+	AnimPose Name: e_kmoon_w
+	Animation Name: Z_1
+	Name Message: ename_311 (Dark Ruff Puff)
+	Description Message: ehelp_311
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 111
+	Sort Value: 358
+Card 118 (Item 357):
+	Name: BUBBLE
+	Icon id: 136
+	AnimPose Name: e_bubble
+	Animation Name: Z_1
+	Name Message: ename_119 (Lava Bubble)
+	Description Message: ehelp_119
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 121
+	Sort Value: 359
+Card 119 (Item 398):
+	Name: NANOTILE_G
+	Icon id: 136
+	AnimPose Name: e_ntile
+	Animation Name: Z_1
+	Name Message: ename_172 (Tileoid G)
+	Description Message: ehelp_172
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 33
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 163
+	Sort Value: 360
+Card 120 (Item 399):
+	Name: NANOTILE_B
+	Icon id: 136
+	AnimPose Name: e_ntl_b
+	Animation Name: Z_1
+	Name Message: ename_173 (Tileoid B)
+	Description Message: ehelp_173
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 33
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 164
+	Sort Value: 361
+Card 121 (Item 400):
+	Name: NANOTILE_R
+	Icon id: 136
+	AnimPose Name: e_ntl_r
+	Animation Name: Z_1
+	Name Message: ename_174 (Tileoid R)
+	Description Message: ehelp_174
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 165
+	Sort Value: 362
+Card 122 (Item 401):
+	Name: NANOTILE_Y
+	Icon id: 136
+	AnimPose Name: e_ntl_y
+	Animation Name: Z_1
+	Name Message: ename_175 (Tileoid Y)
+	Description Message: ehelp_175
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 166
+	Sort Value: 363
+Card 123 (Item 402):
+	Name: NANOTILE_Y_BLK
+	Icon id: 136
+	AnimPose Name: e_ntl_y
+	Animation Name: Z_1
+	Name Message: ename_329 (Dark Tileoid)
+	Description Message: ehelp_329
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 167
+	Sort Value: 364
+Card 124 (Item 403):
+	Name: KAMEREBOMB
+	Icon id: 136
+	AnimPose Name: e_kamere_bom
+	Animation Name: Z_1
+	Name Message: ename_176 (Meowbomb)
+	Description Message: ehelp_176
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 177
+	Sort Value: 365
+Card 125 (Item 404):
+	Name: PATONYAN
+	Icon id: 136
+	AnimPose Name: e_ptnyan
+	Animation Name: Z_1
+	Name Message: ename_289 (PatrolMeow)
+	Description Message: ehelp_289
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 173
+	Sort Value: 366
+Card 126 (Item 405):
+	Name: FLYNYAN
+	Icon id: 136
+	AnimPose Name: e_flnyan
+	Animation Name: Z_1
+	Name Message: ename_290 (AirMeow)
+	Description Message: ehelp_290
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 174
+	Sort Value: 367
+Card 127 (Item 406):
+	Name: DOMNYAN
+	Icon id: 136
+	AnimPose Name: e_dmnyan
+	Animation Name: Z_1
+	Name Message: ename_177 (SurpriseMeow)
+	Description Message: ehelp_177
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 175
+	Sort Value: 368
+Card 128 (Item 407):
+	Name: DEKUNYAN
+	Icon id: 137
+	AnimPose Name: n_stg3_dknyan
+	Animation Name: Z_1
+	Name Message: ename_178 (BigMeow)
+	Description Message: ehelp_178
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 172
+	Sort Value: 369
+Card 129 (Item 503):
+	Name: MEIDO_NYAN
+	Icon id: 136
+	AnimPose Name: n_stg3_md_nyan
+	Animation Name: Z_1
+	Name Message: ename_369 (Meowmaid)
+	Description Message: ehelp_369
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 129
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 370
+Card 130 (Item 504):
+	Name: GUARD_NYAN
+	Icon id: 137
+	AnimPose Name: n_stg3_gdnyan
+	Animation Name: Z_1
+	Name Message: ename_370 (SecuriMeow)
+	Description Message: ehelp_370
+	Buy Price: 100
+	Sell Price: 50
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 129
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 371
+Card 131 (Item 408):
+	Name: UCHU_KURAGE
+	Icon id: 136
+	AnimPose Name: e_u_kurage
+	Animation Name: Z_1
+	Name Message: ename_179 (Jellien)
+	Description Message: ehelp_179
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 178
+	Sort Value: 372
+Card 132 (Item 409):
+	Name: PHOTON
+	Icon id: 136
+	AnimPose Name: e_card_fot
+	Animation Name: Z_1
+	Name Message: ename_180 (Foton)
+	Description Message: ehelp_180
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 179
+	Sort Value: 373
+Card 133 (Item 410):
+	Name: WARPWARP
+	Icon id: 136
+	AnimPose Name: e_warp
+	Animation Name: Z_1
+	Name Message: ename_182 (Warpid)
+	Description Message: ehelp_182
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 181
+	Sort Value: 374
+Card 134 (Item 411):
+	Name: FRAGON
+	Icon id: 136
+	AnimPose Name: e_card_fre1
+	Animation Name: Z_1
+	Name Message: ename_183 (Eeligon)
+	Description Message: ehelp_183
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 182
+	Sort Value: 375
+Card 135 (Item 412):
+	Name: FRAGON_G
+	Icon id: 136
+	AnimPose Name: e_card_fre2
+	Animation Name: Z_1
+	Name Message: ename_185 (Hooligon)
+	Description Message: ehelp_185
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 184
+	Sort Value: 376
+Card 136 (Item 413):
+	Name: FRAGON_G_BLK
+	Icon id: 136
+	AnimPose Name: e_card_fre3
+	Animation Name: Z_1
+	Name Message: ename_330 (Dark Eeligon)
+	Description Message: ehelp_330
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 186
+	Sort Value: 377
+Card 137 (Item 414):
+	Name: KAKKUN
+	Icon id: 136
+	AnimPose Name: e_card_kak1
+	Animation Name: Z_1
+	Name Message: ename_187 (Longator)
+	Description Message: ehelp_187
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 188
+	Sort Value: 378
+Card 138 (Item 415):
+	Name: KAKKUN_H
+	Icon id: 136
+	AnimPose Name: e_card_kak2
+	Animation Name: Z_1
+	Name Message: ename_188 (Longadile)
+	Description Message: ehelp_188
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 189
+	Sort Value: 379
+Card 139 (Item 416):
+	Name: KAKKUN_H_BLK
+	Icon id: 136
+	AnimPose Name: e_card_kak2
+	Animation Name: Z_1
+	Name Message: ename_331 (Dark Longator)
+	Description Message: ehelp_331
+	Buy Price: 10
+	Sell Price: 1
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 190
+	Sort Value: 380
+Card 140 (Item 417):
+	Name: BARRIER_MAN
+	Icon id: 136
+	AnimPose Name: e_bari
+	Animation Name: Z_1
+	Name Message: ename_189 (Barribad)
+	Description Message: ehelp_189
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 194
+	Sort Value: 381
+Card 141 (Item 418):
+	Name: BARRIER_MAN_H
+	Icon id: 136
+	AnimPose Name: e_bari2
+	Animation Name: Z_1
+	Name Message: ename_191 (Sobarribad)
+	Description Message: ehelp_191
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 196
+	Sort Value: 382
+Card 142 (Item 419):
+	Name: BARRIER_MAN_H_BLK
+	Icon id: 136
+	AnimPose Name: e_bari2
+	Animation Name: Z_1
+	Name Message: ename_332 (Dark Barribad)
+	Description Message: ehelp_332
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 198
+	Sort Value: 383
+Card 143 (Item 420):
+	Name: MATRYOSHKA
+	Icon id: 136
+	AnimPose Name: e_card_mat1
+	Animation Name: Z_1
+	Name Message: ename_193 (Pigarithm)
+	Description Message: ehelp_193
+	Buy Price: 15
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 200
+	Sort Value: 384
+Card 144 (Item 421):
+	Name: MATRYOSHKA_H
+	Icon id: 136
+	AnimPose Name: e_card_mat2
+	Animation Name: Z_1
+	Name Message: ename_194 (Hogarithm)
+	Description Message: ehelp_194
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 201
+	Sort Value: 385
+Card 145 (Item 422):
+	Name: MATRYOSHKA_H_BLK
+	Icon id: 136
+	AnimPose Name: e_card_mat2
+	Animation Name: Z_1
+	Name Message: ename_333 (Dark Pigarithm)
+	Description Message: ehelp_333
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 202
+	Sort Value: 386
+Card 146 (Item 423):
+	Name: LEEPAT
+	Icon id: 136
+	AnimPose Name: e_lepat
+	Animation Name: Z_1
+	Name Message: ename_195 (Choppa)
+	Description Message: ehelp_195
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 41
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 191
+	Sort Value: 387
+Card 147 (Item 424):
+	Name: LEEPAT_H
+	Icon id: 136
+	AnimPose Name: e_lepa2
+	Animation Name: Z_1
+	Name Message: ename_196 (Copta)
+	Description Message: ehelp_196
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 192
+	Sort Value: 388
+Card 148 (Item 425):
+	Name: LEEPAT_H_BLK
+	Icon id: 136
+	AnimPose Name: e_lepa2
+	Animation Name: Z_1
+	Name Message: ename_334 (Dark Choppa)
+	Description Message: ehelp_334
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 193
+	Sort Value: 389
+Card 149 (Item 426):
+	Name: MONMOUTH
+	Icon id: 137
+	AnimPose Name: e_manmo
+	Animation Name: Z_1
+	Name Message: ename_197 (Muth)
+	Description Message: ehelp_197
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 257
+	Sort Value: 390
+Card 150 (Item 428):
+	Name: MONMOUTH_W
+	Icon id: 136
+	AnimPose Name: e_manm3
+	Animation Name: Z_1
+	Name Message: ename_199 (Mega Muth)
+	Description Message: ehelp_199
+	Buy Price: 100
+	Sell Price: 30
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 258
+	Sort Value: 391
+Card 151 (Item 427):
+	Name: MONMOUTH_H_BLK
+	Icon id: 136
+	AnimPose Name: e_manm2
+	Animation Name: Z_1
+	Name Message: ename_335 (Dark Muth)
+	Description Message: ehelp_335
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 259
+	Sort Value: 392
+Card 152 (Item 429):
+	Name: HANAZOKU
+	Icon id: 136
+	AnimPose Name: e_hanazoku_y
+	Animation Name: Z_1
+	Name Message: ename_201 (Floro Sapien)
+	Description Message: ehelp_201
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 205
+	Sort Value: 393
+Card 153 (Item 430):
+	Name: PRIMITIVE_MAN
+	Icon id: 137
+	AnimPose Name: e_genjin_a
+	Animation Name: Z_1
+	Name Message: ename_207 (Floro Cragnien)
+	Description Message: ehelp_207
+	Buy Price: 100
+	Sell Price: 40
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 51
+	Card Shop Min GSW(0): 221
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 203
+	Sort Value: 394
+Card 154 (Item 431):
+	Name: NINJYA
+	Icon id: 136
+	AnimPose Name: e_ninja
+	Animation Name: Z_1
+	Name Message: ename_209 (Ninjoe)
+	Description Message: ehelp_209
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 61
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 211
+	Sort Value: 395
+Card 155 (Item 432):
+	Name: NINJYA_M
+	Icon id: 136
+	AnimPose Name: e_nin_g
+	Animation Name: Z_1
+	Name Message: ename_212 (Ninjohn)
+	Description Message: ehelp_212
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 61
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 214
+	Sort Value: 396
+Card 156 (Item 433):
+	Name: NINJYA_H
+	Icon id: 136
+	AnimPose Name: e_nin_r
+	Animation Name: Z_1
+	Name Message: ename_215 (Ninjerry)
+	Description Message: ehelp_215
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 61
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 217
+	Sort Value: 397
+Card 157 (Item 434):
+	Name: NINJYA_H_BLK
+	Icon id: 136
+	AnimPose Name: e_nin_r
+	Animation Name: Z_1
+	Name Message: ename_336 (Dark Ninjoe)
+	Description Message: ehelp_336
+	Buy Price: 45
+	Sell Price: 13
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 220
+	Sort Value: 398
+Card 158 (Item 435):
+	Name: HAND_1
+	Icon id: 137
+	AnimPose Name: e_ayashii_te
+	Animation Name: Z_1
+	Name Message: ename_218 (Underhand)
+	Description Message: ehelp_218
+	Buy Price: 100
+	Sell Price: 40
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 262
+	Sort Value: 399
+Card 159 (Item 436):
+	Name: SHINIGAMIN_ALPHA
+	Icon id: 136
+	AnimPose Name: e_tesita_a1
+	Animation Name: Z_1
+	Name Message: ename_221 (Skellobit)
+	Description Message: ehelp_221
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 223
+	Sort Value: 400
+Card 160 (Item 437):
+	Name: SHINIGAMIN_BETA
+	Icon id: 136
+	AnimPose Name: e_tesita_a2
+	Animation Name: Z_1
+	Name Message: ename_222 (Spiky Skellobit)
+	Description Message: ehelp_222
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 226
+	Sort Value: 401
+Card 161 (Item 438):
+	Name: MD_SHINIGAMIN_ALPHA_BLK
+	Icon id: 136
+	AnimPose Name: e_tesita_a1
+	Animation Name: Z_1
+	Name Message: ename_337 (Dark Skellobit)
+	Description Message: ehelp_337
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 225
+	Sort Value: 402
+Card 162 (Item 439):
+	Name: MD_SHINIGAMIN_BETA_BLK
+	Icon id: 136
+	AnimPose Name: e_tesita_a2
+	Animation Name: Z_1
+	Name Message: ename_338 (Dark Spiky Skellobit)
+	Description Message: ehelp_338
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x3
+	Tribe: 228
+	Sort Value: 403
+Card 163 (Item 440):
+	Name: SHINIGAMIN_SKY
+	Icon id: 136
+	AnimPose Name: e_tesita_b
+	Animation Name: Z_1
+	Name Message: ename_225 (Skellobomber)
+	Description Message: ehelp_225
+	Buy Price: 25
+	Sell Price: 3
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 229
+	Sort Value: 404
+Card 164 (Item 441):
+	Name: SHINIGAMIN_TAKO_A
+	Icon id: 136
+	AnimPose Name: e_tesita_c
+	Animation Name: Z_1
+	Name Message: ename_230 (Skellobait)
+	Description Message: ehelp_230
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 234
+	Sort Value: 405
+Card 165 (Item 442):
+	Name: SHINIGAMIN_TAKO_B
+	Icon id: 136
+	AnimPose Name: e_tesita_d
+	Animation Name: Z_1
+	Name Message: ename_231 (Spiky Skellobait)
+	Description Message: ehelp_231
+	Buy Price: 20
+	Sell Price: 2
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 235
+	Sort Value: 406
+Card 166 (Item 446):
+	Name: MAGE_RED
+	Icon id: 136
+	AnimPose Name: e_mage_r
+	Animation Name: Z_1
+	Name Message: ename_235 (Red Magiblot)
+	Description Message: ehelp_235
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 239
+	Sort Value: 407
+Card 167 (Item 447):
+	Name: MAGE_BLUE
+	Icon id: 136
+	AnimPose Name: e_mage_b
+	Animation Name: Z_1
+	Name Message: ename_237 (Blue Magiblot)
+	Description Message: ehelp_237
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 237
+	Sort Value: 408
+Card 168 (Item 448):
+	Name: MAGE_YELLOW
+	Icon id: 136
+	AnimPose Name: e_mage_y
+	Animation Name: Z_1
+	Name Message: ename_239 (Yellow Magiblot)
+	Description Message: ehelp_239
+	Buy Price: 35
+	Sell Price: 7
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 81
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 241
+	Sort Value: 409
+Card 169 (Item 449):
+	Name: MAGE_YELLOW_BLK
+	Icon id: 136
+	AnimPose Name: e_mage_y
+	Animation Name: Z_1
+	Name Message: ename_405 (Dark Magiblot)
+	Description Message: ehelp_405
+	Buy Price: 50
+	Sell Price: 15
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 10
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 243
+	Sort Value: 410
+Card 170 (Item 443):
+	Name: DEATHDEATH
+	Icon id: 137
+	AnimPose Name: e_death
+	Animation Name: Z_1
+	Name Message: ename_233 (Megabite)
+	Description Message: ehelp_233
+	Buy Price: 140
+	Sell Price: 56
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 254
+	Sort Value: 411
+Card 171 (Item 444):
+	Name: DEATHDEATH_2
+	Icon id: 137
+	AnimPose Name: e_deat2
+	Animation Name: Z_1
+	Name Message: ename_234 (Gigabite)
+	Description Message: ehelp_234
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 71
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 255
+	Sort Value: 412
+Card 172 (Item 445):
+	Name: DEATHDEATH_2_BLK
+	Icon id: 137
+	AnimPose Name: e_death
+	Animation Name: Z_1
+	Name Message: ename_404 (Dark Megabite)
+	Description Message: ehelp_404
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x2
+	Tribe: 256
+	Sort Value: 413
+Card 173 (Item 461):
+	Name: BLACK_MARIO
+	Icon id: 138
+	AnimPose Name: p_mario_e
+	Animation Name: mario_Z_1
+	Name Message: ename_257 (Dark Mario)
+	Description Message: ehelp_257
+	Buy Price: 500
+	Sell Price: 350
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x2
+	Tribe: 330
+	Sort Value: 414
+Card 174 (Item 460):
+	Name: BLACK_LUIGI
+	Icon id: 138
+	AnimPose Name: e_dark_luigi
+	Animation Name: d_luigi_Z_1
+	Name Message: ename_258 (Dark Luigi)
+	Description Message: ehelp_258
+	Buy Price: 500
+	Sell Price: 350
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x2
+	Tribe: 331
+	Sort Value: 415
+Card 175 (Item 462):
+	Name: BLACK_PEACH
+	Icon id: 138
+	AnimPose Name: p_peach_e
+	Animation Name: Z_1
+	Name Message: ename_260 (Dark Peach)
+	Description Message: ehelp_260
+	Buy Price: 900
+	Sell Price: 630
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x2
+	Tribe: 332
+	Sort Value: 416
+Card 176 (Item 459):
+	Name: BLACK_KOOPA
+	Icon id: 138
+	AnimPose Name: p_kuppa_e
+	Animation Name: Z_1
+	Name Message: ename_259 (Dark Bowser)
+	Description Message: ehelp_259
+	Buy Price: 500
+	Sell Price: 350
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x2
+	Tribe: 333
+	Sort Value: 417
+Card 177 (Item 451):
+	Name: KILLER_KINOKO
+	Icon id: 137
+	AnimPose Name: e_killer_k
+	Animation Name: Z_1
+	Name Message: ename_283 (Zombie Shroom)
+	Description Message: ehelp_283
+	Buy Price: 120
+	Sell Price: 48
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 268
+	Sort Value: 418
+Card 178 (Item 452):
+	Name: KILLER_KINOKO_H
+	Icon id: 137
+	AnimPose Name: e_killer_k3
+	Animation Name: Z_1
+	Name Message: ename_284 (Ghoul Shroom)
+	Description Message: ehelp_284
+	Buy Price: 90
+	Sell Price: 36
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 4
+	Card Shop Chance: 8
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 269
+	Sort Value: 419
+Card 179 (Item 456):
+	Name: BOSS_ZUNBABA
+	Icon id: 137
+	AnimPose Name: e_zun_hed
+	Animation Name: zun_hed_Z_1
+	Name Message: ename_254 (Fracktail)
+	Description Message: ehelp_254
+	Buy Price: 200
+	Sell Price: 100
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 66
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 313
+	Sort Value: 420
+Card 180 (Item 457):
+	Name: BOSS_ZUNBABA_WHITE
+	Icon id: 137
+	AnimPose Name: e_W_zun_hed
+	Animation Name: zun_hed_Z_1
+	Name Message: ename_255 (Wracktail)
+	Description Message: ehelp_255
+	Buy Price: 150
+	Sell Price: 75
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 314
+	Sort Value: 421
+Card 181 (Item 531):
+	Name: KYORORU
+	Icon id: 136
+	AnimPose Name: e_kozun
+	Animation Name: Z_1
+	Name Message: ename_412 (Frackle)
+	Description Message: ehelp_412
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 66
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 450
+	Sort Value: 422
+Card 182 (Item 532):
+	Name: ALPHA_KYORORU
+	Icon id: 137
+	AnimPose Name: e_kozun_w
+	Animation Name: Z_1
+	Name Message: ename_413 (Wrackle)
+	Description Message: ehelp_413
+	Buy Price: 100
+	Sell Price: 50
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 451
+	Sort Value: 423
+Card 183 (Item 463):
+	Name: GESO
+	Icon id: 137
+	AnimPose Name: e_big_gesso
+	Animation Name: Z_1
+	Name Message: ename_261 (Big Blooper)
+	Description Message: ehelp_261
+	Buy Price: 80
+	Sell Price: 40
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 111
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 317
+	Sort Value: 424
+Card 184 (Item 464):
+	Name: KAMEREKING
+	Icon id: 137
+	AnimPose Name: e_kamere
+	Animation Name: Z_1
+	Name Message: ename_262 (Francis)
+	Description Message: ehelp_262
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 129
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 318
+	Sort Value: 425
+Card 185 (Item 465):
+	Name: ROSE
+	Icon id: 137
+	AnimPose Name: e_card_bar
+	Animation Name: Z_1
+	Name Message: ename_263 (King Croacus)
+	Description Message: ehelp_263
+	Buy Price: 100
+	Sell Price: 50
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 225
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 319
+	Sort Value: 426
+Card 186 (Item 469):
+	Name: SHINIGAMI
+	Icon id: 137
+	AnimPose Name: e_card_shini
+	Animation Name: Z_1
+	Name Message: ename_273 (Bonechill)
+	Description Message: ehelp_273
+	Buy Price: 140
+	Sell Price: 70
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 359
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 327
+	Sort Value: 427
+Card 187 (Item 470):
+	Name: EARL_DIMENSION
+	Icon id: 138
+	AnimPose Name: e_jigen
+	Animation Name: Z_1
+	Name Message: ename_276 (Count Bleck)
+	Description Message: ehelp_276
+	Buy Price: 400
+	Sell Price: 240
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 305
+	Sort Value: 428
+Card 188 (Item 471):
+	Name: EARL_ADJUTANT
+	Icon id: 138
+	AnimPose Name: n_nasta
+	Animation Name: Z_1
+	Name Message: ename_280 (Nastasia)
+	Description Message: ehelp_280
+	Buy Price: 300
+	Sell Price: 180
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 304
+	Sort Value: 429
+Card 189 (Item 453):
+	Name: DODONTUS
+	Icon id: 137
+	AnimPose Name: e_ddtas
+	Animation Name: Z_1
+	Name Message: ename_241 (O'Chunks)
+	Description Message: ehelp_241
+	Buy Price: 130
+	Sell Price: 65
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 273
+	Sort Value: 430
+Card 190 (Item 455):
+	Name: MANERA
+	Icon id: 137
+	AnimPose Name: e_3D_manera
+	Animation Name: 3D_manera_Z_1
+	Name Message: ename_251 (Mimi)
+	Description Message: ehelp_251
+	Buy Price: 150
+	Sell Price: 75
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 284
+	Sort Value: 431
+Card 191 (Item 466):
+	Name: LUIGI_L
+	Icon id: 137
+	AnimPose Name: e_dark_luigi
+	Animation Name: d_luigi_Z_1
+	Name Message: ename_268 (Mr. L)
+	Description Message: ehelp_268
+	Buy Price: 20
+	Sell Price: 10
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 179
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 295
+	Sort Value: 432
+Card 192 (Item 467):
+	Name: LUIGI_ROBO
+	Icon id: 137
+	AnimPose Name: e_card_gan
+	Animation Name: Z_1
+	Name Message: ename_269 (Brobot)
+	Description Message: ehelp_269
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 179
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 296
+	Sort Value: 433
+Card 193 (Item 468):
+	Name: LUIGI_ROBO_II
+	Icon id: 137
+	AnimPose Name: e_card_ganZ
+	Animation Name: Z_1
+	Name Message: ename_272 (Brobot L-type)
+	Description Message: ehelp_272
+	Buy Price: 130
+	Sell Price: 65
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 292
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 300
+	Sort Value: 434
+Card 194 (Item 454):
+	Name: DIMEEN
+	Icon id: 137
+	AnimPose Name: e_dmen
+	Animation Name: Z_1
+	Name Message: ename_247 (Dimentio)
+	Description Message: ehelp_247
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 292
+	Sort Value: 435
+Card 195 (Item 472):
+	Name: DIMEEN_L
+	Icon id: 138
+	AnimPose Name: e_card_DmL
+	Animation Name: Z_1
+	Name Message: ename_281 (Super Dimentio)
+	Description Message: ehelp_281
+	Buy Price: 330
+	Sell Price: 198
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 309
+	Sort Value: 436
+Card 196 (Item 505):
+	Name: DEARU
+	Icon id: 137
+	AnimPose Name: n_machi_dearle
+	Animation Name: Z_1
+	Name Message: ename_371 (Merlon)
+	Description Message: ehelp_371
+	Buy Price: 70
+	Sell Price: 35
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 437
+Card 197 (Item 506):
+	Name: URA_DEARU
+	Icon id: 137
+	AnimPose Name: n_machi_c_dearle
+	Animation Name: Z_1
+	Name Message: ename_372 (Nolrem)
+	Description Message: ehelp_372
+	Buy Price: 90
+	Sell Price: 45
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 179
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 438
+Card 198 (Item 507):
+	Name: MISUTERU
+	Icon id: 137
+	AnimPose Name: n_stg2_mist
+	Animation Name: n_stg2_mist_Z_1
+	Name Message: ename_373 (Merluvlee)
+	Description Message: ehelp_373
+	Buy Price: 110
+	Sell Price: 55
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 439
+Card 199 (Item 508):
+	Name: SANDERU
+	Icon id: 137
+	AnimPose Name: n_sundale
+	Animation Name: n_stg2_mist_Z_1
+	Name Message: ename_374 (Merlee)
+	Description Message: ehelp_374
+	Buy Price: 110
+	Sell Price: 55
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 440
+Card 200 (Item 510):
+	Name: AGERU
+	Icon id: 137
+	AnimPose Name: e_card_agelu
+	Animation Name: Z_1
+	Name Message: ename_376 (Bestovius)
+	Description Message: ehelp_376
+	Buy Price: 80
+	Sell Price: 40
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 441
+Card 201 (Item 511):
+	Name: MIHARU
+	Icon id: 137
+	AnimPose Name: n_stg1_chief
+	Animation Name: Z_1
+	Name Message: ename_377 (Watchitt)
+	Description Message: ehelp_377
+	Buy Price: 90
+	Sell Price: 45
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 442
+Card 202 (Item 509):
+	Name: CRYSTALE
+	Icon id: 137
+	AnimPose Name: n_starl
+	Animation Name: Z_1
+	Name Message: ename_375 (Merlumina)
+	Description Message: ehelp_375
+	Buy Price: 90
+	Sell Price: 45
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 66
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 443
+Card 203 (Item 520):
+	Name: CUBY
+	Icon id: 137
+	AnimPose Name: n_stg2_shikai
+	Animation Name: n_stg2_shikai_Z_1
+	Name Message: ename_386 (The InterNed)
+	Description Message: ehelp_386
+	Buy Price: 130
+	Sell Price: 65
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 444
+Card 204 (Item 534):
+	Name: CUBELIC
+	Icon id: 137
+	AnimPose Name: n_yuugi
+	Animation Name: Z_1
+	Name Message: ename_415 (The InterChet)
+	Description Message: ehelp_415
+	Buy Price: 150
+	Sell Price: 75
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 129
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 445
+Card 205 (Item 533):
+	Name: HORUHOLE
+	Icon id: 137
+	AnimPose Name: n_dokan
+	Animation Name: Z_1
+	Name Message: ename_414 (Welderberg)
+	Description Message: ehelp_414
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 446
+Card 206 (Item 524):
+	Name: RED_GURIN
+	Icon id: 137
+	AnimPose Name: e_card_red
+	Animation Name: Z_1
+	Name Message: ename_402 (Red & Green)
+	Description Message: ehelp_402
+	Buy Price: 100
+	Sell Price: 50
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 447
+Card 207 (Item 390):
+	Name: BANKEN
+	Icon id: 136
+	AnimPose Name: n_stg2_gau
+	Animation Name: Z_1_L
+	Name Message: ename_163 (Howl)
+	Description Message: ehelp_163
+	Buy Price: 30
+	Sell Price: 6
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 10
+	Card Shop Chance: 5
+	Card Shop Bonus Seq: 23
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 260
+	Sort Value: 448
+Card 208 (Item 391):
+	Name: DEKA_BANKEN
+	Icon id: 137
+	AnimPose Name: n_stg2_gaubos
+	Animation Name: Z_1_L
+	Name Message: ename_164 (Growl)
+	Description Message: ehelp_164
+	Buy Price: 150
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 23
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 261
+	Sort Value: 449
+Card 209 (Item 513):
+	Name: TAMARA
+	Icon id: 137
+	AnimPose Name: n_stg4_tamara
+	Animation Name: Z_1
+	Name Message: ename_379 (Squirps)
+	Description Message: ehelp_379
+	Buy Price: 170
+	Sell Price: 85
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 174
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 450
+Card 210 (Item 514):
+	Name: DAVID
+	Icon id: 137
+	AnimPose Name: n_stg5_hiroshi
+	Animation Name: Z_1
+	Name Message: ename_380 (Flint Cragley)
+	Description Message: ehelp_380
+	Buy Price: 160
+	Sell Price: 80
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 221
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 451
+Card 211 (Item 515):
+	Name: HENRY_STANLAY
+	Icon id: 137
+	AnimPose Name: e_card_hen
+	Animation Name: Z_1
+	Name Message: ename_381 (Hornfels & Monzo)
+	Description Message: ehelp_381
+	Buy Price: 90
+	Sell Price: 45
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 221
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 452
+Card 212 (Item 516):
+	Name: TONO
+	Icon id: 137
+	AnimPose Name: n_stg6_tono
+	Animation Name: Z_1
+	Name Message: ename_382 (King Sammer)
+	Description Message: ehelp_382
+	Buy Price: 130
+	Sell Price: 65
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 272
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 453
+Card 213 (Item 450):
+	Name: SAMURAI
+	Icon id: 137
+	AnimPose Name: e_card_smra1
+	Animation Name: Z_1
+	Name Message: ename_288 (Sammer Guy)
+	Description Message: ehelp_288
+	Buy Price: 150
+	Sell Price: 75
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 292
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 338
+	Sort Value: 454
+Card 214 (Item 526):
+	Name: MAME_BUBUDO
+	Icon id: 136
+	AnimPose Name: e_card_smrc1
+	Animation Name: Z_1
+	Name Message: ename_407 (Small Sammer Guy)
+	Description Message: ehelp_407
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 292
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 355
+	Sort Value: 455
+Card 215 (Item 527):
+	Name: DAI_BUBUDO
+	Icon id: 136
+	AnimPose Name: e_card_smrb1
+	Animation Name: Z_1
+	Name Message: ename_408 (Big Sammer Guy)
+	Description Message: ehelp_408
+	Buy Price: 40
+	Sell Price: 12
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 292
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: 347
+	Sort Value: 456
+Card 216 (Item 517):
+	Name: ANGEL
+	Icon id: 137
+	AnimPose Name: n_angeko
+	Animation Name: Z_1
+	Name Message: ename_383 (Luvbi)
+	Description Message: ehelp_383
+	Buy Price: 200
+	Sell Price: 100
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 359
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 457
+Card 217 (Item 518):
+	Name: ENNMA
+	Icon id: 137
+	AnimPose Name: n_enma
+	Animation Name: Z_1
+	Name Message: ename_384 (Jaydes)
+	Description Message: ehelp_384
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 307
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 458
+Card 218 (Item 519):
+	Name: KAMISAMA
+	Icon id: 137
+	AnimPose Name: n_kami
+	Animation Name: Z_1
+	Name Message: ename_385 (Grambi)
+	Description Message: ehelp_385
+	Buy Price: 120
+	Sell Price: 60
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 3
+	Card Shop Chance: 3
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 359
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 459
+Card 219 (Item 512):
+	Name: KOBURON
+	Icon id: 138
+	AnimPose Name: n_koburon
+	Animation Name: Z_1
+	Name Message: ename_378 (Whacka)
+	Description Message: ehelp_378
+	Buy Price: 500
+	Sell Price: 300
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 179
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 460
+Card 220 (Item 522):
+	Name: MARIO
+	Icon id: 138
+	AnimPose Name: p_mario_e
+	Animation Name: mario_Z_1
+	Name Message: ename_388 (Mario)
+	Description Message: ehelp_388
+	Buy Price: 999
+	Sell Price: 999
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 461
+Card 221 (Item 521):
+	Name: LUIGI
+	Icon id: 138
+	AnimPose Name: p_luigi_e
+	Animation Name: luigi_Z_1
+	Name Message: ename_387 (Luigi)
+	Description Message: ehelp_387
+	Buy Price: 999
+	Sell Price: 999
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 462
+Card 222 (Item 523):
+	Name: PEACH
+	Icon id: 138
+	AnimPose Name: p_peach_e
+	Animation Name: Z_1
+	Name Message: ename_389 (Peach (1))
+	Description Message: ehelp_389
+	Buy Price: 999
+	Sell Price: 999
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 463
+Card 223 (Item 474):
+	Name: W_PEACH
+	Icon id: 137
+	AnimPose Name: p_w_peach
+	Animation Name: Z_1
+	Name Message: ename_340 (Peach (2))
+	Description Message: ehelp_340
+	Buy Price: 150
+	Sell Price: 75
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 464
+Card 224 (Item 475):
+	Name: P_PEACH
+	Icon id: 137
+	AnimPose Name: e_card_poni
+	Animation Name: Z_1
+	Name Message: ename_341 (Peach (3))
+	Description Message: ehelp_341
+	Buy Price: 200
+	Sell Price: 100
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 465
+Card 225 (Item 458):
+	Name: KOOPA
+	Icon id: 138
+	AnimPose Name: p_kuppa_e
+	Animation Name: Z_1
+	Name Message: ename_256 (Bowser (1))
+	Description Message: ehelp_256
+	Buy Price: 999
+	Sell Price: 999
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: 315
+	Sort Value: 466
+Card 226 (Item 473):
+	Name: W_KOOPA
+	Icon id: 137
+	AnimPose Name: p_kuppa_w
+	Animation Name: Z_1
+	Name Message: ename_339 (Bowser (2))
+	Description Message: ehelp_339
+	Buy Price: 140
+	Sell Price: 70
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 2
+	Card Shop Chance: 2
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 467
+Card 227 (Item 476):
+	Name: ANNNA
+	Icon id: 138
+	AnimPose Name: FRY_infom
+	Animation Name: Z_2
+	Name Message: ename_342 (Tippi)
+	Description Message: ehelp_342
+	Buy Price: 400
+	Sell Price: 240
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 468
+Card 228 (Item 477):
+	Name: FAIRY_CATCH
+	Icon id: 138
+	AnimPose Name: FRY_throw
+	Animation Name: Z_1
+	Name Message: ename_343 (Thoreau)
+	Description Message: ehelp_343
+	Buy Price: 300
+	Sell Price: 180
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 469
+Card 229 (Item 478):
+	Name: FAIRY_BOMB
+	Icon id: 138
+	AnimPose Name: FRY_bakudan
+	Animation Name: Z_1
+	Name Message: ename_344 (Boomer)
+	Description Message: ehelp_344
+	Buy Price: 280
+	Sell Price: 168
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 470
+Card 230 (Item 479):
+	Name: FAIRY_SLIT
+	Icon id: 138
+	AnimPose Name: FRY_slit
+	Animation Name: Z_1
+	Name Message: ename_345 (Slim)
+	Description Message: ehelp_345
+	Buy Price: 250
+	Sell Price: 150
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 471
+Card 231 (Item 480):
+	Name: FAIRY__HIPATTACK
+	Icon id: 138
+	AnimPose Name: FRY_hipat
+	Animation Name: Z_1
+	Name Message: ename_346 (Thudley)
+	Description Message: ehelp_346
+	Buy Price: 225
+	Sell Price: 135
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 472
+Card 232 (Item 481):
+	Name: FAIRY_RIDE
+	Icon id: 138
+	AnimPose Name: FRY_move
+	Animation Name: Z_1
+	Name Message: ename_347 (Carrie)
+	Description Message: ehelp_347
+	Buy Price: 240
+	Sell Price: 144
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 473
+Card 233 (Item 482):
+	Name: FAIRY_REVERSE
+	Icon id: 138
+	AnimPose Name: FRY_mekri
+	Animation Name: Z_1
+	Name Message: ename_348 (Fleep)
+	Description Message: ehelp_348
+	Buy Price: 260
+	Sell Price: 156
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 474
+Card 234 (Item 483):
+	Name: FAIRY_HAMMER
+	Icon id: 138
+	AnimPose Name: FRY_hummr
+	Animation Name: Z_1
+	Name Message: ename_349 (Cudge)
+	Description Message: ehelp_349
+	Buy Price: 290
+	Sell Price: 174
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 475
+Card 235 (Item 484):
+	Name: FAIRY_MINI
+	Icon id: 138
+	AnimPose Name: FRY_mini
+	Animation Name: Z_1
+	Name Message: ename_350 (Dottie)
+	Description Message: ehelp_350
+	Buy Price: 300
+	Sell Price: 180
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 476
+Card 236 (Item 486):
+	Name: FAIRY_COUNTER
+	Icon id: 138
+	AnimPose Name: FRY_count
+	Animation Name: Z_1
+	Name Message: ename_352 (Barry)
+	Description Message: ehelp_352
+	Buy Price: 220
+	Sell Price: 132
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 477
+Card 237 (Item 487):
+	Name: FAIRY_DASH
+	Icon id: 138
+	AnimPose Name: FRY_dash
+	Animation Name: Z_1
+	Name Message: ename_353 (Dashell)
+	Description Message: ehelp_353
+	Buy Price: 210
+	Sell Price: 126
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 478
+Card 238 (Item 485):
+	Name: FAIRY_SOUND
+	Icon id: 138
+	AnimPose Name: FRY_pkyrn
+	Animation Name: Z_1
+	Name Message: ename_351 (Piccolo)
+	Description Message: ehelp_351
+	Buy Price: 200
+	Sell Price: 120
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 479
+Card 239 (Item 536):
+	Name: JYASUMING_2SEI
+	Icon id: 137
+	AnimPose Name: FRY_info2
+	Animation Name: Z_2
+	Name Message: ename_417 (Tiptron)
+	Description Message: ehelp_417
+	Buy Price: 500
+	Sell Price: 300
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 1
+	Card Shop Chance: 1
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 480
+Card 240 (Item 488):
+	Name: SMRPG64_KURIO
+	Icon id: 138
+	AnimPose Name: e_card_krio
+	Animation Name: Z_1
+	Name Message: ename_354 (Goombario)
+	Description Message: ehelp_354
+	Buy Price: 450
+	Sell Price: 315
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 481
+Card 241 (Item 489):
+	Name: SMRPG64_KAMEKI
+	Icon id: 138
+	AnimPose Name: e_card_kameki
+	Animation Name: Z_1
+	Name Message: ename_355 (Kooper)
+	Description Message: ehelp_355
+	Buy Price: 470
+	Sell Price: 329
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 482
+Card 242 (Item 490):
+	Name: SMRPG64_PINKY
+	Icon id: 138
+	AnimPose Name: e_card_pinky
+	Animation Name: Z_1
+	Name Message: ename_356 (Bombette)
+	Description Message: ehelp_356
+	Buy Price: 500
+	Sell Price: 350
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 483
+Card 243 (Item 491):
+	Name: SMRPG64_PALETTA
+	Icon id: 138
+	AnimPose Name: e_card_paleta
+	Animation Name: Z_1
+	Name Message: ename_357 (Parakarry)
+	Description Message: ehelp_357
+	Buy Price: 490
+	Sell Price: 343
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 484
+Card 244 (Item 492):
+	Name: SMRPG64_LESALESA
+	Icon id: 138
+	AnimPose Name: e_card_resa
+	Animation Name: Z_1
+	Name Message: ename_358 (Bow)
+	Description Message: ehelp_358
+	Buy Price: 550
+	Sell Price: 385
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 485
+Card 245 (Item 493):
+	Name: SMRPG64_AKARIN
+	Icon id: 138
+	AnimPose Name: e_card_aka
+	Animation Name: Z_1
+	Name Message: ename_359 (Watt)
+	Description Message: ehelp_359
+	Buy Price: 525
+	Sell Price: 367
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 486
+Card 246 (Item 494):
+	Name: SMRPG64_OPUKU
+	Icon id: 138
+	AnimPose Name: e_card_opu
+	Animation Name: Z_1
+	Name Message: ename_360 (Sushie)
+	Description Message: ehelp_360
+	Buy Price: 470
+	Sell Price: 329
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 487
+Card 247 (Item 495):
+	Name: SMRPG64_POKOPI
+	Icon id: 138
+	AnimPose Name: e_card_pokopi
+	Animation Name: Z_1
+	Name Message: ename_361 (Lakilester)
+	Description Message: ehelp_361
+	Buy Price: 500
+	Sell Price: 350
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 488
+Card 248 (Item 496):
+	Name: MARIOST_KURI
+	Icon id: 138
+	AnimPose Name: e_card_kuris
+	Animation Name: Z_1
+	Name Message: ename_362 (Goombella)
+	Description Message: ehelp_362
+	Buy Price: 510
+	Sell Price: 357
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 489
+Card 249 (Item 497):
+	Name: MARIOST_NOKO
+	Icon id: 138
+	AnimPose Name: e_card_nokota
+	Animation Name: Z_1
+	Name Message: ename_363 (Koops)
+	Description Message: ehelp_363
+	Buy Price: 470
+	Sell Price: 329
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 490
+Card 250 (Item 498):
+	Name: MARIOST_CLOUD
+	Icon id: 138
+	AnimPose Name: e_card_clouda
+	Animation Name: Z_1
+	Name Message: ename_364 (Madame Flurrie)
+	Description Message: ehelp_364
+	Buy Price: 465
+	Sell Price: 325
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 491
+Card 251 (Item 499):
+	Name: MARIOST_YOSHI
+	Icon id: 138
+	AnimPose Name: e_card_tibiyo
+	Animation Name: Z_1
+	Name Message: ename_365 (Yoshi)
+	Description Message: ehelp_365
+	Buy Price: 520
+	Sell Price: 364
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 492
+Card 252 (Item 500):
+	Name: MARIOST_VIVI
+	Icon id: 138
+	AnimPose Name: e_card_bibi
+	Animation Name: Z_1
+	Name Message: ename_366 (Vivian)
+	Description Message: ehelp_366
+	Buy Price: 540
+	Sell Price: 378
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 493
+Card 253 (Item 501):
+	Name: MARIOST_BARERU
+	Icon id: 138
+	AnimPose Name: e_card_barel
+	Animation Name: Z_1
+	Name Message: ename_367 (Admiral Bobbery)
+	Description Message: ehelp_367
+	Buy Price: 480
+	Sell Price: 336
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 494
+Card 254 (Item 502):
+	Name: MARIOST_CHUCHU
+	Icon id: 138
+	AnimPose Name: e_card_tyu
+	Animation Name: Z_1
+	Name Message: ename_368 (Ms. Mowz)
+	Description Message: ehelp_368
+	Buy Price: 520
+	Sell Price: 364
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 0
+	Card Shop Chance: 0
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 421
+	Card Shop Block Duplicates: 1
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 495
+Card 255 (Item 537):
+	Name: KINOPIO
+	Icon id: 137
+	AnimPose Name: n_kinoipio
+	Animation Name: Z_1
+	Name Message: ename_418 (Toad)
+	Description Message: ehelp_418
+	Buy Price: 100
+	Sell Price: 50
+	HP Gain: 0
+	XP Gain: 0
+	Card Bag Chance: 20
+	Card Shop Chance: 20
+	Card Shop Bonus Seq: 0
+	Card Shop Min GSW(0): 11
+	Card Shop Block Duplicates: 0
+	Disp Flags: 0x0
+	Tribe: -1
+	Sort Value: 496
