@@ -52,8 +52,8 @@ evt_eff.c          800e57bc - 800e658b
 evt_env.c          800e658c - 800e6f9b
 evt_ext.c          800e6f9c - 800e704c
 evt_fade.c         800e7050 - 800e72c3
-evt_fairy.c        800e72c4 - 800e884f
-evt_frame.c        800e8850 - 800e9bb3
+evt_fairy.c        800e72c4 - 800e8853
+evt_frame.c        800e8854 - 800e9bb3
 evt_guide.c        800e9bb4 - 
 ...
 evt_npc.c          <=800fde94 - >=8010bc43
