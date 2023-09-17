@@ -306,7 +306,7 @@ BLACKLIST = set((
     0x80407d40,
     0x80407ef4,
     0x80d12620,
-    0x80d585b8,
+    0x80d585e4,
     0x80d76920,
     0x80da1ce8,
     0x80daac28,
