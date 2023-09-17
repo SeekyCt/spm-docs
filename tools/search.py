@@ -311,6 +311,7 @@ while p < end:
     switch_depth = 0
     inline_depth = 0
     brother_depth = 0
+    returned = False
 
     while True:
         instr = ram.readatW(p)
@@ -410,18 +411,29 @@ while p < end:
                 break
 
         p += cmdn * 4 + 4
-        if cmd == 1:
-            if p == scriptStart + 4:
-                #print(f"Rejecting {scriptStart:x} for being too short")
-                break
-            if any(x != 0 for x in (
+
+        # Check for code after end_evt
+        if returned and cmd != 1:
+            # print(f"Rejecting {scriptStart:x} for code after return")
+            p = scriptStart + 4
+            break
+        if opcodes[cmd] == "end_evt":
+            if all(x == 0 for x in (
                 if_depth,
                 while_depth,
                 switch_depth,
                 inline_depth,
                 brother_depth,
-            )):
-                print(f"Rejecting {scriptStart:x} for unclosed scope")
+            )) and opcodes.get(ram.readatH(p + 2)) != "lbl":
+                returned = True
+
+        if cmd == 1:
+            if p == scriptStart + 4:
+                #print(f"Rejecting {scriptStart:x} for being too short")
+                break
+            if not returned:
+                # print(f"Rejecting {scriptStart:x} for unclosed scope")
+                p = scriptStart + 4
                 break
             print(f"{scriptStart:08x}-{p-1:08x}")
             break
