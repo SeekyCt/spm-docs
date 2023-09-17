@@ -300,6 +300,56 @@ end = int(end, 16) + 3 & ~3
 
 assert start < end
 
+# False positive end_evt + 1s
+BLACKLIST = set((
+    0x80405bcc,
+    0x80407d40,
+    0x80407ef4,
+    0x80d12620,
+    0x80d585b8,
+    0x80d76920,
+    0x80da1ce8,
+    0x80daac28,
+    0x80daac3c,
+    0x80e03e70,
+    0x80e4fc60,
+    0x80e4fcb8,
+    0x80e4fd10,
+    0x80e4fd68,
+    0x80e4fdc0,
+    0x80e55ef8,
+    0x80e55ff8,
+    0x80e560f8,
+    0x80e561f8,
+    0x80e562b8,
+    0x80e56308,
+    0x80e563c8,
+    0x80e56418,
+    0x80e566f8,
+    0x80e56768,
+    0x80e56808,
+    0x80e56878,
+    0x80e56918,
+    0x80e56948,
+    0x80e56998,
+    0x80e56a38,
+    0x80e56a68,
+    0x80e56ab8,
+    0x80e56b58,
+    0x80e56b88,
+    0x80e56bd8,
+    0x80e56c78,
+    0x80e56ca8,
+    0x80e56cf8,
+    0x80e56d98,
+    0x80e56dc8,
+    0x80e56e18,
+    0x80e56eb8,
+    0x80e56ee8,
+    0x80e56f38,
+    0x80e58078,
+))
+
 p = start
 while p < end:
     scriptStart = p
@@ -433,6 +483,10 @@ while p < end:
                 break
             if not returned:
                 # print(f"Rejecting {scriptStart:x} for unclosed scope")
+                p = scriptStart + 4
+                break
+            if scriptStart in BLACKLIST:
+                # print(f"Rejecting {scriptStart:x} for blacklist")
                 p = scriptStart + 4
                 break
             print(f"{scriptStart:08x}-{p-1:08x}")
