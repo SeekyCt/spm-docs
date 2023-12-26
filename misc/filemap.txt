@@ -1,13 +1,16 @@
         ==== Dol ====
 
 == Game Specific ==
-main.c             8001da60 - >=8001da87
-...
-ac_scissor.c       <=8001e69c - >=80021ffc
-...
-ac_signal_timing.c <=80022b34 - >=8002309b
-...
-item_event_data.c  <=80025164 - 800294df
+main.c             8001da60 - 8001da87
+ac_shake.c         8001da88 - 8001e307
+ac_pendulum_crane_timing.c 8001e308 - 8001e69b
+ac_scissor.c       8001e69c - 8002250f
+ac_crane_timing.c  80022510 - 80022b33
+ac_signal_timing.c 80022b34 - 800236ab
+ac_target_row.c    800236ac - 8002443b
+ac_timing_button.c 800244e8 - 80024da3
+ac_timing_hold.c   80024da4 - 80025163
+item_event_data.c  80025164 - 800294df
 map_data.c         800294e0 - 8002967f
 setup_data.c       80029680 - 800297bf
 mobjdrv.c          800297c0 - 8002ed9f
@@ -37,10 +40,18 @@ imgdrv.c           8007508c - 8007765f
 itemdrv.c          80077660 - 8007e1a7
 lightdrv.c         8007e1a8 - 8007ec33
 mapdrv.c           8007ec34 - 80091653
+eff_spm_recovery.c 80091654 - 800930d3
+eff_zunbaba.c      800930d4 - 8009351f
+eff_spm_use.c      80093520 - 800939df
+eff_spm_get.c      800939e0 - 8009401f
+eff_map_water.c    8009461c - 80094e43
+eff_pure_heart.c   80094e44 - 80096713
+eff_map_bubble     80096714 - 80096d6f
+eff_map_wind       80096d70 - 80096d70
 ...
+eff_score.c        800d17c8 - 800d2147
 evt_snd.c          800d2148 - 800d378b
-evt_sub.c          800d378c - <=800d792f
-...
+evt_sub.c          800d378c - 800d87e3
 evtmgr.c           800d87e4 - 800da0af
 evtmgr_cmd.c       800da0b0 - 800df9a7
 evt_ac.c           800df9a8 - 800dfadf
@@ -50,19 +61,26 @@ evt_case.c         800e0ca4 - 800e0faf
 evt_door.c         800e0fb0 - 800e57bb
 evt_eff.c          800e57bc - 800e658b
 evt_env.c          800e658c - 800e6f9b
-evt_ext.c          800e6f9c - 800e704c
+evt_ext.c          800e6f9c - 800e704f
 evt_fade.c         800e7050 - 800e72c3
 evt_fairy.c        800e72c4 - 800e8853
 evt_frame.c        800e8854 - 800e9bb3
-evt_guide.c        800e9bb4 - 
+evt_guide.c        800e9bb4 - 800eab1b
+evt_hit.c          800eab1c - 800ec2c7
+evt_img.c          800ec2c8 - 800ecc83
 ...
 evt_npc.c          <=800fde94 - >=8010bc43
 ...
 evt_pouch.c        8010c698 - 8010d027
 evt_seq.c          8010d028 - 8010d193
 evt_shop.c         8010d194 - 80111fe7
-...
-
+mot_stay.c         80111fe8 - 80112af7
+mot_swim.c         80112af8 - 80117d1f
+mot_mega_star.c    80117d20 - 80118e87
+mot_walk.c         80118e88 - 80119abf
+mot_crouch.c       80119ac0 - 8011a7b3
+mot_spring.c       8011a7b4 - 8011ae7f
+mot_ladder.c       8011ae80 - 8011bc07
 fairy.c            8011bc08 - 8011fa2b
 guide.c            8011fa2c - 80121e17
 mario.c            80121e18 - 8012dac3
@@ -73,8 +91,20 @@ mario_motion.c     80143370 - 8014c087
 mario_pouch.c      8014c088 - 801501c3
 mario_sbr.c        801501c4 - 80154c7f
 mario_status.c     80154c80 - 8015f063
+mot_flip.c         8015f064 - >=8015fee3
 ...
-?                  <=8017719c - 801789f3
+mot_damage.c       <=80160350 - 8016202b
+...
+mot_fairy_mario.c  <=80166b34 - 8016d897
+mot_fairy_other.c  8016d898 - 8016e4ac
+mot_hammer.c       8016e4ac - >=801704bb
+...
+mot_hip.c          <=801706dc - 80171e0f
+mot_jabara.c       80171e10 - 80173c97
+mot_jump.c         80173c98 - 80175bcb
+mot_hit.c          80175bcc - 80175f67
+mot_peach_float.c  80175f68 - 801764a3
+mot_slit.c         801764a4 - 801789f3
 seq_gameover.c     801789f4 - 80178fef
 seq_logo.c         80178fd0 - 8017a33b
 seq_mapchange.c    8017a33c - 8017b12f
@@ -93,10 +123,10 @@ treasuremap.c      8019beb4 - 8019c3af
 sptexture.c        8019c3b0 - 8019c4ff
 system.c           8019c500 - 8019e043
 dvdmgr.c           8019e044 - 8019e327
-...
+debug.c            8019e328 - 8019e477
 filemgr.c          8019e478 - 8019ffb7
-fontmgr.c          8019ffb8 - >=801a37b3
-...
+fontmgr.c          8019ffb8 - 801a37b3
+gxsub.c            801a37b4 - 801a5417
 himo.c             801a5418 - 801a5dcb
 memory.c           801a5dcc - 801a6e9b
 parse.c            801a6e9c - 801a74ef
@@ -109,10 +139,13 @@ wpadmgr.c          8023697c - 80237a0f
 spmario_snd.c      80237a10 - 8023e433
 relmgr.c           8023e434 - 8023e60b
 nandmgr.c          8023e60c - 8024069f
-...
+ac_shake.c         802406a0 - 80241407
 evt_nand.c         80241408 - 80241807
 homebuttondrv.c    80241808 - 80242937
-search.c           80242938 - ?
+search.c           80242938 - 8024a62b
+evt_search.c       8024a62c - 8024ad47
+...
+eff_cheri_shell.c  80255334 - 80255837
 
 == Codewarrior Bundled ==
 MSL_C.PPCEABI.bare.H.a     80255838 - 8026465b
