@@ -13,7 +13,10 @@ enum {
 };
 
 typedef struct {
-/* 0x00 */ // unknown 0x0-33
+/* 0x00 */ // unknown 0x0-7
+/* 0x08 */ f32 ySpeed;
+/* 0x0c */ f32 jumpTimer;
+/* 0x10 */ f32 jumpAccel;
 } MarioJumpFallPara; // total size 0x34;
 
 /*
@@ -199,9 +202,16 @@ typedef struct {
         18 slit (slim)
         19 talk
         23 forceReset?
+        24 death
         25 bottomless (fall off respawn)
         26 flip into midair
         27 damage
+        28 damage 2
+        29 scared anim
+        30 life shroom revive
+        31 shake prompt
+        32 sleep shake prompt
+        33 frozen shake prompt
         36 throwing thoreau
         37 placing bomb
         38 using fleep
@@ -211,6 +221,7 @@ typedef struct {
         42 barry
         44 mount carrie
         45 dismount carrie
+        68 mega star transformation
         69 swim
         71 character change
         72 pixl change
@@ -231,14 +242,17 @@ typedef struct {
 /* 0x0039 */ // unknown 0x39-3a
 /* 0x003B */ u8 wallTimer;
 /* 0x003C */ s32 subMotionId; // values vary by motion id
-/* 0x0040 */ // unknown 0x40-4f
+/* 0x0040 */ // unknown 0x40-47
+/* 0x0048 */ float invincibilityTimer;
+/* 0x004C */ // unknown 0x4c-4f
 /* 0x0050 */ float airTimer; // time in air
 /* 0x0054 */ float jumpPeakAirTime; // value of airTimer when reaching top of jump
 /* 0x0058 */ // unknown 0x58-5b
 /* 0x005C */ Vec3 position;
 /* 0x0068 */ // unknown 0x68-bb
 /* 0x00BC */ Vec3 scale;
-/* 0x00C8 */ // unknown 0xc8-11f
+/* 0x00C8 */ Vec3 unkScale; // Scale-related
+/* 0x00D4 */ // unknown 0xd4-11f
 /* 0x0120 */ s32 camId;
 /* 0x0124 */ // unknown 0x124-127
 /* 0x0128 */ Vec3i framebufferPos;
@@ -248,7 +262,8 @@ typedef struct {
 /* 0x0150 */ float dashSpeed; // base dash speed
 /* 0x0154 */ // unknown 0x154-15f
 /* 0x0160 */ float lastGroundSpeed; // xzSpeed when last on ground
-/* 0x0164 */ // unknown 0x164-173
+/* 0x0164 */ float initSpeedScale;
+/* 0x0168 */ // unknown 0x168-173
 /* 0x0174 */ float directionWorld; // degrees
 /* 0x0178 */ float directionView; // degrees
 /* 0x017C */ // unknown 0x17c-17f
@@ -259,7 +274,9 @@ typedef struct {
 /* 0x0198 */ float hitboxHeight;
 /* 0x019C */ float baseHitboxWidth;
 /* 0x01A0 */ float baseHitboxHeight;
-/* 0x01A4 */ // unknown 0x1a4-1bb
+/* 0x01A4 */ // unknown 0x1a4-1b3
+/* 0x01B4 */ float targetMovingAngle;
+/* 0x01B8 */ // unknown 0x1b8-1bb
     /*
         1 is interact (in front of player)
         2 is stand on
@@ -274,7 +291,8 @@ typedef struct {
         Others unknown
     */
 /* 0x01FC */ HitObj * hitObjs2[3];
-/* 0x0208 */ // unknown 0x208-24b
+/* 0x0208 */ // unknown 0x208-247
+/* 0x0248 */ float speedScale;
     /*
         0 is main model
         1 is back model (Mario only)
@@ -301,7 +319,9 @@ typedef struct {
 /* 0x0320 */ s16 held2Time;
 /* 0x0322 */ // unknown 0x322-347
 /* 0x0348 */ s32 sfxIds[4];
-/* 0x0358 */ // unknown 0x358-3a3
+/* 0x0358 */ // unknown 0x358-363
+/* 0x0364 */ float idleTimer;
+/* 0x0368 */ // unknown 0x368-3a3
     /*
         Info on entity caught with Thoreau
         catchType indicates the type of caught
