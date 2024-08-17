@@ -68,9 +68,14 @@ evt_frame.c        800e8854 - 800e9bb3
 evt_guide.c        800e9bb4 - 800eab1b
 evt_hit.c          800eab1c - 800ec2c7
 evt_img.c          800ec2c8 - 800ecc83
-...
-evt_npc.c          <=800fde94 - >=8010bc43
-...
+evt_item.c         800ecc84 - 800ed6bf
+evt_map.c          800ed6c0 - 800ef3c7
+evt_mario.c        800ef3c8 - 800f358b
+evt_mobj.c         800f358c - 800fb27b
+evt_msg.c          800fb27c - 800fdcbf
+evt_npc.c          800fdcc0 - 8010c4a3
+evt_offscreen.c    8010c4a4 - 8010c5ff
+evt_paper.c        8010c600 - 8010c697
 evt_pouch.c        8010c698 - 8010d027
 evt_seq.c          8010d028 - 8010d193
 evt_shop.c         8010d194 - 80111fe7
